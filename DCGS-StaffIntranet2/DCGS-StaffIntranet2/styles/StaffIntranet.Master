@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StaffIntranet.master.cs" Inherits="DCGS_Staff_Intranet2.StaffIntranet" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>dcgs staff intranet master</title>
+    <link href="../styles/default1.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <script  type="text/javascript">
+<!--
+        function uberMenu(intElementId) {
+            document.getElementById('child_' + intElementId).style.display = document.getElementById('child_' + intElementId).style.display == 'none' ? '' : 'none';
+            document.getElementById('parent_' + intElementId).firstChild.className = document.getElementById('parent_' + intElementId).firstChild.className == 'parentclicked' ? '' : 'parentclicked';
+        }
+//-->
+</script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <input type="hidden" name="__EVENTDATA" value="" />
+        
+<div id="container">
+    <div id="banner">    </div>
+    <div class ="dcgsNavbar" id="dcgsNavBar1" runat="server">   Staff Intranet</div>
+    <div id="columns">
+    <div id="navigation">
+<ul id="ubermenu" >
+<li><a href="../content/StartForm.aspx?id=11">Home</a></li>
+    <li id="parent_0" class="parent"><a href="#" onclick="uberMenu(0)">Students</a>
+    <ul id="child_0" style="DISPLAY:none " >
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=6">Pre-Adm</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=7">Year 7</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=8">Year 8</a></li><br />
+	    <li><a href="../content/PupilChoice.aspx?Type=Year&Year=9">Year 9</a></li><br />
+	    <li><a href="../content/PupilChoice.aspx?Type=Year&Year=10">Year 10</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=11">Year 11</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=12">Year 12</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Year&Year=13">Year 13</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Current&Year=">All Current</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Left&Year=14">Past Students</a></li><br />
+        <li><a href="../content/PupilChoice.aspx?Type=Mask&Year=0">Use Mask</a></li><br />
+    </ul>
+    </li>
+								
+    <li id="parent_1" class="parent"><a href="#" onclick="uberMenu(1)">Staff</a>
+	<ul id="child_1"  style="DISPLAY:none" >
+        <!--
+        <li><a href="https://drive.google.com/a/challoners.org/folderview?id=0B5E_IxOQfDBWaHRDZGh6bTFKOFk&usp=sharing_eid&ts=573effb6#list">Documents</a></li><br />
+        -->
+        <li><a href="http://www.challoners.com/intranet/staff">Documents</a></li><br />
+        <li><a href="http://registration.challoners.net:13031">Registration</a></li><br />
+		<li><a href="../content/StaffInfo.aspx?Type=staff">Information (TT etc)</a></li><br />
+		<li><a href="../content/DataEntry.aspx">Upload Results</a></li><br />
+		<li><a href="../content/StaffInfo.aspx?Type=room">Room Timetables</a></li><br />
+		<li><a href="https://script.google.com/macros/s/AKfycbxSUj_9Xfd8pig1wsgcAN35KG2KoCt1zAjjExb3rE_RJRI2CJIt/exec">Staff Info Screen</a></li><br />
+	</ul>
+	</li>
+    <li id="parent_2" class="parent"><a href="#" onclick="uberMenu(2)">Lists</a>
+    <ul id="child_2" style="DISPLAY:none" >
+        <li><a href="../content/SimpleLists.aspx?Type=User&Year=">My Groups</a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=7">Year 7 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=8">Year 8 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=9">Year 9 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=10">Year 10 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=11">Year 11 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=12">Year 12 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=13">Year 13 </a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=All">All Groups</a></li><br />
+		<li><a href="../content/SimpleLists.aspx?Type=Year&Year=0">Use Mask</a></li><br />
+	</ul>
+	</li>
+	<li id="parent_3" class="parent"><a href="#" onclick="uberMenu(3)">Exams</a>
+	<ul id="child_3" style="DISPLAY:none">
+	    <li><a href="../content/ExamsSubjectList.aspx?ExamYear=2012&ExamSeason=6&Task=SubjectEntries ">By Subjects</a></li><br />
+		<li><a href="../content/ExamsSubjectList.aspx?ExamYear=2012&ExamSeason=6&Task=mylist">My Students</a></li><br />
+	</ul>
+	</li>
+		<li id="parent_4"class="parent"><a href="#" onclick="uberMenu(4)">Messaging</a>
+    <ul id="child_4" style="DISPLAY:none">
+        <li><a href="../content/AddMessage.aspx">Add Message</a></li><br />
+        <li><a href="../content/StaffMessages.aspx">Check Message</a></li><br />
+        <li><a href="../content/CreateMessageGroupX.aspx">Manage Groups</a></li><br />
+	</ul>
+	</li>
+	
+		<li id="parent_5" class="parent"><a href="#" onclick="uberMenu(5)">Useful Links</a>
+    <ul id="child_5" style="DISPLAY:none">
+		<li><a href="http://www.alisproject.org/institution/default.asp?reason=denied_empty&amp;script_name=/institution/live/default.asp&amp;bhcp=1">Allis Site</a></li><br />
+        <li> <a href="https://bookings.parentteacheronline.co.uk?school=enxvd">PTO</a> </li><br />
+		<li><a href="http://finance.challoners.net:8000/deed">Corero Finance</a></li><br />
+	</ul>
+	</li>
+    
+    <li id="parent_6" class="parent"><a href="#" onclick="uberMenu(6)">Admin Tasks</a>
+    <ul id="child_6" style="DISPLAY:none">
+        <li><a href="../content/AdminTasks.aspx?Type=Lists">Admin Tasks</a></li><br />
+        <li><a href="../content/NextTT/NextYearTTChoice.aspx">TimeTable Plan</a></li><br />
+        <li><a href="http://finance.challoners.net:8000/deed">Ledger</a></li><br />
+        <li><a href="../content/StudentsComplexLists.aspx">Complex Lists</a></li><br />
+        <li><a href="../content/Admin_timetables.aspx">Arrange meetings</a></li><br />
+        <li><a href="../content/iSAMS_Sync.aspx">iSAMS Sync</a></li>
+	</ul>
+	
+	</li>
+    <div runat="server" id="PhysicsBooking">
+         <li><a href="../content/Booking/Menu.aspx">Book Physics</a></li>
+    </div>
+     <div runat="server" id="ExamsMenu">
+         <li><a href="../Exams/ExamsStart.aspx">Exams Menu</a></li>
+    </div>
+    <div runat="server" id="OptionsMenu">
+         <li><a href="../content/Options/OptionsStart.aspx">OptionsMenu</a></li>
+    </div>
+	<!--
+<li><a href="../content/DataEntry_test.htm">Summer Results</a></li><br />	
+-->
+
+<!--
+<li><a href="../content/DataEntry.aspx">Summer Results</a></li>
+<li><a href="../content/DataEntry_test.htm">Summer Results_TEST</a></li>
+
+
+-->
+<li><a href="https://script.google.com/macros/s/AKfycbxSUj_9Xfd8pig1wsgcAN35KG2KoCt1zAjjExb3rE_RJRI2CJIt/exec">Info Screen</a></li>
+
+<li><a href="../content/PredictedGrades.aspx">Predicted Grades</a></li>
+<li><a href="../content/Logout.aspx">Logout</a></li>
+<!--
+<li><a href="../content/DataEntry.aspx">Y12 Exam Results</a></li><br />
+<li><a href="../content/examresultsforstaff.aspx">My Results</a></li><br />
+//-->
+
+<!--
+<li><a href="../content/DataEntry.aspx">Summer Results</a></li><br />
+-->
+</ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="contact">
+    <p>
+        Chesham Road, Amersham<br />
+        Buckinghamshire<br />
+        <a href="http://maps.google.co.uk/maps?q=HP6+5HA">HP6 5HA</a>
+    </p>
+    <p>
+        <strong>Tel:</strong> <a href="index.aspx?section=more&sub=contact" onClick="return (false);">01494 787500</a><br />
+        <strong>Fax:</strong> 01494 721862<br />
+        <strong>E-mail: </strong><a href="mailto:admin@challoners.com">admin@challoners.com</a>
+    </p>
+</div>
+
+</div>
+    <div id="content">
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+<div id="footer"  >
+<span id="logondetail"  ><asp:Label ID="Label2" runat="server"  Text=""></asp:Label><a href="../content/Logout.aspx" style="padding-left: 5px">Logout</a></span>
+    
+<span id="author" >Coding by CC (29/6/2017)..........</span>
+<!--
+<script>var enchant = enchant || []</script>
+<script src="//platform.enchant.com" async="async"></script>
+<div class="enchant-help-center" data-id="03ed27a3"></div>
+-->
+
+</div>
+
+</div>
+</div>
+
+    </form>
+</body>
+</html>

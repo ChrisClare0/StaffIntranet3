@@ -1,0 +1,364 @@
+O16G17_106G17BEDEXCEL   14                                                                                         
+O36G17_106G17001                                                                                                   
+O5KBI0  KBI0  GCSEFC C       ERH3 60032479BIOLOGY                             Y04030        1F               000002
+O5KCH0  KCH0  GCSEFC C       ERD1 60032467CHEMISTRY                           Y04030        1F               000002
+O5KCN0  KCN0  GCSEFC C       EFKC 60044196CHINESE                             Y06230        1F               000003
+O5KEA0  KEA0  GCSEFC C       EFK2B60001380ENGLISH LANGUAGE                    Y04030        1F               000003
+O5KEA0T KEA0  GCSEFC C       EFK2B60001380ENGLISH LANGUAGE OPTION T           Y04030        1F               000003
+O5KFR0  KFR0  GCSEFC C       EFKF 60044226FRENCH                              Y06230        1F               000003
+O5KGE0  KGE0  GCSEFC C       ERF4 60032157GEOGRAPHY                           Y04030        1F               000001
+O5KGN0  KGN0  GCSEFC C       EFKG 60045188GERMAN                              Y06230        1F               000003
+O5KHI0  KHI0  GCSEFC C       EDB  60036229HISTORY                             Y04030        1F               000002
+O5KMA0F KMA0  GCSEFC C       ERB1 60004757MATHEMATICS OPTION F                Y04030        1F               000002
+O5KMA0H KMA0  GCSEFC C       ERB1 60004757MATHEMATICS OPTION H                Y04030        1F               000002
+O5KPH0  KPH0  GCSEFC C       ERC1 60032480PHYSICS                             Y04030        1F               000002
+O5KSC0  KSC0  GCSEDA C       ERA1E60032492SCIENCE (DOUBLE AWARD)              Y08060        115              000003
+O5KSP0  KSP0  GCSEFC C       EFKS 60044238SPANISH                             Y06230        1F               000003
+O51CP0A 1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION A           Y03170        1F               000002
+O51CP0AT1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION AT          Y03170        1F               000002
+O51CP0B 1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION B           Y03170        1F               000002
+O51CP0BT1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION BT          Y03170        1F               000002
+O51CP0C 1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION C           Y03170        1F               000002
+O51CP0CT1CP0  GCSEFC C       ECK1 60105446COMPUTER SCIENCE OPTION CT          Y03170        1F               000002
+O51EN0  1EN0  GCSEFC C       EFK2B60148366ENGLISH LANGUAGE                    Y03400        140      42      000003
+O51ET0  1ET0  GCSEFC C       EFC4 60147891ENGLISH LITERATURE                  Y03240        140              000002
+O51MA0F 1MA0  GCSEFC C       ERB1 50079165MATHEMATICS A (LINEAR) OPTION F     Y03200        1F               000002
+O51MA0H 1MA0  GCSEFC C       ERB1 50079165MATHEMATICS A (LINEAR) OPTION H     Y03200        1F               000002
+O51MA1F 1MA1  GCSEFC C       ERB1 60147003MATHEMATICS OPTION F                Y03370        140              000003
+O51MA1H 1MA1  GCSEFC C       ERB1 60147003MATHEMATICS OPTION H                Y03370        140              000003
+O52AB01 2AB01 GCSEFC C       EAA3 5004509XAPPLIED BUSINESS                    N00000        BF               020000
+O52AB02 2AB02 GCSEDA C       EAA3 50044874APPLIED BUSINESS(DOUBLE)            N00000        B15              040000
+O52AD01 2AD01 GCSEFC C       EJA2 50045210ART & DESIGN                        N00000        BF               020000
+O52AM01 2AM01 GCSEFC C       ERB7J50079402APPLICATION OF MATHS.               N00000        BF               040000
+O52AR01 2AR01 GCSEFC C       EFKM 50044679ARABIC                              N00000        BF               030000
+O52AS01 2AS01 GCSEFC C       ERE1 5004445XASTRONOMY                           N00000        BF               020000
+O52BC01 2BC01 GCSEFC C       EAA3 50045775BUSINESS COMMUNICATIONS             N00000        BF               020000
+O52BE01 2BE01 GCSEFC C       EEB  50045751BUSINESS ST.& ECONOMICS             N00000        BF               020000
+O52BI01 2BI01 GCSEFC C       ERH3 60007709BIOLOGY                             N00000        BF               032000
+O52BS01 2BS01 GCSEFC C       EAA3 50045763BUSINESS STUDIES                    N00000        BF               020000
+O52CH01 2CH01 GCSEFC C       ERD1 60007990CHEMISTRY                           N00000        BF               032000
+O52CN01 2CN01 GCSEFC C       EFKC 5004672XCHINESE                             N00000        BF               030000
+O52CS01 2CS01 GCSEFC C       EEE3150045519CITIZENSHIP STUDIES                 N00000        BF               030000
+O52DR01 2DR01 GCSEFC C       ELC1150045787DRAMA                               N00000        BF               030000
+O52EG02 2EG02 GCSEDA C       EXA1 50045805ENGINEERING(DOUBLE)                 N00000        B15              030000
+O52EH01 2EH01 GCSEFC C       EFK2A60131573ENGLISH                             N00000        BF               025000
+O52EN01 2EN01 GCSEFC C       EFK2B60131585ENGLISH LANGUAGE                    N00000        BF               025000
+O52EP01 2EP01 GCSEFC C       EXL1 50044217DESIGN & TECH.ELEC.PRODS            N00000        BF               020000
+O52FA01 2FA01 GCSEFC C       EJA2 50045210ART & DESIGN:FINE ART               N00000        BF               020000
+O52FR01 2FR01 GCSEFC C       EFKF 50046214FRENCH                              N00000        BF               030000
+O52FT01 2FT01 GCSEFC C       ENH6 50044199DESIGN & TECH.FOOD TECH             N00000        BF               020000
+O52GA01 2GA01 GCSEFC C       ERF4 60061571GEOGRAPHY A                         N00000        BF               040000
+O52GB01 2GB01 GCSEFC C       ERF4 60064341GEOGRAPHY B                         N00000        BF               040000
+O52GC01 2GC01 GCSEFC C       EJA2 50045210ART & DESIGN:GRAPHIC                N00000        BF               020000
+O52GK01 2GK01 GCSEFC C       EFKK 50044606GREEK                               N00000        BF               030000
+O52GN01 2GN01 GCSEFC C       EFKG 50045933GERMAN                              N00000        BF               030000
+O52GR01 2GR01 GCSEFC C       EJC3 5004574XDESIGN & TECH.GRAPH.PRODS           N00000        BF               020000
+O52HA01 2HA01 GCSEFC C       EDB  60101635HISTORY A                           N00000        BF               040000
+O52HB01 2HB01 GCSEFC C       EDB  60101647HISTORY B                           N00000        BF               040000
+O52HS01 2HS01 GCSEFC C       EPA1 50044825HEALTH & SOCIAL CARE                N00000        BF               020000
+O52HS02 2HS02 GCSEDA C       EPA1 50044461HEALTH & SOCIAL CARE(DBL)           N00000        B15              040000
+O52IN01 2IN01 GCSEFC C       EFKX 50045945ITALIAN                             N00000        BF               030000
+O52IT01 2IT01 GCSEFC C       ECJ  50075755ICT                                 N00000        BF               020000
+O52IT02 2IT02 GCSEDA C       ECJ  50074829ICT(DOUBLE AWARD)                   N00000        B15              040000
+O52JA01 2JA01 GCSEFC C       EFKJ 50044618JAPANESE                            N00000        BF               030000
+O52LT01 2LT01 GCSEFC C       ENK1 50044722LEISURE & TOURISM                   N00000        BF               015000
+O52LT02 2LT02 GCSEDA C       ENK1 50045192LEISURE & TOURISM(DOUBLE)           N00000        B15              030000
+O52MM01 2MM01 GCSEFC C       ERB1G50079499METHODS IN MATHEMATICS              N00000        BF               040000
+O52MN02 2MN02 GCSEDA C       EWA  50045799MANUFACTURING(DOUBLE)               N00000        B15              030000
+O52MU01 2MU01 GCSEFC C       ELF1 50046597MUSIC                               N00000        BF               030000
+O52PE01 2PE01 GCSEFC C       EMA1 50046767PHYSICAL EDUCATION                  N00000        BF               020000
+O52PH01 2PH01 GCSEFC C       ERC1 60007710PHYSICS                             N00000        BF               032000
+O52PS01 2PS01 GCSEFC C       EPK1 50044424PSYCHOLOGY                          N00000        BF               020000
+O52PY01 2PY01 GCSEFC C       EKJ1 50045210ART & DESIGN:PHOTOGRAPHY            N00000        BF               020000
+O52RM01 2RM01 GCSEFC C       EXA5 50044187DESIGN & TECH.RMT                   N00000        BF               020000
+O52RS01 2RS01 GCSEFC C       EDD1 50044886RELIGIOUS STUDIES                   N00000        BF               020000
+O52RU01 2RU01 GCSEFC C       EFKR 50044758RUSSIAN                             N00000        BF               030000
+O52SA01 2SA01 GCSEFC C       ERA1C60007989ADDITIONAL SCIENCE                  N00000        BF               032000
+O52SC01 2SC01 GCSEFC C       ERA1B60007722SCIENCE                             N00000        BF               032000
+O52SF01 2SF01 GCSEFC C       ERA1D60061492FURTHER ADD. SCIENCE                N00000        BF               032000
+O52SP01 2SP01 GCSEFC C       EFKS 50045957SPANISH                             N00000        BF               030000
+O52ST01 2ST01 GCSEFC C       ERB7150044564STATISTICS                          N00000        BF               020000
+O52TD01 2TD01 GCSEFC C       EJA2 50045210ART & DESIGN:3D DESIGN              N00000        BF               020000
+O52TE01 2TE01 GCSEFC C       EJA2 50045210ART & DESIGN:TEXTILE DES.           N00000        BF               020000
+O52TT01 2TT01 GCSEFC C       EXA5A50044588DESIGN & TECH.TEXT.TECH             N00000        BF               020000
+O52UR01 2UR01 GCSEFC C       EFKU 50046287URDU                                N00000        BF               030000
+O53AR0S 3AR0S GCSESC C       E    50045507ARABIC:SPOKEN LANGUAGE              Y00600        BF               015000
+O53AR0W 3AR0W GCSESC C       E    50045489ARABIC:WRITTEN LANGUAGE             Y00600        BF               015000
+O53BS01 3BS01 GCSESC C       E    50045222BUSINESS STUDIES                    Y00170        BF               010000
+O53CN0S 3CN0S GCSESC C       E    50046330CHINESE:SPOKEN LANGUAGE             Y00600        BF               015000
+O53CN0W 3CN0W GCSESC C       E    50046329CHINESE:WRITTEN LANGUAGE            Y00600        BF               015000
+O53CS01 3CS01 GCSESC C       E    50045921CITIZENSHIP STUDIES                 Y00850        BF               015000
+O53FA01 3FA01 GCSESC C       E    50045209ART & DESIGN:FINE ART               N00000        BF               020000
+O53FR0S 3FR0S GCSESC C       E    50046457FRENCH:SPOKEN LANGUAGE              Y00585        BF               015000
+O53FR0W 3FR0W GCSESC C       E    5004641XFRENCH:WRITTEN LANGUAGE             Y00585        BF               015000
+O53GC01 3GC01 GCSESC C       E    50045209ART & DESIGN:GRAPHIC                N00000        BF               020000
+O53GK0S 3GK0S GCSESC C       E    50045477GREEK:SPOKEN LANGUAGE               Y00585        BF               015000
+O53GK0W 3GK0W GCSESC C       E    50045465GREEK:WRITTEN LANGUAGE              Y00585        BF               015000
+O53GN0S 3GN0S GCSESC C       E    50046445GERMAN:SPOKEN LANGUAGE              Y00585        BF               015000
+O53GN0W 3GN0W GCSESC C       E    50046421GERMAN:WRITTEN LANGUAGE             Y00585        BF               015000
+O53IN0S 3IN0S GCSESC C       E    50046251ITALIAN:SPOKEN LANGUAGE             Y00585        BF               015000
+O53IN0W 3IN0W GCSESC C       E    50046226ITALIAN:WRITTEN LANGUAGE            Y00585        BF               015000
+O53JA0S 3JA0S GCSESC C       E    50044151JAPANESE:SPOKEN LANGUAGE            Y00585        BF               015000
+O53JA0W 3JA0W GCSESC C       E    50044990JAPANESE:WRITTEN LANGUAGE           Y00585        BF               015000
+O53PE01 3PE01 GCSESC C       E    50046755PHYSICAL EDUCATION                  N00000        BF               010000
+O53PY01 3PY01 GCSESC C       E    50045209ART & DESIGN:PHOTOGRAPHY            N00000        BF               020000
+O53RS01 3RS01 GCSESC C       E    5004526XRELIGIOUS STUDIES                   Y00560        BF               010000
+O53RU0S 3RU0S GCSESC C       E    50045520RUSSIAN:SPOKEN LANGUAGE             Y00600        BF               015000
+O53RU0W 3RU0W GCSESC C       E    50045490RUSSIAN:WRITTEN LANGUAGE            Y00600        BF               015000
+O53SP0S 3SP0S GCSESC C       E    50046469SPANISH:SPOKEN LANGUAGE             Y00585        BF               015000
+O53SP0W 3SP0W GCSESC C       E    50046433SPANISH:WRITTEN LANGUAGE            Y00585        BF               015000
+O53TD01 3TD01 GCSESC C       E    50045209ART & DESIGN:3D DESIGN              N00000        BF               020000
+O53TE01 3TE01 GCSESC C       E    50045209ART & DESIGN:TEXTILE DES.           N00000        BF               020000
+O53UR0S 3UR0S GCSESC C       E    50046263URDU:SPOKEN LANGUAGE                Y00585        BF               015000
+O53UR0W 3UR0W GCSESC C       E    50046275URDU:WRITTEN LANGUAGE               Y00585        BF               015000
+O54BI0  4BI0  GCSEFC C       E    60188169BIOLOGY                             Y04030        1F               000002
+O54BS0  4BS0  GCSEFC C       E            BUSINESS STUDIES                    Y04030        1F               000001
+O54CH0  4CH0  GCSEFC C       E    60188170CHEMISTRY                           Y04030        1F               000002
+O54CN0  4CN0  GCSEFC C       E    60188182CHINESE                             Y06230        1F               000003
+O54EA0A 4EA0  GCSEFC C       E    60188194ENGLISH LANGUAGE A OPTION A         Y04030        1F               000002
+O54EA0B 4EA0  GCSEFC C       E    60188194ENGLISH LANGUAGE A OPTION B         Y04030        1F               000003
+O54EA0BT4EA0  GCSEFC C       E    60188194ENGLISH LANGUAGE A OPTION BT        Y04030        1F               000003
+O54EA0CT4EA0  GCSEFC C       E    60188194ENGLISH LANGUAGE A OPTION CT        Y04030        1F               000003
+O54EA0DT4EA0  GCSEFC C       E    60188194ENGLISH LANGUAGE A OPTION DT        Y04030        1F               000003
+O54EB0  4EB0  GCSEFC C       E            ENGLISH LANGUAGE B                  Y04030        1F               000001
+O54EC0  4EC0  GCSEFC C       E            ECONOMICS                           Y04030        1F               000001
+O54ES0  4ES0  GCSEFC C       E0000        ENGLISH AS A SECOND LANG.           Y06230        1F       F       000002
+O54ES0A 4ES0  GCSEFC C       E0000        ENGLISH AS A SECOND LANG. OPTION A  Y08920        1F       F       000003
+O54ET0A 4ET0  GCSEFC C       E            ENGLISH LITERATURE OPTION A         Y04030        1F               000002
+O54ET0B 4ET0  GCSEFC C       E            ENGLISH LITERATURE OPTION B         Y04030        1F               000002
+O54ET0BT4ET0  GCSEFC C       E            ENGLISH LITERATURE OPTION BT        Y04030        1F               000002
+O54FR0  4FR0  GCSEFC C       E    60188212FRENCH                              Y06230        1F               000003
+O54GE0  4GE0  GCSEFC C       E    60188224GEOGRAPHY                           Y04030        1F               000001
+O54GL0  4GL0  GCSEFC C       E            GLOBAL CITIZENSHIP                  Y04030        1F               000001
+O54GN0  4GN0  GCSEFC C       E    60188236GERMAN                              Y06230        1F               000003
+O54HB0  4HB0  GCSEFC C       E            HUMAN BIOLOGY                       Y04030        1F               000002
+O54HI0  4HI0  GCSEFC C       E    60188248HISTORY                             Y04030        1F               000002
+O54HN0  4HN0  GCSEFC C       E            HINDI                               Y06230        1F               000001
+O54IT0  4IT0  GCSEFC C       E            ICT                                 Y04030        1F               000002
+O54MA0F 4MA0  GCSEFC C       E    6018825XMATHEMATICS A OPTION F              Y04030        1F               000002
+O54MA0H 4MA0  GCSEFC C       E    6018825XMATHEMATICS A OPTION H              Y04030        1F               000002
+O54MB0  4MB0  GCSEFC C       E            MATHEMATICS B                       Y04030        1F               000002
+O54PH0  4PH0  GCSEFC C       E    60188261PHYSICS                             Y04030        1F               000002
+O54PM0  4PM0  GCSEFC C       E            FURTHER PURE MATHEMATICS            Y04030        1F               000002
+O54RS0  4RS0  GCSEFC C       E            RELIGIOUS STUDIES                   Y04030        1F               000001
+O54SC0  4SC0  GCSEDA C       E    60188273SCIENCE (DOUBLE AWARD)              Y08060        115              000003
+O54SP0  4SP0  GCSEFC C       E    60188285SPANISH                             Y06230        1F               000003
+O54TA0  4TA0  GCSEFC C       E            TAMIL                               Y06230        1F               000001
+O55AB01 5AB01        UGCSEB  E0000        APPLIED BUSINESS 1                  Y01660        UQ               012001
+O55AB02 5AB02        UGCSEB  E0000        APPLIED BUSINESS 2                  Y01660        UQ               008001
+O55AB03 5AB03        UGCSEB  E0000        APPLIED BUSINESS 3                  Y01660        UQ               012001
+O55AB04 5AB04        UGCSEB  E0000        APPLIED BUSINESS 4                  Y01660        UQ               008001
+O55AD01 5AD01        UGCSEB  E0000        ART & DESIGN 1                      Y01920        UQ               012001
+O55AD02 5AD02        UGCSEB  E0000        ART & DESIGN 2                      Y01280        UQ               008001
+O55AM1F 5AM1F        UGCSEB  E0000        APPLICATION OF MATHS.1              Y01600        UQ               020001
+O55AM1H 5AM1H        UGCSEB  E0000        APPLICATION OF MATHS.1              Y01600        UQ               020001
+O55AM2F 5AM2F        UGCSEB  E0000        APPLICATION OF MATHS.2              Y01600        UQ               020001
+O55AM2H 5AM2H        UGCSEB  E0000        APPLICATION OF MATHS.2              Y01600        UQ               020001
+O55AR01 5AR01        UGCSEB  E0000        ARABIC 1                            Y00800        UQ               007001
+O55AR02 5AR02        UGCSEB  E0000        ARABIC 2                            Y00805        UQ               008001
+O55AR03 5AR03        UGCSEB  E0000        ARABIC 3                            Y00800        UQ               007001
+O55AR04 5AR04        UGCSEB  E0000        ARABIC 4                            Y00805        UQ               008001
+O55AS01 5AS01        UGCSEB  E0000        ASTRONOMY 1                         Y02420        UQ               015001
+O55AS02 5AS02        UGCSEB  E0000        ASTRONOMY 2                         Y00805        UQ               005001
+O55BI04 5BI04        UGCSEB  E0000        BIOLOGY CONTROLLED ASS.             Y00820        UQ               008001
+O55BI1F 5BI1F        UGCSEB  E0000        SCIENCE/BIOLOGY B1                  Y00865        UQ               008001
+O55BI1H 5BI1H        UGCSEB  E0000        SCIENCE/BIOLOGY B1                  Y00865        UQ               008001
+O55BI2F 5BI2F        UGCSEB  E0000        ADD.SCIENCE/BIOLOGY B2              Y00865        UQ               008001
+O55BI2H 5BI2H        UGCSEB  E0000        ADD.SCIENCE/BIOLOGY B2              Y00865        UQ               008001
+O55BI3F 5BI3F        UGCSEB  E0000        BIOLOGY B3                          Y00865        UQ               008001
+O55BI3H 5BI3H        UGCSEB  E0000        BIOLOGY B3                          Y00865        UQ               008001
+O55BS01 5BS01        UGCSEB  E0000        BUSINESS STUDIES 1                  Y01240        UQ               005001
+O55BS02 5BS02        UGCSEB  E0000        BUSINESS STUDIES 2                  Y00820        UQ               005001
+O55BS03 5BS03        UGCSEB  E0000        BUSINESS STUDIES 3                  Y01240        UQ               010001
+O55BS04 5BS04        UGCSEB  E0000        BUSINESS STUDIES 4                  Y01240        UQ               010001
+O55BS05 5BS05        UGCSEB  E0000        BUSINESS STUDIES 5                  Y01240        UQ               010001
+O55BS06 5BS06        UGCSEB  E0000        BUSINESS STUDIES 6                  Y01240        UQ               005001
+O55CH04 5CH04        UGCSEB  E0000        CHEMISTRY CONTROLLED ASS.           Y00820        UQ               008001
+O55CH1F 5CH1F        UGCSEB  E0000        SCIENCE/CHEMISTRY C1                Y00865        UQ               008001
+O55CH1H 5CH1H        UGCSEB  E0000        SCIENCE/CHEMISTRY C1                Y00865        UQ               008001
+O55CH2F 5CH2F        UGCSEB  E0000        ADD.SCIENCE/CHEMISTRY C2            Y00865        UQ               008001
+O55CH2H 5CH2H        UGCSEB  E0000        ADD.SCIENCE/CHEMISTRY C2            Y00865        UQ               008001
+O55CH3F 5CH3F        UGCSEB  E0000        CHEMISTRY C3                        Y00865        UQ               008001
+O55CH3H 5CH3H        UGCSEB  E0000        CHEMISTRY C3                        Y00865        UQ               008001
+O55CN01 5CN01        UGCSEB  E0000        CHINESE 1                           Y00800        UQ               006002
+O55CN02 5CN02        UGCSEB  E0000        CHINESE 2                           Y00775        UQ               009002
+O55CN03 5CN03        UGCSEB  E0000        CHINESE 3                           Y00800        UQ               006002
+O55CN04 5CN04        UGCSEB  E0000        CHINESE 4                           Y00775        UQ               009001
+O55CS01 5CS01        UGCSEB  E0000        CITIZENSHIP STUDIES 1               Y00690        UQ               006001
+O55CS02 5CS02        UGCSEB  E0000        CITIZENSHIP STUDIES 2               Y00690        UQ               009001
+O55CS03A5CS03        UGCSEB  E0000        CITIZENSHIP STUDIES 3 OPTION A      Y00800        UQ               006001
+O55CS03B5CS03        UGCSEB  E0000        CITIZENSHIP STUDIES 3 OPTION B      Y00800        UQ               006001
+O55CS03C5CS03        UGCSEB  E0000        CITIZENSHIP STUDIES 3 OPTION C      Y00800        UQ               006001
+O55CS04 5CS04        UGCSEB  E0000        CITIZENSHIP STUDIES 4               Y00800        UQ               009001
+O55DR01 5DR01        UGCSEB  E0000        DRAMA 1                             Y01000        UQ               009002
+O55DR02 5DR02        UGCSEB  E0000        DRAMA 2                             Y01000        UQ               009002
+O55DR03 5DR03        UGCSEB  E0000        DRAMA 3                             Y01300        UQ               012001
+O55EG01 5EG01        UGCSEB  E0000        ENGINEERING 1                       Y02215        UQ               009001
+O55EG02 5EG02        UGCSEB  E0000        ENGINEERING 2                       Y02215        UQ               009001
+O55EH01 5EH01        UGCSEB  E0000        ENGLISH/ENGLISH LANGUAGE1           Y00890        UQ               005001
+O55EH2F 5EH2F        UGCSEB  E0000        ENGLISH 2                           Y01420        UQ               015001
+O55EH2H 5EH2H        UGCSEB  E0000        ENGLISH 2                           Y01420        UQ               015001
+O55EH3A 5EH3A        UGCSEB  E0000        ENGLISH 3A                          Y00890        UQ               005001
+O55EH3B 5EH3B        UGCSEB  E0000        ENGLISH/ENG.LANG.3B S&L             Y00000        131              000001
+O55EM03A5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION A    Y02215        UQ               012001
+O55EM03B5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION B    Y02215        UQ               012001
+O55EM03C5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION C    Y02215        UQ               012001
+O55EM03D5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION D    Y02215        UQ               012001
+O55EM03E5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION E    Y02215        UQ               012001
+O55EM03F5EM03        UGCSEB  E0000        ENGINEERING/MANUFACT. 3 OPTION F    Y02215        UQ               012001
+O55EN2F 5EN2F        UGCSEB  E0000        ENGLISH LANGUAGE 2                  Y01420        UQ               015001
+O55EN2H 5EN2H        UGCSEB  E0000        ENGLISH LANGUAGE 2                  Y01420        UQ               015001
+O55EN3A 5EN3A        UGCSEB  E0000        ENGLISH LANGUAGE 3A                 Y00890        UQ               005001
+O55EP01 5EP01        UGCSEB  E0000        DESIGN & TECH.ELEC.PROD.1           Y01700        UQ               012001
+O55EP02 5EP02        UGCSEB  E0000        DESIGN & TECH.ELEC.PROD.2           Y01450        UQ               008001
+O55FA01 5FA01        UGCSEB  E0000        ART & DESIGN:FINE ART 1             Y01920        UQ               012001
+O55FA02 5FA02        UGCSEB  E0000        ART & DESIGN:FINE ART 2             Y01280        UQ               008001
+O55FA03 5FA03        UGCSEB  E0000        ART & DESIGN:FINE ART 3             Y01125        UQ               012001
+O55FA04 5FA04        UGCSEB  E0000        ART & DESIGN:FINE ART 4             Y01125        UQ               008001
+O55FR01 5FR01        UGCSEB  E0000        FRENCH 1                            Y00800        UQ               006002
+O55FR02 5FR02        UGCSEB  E0000        FRENCH 2                            Y00805        UQ               009002
+O55FR03 5FR03        UGCSEB  E0000        FRENCH 3                            Y00800        UQ               006002
+O55FR04 5FR04        UGCSEB  E0000        FRENCH 4                            Y00805        UQ               009001
+O55FT01 5FT01        UGCSEB  E0000        DESIGN & TECH.FOOD TECH.1           Y01700        UQ               012001
+O55FT02 5FT02        UGCSEB  E0000        DESIGN & TECH.FOOD TECH.2           Y01450        UQ               008001
+O55GA04 5GA04        UGCSEB  E0000        GEOGRAPHY A4                        Y00825        UQ               010001
+O55GA1F 5GA1F        UGCSEB  E0000        GEOGRAPHY A1                        Y00825        UQ               010001
+O55GA1H 5GA1H        UGCSEB  E0000        GEOGRAPHY A1                        Y00825        UQ               010001
+O55GA2F 5GA2F        UGCSEB  E0000        GEOGRAPHY A2                        Y00825        UQ               010001
+O55GA2H 5GA2H        UGCSEB  E0000        GEOGRAPHY A2                        Y00825        UQ               010001
+O55GA3F 5GA3F        UGCSEB  E0000        GEOGRAPHY A3                        Y00825        UQ               010001
+O55GA3H 5GA3H        UGCSEB  E0000        GEOGRAPHY A3                        Y00825        UQ               010001
+O55GB04 5GB04        UGCSEB  E0000        GEOGRAPHY B4                        Y00825        UQ               010001
+O55GB1F 5GB1F        UGCSEB  E0000        GEOGRAPHY B1                        Y00825        UQ               010001
+O55GB1H 5GB1H        UGCSEB  E0000        GEOGRAPHY B1                        Y00825        UQ               010001
+O55GB2F 5GB2F        UGCSEB  E0000        GEOGRAPHY B2                        Y00825        UQ               010001
+O55GB2H 5GB2H        UGCSEB  E0000        GEOGRAPHY B2                        Y00825        UQ               010001
+O55GB3F 5GB3F        UGCSEB  E0000        GEOGRAPHY B3                        Y00825        UQ               010001
+O55GB3H 5GB3H        UGCSEB  E0000        GEOGRAPHY B3                        Y00825        UQ               010001
+O55GC01 5GC01        UGCSEB  E0000        ART & DESIGN:GRAPHICS 1             Y01920        UQ               012001
+O55GC02 5GC02        UGCSEB  E0000        ART & DESIGN:GRAPHICS 2             Y01280        UQ               008001
+O55GC03 5GC03        UGCSEB  E0000        ART & DESIGN:GRAPHICS 3             Y01125        UQ               012001
+O55GC04 5GC04        UGCSEB  E0000        ART & DESIGN:GRAPHICS 4             Y01125        UQ               008001
+O55GK01 5GK01        UGCSEB  E0000        GREEK 1                             Y00800        UQ               007001
+O55GK02 5GK02        UGCSEB  E0000        GREEK 2                             Y00805        UQ               008001
+O55GK03 5GK03        UGCSEB  E0000        GREEK 3                             Y00800        UQ               007001
+O55GK04 5GK04        UGCSEB  E0000        GREEK 4                             Y00805        UQ               008001
+O55GN01 5GN01        UGCSEB  E0000        GERMAN 1                            Y00800        UQ               006002
+O55GN02 5GN02        UGCSEB  E0000        GERMAN 2                            Y00805        UQ               009002
+O55GN03 5GN03        UGCSEB  E0000        GERMAN 3                            Y00800        UQ               006002
+O55GN04 5GN04        UGCSEB  E0000        GERMAN 4                            Y00805        UQ               009001
+O55GR01 5GR01        UGCSEB  E0000        DESIGN & TECH.GRAPHICS 1            Y01700        UQ               012001
+O55GR02 5GR02        UGCSEB  E0000        DESIGN & TECH.GRAPHICS 2            Y01450        UQ               008001
+O55HA01 5HA01        UGCSEB  E0000        HISTORY A1                          Y00825        UQ               010001
+O55HA02A5HA02        UGCSEB  E0000        HISTORY A2 OPTION A                 Y00825        UQ               010001
+O55HA02B5HA02        UGCSEB  E0000        HISTORY A2 OPTION B                 Y00825        UQ               010001
+O55HA02C5HA02        UGCSEB  E0000        HISTORY A2 OPTION C                 Y00825        UQ               010001
+O55HA03A5HA03        UGCSEB  E0000        HISTORY A3 OPTION A                 Y00825        UQ               010001
+O55HA03B5HA03        UGCSEB  E0000        HISTORY A3 OPTION B                 Y00825        UQ               010001
+O55HA03C5HA03        UGCSEB  E0000        HISTORY A3 OPTION C                 Y00825        UQ               010001
+O55HA04 5HA04        UGCSEB  E0000        HISTORY A4                          Y00825        UQ               010001
+O55HB01A5HB01        UGCSEB  E0000        HISTORY B1 OPTION A                 Y00825        UQ               010001
+O55HB01B5HB01        UGCSEB  E0000        HISTORY B1 OPTION B                 Y00825        UQ               010001
+O55HB01C5HB01        UGCSEB  E0000        HISTORY B1 OPTION C                 Y00825        UQ               010001
+O55HB02A5HB02        UGCSEB  E0000        HISTORY B2 OPTION A                 Y00825        UQ               010001
+O55HB02B5HB02        UGCSEB  E0000        HISTORY B2 OPTION B                 Y00825        UQ               010001
+O55HB02C5HB02        UGCSEB  E0000        HISTORY B2 OPTION C                 Y00825        UQ               010001
+O55HB03A5HB03        UGCSEB  E0000        HISTORY B3 OPTION A                 Y00825        UQ               010001
+O55HB03B5HB03        UGCSEB  E0000        HISTORY B3 OPTION B                 Y00825        UQ               010001
+O55HB03C5HB03        UGCSEB  E0000        HISTORY B3 OPTION C                 Y00825        UQ               010001
+O55HB04 5HB04        UGCSEB  E0000        HISTORY B4                          Y00825        UQ               010001
+O55HS01 5HS01        UGCSEB  E0000        HEALTH & SOCIAL CARE 1              Y01620        UQ               008001
+O55HS02 5HS02        UGCSEB  E0000        HEALTH & SOCIAL CARE 2              Y01620        UQ               012001
+O55HS03 5HS03        UGCSEB  E0000        HEALTH & SOCIAL CARE 3              Y01620        UQ               012001
+O55HS04 5HS04        UGCSEB  E0000        HEALTH & SOCIAL CARE 4              Y01620        UQ               008001
+O55IN01 5IN01        UGCSEB  E0000        ITALIAN 1                           Y00800        UQ               006002
+O55IN02 5IN02        UGCSEB  E0000        ITALIAN 2                           Y00805        UQ               009002
+O55IN03 5IN03        UGCSEB  E0000        ITALIAN 3                           Y00800        UQ               006002
+O55IN04 5IN04        UGCSEB  E0000        ITALIAN 4                           Y00805        UQ               009001
+O55IT01 5IT01        UGCSEB  E0000        ICT 1                               Y02300        UQ               008001
+O55IT02E5IT02        UGCSEB  E0000        ICT 2 OPTION E                      Y00950        UQ               012001
+O55IT02F5IT02        UGCSEB  E0000        ICT 2 OPTION F                      Y00950        UQ               012001
+O55IT03 5IT03        UGCSEB  E0000        ICT 3                               Y02300        UQ               008001
+O55IT04 5IT04        UGCSEB  E0000        ICT 4                               Y00950        UQ               012001
+O55JA01 5JA01        UGCSEB  E0000        JAPANESE 1                          Y00800        UQ               007001
+O55JA02 5JA02        UGCSEB  E0000        JAPANESE 2                          Y00805        UQ               008001
+O55JA03 5JA03        UGCSEB  E0000        JAPANESE 3                          Y00800        UQ               007001
+O55JA04 5JA04        UGCSEB  E0000        JAPANESE 4                          Y00805        UQ               008001
+O55LT01 5LT01        UGCSEB  E0000        LEISURE & TOURISM 1                 Y01620        UQ               006001
+O55LT02 5LT02        UGCSEB  E0000        LEISURE & TOURISM 2                 Y01620        UQ               009001
+O55LT03 5LT03        UGCSEB  E0000        LEISURE & TOURISM 3                 Y01620        UQ               006001
+O55LT04 5LT04        UGCSEB  E0000        LEISURE & TOURISM 4                 Y01620        UQ               009001
+O55MM1F 5MM1F        UGCSEB  E0000        METHODS IN MATHEMATICS 1            Y01600        UQ               020001
+O55MM1H 5MM1H        UGCSEB  E0000        METHODS IN MATHEMATICS 1            Y01600        UQ               020001
+O55MM2F 5MM2F        UGCSEB  E0000        METHODS IN MATHEMATICS 2            Y01600        UQ               020001
+O55MM2H 5MM2H        UGCSEB  E0000        METHODS IN MATHEMATICS 2            Y01600        UQ               020001
+O55MN01 5MN01        UGCSEB  E0000        MANUFACTURING 1                     Y02220        UQ               009001
+O55MN02 5MN02        UGCSEB  E0000        MANUFACTURING 2                     Y02220        UQ               009001
+O55MU01 5MU01        UGCSEB  E0000        MUSIC 1                             Y00900        UQ               009001
+O55MU02 5MU02        UGCSEB  E0000        MUSIC 2                             Y00900        UQ               009001
+O55MU03 5MU03        UGCSEB  E0000        MUSIC 3                             Y01300        UQ               012001
+O55PE01 5PE01        UGCSEB  E0000        PHYSICAL EDUCATION 1                Y01950        UQ               008001
+O55PE02 5PE02        UGCSEB  E0000        PHYSICAL EDUCATION 2                Y01300        UQ               012001
+O55PE03 5PE03        UGCSEB  E0000        PHYSICAL EDUCATION 3                Y01380        UQ               004001
+O55PE04 5PE04        UGCSEB  E0000        PHYSICAL EDUCATION 4                Y00900        UQ               006001
+O55PH04 5PH04        UGCSEB  E0000        PHYSICS CONTROLLED ASS.             Y00820        UQ               008001
+O55PH1F 5PH1F        UGCSEB  E0000        SCIENCE/PHYSICS P1                  Y00865        UQ               008001
+O55PH1H 5PH1H        UGCSEB  E0000        SCIENCE/PHYSICS P1                  Y00865        UQ               008001
+O55PH2F 5PH2F        UGCSEB  E0000        ADD.SCIENCE/PHYSICS P2              Y00865        UQ               008001
+O55PH2H 5PH2H        UGCSEB  E0000        ADD.SCIENCE/PHYSICS P2              Y00865        UQ               008001
+O55PH3F 5PH3F        UGCSEB  E0000        PHYSICS P3                          Y00865        UQ               008001
+O55PH3H 5PH3H        UGCSEB  E0000        PHYSICS P3                          Y00865        UQ               008001
+O55PS01 5PS01        UGCSEB  E0000        PSYCHOLOGY 1                        Y01610        UQ               008001
+O55PS02 5PS02        UGCSEB  E0000        PSYCHOLOGY 2                        Y01610        UQ               012001
+O55PY01 5PY01        UGCSEB  E0000        ART & DESIGN:PHOTOGRAPHY1           Y01920        UQ               012001
+O55PY02 5PY02        UGCSEB  E0000        ART & DESIGN:PHOTOGRAPHY2           Y01280        UQ               008001
+O55PY03 5PY03        UGCSEB  E0000        ART & DESIGN:PHOTOGRAPHY3           Y01125        UQ               012001
+O55PY04 5PY04        UGCSEB  E0000        ART & DESIGN:PHOTOGRAPHY4           Y01125        UQ               008001
+O55RM01 5RM01        UGCSEB  E0000        DESIGN & TECH.RMT 1                 Y01700        UQ               012001
+O55RM02 5RM02        UGCSEB  E0000        DESIGN & TECH.RMT 2                 Y01450        UQ               008001
+O55RS01 5RS01        UGCSEB  E0000        RELIGIOUS STUDIES 1                 Y01690        UQ               010001
+O55RS02 5RS02        UGCSEB  E0000        RELIGIOUS STUDIES 2                 Y01690        UQ               010001
+O55RS03 5RS03        UGCSEB  E0000        RELIGIOUS STUDIES 3                 Y01690        UQ               010001
+O55RS04 5RS04        UGCSEB  E0000        RELIGIOUS STUDIES 4                 Y01690        UQ               010001
+O55RS05 5RS05        UGCSEB  E0000        RELIGIOUS STUDIES 5                 Y01690        UQ               010001
+O55RS06 5RS06        UGCSEB  E0000        RELIGIOUS STUDIES 6                 Y01690        UQ               010001
+O55RS07 5RS07        UGCSEB  E0000        RELIGIOUS STUDIES 7                 Y01690        UQ               010001
+O55RS08 5RS08        UGCSEB  E0000        RELIGIOUS STUDIES 8                 Y01690        UQ               010001
+O55RS09 5RS09        UGCSEB  E0000        RELIGIOUS STUDIES 9                 Y01690        UQ               010001
+O55RS10 5RS10        UGCSEB  E0000        RELIGIOUS STUDIES 10                Y01690        UQ               010001
+O55RS11 5RS11        UGCSEB  E0000        RELIGIOUS STUDIES 11                Y01690        UQ               010001
+O55RS12 5RS12        UGCSEB  E0000        RELIGIOUS STUDIES 12                Y01690        UQ               010001
+O55RS13 5RS13        UGCSEB  E0000        RELIGIOUS STUDIES 13                Y01690        UQ               010001
+O55RS14 5RS14        UGCSEB  E0000        RELIGIOUS STUDIES 14                Y01690        UQ               010001
+O55RS15 5RS15        UGCSEB  E0000        RELIGIOUS STUDIES 15                Y01690        UQ               010001
+O55RS16 5RS16        UGCSEB  E0000        RELIGIOUS STUDIES 16                Y01690        UQ               010001
+O55RU01 5RU01        UGCSEB  E0000        RUSSIAN 1                           Y00800        UQ               007001
+O55RU02 5RU02        UGCSEB  E0000        RUSSIAN 2                           Y00805        UQ               008001
+O55RU03 5RU03        UGCSEB  E0000        RUSSIAN 3                           Y00800        UQ               007001
+O55RU04 5RU04        UGCSEB  E0000        RUSSIAN 4                           Y00805        UQ               008001
+O55SA04 5SA04        UGCSEB  E0000        ADD.SCI.CONTROLLED ASS.             Y00820        UQ               008001
+O55SC04 5SC04        UGCSEB  E0000        SCIENCE CONTROLLED ASS.             Y00820        UQ               008001
+O55SF04 5SF04        UGCSEB  E0000        FUR.ADD.SCI.CONTROL.ASS             Y00820        UQ               008001
+O55SP01 5SP01        UGCSEB  E0000        SPANISH 1                           Y00800        UQ               006002
+O55SP02 5SP02        UGCSEB  E0000        SPANISH 2                           Y00805        UQ               009002
+O55SP03 5SP03        UGCSEB  E0000        SPANISH 3                           Y00800        UQ               006002
+O55SP04 5SP04        UGCSEB  E0000        SPANISH 4                           Y00805        UQ               009001
+O55ST02 5ST02        UGCSEB  E0000        STATISTICS 2                        Y00850        UQ               005001
+O55ST1F 5ST1F        UGCSEB  E0000        STATISTICS 1                        Y02400        UQ               015001
+O55ST1H 5ST1H        UGCSEB  E0000        STATISTICS 1                        Y02400        UQ               015001
+O55TD01 5TD01        UGCSEB  E0000        ART & DESIGN:3D DESIGN 1            Y01920        UQ               012001
+O55TD02 5TD02        UGCSEB  E0000        ART & DESIGN:3D DESIGN 2            Y01280        UQ               008001
+O55TD03 5TD03        UGCSEB  E0000        ART & DESIGN:3D DESIGN 3            Y01125        UQ               012001
+O55TD04 5TD04        UGCSEB  E0000        ART & DESIGN:3D DESIGN 4            Y01125        UQ               008001
+O55TE01 5TE01        UGCSEB  E0000        ART & DESIGN:TEXTILE DES1           Y01920        UQ               012001
+O55TE02 5TE02        UGCSEB  E0000        ART & DESIGN:TEXTILE DES2           Y01280        UQ               008001
+O55TE03 5TE03        UGCSEB  E0000        ART & DESIGN:TEXTILE DES3           Y01125        UQ               012001
+O55TE04 5TE04        UGCSEB  E0000        ART & DESIGN:TEXTILE DES4           Y01125        UQ               008001
+O55TT01 5TT01        UGCSEB  E0000        DESIGN & TECH.TEXTILES 1            Y01700        UQ               012001
+O55TT02 5TT02        UGCSEB  E0000        DESIGN & TECH.TEXTILES 2            Y01450        UQ               008001
+O55UR01 5UR01        UGCSEB  E0000        URDU 1                              Y00800        UQ               006002
+O55UR02 5UR02        UGCSEB  E0000        URDU 2                              Y00805        UQ               009002
+O55UR03 5UR03        UGCSEB  E0000        URDU 3                              Y00800        UQ               006002
+O55UR04 5UR04        UGCSEB  E0000        URDU 4                              Y00805        UQ               009001
+O76G17_0000362031116                                                                                               
+O96G17_00003640000001                                                                                              

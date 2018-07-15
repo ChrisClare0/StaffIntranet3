@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/styles/StaffIntranet.Master" AutoEventWireup="true" CodeBehind="MasterPage1.master.cs" Inherits="DCGS_Staff_Intranet2.styles.MasterPage1" %>
+        
+        
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<div id="Servercontentleft" runat="server" style="float:left; width:615px; " >
+<asp:ContentPlaceHolder ID="ContentPlaceHolderLeft" runat="server"></asp:ContentPlaceHolder>
+</div>
+<div id="ServerContentright" runat="server" style="float:right; width:170px; " >
+<asp:ContentPlaceHolder ID="ContentPlaceHolderRight" runat="server"></asp:ContentPlaceHolder>
+</div>
+</asp:Content>

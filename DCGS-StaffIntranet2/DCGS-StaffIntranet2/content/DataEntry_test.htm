@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    <link href="../styles/Styles1.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <script type ="text/jscript" src="../Code/js/jquery-1.6.2.min.js"></script> 	
+
+    	<script language="javascript" type="text/javascript">
+    	    var url1 = "http://localhost:55617/WebSites/Service2.asmx/";
+    	    //var url1 = "https://internal.challoners.com/x/staff2/service2.asmx/";
+    	    $(document).ready(function() {
+    	    CC_SetupAjax();
+    	    $('#fred1').html="hello";
+  	        
+    	        CC_LoadSetList($('#SetList'));
+    	        $('#SetList').bind('change', SetList_onclick);
+    	        $('#Submit').bind('click', Submit_onclick);
+
+    	        //positioning...
+    	        $('#Label1').css({ position: 'absolute', top: 20, left: 0 });
+    	        var width1 = $('#Label1').width() + 10;
+    	        $('#SetList').css({ position: 'absolute', top: 20, left: width1 });
+    	        width1 += $('#SetList').width() + 80;
+    	        $('#Submit').css({ position: 'absolute', top: 20, left: width1 });
+    	        var height1 = $('#Submit').height() + 40;
+    	        $('#Table1').css({ position: 'absolute', top: height1, left: 10 });
+
+    	    })
+
+    	    function CC_SetupAjax() {
+    	        $.ajaxSetup({
+    	            type: "GET",
+    	            contentType: "application/json; charset=utf-8",
+    	            data: "{}",
+    	            dataType: "jsonp",
+    	            converters: { "json jsond": function(msg) { return msg.hasOwnProperty('d') ? msg.d : msg; } },
+    	            statusCode: { 500: function() { alert("Server Error 500") }, 404: function() { alert("Page Not Found 404"); } },
+    	            failure: function(msg) { alert(msg); }
+    	        });
+    	    };
+    	    
+    	    function CC_LoadSetList(SelectList) {
+    	        $.ajax({
+    	            url: url1 + "GetCurrentSetsForStaffAsSelect",
+    	            //url: "http://localhost:55617/WebSites/Service2.asmx/GetCurrentSetsForStaffAsSelect",
+    	            //url: "https://internal.challoners.com/x/staff2/service2.asmx/GetCurrentSetsForStaffAsSelect",
+    	            data: { StaffCode: JSON.stringify("CC") },
+    	            error: function(XHR, msg, OBJ) {alert("Ajax call failed" + msg); },
+    	            success: function(msg) {alert("Ajax call success" + msg);
+    	            $(SelectList).html($(SelectList).html() + $.parseJSON(msg.d));   
+    	            }
+    	        });
+    	    };
+    	    
+    	    function SetList_onclick() {
+    	        gp_id = $('#SetList').val();
+    	        $("#Table1 td.tableCell").remove();
+    	        $("#Table1 th.tableCell").remove();
+    	        $("#Table1 tr").remove();
+    	        if (gp_id != 'none') CC_LoadSetMembers(gp_id, $('#Table1'));
+    	    }
+
+    	    function CC_LoadSetMembers(Group_id, table) {
+    	        $.ajax({
+    	        url: url1 + "GetCurrentGroupMembers_DataItem",
+    	            data: { GroupId: JSON.stringify(Group_id), ResultType: JSON.stringify("5"), Months_previous: JSON.stringify("1") },
+    	            error: function(XHR, msg, OBJ) { alert("Ajax call failed" + msg); },
+    	            success: function(msg) {
+    	                var x = $.parseJSON(msg.d);
+    	                var rows = x.length;
+    	                var text = [];
+    	                var i = 0;
+    	                text[i++] = '<tr><th class="tableCell" col="0" row="0">GivenName</th>';
+    	                text[i++] = '<th class="tableCell" col="1" row="0">SurnameName</th>';
+    	                text[i++] = '<th class="tableCell" col="2" row="0">Adno</th>';
+    	                text[i++] = '<th class="tableCell" col="3" row="0">Exam Result (%)</th></tr>';
+    	                for (var r = 1; r < rows; r++) {
+    	                    text[i++] = '<tr>';
+    	                    text[i++] = '<td class="tableCell" col="0" row="' + r + '"  >' + x[r].m_GivenName + '</td><td class="tableCell" col="1" row="' + r + '"  >' + x[r].m_Surname + '</td><td class="tableCell" col="2" row="' + r + '"  >' + x[r].m_adno + '</td>';
+    	                    text[i++] = '<td class="tableCell" col="3" row="' + r + '"  ><input class="DataTableInput" col="3" row="' + r + '" width="30" StudentID="' + x[r].m_StudentId + '" value = "' + x[r].m_ExtraData + '"  /></td>';
+    	                    text[i++] = ' </tr>';
+    	                }
+    	                $(table).append(text.join(''));
+    	            }
+    	        });
+    	    };
+
+    	    
+    	    
+    	    function Submit_onclick() {
+    	        //going to send the input data in object array v
+    	        var v = []; //used for data submitted
+    	        var i = 0;
+    	        $('.DataTableInvalid').removeClass('DataTableInvalid');
+    	        $('.DataTableInput').each(function(n) {
+    	            var r = new Number(this.value);
+    	            v[i] = new Object;
+    	            v[i].value = this.value;
+    	            v[i].row = this.row;
+    	            v[i].col = this.col;
+    	            v[i].StudentID = this.StudentID;
+    	            if (this.value > 100) $(this).addClass("DataTableInvalid");
+    	            if (this.value < 0) $(this).addClass("DataTableInvalid");
+    	            if (isNaN(r)) $(this).addClass("DataTableInvalid");
+    	            i++;
+    	        });
+    	        var s = $('.DataTableInvalid').size();
+    	        if (s > 0) { alert("Please correct data that is invalid"); return; }
+    	        alert("about to make ajax call");
+
+    	        //make the ajax call to submit data....
+
+    	        $.ajax({
+    	        url: url1 + "SaveData",
+    	        data: { GroupId: JSON.stringify($('#SetList').val()),
+    	        GroupData: JSON.stringify(v), 
+    	        ResultType: JSON.stringify('5') },
+    	        error: function(XHR, msg, OBJ) { alert("in error return  " + url1 + "SaveData" + XHR); alert(msg); },
+    	        success: function(msg) {alert($.parseJSON(msg.d)); }
+    	        });
+    	    }
+
+	   </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <label  id="Label1" for="SelectStaffList">Select Set:</label>
+            <select id ="SetList"  name="SetList"><option value="none">none</option></select>
+            <table  id="Table1" class ="DataTable"></table>
+            <input  id="Submit" class ="button1style" type="button" value="Save Data"   />
+            <label  id="fred1" for="SelectStaffList">.......</label>
+        </div>     
+    </form>
+</body>
+</html>

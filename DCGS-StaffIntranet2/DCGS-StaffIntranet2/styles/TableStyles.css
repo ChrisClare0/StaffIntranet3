@@ -1,0 +1,53 @@
+﻿/* style for Results tables */
+.ResultsTbl  {border-collapse:collapse;font-size:small;}
+.ResultsTbl th{border: none ;background-color:#000000;color:#ffffff;}
+.ResultsTbl tr:nth-of-type(even){background-color:#f3f3f3;}/* stripes */
+.ResultsTbl tr:nth-of-type(odd){background-color:#d0d0d0;}
+
+/* style for Exams tables */
+.ExamsTbl  {border-collapse:collapse;font-size:small;}
+.ExamsTbl th{border: none ;}
+.ExamsTbl tr:nth-of-type(even){background-color:#f3f3f3;}/* stripes */
+.ExamsTbl tr:nth-of-type(odd){background-color:#d0d0d0;}
+
+/* Apply different styles for the timetables*/
+.TimetableTable {border-collapse:collapse;font-size:small;}
+.TimetableTable td:first-child{background-color:#d0d0d0;} 
+.TimetableTable th{background-color:#d0d0d0;color:#000000;} 
+.TimetableTable th{border: solid ;}
+.TimetableTable td{border: solid ;}
+.TimetableTable td{background-color:#f3f3f3;} 
+.TimetableTable .TimetableSplitPeriod {background-color:Aqua;}
+.TimetableSplitPeriod {background-color:Aqua;}
+.TimetableBookedPeriod {background-color:Green;}
+.TimetableTable .TimetableBookedPeriod {background-color:Lime;}
+#id2 {background-color:Aqua;}
+
+.EventsTable {border-collapse:collapse;font-size:small;}
+.EventsTable th{border: none ;background-color:#084c8d;color:#ffffff;}
+.EventsTable tr:nth-of-type(even){background-color:#eeeeef;}/* stripes */
+.EventsTable tr:nth-of-type(odd){background-color:#dddddd;}
+.EventsTable td,th {text-align: center;} 
+.EventsTable tr > td:first-child {text-align:left; }
+
+.CalendarHead {color:#084c8d;}
+.tableHighlight1 {background-color:#00ff00;}
+.tableHighlight2 {background-color:#00aa00;}
+.tableHighlight3 {}
+.tableHighlight4 {background-color:#aa0000;}
+.tableHighlight5 {background-color:#ff0000;}
+.tableAdditionalText {font-size:small; font-family:Arial; color:Gray;}
+
+.RadioButton1 {float: right;}
+
+.DataTableInput {width:30px;  }
+
+.DataTable td:first-child{background-color:#ddd;} 
+.DataTable th{background-color:#ddd;color:#000;} 
+.DataTable th{border: solid ; }
+.DataTable td{border: solid; border-color:#888  ;}
+.DataTable td{background-color:#f3f3f3;} 
+
+.DataTableInvalid {background-color: Lime;}
+
+.button1style {background-color:#f3f3f3;color:#000; outline-color:#888; outline-style:ridge; }

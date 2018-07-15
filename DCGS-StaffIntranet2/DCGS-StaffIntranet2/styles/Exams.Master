@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Exams.master.cs" Inherits="DCGS_Staff_Intranet2.styles.Exams" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder> 
+     <title>DCGS Staff Intranet Exams Master</title>
+    <link href="../styles/default1.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+<!--
+        function uberMenu(intElementId) {
+            document.getElementById('child_' + intElementId).style.display = document.getElementById('child_' + intElementId).style.display == 'none' ? '' : 'none';
+            document.getElementById('parent_' + intElementId).firstChild.className = document.getElementById('parent_' + intElementId).firstChild.className == 'parentclicked' ? '' : 'parentclicked';
+        }
+        //-->
+
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+        <div id="bannerExams"></div>
+        <div  id="BannerText" class ="dcgsNavbar"><asp:Label ID="Label_Banner"  runat="server" Text="DCGS Exams"></asp:Label></div>
+        <div id="navigation">
+<ul id="ubermenu">
+<li><a href="https://internal.challoners.com/x/admin/content/StartForm.aspx">Intranet Home</a></li>
+    <li><a href="../Exams/ExamsStart.aspx">Exams Home</a></li>
+    <li id="parent_0" class="parent" ><a href="#" onclick="uberMenu(0)">View Entries</a>
+    <ul id="child_0" style="DISPLAY:none " >
+        <li><a href="EntriesView.aspx?Type=Student">Student</a></li><br />
+        <li><a href="EntriesView.aspx?Type=Option">Option</a></li><br />
+        <li><a href="EntriesView.aspx?Type=Subject">Subject</a></li><br />
+        <li><a href="EntriesView.aspx?Type=Status">Status</a></li><br />
+    </ul>
+    </li>
+
+    <li id="parent_1" class="parent" ><a href="#" onclick="uberMenu(1)">Upload Entries</a>
+    <ul id="child_1" style="DISPLAY:none " >
+        <li><a href="UploadEntriesByCourse.aspx">By Course</a></li><br />
+        <li><a href="UploadStudentResits.aspx">Student Website</a></li><br />
+        <li><a href="UploadTextFile.aspx">Text File</a></li><br />
+    </ul>
+    </li>
+
+        <li id="parent_2" class="parent" ><a href="#" onclick="uberMenu(2)">Base Data</a>
+    <ul id="child_2" style="DISPLAY:none " >
+        <li><a href="BaseDataUpload.aspx">Upload</a></li><br />
+        <li><a href="BaseDataView.aspx">View</a></li><br />
+        <li><a href="BaseDataSetupRetakes.aspx">Setup for Retakes</a></li><br />
+         <li><a href="BaseDataCreateDCGS.aspx">Create DCGS Basedata</a></li><br />
+         <li><a href="BaseDataCheckComponents.aspx">Update from Basedata</a></li><br />
+    </ul>
+    </li>
+
+    
+        <li id="parent_3" class="parent" ><a href="#" onclick="uberMenu(3)">EDI Files</a>
+    <ul id="child_3" style="DISPLAY:none "  >
+        <li><a href="EDIOptions.aspx?CheckULN">Check UCI/ULN</a></li><br />
+        <li><a href="EDICreateEntryFile.aspx?Create">Create Entry File</a></li><br />
+
+    </ul>
+    </li>
+    
+            <li id="parent_4" class="parent" ><a href="#" onclick="uberMenu(4)">TimeTable</a>
+    <ul id="child_4" style="DISPLAY:none "  >
+        <li><a href="TimetableInitialize.aspx">Initialize</a></li><br />
+        <li><a href="TimetableSummary.aspx">Summary</a></li><br />
+            </ul>
+    </li>
+        
+        <li id="parent_5" class="parent" ><a href="#" onclick="uberMenu(5)">Components</a>
+            <ul id="child_5" style="DISPLAY:none "  >
+                <li><a href="UploadComponentResults.aspx">Upload Component Results</a></li><br />
+                <li><a href="EditTQMBoundaries.aspx">Edit TQM Data</a></li><br />
+                <li><a href="UploadComponentMaxScores.aspx">Edit Component Max</a></li><br />
+
+
+    </ul>
+    </li>
+
+            <li id="parent_6" class="parent" ><a href="#" onclick="uberMenu(6)">iSAMS Sync</a>
+            <ul id="child_6" style="DISPLAY:none "  >
+                <li><a href="iSAMSPullBaseData.aspx">Import BaseData</a></li><br />
+
+
+
+    </ul>
+    </li>
+
+    <li><a href="../content/Logout.aspx">Logout</a></li>
+
+    </ul>
+            
+            <br /> <br /><br /><br /><br /><br />
+                        <br /> <br /><br /><br /><br /><br />
+                        <br /> <br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br />
+            <br /><br /><br /><br />
+
+
+</div> 
+        <div id="content">
+        <div id="Servercontentleft" runat="server" style="float:left; width:815px; " >
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        </div>
+
+
+<div id="footer"  >
+<span id="logondetail"  ><asp:Label ID="Label2" runat="server"  Text=""></asp:Label>
+    <a href="../content/Logout.aspx" style="padding-left: 5px">Logout</a></span>
+    
+<span id="author" >coding by CC (2/2/2017)</span>
+
+
+
+
+</div>
+                    </div>
+    </form>
+</body>
+</html>

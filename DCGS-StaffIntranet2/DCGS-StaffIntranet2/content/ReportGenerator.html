@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head >
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../styles/default1.css" media="screen" rel="stylesheet" type="text/css" />
+    <style>
+#bannerReport {
+    background-image: url(../images/Report.jpg);
+    background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 150px;
+   
+        }
+.block {
+             margin-left: 2cm;
+        }
+ 
+.Navbar {
+    background-color: #173F7A;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    min-height: 20px;
+    color:white;
+    font-size:x-large;
+    text-indent:10px
+}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        window.onload = Setup;
+        var current = 0; var time = 0; var maxtime = 0;
+        function Setup() {
+
+            var w1 = document.getElementById("working")
+            //w1.style.display = 'none';
+        }
+        function ClearStatus() {
+            document.getElementById("Status1").value = "";
+            document.getElementById("Status2").value = "";
+            document.getElementById("Status3").value = "";
+            document.getElementById("TextArea1").value = "";
+            document.getElementById("TextArea1").style.display = "none";
+        }
+        function SetupURL(f,l,opt,callback) {
+            var url = "https://script.google.com/a/challoners.org/macros/s/AKfycby9_Hy8w4cITfOQWdtzfuS3vysrxXHsXRlDAcn2EYQ/exec?";
+            url += "callback="+callback;
+            url += "&SheetId=" + document.getElementById("Text1").value;
+            url += "&FirstRow=" + f;      
+            url += "&LastRow=" + l;
+            url += "&Option=" + opt;
+            //alert(url);
+            return url;
+        }
+
+        function Create() {
+            ClearStatus(); time = 0; maxtime = 0;
+            var FirstRow = document.getElementById("Text2").value;
+            var LastRow = 1 * document.getElementById("Text4").value + 1 * FirstRow;
+            current = 1 * FirstRow;
+            callGoogleScript(SetupURL(FirstRow, LastRow,1,"ctrlq"));
+        }
+
+
+
+  // Make an AJAX call to Google Script
+    function callGoogleScript(url) {
+    document.getElementById("Image1").style.display = "inline-block";
+    var request = $.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+    });
+  }
+
+        function ctrlq(e) {
+            document.getElementById("Image1").style.display = "none";
+      if (e.Status == "0") {
+          ClearStatus();
+          document.getElementById("Status1").value = "Call Failed:" + e.Error;
+      }
+      else {
+          var t = e.time * 1; if (t > maxtime) { maxtime = t; }
+          time += e.time * 1;//total
+          var LastRow = 1 * document.getElementById("Text3").value;
+          var inc = 1*document.getElementById("Text4").value;
+          current = 1*current  + inc * 1;
+          if (current < LastRow) { callGoogleScript(SetupURL(current, (current + inc), 1, "ctrlq")); }
+          document.getElementById("Status2").value = "Time so far:" + time + " sec.   Current iteration starts at " + (current);
+          document.getElementById("Status3").value = "Max time per iteration:" + maxtime + " sec";
+          if (current >= LastRow)
+          {
+              document.getElementById("Status2").value = "Total Time Taken:" + time + " sec.  ";
+              document.getElementById("Status1").value = "COMPLETED";
+              time = 0; maxtime = 0;
+          }
+      }
+  }
+
+
+  function CheckAll() {
+      ClearStatus();
+      document.getElementById("Status1").value = "Checking all pdfs exist in Holding folder..";
+      callGoogleScript(SetupURL(0,0,2,"cb2")); 
+  }
+  function cb2(e) {
+      document.getElementById("Image1").style.display = "none";
+      if (e.Status == "0") {
+          ClearStatus();
+          document.getElementById("Status1").value = "Call Failed:" + e.Error;
+      }
+      else {
+          document.getElementById("Status1").value = "COMPLETED";
+          document.getElementById("TextArea1").value = "The following are missing:      " + e.Missing;
+          document.getElementById("TextArea1").style.display = "inline-block";
+      }
+  }
+
+      function PublishSudents() {
+          ClearStatus(); time = 0; maxtime = 0;
+          if (confirm("Are you sure you want to publish the pdfs to the output folders?") == true)
+          {
+              document.getElementById("Status1").value = "Publishing .....";
+              var FirstRow = document.getElementById("Text2").value;
+              var LastRow = 1 * document.getElementById("Text4").value + 1 * FirstRow;
+              current = 1 * FirstRow;
+              callGoogleScript(SetupURL(FirstRow, LastRow,3, "cb3"));
+
+          } else { }
+      }
+
+      function cb3(e)
+      {
+          document.getElementById("Image1").style.display = "none";
+          if (e.Status == "0") {
+              ClearStatus();
+              document.getElementById("Status1").value = "Call Failed:" + e.Error;
+          }
+          else {
+              var t = e.time * 1; if (t > maxtime) { maxtime = t; }
+              time += e.time * 1;//total
+              time=Math.floor(time * 100) / 100;
+              var LastRow = 1 * document.getElementById("Text3").value;
+              var inc = 1 * document.getElementById("Text4").value;
+              current = 1 * current + inc * 1;
+              if (current < LastRow) { callGoogleScript(SetupURL(current, (current + inc),3,"cb3")); }
+              document.getElementById("Status2").value = "Time so far:" + time + " sec.   Current iteration starts at " + (current);
+              document.getElementById("Status3").value = "Max time per iteration:" + maxtime + " sec";
+              if (current >= LastRow) {
+                  document.getElementById("Status2").value = "Total Time Taken:" + time + " sec.  ";
+                  document.getElementById("Status1").value = "COMPLETED";
+                  time = 0; maxtime = 0;
+              }
+          }
+
+      }
+    </script>
+
+
+</head>
+<body>
+
+        <div id="bannerReport"></div>
+        <div id="BannerText" class="Navbar">Google Sheets Report Generator</div>
+             
+    <p >
+        <div id="status" class="block">
+            Status:
+            <img id="Image1" src="../images/loading.gif" style="display:none" alt="" width="50" height="50" />
+            <input id="Status1" type="text" disabled="disabled" size="60" />
+            <input id="Status2" type="text" disabled="disabled" size="50" />
+            <input id="Status3" type="text" disabled="disabled" size="50" />
+        </div><hr />
+
+        <div id="main" class="block">
+            <br />
+
+            <input onclick="Create()" id="Button_Create" type="button" value="Generate Grade Profiles pdfs for this report cycle" />
+            Generator Sheet ID:<input id="Text1" type="text" size="60" value="12xdRhUygfQz7P42k5aGVDK7wcDiqUC6F6Png43Yg2y8" />
+            First Row:<input id="Text2" type="text" value="2" size="5" />
+            Last Row:<input id="Text3" type="text" value="6" size="5" />
+            Increment:<input id="Text4" type="text" value=2 size="5" />
+
+        </div>
+    </p>
+
+
+    <br/><hr />
+    <div class="block">
+
+        <input onclick="CheckAll()" id="Button_PublishStaff" type="button" value="Check all pdfs exist in Holding Folder (prior to publishing)" />
+    </div>
+        <hr />
+    <div class="block">
+        <input onclick="PublishSudents()" id="Button_PublishStudents" type="button" value="Publish to Students Folder" />
+    </div>
+
+
+        <br /><br />
+
+        <textarea id="TextArea1" rows="5" cols="200"  style="display:none"></textarea>
+</body>
+</html>

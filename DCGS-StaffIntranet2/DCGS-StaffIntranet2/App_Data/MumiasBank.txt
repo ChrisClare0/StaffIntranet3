@@ -1,0 +1,11 @@
+Bank:  Equity bank of kenya
+
+Account: Gospel Springs Missions - Lubinu Church
+
+Account number:	0680168589870
+
+Swift Code:	EQBLKENA
+
+Bank code:	068
+
+Branch code:	068

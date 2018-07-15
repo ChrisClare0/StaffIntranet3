@@ -1,0 +1,351 @@
+
+.dcgsNavbar {
+    background-color: #173F7A;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    min-height: 20px;
+    width:992px;
+    color:white;
+    font-size:larger;
+    text-indent:10px
+}
+
+/* -------- Container Styling -------- */
+#container
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    text-align: left;
+	    padding: 0;
+	    margin-left: auto;
+         margin-right:auto;
+         width:1000px;
+	    background-color: #ffffff;
+	    position:relative;
+}
+/* -------- Columns Styling -------- */
+#columns
+{
+	width: 990px;
+	position: relative;
+	clear: both;
+	float: left;
+	overflow: hidden;
+	border-left: solid 1px #dddddd;
+	border-right: solid 1px #dddddd;
+	border-bottom: solid 1px #dddddd;
+	margin: 0;
+	padding: 0;
+	margin-top:0px;
+}
+/* ----------------------------------- */
+
+
+/* -------- Banner Styling -------- */
+#banner
+{
+	background-image: url(../images/dcgsBanner.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 1000px;
+}
+
+
+#bannerPhysics {
+    	background-image: url(../images/img_Physics.jpg);
+        background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 100px;
+    width: 992px;
+}
+
+#bannerExams {
+    	background-image: url(../images/img_Exams.jpg);
+        background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 100px;
+    width: 992px;
+}
+
+
+#banneroptions
+{
+    	background-image: url(../images/img_options.gif);
+        background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 100px;
+    width: 992px;
+}
+
+
+#banner h1
+{
+    display: none
+}
+/* -------------------------------- */ 
+
+/* -------- Breadcrumb Styling -------- */
+#breadcrumbs
+{
+	position: absolute;
+	left: 6px;
+	top: 145px;
+	text-align: left;
+	color: #17266b;
+	font-size:medium;
+	font-weight:bold;
+    background-color:#eeeeef
+}
+
+#breadcrumbs a
+{
+	color: #17266b;
+	text-decoration: none
+}
+
+#breadcrumbs a:hover
+{
+	text-decoration: underline
+}
+/* ------------------------------------ */
+
+
+
+/* -------- Navigation Styling -------- */
+#navigation 
+{
+	position: relative;
+	float: left;
+	width: 160px;
+	background-color: #eeeeef;
+	border-right: solid 1px #dddddd;
+	padding-bottom: 20px;
+	padding-top: 10px;
+    top: -1px;
+    left: -2px;
+}
+
+#navigation a
+{
+	color: #084c8d;
+	text-decoration: none
+}
+
+#navigation a:hover
+{
+	text-decoration: underline
+}
+	
+#navigation ul
+{
+	list-style: none;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+	padding: 0;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+#navigation ul li
+{
+	margin:0;
+	padding:0;
+	padding-left:20px;
+	background-image:url("../images/img_IconFadedRoundel.png");
+	background-repeat:no-repeat;
+	background-position: 0px 2px;
+}
+
+#navigation .block
+{
+	display: block;
+}
+
+#navigation .block li
+{
+	display: block;
+}
+
+#navigation ul ul
+{
+	padding-left: 2px;
+}
+
+#navigation ul ul li
+{
+	list-style: none; 
+	display: inline;
+	margin: 0 2px 0 0; 
+	padding: 0; 
+	font-size: 0.8em; 
+	font-weight: normal;
+	background-image: none;
+}
+
+#navigation .highlight
+{
+	background-image:url("../images/img_IconRoundel.png");
+}
+	
+#navigation .standard-highlight
+{
+	display: inline-block;
+	font-weight: bolder;
+}
+
+#navigation .standard
+{
+	display: inline-block;
+}
+/* ------------------------------------ */
+
+
+/* -------- Contact Styling -------- */
+#navigation #contact 
+{
+	vertical-align: text-bottom;
+	font-size: x-small;
+	color: gray;
+}
+
+#navigation #contact p
+{
+	vertical-align: text-bottom;
+	text-align: center;
+}
+/* -------- Contact Styling -------- */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "Trebuchet MS", sans-serif;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+body p
+{
+	font-family: Tahoma, Arial, "Trebuchet MS", sans-serif;
+	margin-left: 0;
+	margin-top: 4px;
+}
+
+
+/* -------- Content Styling -------- */
+#content 
+{
+    position: relative;
+	float: right;
+	width: 790px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right:33px;
+	padding-top: 10px;
+	padding-left:0px;
+	padding-right:0px;
+
+}
+
+#content p
+{
+	margin-right: 0px;
+	margin-left:10px;
+}
+
+#content li
+{
+	margin-right: 20px;
+	list-style-position: outside;
+	text-indent: 15px;
+	padding-bottom: 5px;
+}
+
+#content h2, h3, h4
+{
+	padding-top: 0px;
+}
+/* --------------------------------- */
+
+
+/* -------- Footer Styling -------- */
+
+#logondetail 
+{
+    clear: both;
+	background-color: #eee;
+	padding: 1em;
+	font-size:medium;
+	text-align: left;
+    position: absolute;
+    left: 10px;
+    width: 500px;
+    height: 5px;
+    bottom:9px;
+}
+
+#footer
+{
+	clear: both;
+	background-color: #eee;
+	padding: 1em;
+	font-size: small;
+    text-align: right;
+}
+
+#author 
+{
+    clear: both;
+	background-color: #eee;
+	padding: 1em;
+	font-size:x-small;
+	text-align: right;
+}
+
+/* -------------------------------- */
+
+
+
+.box
+{
+	border: solid 1px #dddddd;
+	background-color: #efefff;
+	margin: 10px 25px 10px 0px;
+	padding: 10px 10px 10px 10px;
+}
+
+.box h2, h3, h4
+{
+	margin: 0;
+	padding: 0;
+}
+
+.box dl
+{
+	margin: 10px 10px 10px 10px;
+}
+
+.Servercontentleft
+{
+    float:left;
+    width:600px;
+    font-size:small;
+}
+
+.Servercontentright
+{
+    float:right;
+    width:180px;
+    font-size:small;
+}
+#SmallText{ font-size:"x-small";}
+.NormalText {
+    font-family: Arial;
+    font-size: small;
+}
+

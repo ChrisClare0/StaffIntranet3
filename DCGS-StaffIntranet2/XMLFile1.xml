@@ -1,0 +1,695 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'>
+	<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic</id>
+	<updated>2015-04-22T14:05:58.000Z</updated>
+	<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+	<title type='text'>Staff Calendar</title>
+	<subtitle type='text'>Staff Calendar</subtitle>
+	<link rel='alternate' type='text/html' href='https://www.google.com/calendar/embed?src=challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com'/>
+	<link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic'/>
+	<link rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/batch'/>
+	<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic?max-results=25'/>
+	<link rel='next' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic?start-index=26&amp;max-results=25'/>
+	<author>
+		<name>David Atkinson</name>
+		<email>da@challoners.org</email>
+	</author>
+	<generator version='1.0' uri='http://www.google.com/calendar'>Google Calendar</generator>
+	<openSearch:totalResults>2107</openSearch:totalResults>
+	<openSearch:startIndex>1</openSearch:startIndex>
+	<openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+	<gCal:timezone value='Europe/London'/>
+	<gCal:timesCleaned value='0'/>
+	<gd:where valueString=''/>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/0rnttm62jov210updbn536auk8</id>
+		<published>2015-04-22T14:05:58.000Z</published>
+		<updated>2015-04-22T14:05:58.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 11 Humanities visit to Auschwitz Provisional 17 - 19 October</title>
+		<summary type='html'>
+			When: Sat Oct 17, 2015&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Sat Oct 17, 2015&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=MHJudHRtNjJqb3YyMTB1cGRibjUzNmF1azggY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/0rnttm62jov210updbn536auk8'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/tmgaudge29dhtp0eujntje8o2g</id>
+		<published>2015-04-21T11:37:41.000Z</published>
+		<updated>2015-04-21T12:07:15.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 6 Primary Enrichment Day</title>
+		<summary type='html'>
+			When: Thu Jun 11, 2015 9:15am to 3pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Thu Jun 11, 2015 9:15am to 3pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=dG1nYXVkZ2UyOWRodHAwZXVqbnRqZThvMmcgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/tmgaudge29dhtp0eujntje8o2g'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/h1laofg9dvfaacl4ltdd3vq0vg</id>
+		<published>2015-03-06T14:15:27.000Z</published>
+		<updated>2015-04-21T10:51:25.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 12 Geography Field visit to Swanage 29 February - 2 March </title>
+		<summary type='html'>
+			When: Mon Feb 29, 2016 8am to 8am&amp;nbsp;
+			GMT&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Feb 29, 2016 8am to 8am
+			GMT&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=aDFsYW9mZzlkdmZhYWNsNGx0ZGQzdnEwdmcgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/h1laofg9dvfaacl4ltdd3vq0vg'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/f0qpan6vjlt727aib7hhp7pntk</id>
+		<published>2015-04-21T10:44:36.000Z</published>
+		<updated>2015-04-21T10:44:37.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Parent Information evening for Swing Band Tour</title>
+		<summary type='html'>
+			When: Thu Apr 30, 2015 7:30pm to 8:30pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Studio, Tricia Adams
+			&lt;br&gt;Where: Studio
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Thu Apr 30, 2015 7:30pm to 8:30pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Studio, Tricia Adams
+			&lt;br /&gt;Where: Studio
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=ZjBxcGFuNnZqbHQ3MjdhaWI3aGhwN3BudGsgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/f0qpan6vjlt727aib7hhp7pntk'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/8jq657440ou1gmmvp8npq6jh8s</id>
+		<published>2015-02-02T14:33:09.000Z</published>
+		<updated>2015-04-21T10:09:42.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Activity Week Parent Information Briefing for Ridgeway visit</title>
+		<summary type='html'>
+			When: Tue Apr 21, 2015 7pm to 8pm&amp;nbsp;
+			BST&lt;br&gt;
+
+			&lt;br&gt;Where: LIC
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Tue Apr 21, 2015 7pm to 8pm
+			BST&lt;br /&gt;
+
+			&lt;br /&gt;Where: LIC
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=OGpxNjU3NDQwb3UxZ21tdnA4bnBxNmpoOHMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/8jq657440ou1gmmvp8npq6jh8s'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/m3fhadpnb1mb96fcgme7omomqs</id>
+		<published>2015-02-02T14:35:00.000Z</published>
+		<updated>2015-04-21T10:08:09.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Activity Week Parent Information Briefing for Plas y Brenin visit</title>
+		<summary type='html'>
+			When: Tue Apr 21, 2015 7pm to 8pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: L1
+			&lt;br&gt;Where: L1
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Tue Apr 21, 2015 7pm to 8pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: L1
+			&lt;br /&gt;Where: L1
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=bTNmaGFkcG5iMW1iOTZmY2dtZTdvbW9tcXMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/m3fhadpnb1mb96fcgme7omomqs'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/1hnrnfae3vhdna6pp4f5jfjqps</id>
+		<published>2015-04-21T09:23:00.000Z</published>
+		<updated>2015-04-21T09:23:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Astra Conference at Dr Challoner&amp;#39;s High School</title>
+		<summary type='html'>
+			When: Thu Jul 2, 2015 9:30am to 3:30pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Thu Jul 2, 2015 9:30am to 3:30pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=MWhucm5mYWUzdmhkbmE2cHA0ZjVqZmpxcHMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/1hnrnfae3vhdna6pp4f5jfjqps'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/25a2dcgs2btklkotp8jb4a835k</id>
+		<published>2015-03-23T11:47:59.000Z</published>
+		<updated>2015-04-20T13:23:56.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Chess Competition v Haberdashers&amp;#39; Aske&amp;#39;s School Provisional-event cancelled</title>
+		<summary type='html'>
+			When: Fri Apr 24, 2015 12am to 12am&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Fri Apr 24, 2015 12am to 12am
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=MjVhMmRjZ3MyYnRrbGtvdHA4amI0YTgzNWsgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/25a2dcgs2btklkotp8jb4a835k'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/d7r267njr9c7hhj95vjsl4sh5s</id>
+		<published>2015-04-17T13:37:39.000Z</published>
+		<updated>2015-04-17T13:37:39.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Football and Hockey Tour 2016 to Holland 28 March - 1 April Provisional</title>
+		<summary type='html'>
+			When: Mon Mar 28, 2016 6am to 6am&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Mar 28, 2016 6am to 6am
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=ZDdyMjY3bmpyOWM3aGhqOTV2anNsNHNoNXMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/d7r267njr9c7hhj95vjsl4sh5s'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/kpl3f5h4f8svvr9og9fpoo116g</id>
+		<published>2015-04-16T07:32:28.000Z</published>
+		<updated>2015-04-16T07:32:28.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 12 &amp;#39;Introducing Electronics&amp;#39; day for External Students</title>
+		<summary type='html'>
+			When: Mon Jun 15, 2015 9am to 3:45pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Jun 15, 2015 9am to 3:45pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=a3BsM2Y1aDRmOHN2dnI5b2c5ZnBvbzExNmcgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/kpl3f5h4f8svvr9og9fpoo116g'/>
+		<author>
+			<name>ta@challoners.org</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/uqfvm55soeuvbrvsmjh8v0mvk4</id>
+		<published>2015-03-06T14:13:37.000Z</published>
+		<updated>2015-04-15T11:42:07.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 9 Group 3 History visit to Battlefields 19 - 21 March</title>
+		<summary type='html'>
+			When: Sat Mar 19, 2016 6am to 6am&amp;nbsp;
+			GMT&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Sat Mar 19, 2016 6am to 6am
+			GMT&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=dXFmdm01NXNvZXV2YnJ2c21qaDh2MG12azQgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/uqfvm55soeuvbrvsmjh8v0mvk4'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/963polga9bf6jf0bb4d52vf0so</id>
+		<published>2015-03-06T14:12:44.000Z</published>
+		<updated>2015-04-15T11:41:40.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 9 Group 2 History visit to Battlefields 12 - 14 March</title>
+		<summary type='html'>
+			When: Sat Mar 12, 2016 6am to 6am&amp;nbsp;
+			GMT&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Sat Mar 12, 2016 6am to 6am
+			GMT&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=OTYzcG9sZ2E5YmY2amYwYmI0ZDUydmYwc28gY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/963polga9bf6jf0bb4d52vf0so'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/mj748ie0un4miijltjrph8apd4</id>
+		<published>2015-03-06T14:11:18.000Z</published>
+		<updated>2015-04-15T11:41:04.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 9 Group 1 History visit to Battlefields 5 - 7 March</title>
+		<summary type='html'>
+			When: Sat Mar 5, 2016 6am to 6am&amp;nbsp;
+			GMT&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Sat Mar 5, 2016 6am to 6am
+			GMT&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=bWo3NDhpZTB1bjRtaWlqbHRqcnBoOGFwZDQgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/mj748ie0un4miijltjrph8apd4'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/sin2012oigo78mscsro08e47sc</id>
+		<published>2015-04-15T11:17:41.000Z</published>
+		<updated>2015-04-15T11:17:41.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 7 visit to UKSA Group 1 (7P; 7R; 7T) 30 September-2 October</title>
+		<summary type='html'>
+			When: Wed Sep 30, 2015 8am to 4pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Wed Sep 30, 2015 8am to 4pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=c2luMjAxMm9pZ283OG1zY3NybzA4ZTQ3c2MgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/sin2012oigo78mscsro08e47sc'/>
+		<author>
+			<name>ta@challoners.org</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/qhlveb4msk9q6bnd0ibdsdjn0c</id>
+		<published>2015-04-15T11:17:12.000Z</published>
+		<updated>2015-04-15T11:17:12.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 7 visit to UKSA Group 1 (7F; 7H; 7N) 28 - 30 September</title>
+		<summary type='html'>
+			When: Mon Sep 28, 2015 8am to 4pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Sep 28, 2015 8am to 4pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=cWhsdmViNG1zazlxNmJuZDBpYmRzZGpuMGMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/qhlveb4msk9q6bnd0ibdsdjn0c'/>
+		<author>
+			<name>ta@challoners.org</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/2tatef486mde1tm2ecvc1nb028</id>
+		<published>2015-03-19T14:31:02.000Z</published>
+		<updated>2015-04-15T11:15:47.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 10 Drama visit to Performance of Everyman</title>
+		<summary type='html'>
+			When: Wed Jun 10, 2015 5pm to 10:30pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Wed Jun 10, 2015 5pm to 10:30pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=MnRhdGVmNDg2bWRlMXRtMmVjdmMxbmIwMjggY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/2tatef486mde1tm2ecvc1nb028'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/vfta6f9gl3ffdi772888geml54</id>
+		<published>2015-01-20T13:46:39.000Z</published>
+		<updated>2015-04-15T08:52:15.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>&amp;#39;New Year 7&amp;#39; Induction Day</title>
+		<summary type='html'>
+			When: Tue Jul 7, 2015 10am to 3pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Hall, Tricia Adams
+			&lt;br&gt;Where: Hall
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Tue Jul 7, 2015 10am to 3pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Hall, Tricia Adams
+			&lt;br /&gt;Where: Hall
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=dmZ0YTZmOWdsM2ZmZGk3NzI4ODhnZW1sNTQgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/vfta6f9gl3ffdi772888geml54'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/4f8gv1ajjm9b9r88pk6go42e9g</id>
+		<published>2015-02-27T12:19:59.000Z</published>
+		<updated>2015-04-15T08:50:57.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Friends Summer Event</title>
+		<summary type='html'>
+			When: Sat Apr 25, 2015 7pm to 12am&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Tricia Adams, Sports-Hall
+			&lt;br&gt;Where: Sports-Hall
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Sat Apr 25, 2015 7pm to 12am
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Tricia Adams, Sports-Hall
+			&lt;br /&gt;Where: Sports-Hall
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=NGY4Z3YxYWpqbTliOXI4OHBrNmdvNDJlOWcgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/4f8gv1ajjm9b9r88pk6go42e9g'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/vsagq1a8psksp48fa7d8becvts</id>
+		<published>2015-03-26T16:14:50.000Z</published>
+		<updated>2015-04-15T08:50:48.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Representative from Loughborough University in school to speak to students</title>
+		<summary type='html'>
+			When: Fri Apr 24, 2015 12:30pm to 1:30pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Tricia Adams, Library
+			&lt;br&gt;Where: Library
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Fri Apr 24, 2015 12:30pm to 1:30pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Tricia Adams, Library
+			&lt;br /&gt;Where: Library
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=dnNhZ3ExYThwc2tzcDQ4ZmE3ZDhiZWN2dHMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/vsagq1a8psksp48fa7d8becvts'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/8l14t7alb4r1g5hlfuilr4unk8</id>
+		<published>2015-02-02T14:30:19.000Z</published>
+		<updated>2015-04-15T08:50:26.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Activity Week Parent Information Briefing for Calshot visit</title>
+		<summary type='html'>
+			When: Wed Apr 15, 2015 7pm to 8pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Tricia Adams
+			&lt;br&gt;Where: Loarridge Centre
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Wed Apr 15, 2015 7pm to 8pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Tricia Adams
+			&lt;br /&gt;Where: Loarridge Centre
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=OGwxNHQ3YWxiNHIxZzVobGZ1aWxyNHVuazggY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/8l14t7alb4r1g5hlfuilr4unk8'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/ak09ijm80ome20al60q9asspa8</id>
+		<published>2015-04-14T10:41:21.000Z</published>
+		<updated>2015-04-14T10:41:47.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Parent Information evening for Namibia Presentation</title>
+		<summary type='html'>
+			When: Mon Apr 27, 2015 7pm to 9pm&amp;nbsp;
+			BST&lt;br&gt;
+			&lt;br&gt;Who: Library
+			&lt;br&gt;Where: Library
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Apr 27, 2015 7pm to 9pm
+			BST&lt;br /&gt;
+			&lt;br /&gt;Who: Library
+			&lt;br /&gt;Where: Library
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=YWswOWlqbTgwb21lMjBhbDYwcTlhc3NwYTggY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/ak09ijm80ome20al60q9asspa8'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/cul39jmoepsqpg0s8nnc08pc28</id>
+		<published>2015-04-14T10:04:53.000Z</published>
+		<updated>2015-04-14T10:04:53.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>#UKSA visit ALL week-NO other staff out this week#</title>
+		<summary type='html'>
+			When: Mon Sep 28, 2015&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Sep 28, 2015&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=Y3VsMzlqbW9lcHNxcGcwczhubmMwOHBjMjggY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/cul39jmoepsqpg0s8nnc08pc28'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/4fagir977apb2ffl4q1td9lqlo</id>
+		<published>2015-03-26T13:52:40.000Z</published>
+		<updated>2015-03-26T13:52:40.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>Year 11 Book Return day </title>
+		<summary type='html'>
+			When: Tue Jun 9, 2015 10:30am to 12pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Tue Jun 9, 2015 10:30am to 12pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=NGZhZ2lyOTc3YXBiMmZmbDRxMXRkOWxxbG8gY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/4fagir977apb2ffl4q1td9lqlo'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/1k5g8thb5sb5t33f71pm011vg0</id>
+		<published>2015-03-25T12:25:10.000Z</published>
+		<updated>2015-03-25T12:25:10.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>RPT Twilight Induction Session</title>
+		<summary type='html'>
+			When: Mon Jul 6, 2015 4pm to 6pm&amp;nbsp;
+			BST&lt;br&gt;
+
+			&lt;br&gt;Where: Learning Level
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Jul 6, 2015 4pm to 6pm
+			BST&lt;br /&gt;
+
+			&lt;br /&gt;Where: Learning Level
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=MWs1Zzh0aGI1c2I1dDMzZjcxcG0wMTF2ZzAgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/1k5g8thb5sb5t33f71pm011vg0'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/ptnr3utnrbmg8eoklmbamivgbs</id>
+		<published>2015-03-25T12:24:15.000Z</published>
+		<updated>2015-03-25T12:24:15.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/>
+		<title type='html'>DCGS RPT Induction Day</title>
+		<summary type='html'>
+			When: Mon Jul 6, 2015 9am to 4pm&amp;nbsp;
+			BST&lt;br&gt;
+
+
+			&lt;br&gt;Event Status: confirmed
+		</summary>
+		<content type='html'>
+			When: Mon Jul 6, 2015 9am to 4pm
+			BST&lt;br /&gt;
+
+
+			&lt;br /&gt;Event Status: confirmed
+		</content>
+		<link rel='alternate' type='text/html' href='https://www.google.com/calendar/event?eid=cHRucjN1dG5yYm1nOGVva2xtYmFtaXZnYnMgY2hhbGxvbmVycy5vcmdfZmVjaTc4aHI1bmw1ZGlsczR0aGNnNGxvdDRAZw' title='alternate'/>
+		<link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/challoners.org_feci78hr5nl5dils4thcg4lot4%40group.calendar.google.com/private-85fb073b5e78ff584fd6d3172a2f1a27/basic/ptnr3utnrbmg8eoklmbamivgbs'/>
+		<author>
+			<name>Tricia Adams</name>
+			<email>ta@challoners.org</email>
+		</author>
+	</entry>
+</feed>

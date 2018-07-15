@@ -1,0 +1,13 @@
+﻿body
+{
+}
+ul li{float:left; background: url("../images/tab-right.gif") no-repeat top right;}
+li a {display:block; padding:0 2em; line-height:2.5em;
+      background:url("../images/tab-left.gif") no-repeat top left;      
+      text-decoration:none;
+      color:#000;
+      float:left;
+}
+
+
+ul a:hover{ color:#333;}

@@ -1,0 +1,1034 @@
+Set	Board	Syllabus Code	Module code	Module Name																		
+13AR1	AQA	2200	2202B	Certification Art & Design (Fine Art) A2																		
+13AR1	AQA	2200	ARTB3	Fine Art - Unit 3																		
+13AR1	AQA	2200	ARTB4	Fine Art - Unit 4																		
+13BI1	OCR	H421	H421	Certification Biology A2																		
+13BI1	OCR	F214	F214	"Biology - COMMNCTN, HMSTSS & ENRGY"																		
+13BI1	OCR	F215	F215	"Biology - CONTROL, GENOMES & ENVRNMNT"																		
+13BI1	OCR	F216	F216	Biology - PRCTCL SKILLS IN BIOLOGY 2																		
+13BI2	OCR	H421	H421	Certification Biology A2																		
+13BI2	OCR	F214	F214	"Biology - COMMNCTN, HMSTSS & ENRGY"																		
+13BI2	OCR	F215	F215	"Biology - CONTROL, GENOMES & ENVRNMNT"																		
+13BI2	OCR	F216	F216	Biology - PRCTCL SKILLS IN BIOLOGY 2																		
+13BI3	OCR	H421	H421	Certification Biology A2																		
+13BI3	OCR	F214	F214	"Biology - COMMNCTN, HMSTSS & ENRGY"																		
+13BI3	OCR	F215	F215	"Biology - CONTROL, GENOMES & ENVRNMNT"																		
+13BI3	OCR	F216	F216	Biology - PRCTCL SKILLS IN BIOLOGY 2																		
+13BI4	OCR	H421	H421	Certification Biology A2																		
+13BI4	OCR	F214	F214	"Biology - COMMNCTN, HMSTSS & ENRGY"																		
+13BI4	OCR	F215	F215	"Biology - CONTROL, GENOMES & ENVRNMNT"																		
+13BI4	OCR	F216	F216	Biology - PRCTCL SKILLS IN BIOLOGY 2																		
+13CH1	Edexcel GCE	9CH01	9CH01	Certification Chemistry A2																		
+13CH1	Edexcel GCE	6CH04	6CH04	Chemistry - Unit 4																		
+13CH1	Edexcel GCE	6CH05	6CH05	Chemistry - Unit 5																		
+13CH1	Edexcel GCE	6CH06	6CH06A	Chemistry - Unit 6																		
+13CH2	Edexcel GCE	9CH01	9CH01	Certification Chemistry A2																		
+13CH2	Edexcel GCE	6CH04	6CH04	Chemistry - Unit 4																		
+13CH2	Edexcel GCE	6CH05	6CH05	Chemistry - Unit 5																		
+13CH2	Edexcel GCE	6CH06	6CH06A	Chemistry - Unit 6																		
+13CH3	Edexcel GCE	9CH01	9CH01	Certification Chemistry A2																		
+13CH3	Edexcel GCE	6CH04	6CH04	Chemistry - Unit 4																		
+13CH3	Edexcel GCE	6CH05	6CH05	Chemistry - Unit 5																		
+13CH3	Edexcel GCE	6CH06	6CH06A	Chemistry - Unit 6																		
+13CH4	Edexcel GCE	9CH01	9CH01	Certification Chemistry A2																		
+13CH4	Edexcel GCE	6CH04	6CH04	Chemistry - Unit 4																		
+13CH4	Edexcel GCE	6CH05	6CH05	Chemistry - Unit 5																		
+13CH4	Edexcel GCE	6CH06	6CH06A	Chemistry - Unit 6																		
+13CH5	Edexcel GCE	9CH01	9CH01	Certification Chemistry A2																		
+13CH5	Edexcel GCE	6CH04	6CH04	Chemistry - Unit 4																		
+13CH5	Edexcel GCE	6CH05	6CH05	Chemistry - Unit 5																		
+13CH5	Edexcel GCE	6CH06	6CH06A	Chemistry - Unit 6																		
+13EC1	AQA	2140	2141	Certification Economics A2																		
+13EC1	AQA	2140	ECON3	Economics - Unit 3																		
+13EC1	AQA	2140	ECON4	Economics - Unit 4																		
+13EC2	AQA	2140	2141	Certification Economics A2																		
+13EC2	AQA	2140	ECON3	Economics - Unit 3																		
+13EC2	AQA	2140	ECON4	Economics - Unit 4																		
+13EC3	AQA	2140	2141	Certification Economics A2																		
+13EC3	AQA	2140	ECON3	Economics - Unit 3																		
+13EC3	AQA	2140	ECON4	Economics - Unit 4																		
+13EL1	OCR	H471	H471	Certification English Literature A2																		
+13EL1	OCR	F663	F663	English Literature -  DRAMA & POETRY PRE-1800																		
+13EL1	OCR	F664	F664	English Literature - TEXTS IN TIME 																		
+13EL2	OCR	H471	H471	Certification English Literature A2																		
+13EL2	OCR	F663	F663	English Literature -  DRAMA & POETRY PRE-1800																		
+13EL2	OCR	F664	F664	English Literature - TEXTS IN TIME 																		
+13ET1	OCR	H465	H465	Certification Electronics A2																		
+13ET1	OCR	F614	F614	Electronics - ELECTRONIC CNTRL SYSTMS																		
+13ET1	OCR	F615	F615	Electronics -  COMMUNICATION SYSTEMS																		
+13ET1	OCR	F616	F616B	"Electronics - DSGN, BLD & INVST PMOD"																		
+13ET2	OCR	H465	H465	Certification Electronics A2																		
+13ET2	OCR	F614	F614	Electronics - ELECTRONIC CNTRL SYSTMS																		
+13ET2	OCR	F615	F615	Electronics -  COMMUNICATION SYSTEMS																		
+13ET2	OCR	F616	F616B	"Electronics - DSGN, BLD & INVST PMOD"																		
+13FR1	OCR	H475	H475	Certification French A2																		
+13FR1	OCR	F703	F703A	French - SPKNG EXTRNL MRKD (OREP)																		
+13FR1	OCR	F704	F704	French - LISTENING/READING/WRITING 2																		
+13GE1	OCR	H483	H483	Certification Geography A2																		
+13GE1	OCR	F763	F763	Geography -  GLOBAL ISSUES  																		
+13GE1	OCR	F764	F764	Geography - GEOGRAPHICAL SKILLS																		
+13GE2	OCR	H483	H483	Certification Geography A2																		
+13GE2	OCR	F763	F763	Geography -  GLOBAL ISSUES  																		
+13GE2	OCR	F764	F764	Geography - GEOGRAPHICAL SKILLS																		
+13GE3	OCR	H483	H483	Certification Geography A2																		
+13GE3	OCR	F763	F763	Geography -  GLOBAL ISSUES  																		
+13GE3	OCR	F764	F764	Geography - GEOGRAPHICAL SKILLS																		
+13GE4	OCR	H483	H483	Certification Geography A2																		
+13GE4	OCR	F763	F763	Geography -  GLOBAL ISSUES  																		
+13GE4	OCR	F764	F764	Geography - GEOGRAPHICAL SKILLS																		
+13GM1	OCR	H476	H476	Certification German A2																		
+13GM1	OCR	F713	F713A	German - SPKNG EXTRNL MRKD (OREP)																		
+13GM1	OCR	F714	F714	German - LISTENING/READING/WRITING 2																		
+13GR1	AQA	2200	2203C	Certification Art & Design (Graphic Communication) A2																		
+13GR1	AQA	2200	ARTC3	Graphic Communication - Unit 3																		
+13GR1	AQA	2200	ARTC4	Graphic Communication - Unit 4																		
+13HI1	Edexcel GCE	9HI01	9HI01	Certification History A2																		
+13HI1	Edexcel GCE	6HI03	6HI03C	History - Unit 3 Option C																		
+13HI1	Edexcel GCE	6HI04	6HI04	History - Unit 4																		
+13HI2	Edexcel GCE	9HI01	9HI01	Certification History A2																		
+13HI2	Edexcel GCE	6HI03	6HI03C	History - Unit 3 Option C																		
+13HI2	Edexcel GCE	6HI04	6HI04	History - Unit 4																		
+13HI3	Edexcel GCE	9HI01	9HI01	Certification History A2																		
+13HI3	Edexcel GCE	6HI03	6HI03C	History - Unit 3 Option C																		
+13HI3	Edexcel GCE	6HI04	6HI04	History - Unit 4																		
+13MU1	Edexcel GCE	9MU01	9MU01	Certification Music A2																		
+13MU1	Edexcel GCE	6MU04	6MU04	Music - Unit 4 (Extended Performance)																		
+13MU1	Edexcel GCE	6MU05	6MU05	Music - Unit 5 (Composition & Technical Study)																		
+13MU1	Edexcel GCE	6MU06	6MU06	Music - Unit 6 (Further Musical Understanding)																		
+13PE1	AQA	2580	2581	Certification Physical Education A2																		
+13PE1	AQA	2580	PHED3	Physical Education - Unit 3																		
+13PE1	AQA	2580	PHED4	Physical Education - Unit 4																		
+13PH1	AQA	2450	2451	Certification Physics A A2																		
+13PH1	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH1	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PH2	AQA	2450	2451	Certification Physics A A2																		
+13PH2	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH2	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PH3	AQA	2450	2451	Certification Physics A A2																		
+13PH3	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH3	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PH4	AQA	2450	2451	Certification Physics A A2																		
+13PH4	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH4	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PH5	AQA	2450	2451	Certification Physics A A2																		
+13PH5	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH5	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PH6	AQA	2450	2451	Certification Physics A A2																		
+13PH6	AQA	2450	PHYA4	Physics A - Unit 4																		
+13PH6	AQA	2450	PHA6T	Physics A - Unit 6																		
+13PO1	Edexcel GCE	9GP01	9GP01	Certification Govt & Politics A2																		
+13PO1	Edexcel GCE	6GP03	6GP03C	Govt & Politics - Unit 3 Option C																		
+13PO1	Edexcel GCE	6GP04	6GP04C	Govt & Politics - Unit 4 Option C																		
+13PO2	Edexcel GCE	9GP01	9GP01	Certification Govt & Politics A2																		
+13PO2	Edexcel GCE	6GP03	6GP03C	Govt & Politics - Unit 3 Option C																		
+13PO2	Edexcel GCE	6GP04	6GP04C	Govt & Politics - Unit 4 Option C																		
+13RS1	OCR	H572	H572	Certification Religious Studies A2																		
+13RS1	OCR	G581	G581	Religious Studies -  PHLSPHY OF RELIGION																		
+13RS1	OCR	G582	G582	Religious Studies - RELIGIOUS ETHICS																		
+13RS2	OCR	H572	H572	Certification Religious Studies A2																		
+13RS2	OCR	G581	G581	Religious Studies -  PHLSPHY OF RELIGION																		
+13RS2	OCR	G582	G582	Religious Studies - RELIGIOUS ETHICS																		
+13SP1	OCR	H477	H477	Certification Spanish A2																		
+13SP1	OCR	F723	F723A	Spanish - SPKNG EXTRNL MRKD (OREP)																		
+13SP1	OCR	F724	F724	Spanish - LISTENING/READING/WRITING 2																		
+13TH1	Edexcel GCE	9DR01	9DR01	Certification Drama & Theatre Studies A2																		
+13TH1	Edexcel GCE	6DR03	6DR03	Drama & Theatre Studies - Unit 3																		
+13TH1	Edexcel GCE	6DR04	6DR04	Drama & Theatre Studies - Unit 4																		
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						
+																						

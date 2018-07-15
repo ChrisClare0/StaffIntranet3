@@ -1,0 +1,374 @@
+S16A17_416A17BWJEC      14                   
+S36A17_416A17003                             
+S50047   MATHEMATICS                         
+S50048   FURTHER MATHEMATICS                 
+S50049   PURE MATHEMATICS                    
+S50970   MATHEMATICS                         
+S50971   FURTHER MATHEMATICS                 
+S50972   PURE MATHEMATICS                    
+S50973   MATHEMATICS C1                      
+S50974   MATHEMATICS C2                      
+S50975   MATHEMATICS C3                      
+S50976   MATHEMATICS C4                      
+S50977   MATHEMATICS FP1                     
+S50978   MATHEMATICS FP2                     
+S50979   MATHEMATICS FP3                     
+S50980   MATHEMATICS M1                      
+S50981   MATHEMATICS M2                      
+S50982   MATHEMATICS M3                      
+S50983   MATHEMATICS S1                      
+S50984   MATHEMATICS S2                      
+S50985   MATHEMATICS S3                      
+S51001   ART, CRAFT & DESIGN: ART 1          
+S51002   ART, CRAFT & DESIGN: ART 2          
+S51003   ART, CRAFT & DESIGN: ART 3          
+S51004   ART, CRAFT & DESIGN: ART 4          
+S51011   FINE ART: ART 1                     
+S51012   FINE ART: ART 2                     
+S51013   FINE ART: ART 3                     
+S51014   FINE ART: ART 4                     
+S51021   GRAPHIC COMMUNICATION: ART 1        
+S51022   GRAPHIC COMMUNICATION: ART 2        
+S51023   GRAPHIC COMMUNICATION: ART 3        
+S51024   GRAPHIC COMMUNICATION: ART 4        
+S51031   TEXTILE DESIGN: ART 1               
+S51032   TEXTILE DESIGN: ART 2               
+S51033   TEXTILE DESIGN: ART 3               
+S51034   TEXTILE DESIGN: ART 4               
+S51041   3D DESIGN: ART 1                    
+S51042   3D DESIGN: ART 2                    
+S51043   3D DESIGN: ART 3                    
+S51044   3D DESIGN: ART 4                    
+S51051   PHOTOGRAPHY: ART 1                  
+S51052   PHOTOGRAPHY: ART 2                  
+S51053   PHOTOGRAPHY: ART 3                  
+S51054   PHOTOGRAPHY: ART 4                  
+S51061   CRITICAL STUDIES: ART 1             
+S51062   CRITICAL STUDIES: ART 2             
+S51063   CRITICAL STUDIES: ART 3             
+S51064   CRITICAL STUDIES: ART 4             
+S51071   BIOLOGY BY1: BIOCHEMISTRY/CELLS     
+S51072   BIOLOGY (& HUMAN) BY2/HB2           
+S51073   BIOLOGY BY3: PRACTICAL              
+S51074   BIOLOGY (& HUMAN) BY4/HB4           
+S51075   BIOL. BY5:ENV./GENETICS/EVOLUTION   
+S51076   BIOLOGY BY6: PRACTICAL              
+S51081   BUSINESS STUDIES BS1 : FRAMEWORK    
+S51082   BUSINESS STUDIES BS2 : FUNCTIONS    
+S51083   BUSINESS ST.BS3 : DECISION-MAKING   
+S51084   BUSINESS ST.BS4:STRATEGY/PRACTICE   
+S51091   CHEMISTRY CH1: CHEMICAL CHANGE      
+S51092   CHEMISTRY CH2: PROP./STRUCT./BOND   
+S51093   CHEMISTRY CH3: PRACTICAL            
+S51094   CHEMISTRY CH4:ANALYSING/MOLECULES   
+S51095   CHEMISTRY CH5:PHYSICAL & INORGANIC  
+S51096   CHEMISTRY CH6: PRACTICAL            
+S51101   COMPUTING CG1: THEORY PAPER         
+S51102   COMPUTING CG2: EXTENDED TASK        
+S51103   COMPUTING CG3: THEORY PAPER         
+S51104   COMPUTING CG4:EXTENDED PROJECT      
+S51111   DESIGN & TECHNOLOGY DT1: EXAM       
+S51112   D&T-DT2: DESIGN & MAKE TASKS        
+S51113   DESIGN & TECHNOLOGY DT3: EXAM       
+S51114   D&T-DT4: MAJOR PROJECT              
+S51121   DRAMA DA1: PERFORMANCE WORKSHOP     
+S51122   DRAMA DA2: TEXT IN PERFORMANCE      
+S51123   DRAMA DA3: PERFORMANCE              
+S51124   DRAMA DA4: TEXT IN CONTEXT          
+S51131   ECONOMICS EC1: INTR. MICRO & MACRO  
+S51132   ECONOMICS EC2: THEORY & POLICY      
+S51133   ECONOMICS EC3: GLOBALISATION (I)    
+S51134   ECONOMICS EC4: GLOBALISATION (II)   
+S51141   ELECTRONICS ET1:DIGITAL & ANALOGUE  
+S51142   ELECTRONICS ET2:CIRCUITS & COMP.    
+S51143   ELECTRONICS ET3:PROJECT             
+S51144   ELECTRONICS ET4:COMMUNICATIONS      
+S51145   ELECTRONICS ET5:APPLICATIONS        
+S51146   ELECTRONICS ET6:DESIGN PROJECT      
+S51151   ENGLISH LANGUAGE LG1                
+S51152   ENGLISH LANGUAGE LG2                
+S51153   ENGLISH LANGUAGE LG3                
+S51154   ENGLISH LANGUAGE LG4                
+S51161   ENGLISH LANGUAGE & LITERATURE LL1   
+S51162   ENGLISH LANGUAGE & LITERATURE LL2   
+S51163   ENGLISH LANGUAGE & LITERATURE LL3   
+S51164   ENGLISH LANGUAGE & LITERATURE LL4   
+S51171   ENGLISH LITERATURE LT1              
+S51172   ENGLISH LITERATURE LT2              
+S51173   ENGLISH LITERATURE LT3              
+S51174   ENGLISH LITERATURE LT4              
+S51181   FILM STUDIES FM1: EXPLORING FILM    
+S51182   FILM ST. FM2: BRITISH/AMERICAN      
+S51183   FILM STUDIES FM3:PROJECT            
+S51184   FILM STUDIES FM4:ISSUES & DEBATES   
+S51191   FRENCH FN1: AS ORAL                 
+S51192   FRENCH FN2: LISTEN/READ/WRITING     
+S51193   FRENCH FN3: ORAL                    
+S51194   FRENCH FN4: LISTEN/READ/WRITING     
+S51201   GEOGRAPHY G1:PHYSICAL ENVIRONMENTS  
+S51202   GEOGRAPHY G2:HUMAN ENVIRONMENTS     
+S51203   GEOGRAPHY G3:CONTEMPORARY THEMES    
+S51204   GEOGRAPHY G4:SUSTAINABILITY         
+S51211   GEOLOGY GL1: FOUNDATION             
+S51212   GEOLOGY GL2: INVESTIGATIVE          
+S51213   GEOLOGY GL3: HUMAN ENVIRONMENT      
+S51214   GEOLOGY GL4: GEOLOGICAL RECORD      
+S51215   GEOLOGY GL5: GEOLOGICAL THEMES      
+S51216   GEOLOGY GL6: INVESTIGATIONS         
+S51221   GERMAN GN1 - AS ORAL                
+S51222   GERMAN GN2: LISTEN/READ/WRITING     
+S51223   GERMAN GN3 - ORAL                   
+S51224   GERMAN GN4: LISTEN/READ/WRITING     
+S51231   HISTORY HY1: AS PERIOD STUDY        
+S51232   HISTORY HY2: AS IN DEPTH STUDY      
+S51233   HISTORY HY3:INTERNAL ASSESSMENT     
+S51234   HISTORY HY4                         
+S51241   INFO. & COMMUNICATION TECH. IT1     
+S51242   INFO. & COMMUNICATION TECH. IT2     
+S51243   INFO. & COMMUNICATION TECH. IT3     
+S51244   INFO. & COMMUNICATION TECH. IT4     
+S51251   LAW LA1:LEGAL VALUES                
+S51252   LAW LA2:LEGAL REASONING             
+S51253   LAW LA3:SUBSTANTIVE LAW             
+S51254   LAW LA4: LAW IN CONTEXT             
+S51291   MEDIA STUDIES MS1: REPRESENTATIONS  
+S51292   MEDIA STUDIES MS2: PRODUCTION       
+S51293   MEDIA STUDIES MS3:INTERNAL ASSESS.  
+S51294   MEDIA ST.MS4:TEXT,INDUS.& AUDIENCE  
+S51301   MUSIC MU1: PERFORMING               
+S51302   MUSIC MU2: COMPOSING                
+S51303   MUSIC MU3: APPRAISING               
+S51304   MUSIC MU4: PERFORMING               
+S51305   MUSIC MU5: COMPOSING                
+S51306   MUSIC MU6: APPRAISING               
+S51311   PHYS. ED. PE1: IMPROVING PERF.      
+S51312   PHYS. ED. PE2: ACTIVE LIFESTYLES    
+S51313   PHYS. ED. PE3: INTERNAL ASSESSMENT  
+S51314   PHYS.ED.PE4:PERFORMANCE/PROVISION   
+S51321   PHYSICS PH1:MOTION ENERGY & CHARGE  
+S51322   PHYSICS PH2: WAVES & PARTICLES      
+S51323   PHYSICS PH3: AS PRACTICAL           
+S51324   PHYSICS PH4:OSCILLATIONS & FIELDS   
+S51325   PHYSICS PH5:ELECTROMAG.NUCLEI/OPT.  
+S51326   PHYSICS PH6:EXPERIMENTAL PHYSICS    
+S51331   PSYCHOLOGY PY1:APPROACHES IN PSYCH  
+S51332   PSYCHOLOGY PY2:CORE STUDIES         
+S51333   PSYCHOLOGY PY3:RESEARCH METHODS     
+S51334   PSYCHOLOGY PY4:CONTROVERSIES/TOPIC  
+S51341   RELIGIOUS STUDIES RS 1/2 CS         
+S51342   RELIGIOUS STUDIES RS 1/2 ETH        
+S51343   RELIGIOUS STUDIES RS 1/2 PHIL       
+S51344   RELIGIOUS STUDIES RS 1/2 BS         
+S51345   RELIGIOUS STUDIES RS 1/2 CHR        
+S51346   RELIGIOUS STUDIES RS 1/2 ER         
+S51347   RELIGIOUS STUDIES RS 1/2 WR         
+S51348   RELIGIOUS STUDIES RS3               
+S51349   RELIGIOUS STUDIES RS4               
+S51351   SOCIOLOGY SY1: ACQUIRING CULTURE    
+S51352   SOCIOLOGY SY2: UNDERSTANDING CULT.  
+S51353   SOCIOLOGY SY3: POWER AND CONTROL    
+S51354   SOCIOLOGY SY4: SOCIAL DIVISIONS     
+S51361   SPANISH SN1: AS ORAL                
+S51362   SPANISH SN2: LISTEN/READ/WRITING    
+S51363   SPANISH SN3: ORAL                   
+S51364   SPANISH SN4: LISTEN/READ/WRITING    
+S51381   WELSH SECOND LANGUAGE CA1           
+S51382   WELSH SECOND LANGUAGE CA2           
+S51383   WELSH SECOND LANGUAGE CA3           
+S51384   WELSH SECOND LANGUAGE CA4           
+S51385   WELSH SECOND LANGUAGE CA5           
+S51386   WELSH SECOND LANGUAGE CA6           
+S51391   WORLD DEVELOPMENT WD1: INTRO.       
+S51392   WORLD DEVELOPMENT WD2: PORTFOLIO    
+S51393   WORLD DEVELOPMENT WD3               
+S51394   WORLD DEVELOPMENT WD4               
+S51601   APPLIED BUSINESS ABUS1              
+S51602   APPLIED BUSINESS ABUS2              
+S51603   APPLIED BUSINESS ABUS3              
+S51604   APPLIED BUSINESS ABUS4              
+S51605   APPLIED BUSINESS ABUS5              
+S51606   APPLIED BUSINESS ABUS6              
+S51607   APPLIED BUSINESS ABUS7              
+S51608   APPLIED BUSINESS ABUS8              
+S51621   HEALTH & SOCIAL CARE: HSC1          
+S51622   HEALTH & SOCIAL CARE: HSC2          
+S51623   HEALTH & SOCIAL CARE: HSC3          
+S51624   HEALTH & SOCIAL CARE: HSC4          
+S51625   HEALTH & SOCIAL CARE: HSC5          
+S51626   HEALTH & SOCIAL CARE: HSC6          
+S51627   HEALTH & SOCIAL CARE: HSC7          
+S51628   HEALTH & SOCIAL CARE: HSC8          
+S51629   HEALTH & SOCIAL CARE: HSC9          
+S51630   HEALTH & SOCIAL CARE: HSC10         
+S51631   HEALTH & SOCIAL CARE: HSC11         
+S51632   HEALTH & SOCIAL CARE: HSC12         
+S51641   APPLIED ICT: AICT1                  
+S51642   APPLIED ICT: AICT2                  
+S51643   APPLIED ICT: AICT3                  
+S51644   APPLIED ICT: AICT4                  
+S51645   APPLIED ICT: AICT5                  
+S51646   APPLIED ICT: AICT6                  
+S51647   APPLIED ICT: AICT7                  
+S51648   APPLIED ICT: AICT8                  
+S51649   APPLIED ICT: AICT9                  
+S51661   APPLIED SCIENCE ASC1                
+S51662   APPLIED SCIENCE ASC2                
+S51663   APPLIED SCIENCE ASC3                
+S51664   APPLIED SCIENCE ASC4                
+S51665   APPLIED SCIENCE ASC5                
+S51666   APPLIED SCIENCE ASC6                
+S51667   APPLIED SCIENCE ASC7                
+S51668   APPLIED SCIENCE ASC8                
+S51669   APPLIED SCIENCE ASC9                
+S51681   TRAVEL & TOURISM TT1                
+S51682   TRAVEL & TOURISM TT2                
+S51683   TRAVEL & TOURISM TT3                
+S51684   TRAVEL & TOURISM TT4                
+S51685   TRAVEL & TOURISM TT5                
+S51686   TRAVEL & TOURISM TT6                
+S51687   TRAVEL & TOURISM TT7                
+S51688   TRAVEL & TOURISM TT8                
+S52001   ART, CRAFT AND DESIGN               
+S52011   ART & DESIGN:FINE ART               
+S52021   ART & DESIGN:GRAPHIC COMMUNICATION  
+S52031   ART & DESIGN:TEXTILE DESIGN         
+S52041   ART & DESIGN:3D DESIGN              
+S52051   ART & DESIGN:PHOTOGRAPHY            
+S52061   ART & DESIGN:CRITICAL STUDIES       
+S52071   BIOLOGY                             
+S52081   BUSINESS STUDIES                    
+S52091   CHEMISTRY                           
+S52101   COMPUTING                           
+S52111   DESIGN AND TECHNOLOGY               
+S52121   DRAMA AND THEATRE STUDIES           
+S52131   ECONOMICS                           
+S52141   ELECTRONICS                         
+S52151   ENGLISH LANGUAGE                    
+S52161   ENGLISH LANGUAGE AND LITERATURE     
+S52171   ENGLISH LITERATURE                  
+S52181   FILM STUDIES                        
+S52191   FRENCH                              
+S52201   GEOGRAPHY                           
+S52211   GEOLOGY                             
+S52221   GERMAN                              
+S52231   HISTORY                             
+S52241   INFORMATION & COMMUNICATION TECH.   
+S52251   LAW                                 
+S52291   MEDIA STUDIES                       
+S52301   MUSIC                               
+S52311   PHYSICAL EDUCATION                  
+S52321   PHYSICS                             
+S52331   PSYCHOLOGY                          
+S52341   RELIGIOUS STUDIES                   
+S52351   SOCIOLOGY                           
+S52361   SPANISH                             
+S52381   WELSH SECOND LANGUAGE               
+S52391   WORLD DEVELOPMENT                   
+S52601   APPLIED BUSINESS:SINGLE AWARD       
+S52602   APPLIED BUSINESS:DOUBLE AWARD       
+S52621   HEALTH & SOCIAL CARE:SINGLE AWARD   
+S52622   HEALTH & SOCIAL CARE:DOUBLE AWARD   
+S52641   APPLIED ICT:SINGLE AWARD            
+S52642   APPLIED ICT:DOUBLE AWARD            
+S52661   APPLIED SCIENCE                     
+S52681   TRAVEL AND TOURISM:SINGLE AWARD     
+S52682   TRAVEL AND TOURISM:DOUBLE AWARD     
+S53001   ART, CRAFT AND DESIGN               
+S53011   ART & DESIGN:FINE ART               
+S53021   ART & DESIGN:GRAPHIC COMMUNICATION  
+S53031   ART & DESIGN: TEXTILE DESIGN        
+S53041   ART & DESIGN:3D DESIGN              
+S53051   ART & DESIGN:PHOTOGRAPHY            
+S53061   ART & DESIGN:CRITICAL STUDIES       
+S53071   BIOLOGY                             
+S53081   BUSINESS STUDIES                    
+S53091   CHEMISTRY                           
+S53101   COMPUTING                           
+S53111   DESIGN AND TECHNOLOGY               
+S53121   DRAMA AND THEATRE STUDIES           
+S53131   ECONOMICS                           
+S53141   ELECTRONICS                         
+S53151   ENGLISH LANGUAGE                    
+S53161   ENGLISH LANGUAGE AND LITERATURE     
+S53171   ENGLISH LITERATURE                  
+S53181   FILM STUDIES                        
+S53191   FRENCH                              
+S53201   GEOGRAPHY                           
+S53211   GEOLOGY                             
+S53221   GERMAN                              
+S53231   HISTORY                             
+S53241   INFORMATION & COMMUNICATION TECH.   
+S53251   LAW                                 
+S53291   MEDIA STUDIES                       
+S53301   MUSIC                               
+S53311   PHYSICAL EDUCATION                  
+S53321   PHYSICS                             
+S53331   PSYCHOLOGY                          
+S53341   RELIGIOUS STUDIES                   
+S53351   SOCIOLOGY                           
+S53361   SPANISH                             
+S53381   WELSH SECOND LANGUAGE               
+S53391   WORLD DEVELOPMENT                   
+S53601   APPLIED BUSINESS:SINGLE AWARD       
+S53602   APPLIED BUSINESS:DOUBLE AWARD       
+S53621   HEALTH & SOCIAL CARE:SINGLE AWARD   
+S53622   HEALTH & SOCIAL CARE:DOUBLE AWARD   
+S53641   APPLIED ICT:SINGLE AWARD            
+S53642   APPLIED ICT:DOUBLE AWARD            
+S53661   APPLIED SCIENCE                     
+S53681   TRAVEL AND TOURISM:SINGLE AWARD     
+S53682   TRAVEL AND TOURISM:DOUBLE AWARD     
+S5A200QS Sociology A level                   
+S5A290QS Psychology A level                  
+S5A400QS Biology A level                     
+S5A410QS Chemistry A level                   
+S5A420QS Physics A level                     
+S5A500QS Computer Science A level            
+S5A510QS Business A level                    
+S5A520QS Economics A level                   
+S5A650QS A&D (Art Craft and Design) A level  
+S5A651QS A&D (Fine Art) A level              
+S5A652QS A&D (Critical & Contextual) A level 
+S5A653QS A&D (Textile Design) A level        
+S5A654QS A&D (Graphic Communication) A level 
+S5A655QS A&D (3D Design) A level             
+S5A656QS A&D (Photography) A level           
+S5A700QS English Language A level            
+S5A710QS English Language & Litera A level   
+S5A720QS English Literature A level          
+S5B110QS Geography AS                        
+S5B120PA Religious Studies - Christianity AS 
+S5B120PB Religious Studies - Islam AS        
+S5B120PC Religious Studies - Judaism AS      
+S5B120PD Religious Studies - Buddhism AS     
+S5B120PE Religious Studies - Hinduism AS     
+S5B120PF Religious Studies - Sikhism AS      
+S5B200QS Sociology AS                        
+S5B290QS Psychology AS                       
+S5B400QS Biology AS                          
+S5B410QS Chemistry AS                        
+S5B420QS Physics AS                          
+S5B500QS Computer Science AS                 
+S5B510QS Business AS                         
+S5B520QS Economics AS                        
+S5B550QS Physical Education AS               
+S5B650QS A&D (Art Craft and Design) AS       
+S5B651QS A&D (Fine Art) AS                   
+S5B652QS A&D (Critical and Contextual) AS    
+S5B653QS A&D (Textile Design) AS             
+S5B654QS A&D (Graphic Communication) AS      
+S5B655QS A&D (3D Design) AS                  
+S5B656QS A&D (Photography) AS                
+S5B660QS Music AS                            
+S5B690QS Drama and Theatre AS                
+S5B700QS English Language AS                 
+S5B710QS English Language & Literature AS    
+S5B720QS English Literature AS               
+S5B800PA French - Teacher Assessor AS        
+S5B800PB French - Visiting Assessor AS       
+S5B810PA Spanish - Teacher Assessor AS       
+S5B810PB Spanish - Visiting Assessor AS      
+S5B820PA German - Teacher Assessor AS        
+S5B820PB German - Visiting Assessor AS       
+S76A17_0000372221116                         
+S96A17_00003740000001                        

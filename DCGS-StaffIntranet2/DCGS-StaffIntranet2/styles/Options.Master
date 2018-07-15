@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Options.master.cs" Inherits="DCGS_Staff_Intranet2.styles.Options" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder> 
+     <title>DCGS Staff Options Code</title>
+    <link href="../styles/default1.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+<!--
+        function uberMenu(intElementId) {
+            document.getElementById('child_' + intElementId).style.display = document.getElementById('child_' + intElementId).style.display == 'none' ? '' : 'none';
+            document.getElementById('parent_' + intElementId).firstChild.className = document.getElementById('parent_' + intElementId).firstChild.className == 'parentclicked' ? '' : 'parentclicked';
+        }
+        //-->
+
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+        <div id="banneroptions"></div>
+        <div  id="BannerText" class ="dcgsNavbar"><asp:Label ID="Label_Banner"  runat="server" Text="DCGS Options Code"></asp:Label></div>
+
+        <div id="navigation">
+<ul id="ubermenu">
+<li><a href="https://internal.challoners.com/x/admin/content/StartForm.aspx">Intranet Home</a></li>
+    <li><a href="../content/options/optionsstart.aspx">Options Home</a></li>
+    <li id="parent_0" class="parent" ><a href="#" onclick="uberMenu(0)">Options</a>
+    <ul id="child_0" style="DISPLAY:none " >
+        <li><a href="EntriesView.aspx?Type=Student">Setup</a></li><br />
+        <li><a href="EntriesView.aspx?Type=Student">Process</a></li><br />
+
+    </ul>
+    </li>
+
+    <li id="parent_1" class="parent" ><a href="#" onclick="uberMenu(1)">Two</a>
+    <ul id="child_1" style="DISPLAY:none " >
+        <li><a href="UploadStudentResits.aspx">...1</a></li><br />
+        <li><a href="UploadTextFile.aspx">...2</a></li><br />
+    </ul>
+    </li>
+
+    
+        <li id="parent_3" class="parent" ><a href="#" onclick="uberMenu(3)">EDI Files</a>
+    <ul id="child_3" style="DISPLAY:none "  >
+        <li><a href="BaseDataUpload.aspx">Create Entry File</a></li><br />
+
+    </ul>
+    </li>
+    
+
+    <li><a href="../content/Logout.aspx">Logout</a></li>
+
+    </ul>
+            
+            <br /> <br /><br /><br /><br /><br />
+                        <br /> <br /><br /><br /><br /><br />
+                        <br /> <br /><br /><br /><br /><br /><br /><br />
+
+
+</div> 
+        <div id="content">
+        <div id="Servercontentleft" runat="server" style="float:left; width:815px; " >
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        </div>
+
+
+<div id="footer"  >
+<span id="logondetail"  ><asp:Label ID="Label2" runat="server"  Text=""></asp:Label>
+    <a href="../content/Logout.aspx" style="padding-left: 5px">Logout</a></span>
+    
+<span id="author" >coding by CC (2/6/2016)</span>
+
+
+
+
+</div>
+                    </div>
+    </form>
+</body>
+</html>

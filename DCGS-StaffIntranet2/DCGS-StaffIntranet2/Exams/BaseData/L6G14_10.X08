@@ -1,0 +1,384 @@
+L16G14_106G14BEDEXCEL   14
+L36G14_106G14008          
+L5KBI0  KBI0 1B           
+L5KBI0  KBI0 2B           
+L5KCH0  KCH0 1C           
+L5KCH0  KCH0 2C           
+L5KCN0  KCN0 01           
+L5KCN0  KCN0 02           
+L5KCN0  KCN0 03           
+L5KEA0  KEA0 01           
+L5KEA0  KEA0 02           
+L5KEA0  KEA0 03           
+L5KEA0T KEA0 01           
+L5KEA0T KEA0 02           
+L5KEA0T KEA0 03T          
+L5KET0  KET0 01           
+L5KET0  KET0 02           
+L5KFR0  KFR0 01           
+L5KFR0  KFR0 02           
+L5KFR0  KFR0 03           
+L5KGE0  KGE0 01           
+L5KGN0  KGN0 01           
+L5KGN0  KGN0 02           
+L5KGN0  KGN0 03           
+L5KHI0  KHI0 01           
+L5KHI0  KHI0 02           
+L5KMA0F KMA0 1F           
+L5KMA0F KMA0 2F           
+L5KMA0H KMA0 3H           
+L5KMA0H KMA0 4H           
+L5KPH0  KPH0 1P           
+L5KPH0  KPH0 2P           
+L5KSC0  KSC0 1B           
+L5KSC0  KSC0 1C           
+L5KSC0  KSC0 1P           
+L5KSP0  KSP0 01           
+L5KSP0  KSP0 02           
+L5KSP0  KSP0 03           
+L51MA0F 1MA0 1F           
+L51MA0F 1MA0 2F           
+L51MA0H 1MA0 1H           
+L51MA0H 1MA0 2H           
+L54AC0  4AC0 01           
+L54AR0  4AR0 01           
+L54AR0  4AR0 02           
+L54BE0  4BE0 01           
+L54BI0  4BI0 1B           
+L54BI0  4BI0 2B           
+L54BN0  4BN0 01           
+L54BN0  4BN0 02           
+L54BS0  4BS0 01           
+L54CA0  4CA0 01           
+L54CH0  4CH0 1C           
+L54CH0  4CH0 2C           
+L54CM0  4CM0 01           
+L54CN0  4CN0 01           
+L54CN0  4CN0 02           
+L54CN0  4CN0 03           
+L54EA0A 4EA0 01           
+L54EA0A 4EA0 02           
+L54EA0B 4EA0 01           
+L54EA0B 4EA0 03           
+L54EA0B 4EA0 04           
+L54EA0BT4EA0 01           
+L54EA0BT4EA0 03T          
+L54EA0BT4EA0 04T          
+L54EA0CT4EA0 01           
+L54EA0CT4EA0 03T          
+L54EA0CT4EA0 04           
+L54EA0DT4EA0 01           
+L54EA0DT4EA0 03           
+L54EA0DT4EA0 04T          
+L54EB0  4EB0 01           
+L54EC0  4EC0 01           
+L54ES0  4ES0 01           
+L54ES0  4ES0 02           
+L54ES0A 4ES0 01           
+L54ES0A 4ES0 02           
+L54ES0A 4ES0 03           
+L54ET0A 4ET0 01           
+L54ET0A 4ET0 02           
+L54ET0B 4ET0 01           
+L54ET0B 4ET0 03           
+L54ET0BT4ET0 01           
+L54ET0BT4ET0 03T          
+L54FA0  4FA0 01           
+L54FR0  4FR0 01           
+L54FR0  4FR0 02           
+L54FR0  4FR0 03           
+L54GD0  4GD0 01           
+L54GE0  4GE0 01           
+L54GL0  4GL0 01           
+L54GN0  4GN0 01           
+L54GN0  4GN0 02           
+L54GN0  4GN0 03           
+L54GU0  4GU0 01           
+L54HB0  4HB0 01           
+L54HB0  4HB0 02           
+L54HI0  4HI0 01           
+L54HI0  4HI0 02           
+L54HN0  4HN0 01           
+L54IS0  4IS0 01           
+L54IT0  4IT0 01           
+L54IT0  4IT0 02           
+L54MA0F 4MA0 1F           
+L54MA0F 4MA0 2F           
+L54MA0H 4MA0 3H           
+L54MA0H 4MA0 4H           
+L54MB0  4MB0 01           
+L54MB0  4MB0 02           
+L54MG0  4MG0 01           
+L54PA0  4PA0 01           
+L54PA0  4PA0 02           
+L54PH0  4PH0 1P           
+L54PH0  4PH0 2P           
+L54PM0  4PM0 01           
+L54PM0  4PM0 02           
+L54PY0  4PY0 01           
+L54RS0  4RS0 01           
+L54SC0  4SC0 1B           
+L54SC0  4SC0 1C           
+L54SC0  4SC0 1P           
+L54SI0  4SI0 01           
+L54SP0  4SP0 01           
+L54SP0  4SP0 02           
+L54SP0  4SP0 03           
+L54SW0  4SW0 01           
+L54TA0  4TA0 01           
+L54TE0  4TE0 01           
+L54TU0  4TU0 01           
+L54UR0  4UR0 01           
+L55AB01 5AB0101           
+L55AB02 5AB0201           
+L55AB03 5AB0301           
+L55AB04 5AB0401           
+L55AD01 5AD0101           
+L55AD02 5AD0201           
+L55AM1F 5AM1F01           
+L55AM1H 5AM1H01           
+L55AM2F 5AM2F01           
+L55AM2H 5AM2H01           
+L55AR01 5AR0101           
+L55AR02 5AR0201           
+L55AR03 5AR0301           
+L55AR04 5AR0401           
+L55AS01 5AS0101           
+L55AS02 5AS0201           
+L55BI04 5BI0401           
+L55BI1F 5BI1F01           
+L55BI1H 5BI1H01           
+L55BI2F 5BI2F01           
+L55BI2H 5BI2H01           
+L55BI3F 5BI3F01           
+L55BI3H 5BI3H01           
+L55BS01 5BS0101           
+L55BS02 5BS0201           
+L55BS03 5BS0301           
+L55BS04 5BS0401           
+L55BS05 5BS0501           
+L55BS06 5BS0601           
+L55CH04 5CH0401           
+L55CH1F 5CH1F01           
+L55CH1H 5CH1H01           
+L55CH2F 5CH2F01           
+L55CH2H 5CH2H01           
+L55CH3F 5CH3F01           
+L55CH3H 5CH3H01           
+L55CN01 5CN011F           
+L55CN01 5CN011H           
+L55CN02 5CN022A           
+L55CN02 5CN022B           
+L55CN03 5CN033F           
+L55CN03 5CN033H           
+L55CN04 5CN0401           
+L55CS01 5CS0101           
+L55CS02 5CS0201           
+L55CS03A5CS033A           
+L55CS03B5CS033B           
+L55CS03C5CS033C           
+L55CS04 5CS0401           
+L55DR01 5DR0101           
+L55DR01 5DR0102           
+L55DR02 5DR0201           
+L55DR02 5DR0202           
+L55DR03 5DR0301           
+L55ED01 5ED0101           
+L55ED02 5ED0201           
+L55ED03 5ED0301           
+L55EG01 5EG0101           
+L55EG02 5EG0201           
+L55EH01 5EH0101           
+L55EH2F 5EH2F01           
+L55EH2H 5EH2H01           
+L55EH3A 5EH3A01           
+L55EH3B 5EH3B01           
+L55EM03A5EM033A           
+L55EM03B5EM033B           
+L55EM03C5EM033C           
+L55EM03D5EM033D           
+L55EM03E5EM033E           
+L55EM03F5EM033F           
+L55EN2F 5EN2F01           
+L55EN2H 5EN2H01           
+L55EN3A 5EN3A01           
+L55EP01 5EP0101           
+L55EP02 5EP0201           
+L55ET03 5ET0301           
+L55ET1F 5ET1F01           
+L55ET1H 5ET1H01           
+L55ET2F 5ET2F01           
+L55ET2H 5ET2H01           
+L55FA01 5FA0101           
+L55FA02 5FA0201           
+L55FA03 5FA0301           
+L55FA04 5FA0401           
+L55FR01 5FR011F           
+L55FR01 5FR011H           
+L55FR02 5FR022A           
+L55FR02 5FR022B           
+L55FR03 5FR033F           
+L55FR03 5FR033H           
+L55FR04 5FR0401           
+L55FT01 5FT0101           
+L55FT02 5FT0201           
+L55GA04 5GA0401           
+L55GA1F 5GA1F01           
+L55GA1H 5GA1H01           
+L55GA2F 5GA2F01           
+L55GA2H 5GA2H01           
+L55GA3F 5GA3F01           
+L55GA3H 5GA3H01           
+L55GB04 5GB0401           
+L55GB1F 5GB1F01           
+L55GB1H 5GB1H01           
+L55GB2F 5GB2F01           
+L55GB2H 5GB2H01           
+L55GB3F 5GB3F01           
+L55GB3H 5GB3H01           
+L55GC01 5GC0101           
+L55GC02 5GC0201           
+L55GC03 5GC0301           
+L55GC04 5GC0401           
+L55GK01 5GK0101           
+L55GK02 5GK0201           
+L55GK03 5GK0301           
+L55GK04 5GK0401           
+L55GN01 5GN011F           
+L55GN01 5GN011H           
+L55GN02 5GN022A           
+L55GN02 5GN022B           
+L55GN03 5GN033F           
+L55GN03 5GN033H           
+L55GN04 5GN0401           
+L55GR01 5GR0101           
+L55GR02 5GR0201           
+L55HA01 5HA0101           
+L55HA02A5HA022A           
+L55HA02B5HA022B           
+L55HA02C5HA022C           
+L55HA03A5HA033A           
+L55HA03B5HA033B           
+L55HA03C5HA033C           
+L55HA04 5HA0401           
+L55HB01A5HB011A           
+L55HB01B5HB011B           
+L55HB01C5HB011C           
+L55HB02A5HB022A           
+L55HB02B5HB022B           
+L55HB02C5HB022C           
+L55HB03A5HB033A           
+L55HB03B5HB033B           
+L55HB03C5HB033C           
+L55HB03D5HB033D           
+L55HB04 5HB0401           
+L55HS01 5HS0101           
+L55HS02 5HS0201           
+L55HS03 5HS0301           
+L55HS04 5HS0401           
+L55IN01 5IN011F           
+L55IN01 5IN011H           
+L55IN02 5IN022A           
+L55IN02 5IN022B           
+L55IN03 5IN033F           
+L55IN03 5IN033H           
+L55IN04 5IN0401           
+L55IT01 5IT0101           
+L55IT02B5IT0202           
+L55IT02C5IT0203           
+L55IT03 5IT0301           
+L55IT04 5IT0401           
+L55JA01 5JA0101           
+L55JA02 5JA0201           
+L55JA03 5JA0301           
+L55JA04 5JA0401           
+L55LT01 5LT0101           
+L55LT02 5LT0201           
+L55LT03 5LT0301           
+L55LT04 5LT0401           
+L55MB1F 5MB1F01           
+L55MB1H 5MB1H01           
+L55MB2F 5MB2F01           
+L55MB2H 5MB2H01           
+L55MB3F 5MB3F01           
+L55MB3H 5MB3H01           
+L55MM1F 5MM1F01           
+L55MM1H 5MM1H01           
+L55MM2F 5MM2F01           
+L55MM2H 5MM2H01           
+L55MN01 5MN0101           
+L55MN02 5MN0201           
+L55MU01 5MU0101           
+L55MU02 5MU0201           
+L55MU03 5MU0301           
+L55PE01 5PE0101           
+L55PE02 5PE0201           
+L55PE03 5PE0301           
+L55PE04 5PE0401           
+L55PH04 5PH0401           
+L55PH1F 5PH1F01           
+L55PH1H 5PH1H01           
+L55PH2F 5PH2F01           
+L55PH2H 5PH2H01           
+L55PH3F 5PH3F01           
+L55PH3H 5PH3H01           
+L55PS01 5PS0101           
+L55PS02 5PS0201           
+L55PY01 5PY0101           
+L55PY02 5PY0201           
+L55PY03 5PY0301           
+L55PY04 5PY0401           
+L55RM01 5RM0101           
+L55RM02 5RM0201           
+L55RS01 5RS0101           
+L55RS02 5RS0201           
+L55RS03 5RS0301           
+L55RS04 5RS0401           
+L55RS05 5RS0501           
+L55RS06 5RS0601           
+L55RS07 5RS0701           
+L55RS08 5RS0801           
+L55RS09 5RS0901           
+L55RS10 5RS1001           
+L55RS11 5RS1101           
+L55RS12 5RS1201           
+L55RS13 5RS1301           
+L55RS14 5RS1401           
+L55RS15 5RS1501           
+L55RS16 5RS1601           
+L55RU01 5RU0101           
+L55RU02 5RU0201           
+L55RU03 5RU0301           
+L55RU04 5RU0401           
+L55SA04 5SA0401           
+L55SC04 5SC0401           
+L55SF04 5SF0401           
+L55SP01 5SP011F           
+L55SP01 5SP011H           
+L55SP02 5SP022A           
+L55SP02 5SP022B           
+L55SP03 5SP033F           
+L55SP03 5SP033H           
+L55SP04 5SP0401           
+L55ST02 5ST0201           
+L55ST1F 5ST1F01           
+L55ST1H 5ST1H01           
+L55TD01 5TD0101           
+L55TD02 5TD0201           
+L55TD03 5TD0301           
+L55TD04 5TD0401           
+L55TE01 5TE0101           
+L55TE02 5TE0201           
+L55TE03 5TE0301           
+L55TE04 5TE0401           
+L55TT01 5TT0101           
+L55TT02 5TT0201           
+L55UR01 5UR011F           
+L55UR01 5UR011H           
+L55UR02 5UR022A           
+L55UR02 5UR022B           
+L55UR03 5UR033F           
+L55UR03 5UR033H           
+L55UR04 5UR0401           
+L76G14_0000382090114      
+L96G14_00003840000001     

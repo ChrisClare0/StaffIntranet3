@@ -1,0 +1,869 @@
+O16A17_706A17BAQA    00114                                                                                         
+O36A17_706A17003                                                                                                   
+O51011  2010  GCE ASBC       EDC  50022520GCE ARCHAEOLOGY AS                  Y00000        BA               020000
+O51021  2020  GCE ASBC       EDB2B50022258GCE CLASSICAL CIVILISATION AS       Y00000        BA               020000
+O51031  2030  GCE ASBC       ERF4 50025946GCE GEOGRAPHY AS                    Y00000        BA               020000
+O51041  2040  GCE ASBC       EDB  50025399GCE HISTORY AS                      Y00000        BA               020000
+O51061  2060  GCE ASBC       EDD1 50025053GCE RELIGIOUS STUDIES AS            Y00005        BA               020000
+O51101  2100  GCE ASBC       EEE3150025909GCE CITIZENSHIP STUDIES AS          Y00000        BA               020000
+O51111  2110  GCE ASBC       EEE2350076905GCE ANTHROPOLOGY AS                 Y00000        BA               020000
+O51121  2120  GCE ASBC       EAK6 50023251GCE ACCOUNTING AS                   Y00000        BA               020000
+O51131  2130  GCE ASBC       EAA3 50022660GCE BUSINESS STUDIES AS             Y00000        BA               020000
+O51141  2140  GCE ASBC       EEB  50022027GCE ECONOMICS AS                    Y00000        BA               020000
+O51151  2150  GCE ASBC       EEA  50024814GCE GOVERNMENT AND POLITICS AS      Y00000        BA               020000
+O51161  2160  GCE ASBC       EEC1 5002324XGCE LAW AS                          Y00000        BA               020000
+O51176  2175  GCE ASBC       EDE1 60126802GCE PHILOSOPHY AS                   Y00000        BA               010000
+O51181  2180  GCE ASBC       EPK1 50024991GCE PSYCHOLOGY A AS                 Y00000        BA               020000
+O51186  2185  GCE ASBC       EPK1 50025429GCE PSYCHOLOGY B AS                 Y00000        BA               020000
+O51191  2190  GCE ASBC       EEE2 50022635GCE SOCIOLOGY AS                    Y00000        BA               020000
+O51201A 2200  GCE ASBC       EJA2 50026598GCE ART AND DESIGN AS               Y00000        BA               020000
+O51202B 2200  GCE ASBC       EJA2 50026598GCE ART AND DESIGN(FINE ART)AS      Y00000        BA               020000
+O51203C 2200  GCE ASBC       EJA2 50026598GCE ART & DES (GRAPHIC COMM)AS      Y00000        BA               020000
+O51204D 2200  GCE ASBC       EJA2 50026598GCE ART & DES (TEXTILE DES) AS      Y00000        BA               020000
+O51205E 2200  GCE ASBC       EJA2 50026598GCE ART & DESIGN (3D DESIGN)AS      Y00000        BA               020000
+O51206F 2200  GCE ASBC       EKJ1 50026598GCE ART AND DESIGN (PHOTO) AS       Y00000        BA               020000
+O51231  2230  GCE ASBC       ELB1 50022210GCE DANCE AS                        Y00000        BA               020000
+O51241  2240  GCE ASBC       ELC1150023500GCE DRAMA & THEATRE STUDIES AS      Y00000        BA               020000
+O51251  2250  GCE ASBC       EJA3350022271GCE HISTORY OF ART AS               Y00000        BA               020000
+O51271  2270  GCE ASBC       ELF1 50024498GCE MUSIC AS                        Y00000        BA               030000
+O51350A 1350  L3  B  C       E235060149450MATHEMATICAL STUDIES OPTION A       Y04495        1A                   02
+O51350B 1350  L3  B  C       E235060149450MATHEMATICAL STUDIES OPTION B       Y04495        1A                   02
+O51350C 1350  L3  B  C       E235060149450MATHEMATICAL STUDIES OPTION C       Y04495        1A                   02
+O51401  2400  GCE ASBC       EDE3 50026562GCE SCIENCE IN SOCIETY AS           Y00000        BA               020000
+O51406  2405  GCE ASBC       ERH4150023512GCE HUMAN BIOLOGY AS                Y00000        BA               030000
+O51411  2410  GCE ASBC       ERH3 50023524GCE BIOLOGY AS                      Y00000        BA               030000
+O51421  2420  GCE ASBC       ERD1 50026574GCE CHEMISTRY AS                    Y00000        BA               030000
+O51431  2430  GCE ASBC       ERC525002355XGCE ELECTRONICS AS                  Y00000        BA               030000
+O51441  2440  GCE ASBC       EQA3 50025211GCE ENVIRONMENTAL STUDIES AS        Y00000        BA               020000
+O51451  2450  GCE ASBC       ERC1 50025697GCE PHYSICS A AS                    Y00000        BA               030000
+O51456  2455  GCE ASBC       ERC1 50025727GCE PHYSICS B AS                    Y00000        BA               030000
+O51511  2510  GCE ASBC       ECK1 50025740GCE COMPUTING AS                    Y00000        BA               020000
+O51521  2520  GCE ASBC       ECJ  50024371GCE INFORMATION & COMM TECH AS      Y00000        BA               020000
+O51541  2540  GCE ASBC       ENH6 50022192GCE D&T:FOOD TECHNOLOGY AS          Y00000        BA               020000
+O51551  2550  GCE ASBC       EVF2 50022167GCE D&T: PRODUCT DES (3-D) AS       Y00000        BA               020000
+O51556  2555  GCE ASBC       EWA2 50022179GCE D&T:SYSTEMS & CON TECH AS       Y00000        BA               020000
+O51561  2560  GCE ASBC       EXA5A50022532GCE D&T: PRODUCT DES (TEX) AS       Y00000        BA               020000
+O51571  2570  GCE ASBC       EKA2 50022465GCE MEDIA STUDIES AS                Y00000        BA               020000
+O51581  2580  GCE ASBC       EMA1 50026422GCE PHYSICAL EDUCATION AS           Y00000        BA               020000
+O51626  2625  GCE ASBC       EKA1 5002243XGCE COMMUNICATION & CULTURE AS      Y00000        BA               020000
+O51636  2635  GCE ASBC       EFKB 50023196GCE BENGALI AS                      Y00000        BA               010000
+O51651  2650  GCE ASBC       EFKF 50022106GCE FRENCH AS                       Y00000        BA               020000
+O51661  2660  GCE ASBC       EFKG 50022076GCE GERMAN AS                       Y00000        BA               020000
+O51676  2675  GCE ASBC       EF1H 50023184GCE MODERN HEBREW AS                Y00000        BA               010000
+O51681  2680  GCE ASBC       EFKQ 50023172GCE PANJABI AS                      Y00000        BA               010000
+O51686  2685  GCE ASBC       EFKO 50023160GCE POLISH AS                       Y00000        BA               010000
+O51696  2695  GCE ASBC       EFKS 50022064GCE SPANISH AS                      Y00000        BA               020000
+O51701  2700  GCE ASBC       EFK2B50025077GCE ENGLISH LANGUAGE A AS           Y00000        BA               020000
+O51706  2705  GCE ASBC       EFK2B5002498XGCE ENGLISH LANGUAGE B AS           Y00000        BA               020000
+O51721  2720  GCE ASBC       EFK2A50026653GCE ENGLISH LANG & LIT A AS         Y00000        BA               020000
+O51726  2725  GCE ASBC       EFK2A50026434GCE ENGLISH LANG & LIT B AS         Y00000        BA               020000
+O51741  2740  GCE ASBC       EFC4 50025764GCE ENGLISH LITERATURE A AS         Y00000        BA               020000
+O51746  2745  GCE ASBC       EFC4 50024176GCE ENGLISH LITERATURE B AS         Y00000        BA               020000
+O51751  2750  GCE ASBC       EKC3 60077463GCE CREATIVE WRITING AS             Y00000        BA               020000
+O51761  2760  GCE ASBC       EEA3 50022222GCE GENERAL STUDIES A AS            Y00000        BA               020000
+O51766  2765  GCE ASBC       EEA3 50022428GCE GENERAL STUDIES B AS            Y00000        BA               020000
+O51806  2805  L3  B  C       EHC4260072696ENTERPRISE, EMPLOYABILITY & PF      Y00000        BA               020000
+O51821  2820  GCE ASBC       EPA1 60052594GCE HEALTH & SOCIAL CARE AS         Y00000        BA               020000
+O51822  2820  GCE ASDC       EPA1 60052582GCE HEALTH & SOC CARE AS DBL        Y00000        BC               040000
+O52011  2010  GCE A  C       E473050022556GCE ARCHAEOLOGY ADV                 Y00000        B4               040000
+O52021  2020  GCE A  C       E65305002226XGCE CLASSICAL CIVILISATION ADV      Y00000        B4               040000
+O52031  2030  GCE A  C       E391050025922GCE GEOGRAPHY ADV                   Y00000        B4               040000
+O52041  2040  GCE A  C       E401050025387GCE HISTORY ADV                     Y00000        B4               040000
+O52061  2060  GCE A  C       E461050025065GCE RELIGIOUS STUDIES ADV           Y00005        B4               040000
+O52101  2100  GCE A  C       E491050025867GCE CITIZENSHIP STUDIES ADV         Y00000        B4               040000
+O52111  2110  GCE A  C       E489250076917GCE ANTHROPOLOGY ADV                Y00000        B4               040000
+O52121  2120  GCE A  C       E741050023299GCE ACCOUNTING ADV                  Y00000        B4               040000
+O52131  2130  GCE A  C       E321050022490GCE BUSINESS STUDIES ADV            Y00000        B4               040000
+O52141  2140  GCE A  C       E441050022040GCE ECONOMICS ADV                   Y00000        B4               040000
+O52151  2150  GCE A  C       E483050024802GCE GOVERNMENT & POLITICS ADV       Y00000        B4               040000
+O52161  2160  GCE A  C       E477050023305GCE LAW ADV                         Y00000        B4               040000
+O52176  2175  GCE A  C       E479060126796GCE PHILOSOPHY ADV                  Y00000        B4               020000
+O52181  2180  GCE A  C       E485050025004GCE PSYCHOLOGY A ADV                Y00000        B4               040000
+O52186  2185  GCE A  C       E485050025417GCE PSYCHOLOGY B ADV                Y00000        B4               040000
+O52191  2190  GCE A  C       E489050022039GCE SOCIOLOGY ADV                   Y00000        B4               040000
+O52201A 2200  GCE A  C       E351050026604GCE ART AND DESIGN ADV              Y00000        B4               040000
+O52202B 2200  GCE A  C       E369050026604GCE ART & DESIGN(FINE ART) ADV      Y00000        B4               040000
+O52203C 2200  GCE A  C       E355050026604GCE ART & DES(GRAPHIC COMM)ADV      Y00000        B4               040000
+O52204D 2200  GCE A  C       E365050026604GCE ART & DES (TEXTILE DES)ADV      Y00000        B4               040000
+O52205E 2200  GCE A  C       E367050026604GCE ART & DESIGN(3D DESIGN)ADV      Y00000        B4               040000
+O52206F 2200  GCE A  C       E357050026604GCE ART AND DESIGN (PHOTO) ADV      Y00000        B4               040000
+O52231  2230  GCE A  C       E723050022209GCE DANCE ADV                       Y00000        B4               040000
+O52241  2240  GCE A  C       E52105002307XGCE DRAMA & THEATRE STDS ADV        Y00000        B4               040000
+O52251  2250  GCE A  C       E383050022246GCE HISTORY OF ART ADV              Y00000        B4               040000
+O52271  2270  GCE A  C       E701050024528GCE MUSIC ADV                       Y00000        B4               060000
+O52401  2400  GCE A  C       E191050025806GCE SCIENCE IN SOCIETY ADV          Y00000        B4               040000
+O52406  2405  GCE A  C       E101050023408GCE HUMAN BIOLOGY ADV               Y00000        B4               060000
+O52411  2410  GCE A  C       E101050023391GCE BIOLOGY ADV                     Y00000        B4               060000
+O52421  2420  GCE A  C       E111050026148GCE CHEMISTRY ADV                   Y00000        B4               060000
+O52431  2430  GCE A  C       E17305002341XGCE ELECTRONICS ADV                 Y00000        B4               060000
+O52441  2440  GCE A  C       E175050025132GCE ENVIRONMENTAL STUDIES ADV       Y00000        B4               040000
+O52451  2450  GCE A  C       E12105002615XGCE PHYSICS A ADV                   Y00000        B4               060000
+O52456  2455  GCE A  C       E121050025703GCE PHYSICS B ADV                   Y00000        B4               060000
+O52511  2510  GCE A  C       E261050025739GCE COMPUTING ADV                   Y00000        B4               040000
+O52521  2520  GCE A  C       E265050023494GCE ICT ADV                         Y00000        B4               040000
+O52541  2540  GCE A  C       E902050022180GCE D&T:FOOD TECHNOLOGY ADV         Y00000        B4               040000
+O52551  2550  GCE A  C       E908050022155GCE D&T: PRODUCT DES (3-D) ADV      Y00000        B4               040000
+O52556  2555  GCE A  C       E906050021862GCE D&T:SYSTEMS & CON TECH ADV      Y00000        B4               040000
+O52561  2560  GCE A  C       E905050022416GCE D&T: PRODUCT DES (TEX) ADV      Y00000        B4               040000
+O52571  2570  GCE A  C       E535050022453GCE MEDIA STUDIES ADV               Y00000        B4               040000
+O52581  2580  GCE A  C       E721050026392GCE PHYSICAL EDUCATION ADV          Y00000        B4               040000
+O52626  2625  GCE A  C       E531050022489GCE COMMUNICATION & CULT ADV        Y00000        B4               040000
+O52636  2635  GCE A  C       E593050023366GCE BENGALI ADV                     Y00000        B4               020000
+O52651  2650  GCE A  C       E56505002209XGCE FRENCH ADV                      Y00000        B4               040000
+O52661  2660  GCE A  C       E567050022088GCE GERMAN ADV                      Y00000        B4               040000
+O52676  2675  GCE A  C       E603050023354GCE MODERN HEBREW ADV               Y00000        B4               020000
+O52681  2680  GCE A  C       E605050023378GCE PANJABI ADV                     Y00000        B4               020000
+O52686  2685  GCE A  C       E60705002338XGCE POLISH ADV                      Y00000        B4               020000
+O52696  2695  GCE A  C       E575050022143GCE SPANISH ADV                     Y00000        B4               040000
+O52701  2700  GCE A  C       E503050024966GCE ENGLISH LANGUAGE A ADV          Y00000        B4               040000
+O52706  2705  GCE A  C       E503050024978GCE ENGLISH LANGUAGE B ADV          Y00000        B4               040000
+O52721  2720  GCE A  C       E501050026616GCE ENGLISH LANG & LIT A ADV        Y00000        B4               040000
+O52726  2725  GCE A  C       E501050025958GCE ENGLISH LANG & LIT B ADV        Y00000        B4               040000
+O52741  2740  GCE A  C       E511050025685GCE ENGLISH LITERATURE A ADV        Y00000        B4               040000
+O52746  2745  GCE A  C       E511050023123GCE ENGLISH LITERATURE B ADV        Y00000        B4               040000
+O52751  2750  GCE A  C       E523060077451GCE CREATIVE WRITING ADV            Y00000        B4               040000
+O52761  2760  GCE A  C       E781050021849GCE GENERAL STUDIES A ADV           Y00000        B4               040000
+O52766  2765  GCE A  C       E781050022234GCE GENERAL STUDIES B ADV           Y00000        B4               040000
+O52821  2820  GCE A  C       E000360052570GCE HEALTH & SOCIAL CARE ADV        Y00000        B4               040000
+O52822  2820  GCE DA C       E000360052569GCE HEALTH & SOC CARE ADV DBL       Y00000        B10              080000
+O54367  4367  FSKLL1 C       EHD4 50087034MATHEMATICS LEVEL 1                 Y02720        1N                   01
+O54368  4368  FSKLL2 C       EHD4 50087022MATHEMATICS LEVEL 2                 Y02720        1N                   01
+O54527  4527  FSKLL1 C       ECN1 5009029XINFO AND COMM TECH LEVEL 1          Y01770        1N                   01
+O54528  4528  FSKLL2 C       ECN1 50090306INFO AND COMM TECH LEVEL 2          Y01770        1N                   01
+O547201 4720         UFSKLL1 E            ENGLISH LEVEL 1 READING             Y00905        1N                   01
+O547201S4720         UFSKLL1 E            ENGLISH LEVEL 1 READING OS          Y00905        1N                   01
+O547202 4720         UFSKLL1 E            ENGLISH LEVEL 1 WRITING             Y00905        1N                   01
+O547202S4720         UFSKLL1 E            ENGLISH LEVEL 1 WRITING OS          Y00905        1N                   01
+O547203 4720         UFSKLL1 E            ENGLISH LEVEL 1 SPEAKING            Y00910        1N                   01
+O54721  4720  FSKLL1 C       EHD2 50087010ENGLISH LEVEL 1                     Y00000        1N                   00
+O547251 4725         UFSKLL2 E            ENGLISH LEVEL 2 READING             Y00905        1N                   01
+O547251S4725         UFSKLL2 E            ENGLISH LEVEL 2 READING OS          Y00905        1N                   01
+O547252 4725         UFSKLL2 E            ENGLISH LEVEL 2 WRITING             Y00905        1N                   01
+O547252S4725         UFSKLL2 E            ENGLISH LEVEL 2 WRITING OS          Y00905        1N                   01
+O547253 4725         UFSKLL2 E            ENGLISH LEVEL 2 SPEAKING            Y00910        1N                   01
+O54726  4725  FSKLL2 C       EHD2 50091268ENGLISH LEVEL 2                     Y00000        1N                   00
+O54911  4911  FSKLEL1C       ECN1 60000910INFO & COMM TECH ENTRY LEVEL 1      Y01245        1N                   01
+O54912  4912  FSKLEL2C       ECN1 60001185INFO & COMM TECH ENTRY LEVEL 2      Y01245        1N                   01
+O54913  4913  FSKLEL3C       ECN1 60013515INFO & COMM TECH ENTRY LEVEL 3      Y01245        1N                   01
+O54931  4931  FSKLEL1C       EHD4 60001197MATHEMATICS ENTRY LEVEL 1           Y01245        1N                   01
+O54932  4932  FSKLEL2C       EHD4 60001203MATHEMATICS ENTRY LEVEL 2           Y01245        1N                   01
+O54933  4933  FSKLEL3C       EHD4 60000752MATHEMATICS ENTRY LEVEL 3           Y01245        1N                   01
+O54971R 4971         UFSKLEL1E            ENGLISH ENTRY LEVEL 1 READING       Y00415        1N                   01
+O54971S 4971         UFSKLEL1E            ENGLISH ENTRY LEVEL 1 SPEAKING      Y00415        1N                   01
+O54971W 4971         UFSKLEL1E            ENGLISH ENTRY LEVEL 1 WRITING       Y00415        1N                   01
+O54972R 4972         UFSKLEL2E            ENGLISH ENTRY LEVEL 2 READING       Y00415        1N                   01
+O54972S 4972         UFSKLEL2E            ENGLISH ENTRY LEVEL 2 SPEAKING      Y00415        1N                   01
+O54972W 4972         UFSKLEL2E            ENGLISH ENTRY LEVEL 2 WRITING       Y00415        1N                   01
+O54973R 4973         UFSKLEL3E            ENGLISH ENTRY LEVEL 3 READING       Y00415        1N                   01
+O54973S 4973         UFSKLEL3E            ENGLISH ENTRY LEVEL 3 SPEAKING      Y00415        1N                   01
+O54973W 4973         UFSKLEL3E            ENGLISH ENTRY LEVEL 3 WRITING       Y00415        1N                   01
+O54976  4971  FSKLEL1C       EHD2 6000115XENGLISH ENTRY LEVEL 1               Y00000        1N                   00
+O54977  4972  FSKLEL2C       EHD2 60001161ENGLISH ENTRY LEVEL 2               Y00000        1N                   00
+O54978  4973  FSKLEL3C       EHD2 60001173ENGLISH ENTRY LEVEL 3               Y00000        1N                   00
+O55361  6360  GCE ASBC       ERB1 10034055GCE MATHEMATICS AS                  Y00010        BA               030000
+O55366  6360  GCE ASBC       ERB1510060054GCE PURE MATHEMATICS AS             Y00010        BA               030000
+O55371  6360  GCE ASBC       ERB1A10060042GCE FURTHER MATHEMATICS AS          Y00010        BA               030000
+O55381  6380  GCE ASBC       ERB7110034912GCE STATISTICS AS                   Y00000        BA               030000
+O56361  6360  GCE A  C       E221010034080GCE MATHEMATICS ADV                 Y00020        B4               060000
+O56366  6360  GCE A  C       E223010060066GCE PURE MATHEMATICS ADV            Y00020        B4               060000
+O56371  6360  GCE A  C       E233010060078GCE FURTHER MATHEMATICS ADV         Y00020        B4               060000
+O56381  6380  GCE A  C       E226010034900GCE STATISTICS ADV                  Y00000        B4               060000
+O57036  7036  GCE ASBC       ERF4 6018971XGEOGRAPHY AS                        Y04270        1A                   02
+O57041AA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AA                Y04270        1A                   02
+O57041AB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AB                Y04270        1A                   02
+O57041AD7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AD                Y04270        1A                   02
+O57041AE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AE                Y04270        1A                   02
+O57041AM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AM                Y04270        1A                   02
+O57041AS7041  GCE ASBC       EDB  60149747HISTORY AS OPTION AS                Y04270        1A                   02
+O57041BA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BA                Y04270        1A                   02
+O57041BB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BB                Y04270        1A                   02
+O57041BD7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BD                Y04270        1A                   02
+O57041BE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BE                Y04270        1A                   02
+O57041BM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BM                Y04270        1A                   02
+O57041BS7041  GCE ASBC       EDB  60149747HISTORY AS OPTION BS                Y04270        1A                   02
+O57041CF7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CF                Y04270        1A                   02
+O57041CG7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CG                Y04270        1A                   02
+O57041CH7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CH                Y04270        1A                   02
+O57041CJ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CJ                Y04270        1A                   02
+O57041CK7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CK                Y04270        1A                   02
+O57041CL7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CL                Y04270        1A                   02
+O57041CN7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CN                Y04270        1A                   02
+O57041CO7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CO                Y04270        1A                   02
+O57041CP7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CP                Y04270        1A                   02
+O57041CQ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CQ                Y04270        1A                   02
+O57041CR7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CR                Y04270        1A                   02
+O57041CT7041  GCE ASBC       EDB  60149747HISTORY AS OPTION CT                Y04270        1A                   02
+O57041DC7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DC                Y04270        1A                   02
+O57041DG7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DG                Y04270        1A                   02
+O57041DH7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DH                Y04270        1A                   02
+O57041DJ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DJ                Y04270        1A                   02
+O57041DK7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DK                Y04270        1A                   02
+O57041DL7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DL                Y04270        1A                   02
+O57041DN7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DN                Y04270        1A                   02
+O57041DO7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DO                Y04270        1A                   02
+O57041DP7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DP                Y04270        1A                   02
+O57041DQ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DQ                Y04270        1A                   02
+O57041DR7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DR                Y04270        1A                   02
+O57041DT7041  GCE ASBC       EDB  60149747HISTORY AS OPTION DT                Y04270        1A                   02
+O57041EA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION EA                Y04270        1A                   02
+O57041EB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION EB                Y04270        1A                   02
+O57041ED7041  GCE ASBC       EDB  60149747HISTORY AS OPTION ED                Y04270        1A                   02
+O57041EE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION EE                Y04270        1A                   02
+O57041EM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION EM                Y04270        1A                   02
+O57041ES7041  GCE ASBC       EDB  60149747HISTORY AS OPTION ES                Y04270        1A                   02
+O57041FC7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FC                Y04270        1A                   02
+O57041FF7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FF                Y04270        1A                   02
+O57041FG7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FG                Y04270        1A                   02
+O57041FH7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FH                Y04270        1A                   02
+O57041FJ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FJ                Y04270        1A                   02
+O57041FK7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FK                Y04270        1A                   02
+O57041FL7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FL                Y04270        1A                   02
+O57041FN7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FN                Y04270        1A                   02
+O57041FO7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FO                Y04270        1A                   02
+O57041FP7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FP                Y04270        1A                   02
+O57041FQ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FQ                Y04270        1A                   02
+O57041FR7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FR                Y04270        1A                   02
+O57041FT7041  GCE ASBC       EDB  60149747HISTORY AS OPTION FT                Y04270        1A                   02
+O57041GC7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GC                Y04270        1A                   02
+O57041GF7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GF                Y04270        1A                   02
+O57041GG7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GG                Y04270        1A                   02
+O57041GH7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GH                Y04270        1A                   02
+O57041GJ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GJ                Y04270        1A                   02
+O57041GK7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GK                Y04270        1A                   02
+O57041GL7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GL                Y04270        1A                   02
+O57041GN7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GN                Y04270        1A                   02
+O57041GO7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GO                Y04270        1A                   02
+O57041GP7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GP                Y04270        1A                   02
+O57041GQ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GQ                Y04270        1A                   02
+O57041GR7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GR                Y04270        1A                   02
+O57041GT7041  GCE ASBC       EDB  60149747HISTORY AS OPTION GT                Y04270        1A                   02
+O57041HA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HA                Y04270        1A                   02
+O57041HB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HB                Y04270        1A                   02
+O57041HD7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HD                Y04270        1A                   02
+O57041HE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HE                Y04270        1A                   02
+O57041HM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HM                Y04270        1A                   02
+O57041HS7041  GCE ASBC       EDB  60149747HISTORY AS OPTION HS                Y04270        1A                   02
+O57041JC7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JC                Y04270        1A                   02
+O57041JF7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JF                Y04270        1A                   02
+O57041JG7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JG                Y04270        1A                   02
+O57041JH7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JH                Y04270        1A                   02
+O57041JJ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JJ                Y04270        1A                   02
+O57041JK7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JK                Y04270        1A                   02
+O57041JL7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JL                Y04270        1A                   02
+O57041JN7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JN                Y04270        1A                   02
+O57041JO7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JO                Y04270        1A                   02
+O57041JP7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JP                Y04270        1A                   02
+O57041JQ7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JQ                Y04270        1A                   02
+O57041JR7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JR                Y04270        1A                   02
+O57041JT7041  GCE ASBC       EDB  60149747HISTORY AS OPTION JT                Y04270        1A                   02
+O57041KA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KA                Y04270        1A                   02
+O57041KB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KB                Y04270        1A                   02
+O57041KD7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KD                Y04270        1A                   02
+O57041KE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KE                Y04270        1A                   02
+O57041KM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KM                Y04270        1A                   02
+O57041KS7041  GCE ASBC       EDB  60149747HISTORY AS OPTION KS                Y04270        1A                   02
+O57041LA7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LA                Y04270        1A                   02
+O57041LB7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LB                Y04270        1A                   02
+O57041LD7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LD                Y04270        1A                   02
+O57041LE7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LE                Y04270        1A                   02
+O57041LM7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LM                Y04270        1A                   02
+O57041LS7041  GCE ASBC       EDB  60149747HISTORY AS OPTION LS                Y04270        1A                   02
+O57042AA7042  GCE A  C       E401060149735HISTORY ADV OPTION AA               Y07475        14                   03
+O57042AB7042  GCE A  C       E401060149735HISTORY ADV OPTION AB               Y07475        14                   03
+O57042AD7042  GCE A  C       E401060149735HISTORY ADV OPTION AD               Y07475        14                   03
+O57042AE7042  GCE A  C       E401060149735HISTORY ADV OPTION AE               Y07475        14                   03
+O57042AM7042  GCE A  C       E401060149735HISTORY ADV OPTION AM               Y07475        14                   03
+O57042AS7042  GCE A  C       E401060149735HISTORY ADV OPTION AS               Y07475        14                   03
+O57042BA7042  GCE A  C       E401060149735HISTORY ADV OPTION BA               Y07475        14                   03
+O57042BB7042  GCE A  C       E401060149735HISTORY ADV OPTION BB               Y07475        14                   03
+O57042BD7042  GCE A  C       E401060149735HISTORY ADV OPTION BD               Y07475        14                   03
+O57042BE7042  GCE A  C       E401060149735HISTORY ADV OPTION BE               Y07475        14                   03
+O57042BM7042  GCE A  C       E401060149735HISTORY ADV OPTION BM               Y07475        14                   03
+O57042BS7042  GCE A  C       E401060149735HISTORY ADV OPTION BS               Y07475        14                   03
+O57042CF7042  GCE A  C       E401060149735HISTORY ADV OPTION CF               Y07475        14                   03
+O57042CG7042  GCE A  C       E401060149735HISTORY ADV OPTION CG               Y07475        14                   03
+O57042CH7042  GCE A  C       E401060149735HISTORY ADV OPTION CH               Y07475        14                   03
+O57042CJ7042  GCE A  C       E401060149735HISTORY ADV OPTION CJ               Y07475        14                   03
+O57042CK7042  GCE A  C       E401060149735HISTORY ADV OPTION CK               Y07475        14                   03
+O57042CL7042  GCE A  C       E401060149735HISTORY ADV OPTION CL               Y07475        14                   03
+O57042CN7042  GCE A  C       E401060149735HISTORY ADV OPTION CN               Y07475        14                   03
+O57042CO7042  GCE A  C       E401060149735HISTORY ADV OPTION CO               Y07475        14                   03
+O57042CP7042  GCE A  C       E401060149735HISTORY ADV OPTION CP               Y07475        14                   03
+O57042CQ7042  GCE A  C       E401060149735HISTORY ADV OPTION CQ               Y07475        14                   03
+O57042CR7042  GCE A  C       E401060149735HISTORY ADV OPTION CR               Y07475        14                   03
+O57042CT7042  GCE A  C       E401060149735HISTORY ADV OPTION CT               Y07475        14                   03
+O57042DC7042  GCE A  C       E401060149735HISTORY ADV OPTION DC               Y07475        14                   03
+O57042DG7042  GCE A  C       E401060149735HISTORY ADV OPTION DG               Y07475        14                   03
+O57042DH7042  GCE A  C       E401060149735HISTORY ADV OPTION DH               Y07475        14                   03
+O57042DJ7042  GCE A  C       E401060149735HISTORY ADV OPTION DJ               Y07475        14                   03
+O57042DK7042  GCE A  C       E401060149735HISTORY ADV OPTION DK               Y07475        14                   03
+O57042DL7042  GCE A  C       E401060149735HISTORY ADV OPTION DL               Y07475        14                   03
+O57042DN7042  GCE A  C       E401060149735HISTORY ADV OPTION DN               Y07475        14                   03
+O57042DO7042  GCE A  C       E401060149735HISTORY ADV OPTION DO               Y07475        14                   03
+O57042DP7042  GCE A  C       E401060149735HISTORY ADV OPTION DP               Y07475        14                   03
+O57042DQ7042  GCE A  C       E401060149735HISTORY ADV OPTION DQ               Y07475        14                   03
+O57042DR7042  GCE A  C       E401060149735HISTORY ADV OPTION DR               Y07475        14                   03
+O57042DT7042  GCE A  C       E401060149735HISTORY ADV OPTION DT               Y07475        14                   03
+O57042EA7042  GCE A  C       E401060149735HISTORY ADV OPTION EA               Y07475        14                   03
+O57042EB7042  GCE A  C       E401060149735HISTORY ADV OPTION EB               Y07475        14                   03
+O57042ED7042  GCE A  C       E401060149735HISTORY ADV OPTION ED               Y07475        14                   03
+O57042EE7042  GCE A  C       E401060149735HISTORY ADV OPTION EE               Y07475        14                   03
+O57042EM7042  GCE A  C       E401060149735HISTORY ADV OPTION EM               Y07475        14                   03
+O57042ES7042  GCE A  C       E401060149735HISTORY ADV OPTION ES               Y07475        14                   03
+O57042FC7042  GCE A  C       E401060149735HISTORY ADV OPTION FC               Y07475        14                   03
+O57042FF7042  GCE A  C       E401060149735HISTORY ADV OPTION FF               Y07475        14                   03
+O57042FG7042  GCE A  C       E401060149735HISTORY ADV OPTION FG               Y07475        14                   03
+O57042FH7042  GCE A  C       E401060149735HISTORY ADV OPTION FH               Y07475        14                   03
+O57042FJ7042  GCE A  C       E401060149735HISTORY ADV OPTION FJ               Y07475        14                   03
+O57042FK7042  GCE A  C       E401060149735HISTORY ADV OPTION FK               Y07475        14                   03
+O57042FL7042  GCE A  C       E401060149735HISTORY ADV OPTION FL               Y07475        14                   03
+O57042FN7042  GCE A  C       E401060149735HISTORY ADV OPTION FN               Y07475        14                   03
+O57042FO7042  GCE A  C       E401060149735HISTORY ADV OPTION FO               Y07475        14                   03
+O57042FP7042  GCE A  C       E401060149735HISTORY ADV OPTION FP               Y07475        14                   03
+O57042FQ7042  GCE A  C       E401060149735HISTORY ADV OPTION FQ               Y07475        14                   03
+O57042FR7042  GCE A  C       E401060149735HISTORY ADV OPTION FR               Y07475        14                   03
+O57042FT7042  GCE A  C       E401060149735HISTORY ADV OPTION FT               Y07475        14                   03
+O57042GC7042  GCE A  C       E401060149735HISTORY ADV OPTION GC               Y07475        14                   03
+O57042GF7042  GCE A  C       E401060149735HISTORY ADV OPTION GF               Y07475        14                   03
+O57042GG7042  GCE A  C       E401060149735HISTORY ADV OPTION GG               Y07475        14                   03
+O57042GH7042  GCE A  C       E401060149735HISTORY ADV OPTION GH               Y07475        14                   03
+O57042GJ7042  GCE A  C       E401060149735HISTORY ADV OPTION GJ               Y07475        14                   03
+O57042GK7042  GCE A  C       E401060149735HISTORY ADV OPTION GK               Y07475        14                   03
+O57042GL7042  GCE A  C       E401060149735HISTORY ADV OPTION GL               Y07475        14                   03
+O57042GN7042  GCE A  C       E401060149735HISTORY ADV OPTION GN               Y07475        14                   03
+O57042GO7042  GCE A  C       E401060149735HISTORY ADV OPTION GO               Y07475        14                   03
+O57042GP7042  GCE A  C       E401060149735HISTORY ADV OPTION GP               Y07475        14                   03
+O57042GQ7042  GCE A  C       E401060149735HISTORY ADV OPTION GQ               Y07475        14                   03
+O57042GR7042  GCE A  C       E401060149735HISTORY ADV OPTION GR               Y07475        14                   03
+O57042GT7042  GCE A  C       E401060149735HISTORY ADV OPTION GT               Y07475        14                   03
+O57042HA7042  GCE A  C       E401060149735HISTORY ADV OPTION HA               Y07475        14                   03
+O57042HB7042  GCE A  C       E401060149735HISTORY ADV OPTION HB               Y07475        14                   03
+O57042HD7042  GCE A  C       E401060149735HISTORY ADV OPTION HD               Y07475        14                   03
+O57042HE7042  GCE A  C       E401060149735HISTORY ADV OPTION HE               Y07475        14                   03
+O57042HM7042  GCE A  C       E401060149735HISTORY ADV OPTION HM               Y07475        14                   03
+O57042HS7042  GCE A  C       E401060149735HISTORY ADV OPTION HS               Y07475        14                   03
+O57042JC7042  GCE A  C       E401060149735HISTORY ADV OPTION JC               Y07475        14                   03
+O57042JF7042  GCE A  C       E401060149735HISTORY ADV OPTION JF               Y07475        14                   03
+O57042JG7042  GCE A  C       E401060149735HISTORY ADV OPTION JG               Y07475        14                   03
+O57042JH7042  GCE A  C       E401060149735HISTORY ADV OPTION JH               Y07475        14                   03
+O57042JJ7042  GCE A  C       E401060149735HISTORY ADV OPTION JJ               Y07475        14                   03
+O57042JK7042  GCE A  C       E401060149735HISTORY ADV OPTION JK               Y07475        14                   03
+O57042JL7042  GCE A  C       E401060149735HISTORY ADV OPTION JL               Y07475        14                   03
+O57042JN7042  GCE A  C       E401060149735HISTORY ADV OPTION JN               Y07475        14                   03
+O57042JO7042  GCE A  C       E401060149735HISTORY ADV OPTION JO               Y07475        14                   03
+O57042JP7042  GCE A  C       E401060149735HISTORY ADV OPTION JP               Y07475        14                   03
+O57042JQ7042  GCE A  C       E401060149735HISTORY ADV OPTION JQ               Y07475        14                   03
+O57042JR7042  GCE A  C       E401060149735HISTORY ADV OPTION JR               Y07475        14                   03
+O57042JT7042  GCE A  C       E401060149735HISTORY ADV OPTION JT               Y07475        14                   03
+O57042KA7042  GCE A  C       E401060149735HISTORY ADV OPTION KA               Y07475        14                   03
+O57042KB7042  GCE A  C       E401060149735HISTORY ADV OPTION KB               Y07475        14                   03
+O57042KD7042  GCE A  C       E401060149735HISTORY ADV OPTION KD               Y07475        14                   03
+O57042KE7042  GCE A  C       E401060149735HISTORY ADV OPTION KE               Y07475        14                   03
+O57042KM7042  GCE A  C       E401060149735HISTORY ADV OPTION KM               Y07475        14                   03
+O57042KS7042  GCE A  C       E401060149735HISTORY ADV OPTION KS               Y07475        14                   03
+O57042LA7042  GCE A  C       E401060149735HISTORY ADV OPTION LA               Y07475        14                   03
+O57042LB7042  GCE A  C       E401060149735HISTORY ADV OPTION LB               Y07475        14                   03
+O57042LD7042  GCE A  C       E401060149735HISTORY ADV OPTION LD               Y07475        14                   03
+O57042LE7042  GCE A  C       E401060149735HISTORY ADV OPTION LE               Y07475        14                   03
+O57042LM7042  GCE A  C       E401060149735HISTORY ADV OPTION LM               Y07475        14                   03
+O57042LS7042  GCE A  C       E401060149735HISTORY ADV OPTION LS               Y07475        14                   03
+O57061A 7061  GCE ASBC       EDD1 60187165RELIGIOUS STUDIES AS OPTION A       Y05175        1A                   02
+O57061B 7061  GCE ASBC       EDD1 60187165RELIGIOUS STUDIES AS OPTION B       Y05175        1A                   02
+O57061C 7061  GCE ASBC       EDD1 60187165RELIGIOUS STUDIES AS OPTION C       Y05175        1A                   02
+O57061D 7061  GCE ASBC       EDD1 60187165RELIGIOUS STUDIES AS OPTION D       Y05175        1A                   02
+O57061E 7061  GCE ASBC       EDD1 60187165RELIGIOUS STUDIES AS OPTION E       Y05175        1A                   02
+O57131  7131  GCE ASBC       EAA3 6014337XBUSINESS AS                         Y05340        1A                   02
+O57132  7132  GCE A  C       E321060143368BUSINESS ADV                        Y07475        14                   03
+O57135  7135  GCE ASBC       EEB  60143721ECONOMICS AS                        Y05340        1A                   02
+O57136  7136  GCE A  C       E44106014371XECONOMICS ADV                       Y07475        14                   03
+O57181  7181  GCE ASBC       EPK1 60148378PSYCHOLOGY AS                       Y04270        1A                   02
+O57182  7182  GCE A  C       E48506014838XPSYCHOLOGY ADV                      Y07475        14                   03
+O57191  7191  GCE ASBC       EEE2 6013995XSOCIOLOGY AS                        Y04270        1A                   02
+O57192  7192  GCE A  C       E489060139948SOCIOLOGY ADV                       Y07475        14                   03
+O57201  7201  GCE A  C       E351060144567ART & DES ADV(ART,CRAFT & DES)      Y07475        14                   02
+O57202  7202  GCE A  C       E369060144567ART & DES ADV (FINE ART)            Y07475        14                   02
+O57203  7203  GCE A  C       E355060144567ART & DES ADV (GRAPHIC COM)         Y07475        14                   02
+O57204  7204  GCE A  C       E365060144567ART & DES ADV (TEXTILE DESIGN)      Y07475        14                   02
+O57205  7205  GCE A  C       E367060144567ART & DES ADV (3D DESIGN)           Y07475        14                   02
+O57206  7206  GCE A  C       E357060144567ART & DES ADV (PHOTOGRAPHY)         Y07475        14                   02
+O57236  7236  GCE ASBC       ELB1 60182982DANCE AS                            Y05900        1A                   02
+O57241  7241  GCE ASBC       EJA2 60147064ART & DES AS (ART,CRAFT & DES)      Y04270        1A                   02
+O57242  7242  GCE ASBC       EJA2 60147064ART & DES AS (FINE ART)             Y04270        1A                   02
+O57243  7243  GCE ASBC       EJA2 60147064ART & DES AS (GRAPHIC COM)          Y04270        1A                   02
+O57244  7244  GCE ASBC       EJA2 60147064ART & DES AS (TEXTILE DESIGN)       Y04270        1A                   02
+O57245  7245  GCE ASBC       EJA2 60147064ART & DES AS (3D DESIGN)            Y04270        1A                   02
+O57246  7246  GCE ASBC       EKJ1 60147064ART & DES AS (PHOTOGRAPHY)          Y04270        1A                   02
+O57261  7261  GCE ASBC       ELC1160185855DRAMA AND THEATRE AS                Y05900        1A                   02
+O57271  7271  GCE ASBC       ELF1 60183056MUSIC AS                            Y05175        1A                   03
+O57401  7401  GCE ASBC       ERH3 60146242BIOLOGY AS                          Y04270        1A                   02
+O57402  7402  GCE A  C       E101060146254BIOLOGY ADV                         Y08010        14       43          04
+O57404  7404  GCE ASBC       ERD1 60157306CHEMISTRY AS                        Y04270        1A                   02
+O57405  7405  GCE A  C       E111060157318CHEMISTRY ADV                       Y08010        14       43          04
+O57407  7407  GCE ASBC       ERC1 60147465PHYSICS AS                          Y04270        1A                   02
+O57408A 7408  GCE A  C       E121060147477PHYSICS ADV (ASTROPHYSICS)          Y08010        14       43          04
+O57408B 7408  GCE A  C       E121060147477PHYSICS ADV (MEDICAL)               Y08010        14       43          04
+O57408C 7408  GCE A  C       E121060147477PHYSICS ADV (ENGINEERING)           Y08010        14       43          04
+O57408D 7408  GCE A  C       E121060147477PHYSICS ADV (TURNING POINTS)        Y08010        14       43          04
+O57408E 7408  GCE A  C       E121060147477PHYSICS ADV (ELECTRONICS)           Y08010        14       43          04
+O57516A 7516  GCE ASBC       ECK1 60146990COMP SCI AS (C#)                    Y05340        1A                   02
+O57516B 7516  GCE ASBC       ECK1 60146990COMP SCI AS (JAVA)                  Y05340        1A                   02
+O57516C 7516  GCE ASBC       ECK1 60146990COMP SCI AS (PASCAL/DELPHI)         Y05340        1A                   02
+O57516D 7516  GCE ASBC       ECK1 60146990COMP SCI AS (PYTHON)                Y05340        1A                   02
+O57516E 7516  GCE ASBC       ECK1 60146990COMP SCI AS (VB.NET)                Y05340        1A                   02
+O57517A 7517  GCE A  C       E261060145699COMP SCI ADV (C#)                   Y07475        14                   03
+O57517B 7517  GCE A  C       E261060145699COMP SCI ADV (JAVA)                 Y07475        14                   03
+O57517C 7517  GCE A  C       E261060145699COMP SCI ADV (PASCAL/DELPHI)        Y07475        14                   03
+O57517D 7517  GCE A  C       E261060145699COMP SCI ADV (PYTHON)               Y07475        14                   03
+O57517E 7517  GCE A  C       E261060145699COMP SCI ADV (VB.NET)               Y07475        14                   03
+O57581  7581  GCE ASBC       EMA1 60186318PHYSICAL EDUCATION AS               Y05175        1A                   02
+O57651T 7651  GCE ASBC       EFKF 60187268FRENCH AS TEACHER COND OPTION       Y05175        1A                   03
+O57651V 7651  GCE ASBC       EFKF 60187268FRENCH AS VISITING EXR OPTION       Y10350        1A                   03
+O57661T 7661  GCE ASBC       EFKG 60187281GERMAN AS TEACHER COND OPTION       Y05175        1A                   03
+O57661V 7661  GCE ASBC       EFKG 60187281GERMAN AS VISITING EXR OPTION       Y10350        1A                   03
+O57691T 7691  GCE ASBC       EFKS 6018730XSPANISH AS TEACHER COND OPTION      Y05175        1A                   03
+O57691V 7691  GCE ASBC       EFKS 6018730XSPANISH AS VISITING EXR OPTION      Y10350        1A                   03
+O57701  7701  GCE ASBC       EFK2B60148469ENGLISH LANGUAGE AS                 Y04270        1A                   02
+O57702  7702  GCE A  C       E503060146400ENGLISH LANGUAGE ADV                Y07475        14                   03
+O57706  7706  GCE ASBC       EFK2A60146424ENGLISH LANG AND LIT AS             Y04270        1A                   02
+O57707  7707  GCE A  C       E501060146412ENGLISH LANG AND LIT ADV            Y07475        14                   03
+O57711  7711  GCE ASBC       EFC4 6015259XENGLISH LITERATURE A AS             Y04270        1A                   02
+O57712A 7712  GCE A  C       E511060153271ENGLISH LIT A ADV OPTION A          Y07475        14                   03
+O57712B 7712  GCE A  C       E511060153271ENGLISH LIT A ADV OPTION B          Y07475        14                   03
+O57716AA7716  GCE ASBC       EFC4 60152576ENGLISH LIT B AS OPTION AA          Y04270        1A                   02
+O57716AB7716  GCE ASBC       EFC4 60152576ENGLISH LIT B AS OPTION AB          Y04270        1A                   02
+O57716BA7716  GCE ASBC       EFC4 60152576ENGLISH LIT B AS OPTION BA          Y04270        1A                   02
+O57716BB7716  GCE ASBC       EFC4 60152576ENGLISH LIT B AS OPTION BB          Y04270        1A                   02
+O57717AA7717  GCE A  C       E511060153283ENGLISH LIT B ADV OPTION AA         Y07475        14                   03
+O57717AB7717  GCE A  C       E511060153283ENGLISH LIT B ADV OPTION AB         Y07475        14                   03
+O57717BA7717  GCE A  C       E511060153283ENGLISH LIT B ADV OPTION BA         Y07475        14                   03
+O57717BB7717  GCE A  C       E511060153283ENGLISH LIT B ADV OPTION BB         Y07475        14                   03
+O57993  7993  EXPJB  C       EHC7 60095349EXTENDED PROJECT                    Y05435        14                   01
+O58611  8610  GCE ASBC       EAA3 10047712GCE APPLIED BUSINESS AS             Y00230        BA               030000
+O58613  8610  GCE ASDC       EAA3 10047736GCE APPLIED BUSINESS AS DBL         Y00460        BC               060000
+O58616  8610  GCE A  C       E000210047724GCE APPLIED BUSINESS ADV            Y00460        B4               060000
+O58617  8610  GCE AASC       E000250036737GCE APP BUSINESS ADV & ADD. AS      Y00690        B11              090000
+O58619  8610  GCE DA C       E000210047748GCE APPLIED BUSINESS ADV DBL        Y00920        B10              120000
+O58771  8770  GCE ASBC       ERA1410050097GCE APPLIED SCIENCE AS              Y00230        BA               030000
+O58773  8770  GCE ASDC       ERA1410050103GCE APPLIED SCIENCE AS DBL          Y00460        BC               060000
+O58776  8770  GCE A  C       E000810050115GCE APPLIED SCIENCE ADV             Y00460        B4               060000
+O58777  8770  GCE AASC       E000850037031GCE APP SCIENCE ADV & ADD. AS       Y00690        B11              090000
+O58779  8770  GCE DA C       E000810050127GCE APPLIED SCIENCE ADV DBL         Y00920        B10              120000
+O59000  9000  ABQ B  C       EBAC 50037778BACCALAUREATE                       Y05125        1D                   00
+O59001  9000         UABQ B  E            ENRICHMENT ELEMENT                  Y00000        1M                   01
+O59361  9360  GCE ASBC       ERB7H50040947GCE USE OF MATHEMATICS AS           Y00000        BA               030000
+O59362  9360  GCE A  C       E220050041460GCE USE OF MATHEMATICS ADV          Y00000        B4               060000
+O59993  9993  FSMQA  BGCE B  ERB7F10064497FSMQ DATA ANALYSIS (ADV)            Y01455        CA               010001
+O59994  9994  FSMQA  BGCE B  ERB7I50040066FSMQ HYPOTHESIS TESTING (ADV)       Y01455        CA               010001
+O59995  9995  FSMQA  BGCE B  ERB565004090XFSMQ DYNAMICS (ADV)                 Y01455        CA               010001
+O59996  9996  FSMQA  BGCE B  ERB7B50040923FSMQ MATHEMATICAL PRINC. (ADV)      Y01455        CA               010001
+O59997  9997  FSMQA  BGCE B  ERB6A50040078FSMQ DECISION MATHEMATICS(ADV)      Y01455        CA               010001
+O59998  9998  FSMQA  BGCE B  ERB555004008XFSMQ CALCULUS (ADV)                 Y01455        CA               010001
+O5ACCN1 2120         UGCE B  E            GCE ACCOUNTING UNIT 1               Y02245        UB               010001
+O5ACCN2 2120         UGCE B  E            GCE ACCOUNTING UNIT 2               Y02250        UB               010001
+O5ACCN3 2120         UGCE B  E            GCE ACCOUNTING UNIT 3               Y02245        UB               010001
+O5ACCN4 2120         UGCE B  E            GCE ACCOUNTING UNIT 4               Y02250        UB               010001
+O5ANTH1 2110         UGCE B  E            GCE ANTHROPOLOGY UNIT 1             Y02335        UB               010001
+O5ANTH2 2110         UGCE B  E            GCE ANTHROPOLOGY UNIT 2             Y02340        UB               010001
+O5ANTH3 2110         UGCE B  E            GCE ANTHROPOLOGY UNIT 3             Y02335        UB               010001
+O5ANTH4 2110         UGCE B  E            GCE ANTHROPOLOGY UNIT 4             Y02340        UB               010001
+O5ARCH1 2010         UGCE B  E            GCE ARCHAEOLOGY UNIT 1              Y02940        UB               008001
+O5ARCH2 2010         UGCE B  E            GCE ARCHAEOLOGY UNIT 2              Y02940        UB               012001
+O5ARCH3 2010         UGCE B  E            GCE ARCHAEOLOGY UNIT 3              Y02940        UB               012001
+O5ARCH4 2010         UGCE B  E            GCE ARCHAEOLOGY UNIT 4              Y02940        UB               008001
+O5ARTA1 2200         UGCE B  E            GCE ART AND DESIGN UNIT 1           Y02245        UB               010001
+O5ARTA2 2200         UGCE B  E            GCE ART AND DESIGN UNIT 2           Y02250        UB               010001
+O5ARTA3 2200         UGCE B  E            GCE ART AND DESIGN UNIT 3           Y02245        UB               010001
+O5ARTA4 2200         UGCE B  E            GCE ART AND DESIGN UNIT 4           Y02250        UB               010001
+O5ARTB1 2200         UGCE B  E            GCE ART & DES(FINE ART) UNIT 1      Y02245        UB               010001
+O5ARTB2 2200         UGCE B  E            GCE ART & DES(FINE ART) UNIT 2      Y02250        UB               010001
+O5ARTB3 2200         UGCE B  E            GCE ART & DES(FINE ART) UNIT 3      Y02245        UB               010001
+O5ARTB4 2200         UGCE B  E            GCE ART & DES(FINE ART) UNIT 4      Y02250        UB               010001
+O5ARTC1 2200         UGCE B  E            GCE ART & DES (GRAPHIC) UNIT 1      Y02245        UB               010001
+O5ARTC2 2200         UGCE B  E            GCE ART & DES (GRAPHIC) UNIT 2      Y02250        UB               010001
+O5ARTC3 2200         UGCE B  E            GCE ART & DES (GRAPHIC) UNIT 3      Y02245        UB               010001
+O5ARTC4 2200         UGCE B  E            GCE ART & DES (GRAPHIC) UNIT 4      Y02250        UB               010001
+O5ARTD1 2200         UGCE B  E            GCE ART & DES (TEXTILE) UNIT 1      Y02245        UB               010001
+O5ARTD2 2200         UGCE B  E            GCE ART & DES (TEXTILE) UNIT 2      Y02250        UB               010001
+O5ARTD3 2200         UGCE B  E            GCE ART & DES (TEXTILE) UNIT 3      Y02245        UB               010001
+O5ARTD4 2200         UGCE B  E            GCE ART & DES (TEXTILE) UNIT 4      Y02250        UB               010001
+O5ARTE1 2200         UGCE B  E            GCE ART & DES (3D DES) UNIT 1       Y02245        UB               010001
+O5ARTE2 2200         UGCE B  E            GCE ART & DES (3D DES) UNIT 2       Y02250        UB               010001
+O5ARTE3 2200         UGCE B  E            GCE ART & DES (3D DES) UNIT 3       Y02245        UB               010001
+O5ARTE4 2200         UGCE B  E            GCE ART & DES (3D DES) UNIT 4       Y02250        UB               010001
+O5ARTF1 2200         UGCE B  E            GCE ART & DES (PHOTO) UNIT 1        Y02245        UB               010001
+O5ARTF2 2200         UGCE B  E            GCE ART & DES (PHOTO) UNIT 2        Y02250        UB               010001
+O5ARTF3 2200         UGCE B  E            GCE ART & DES (PHOTO) UNIT 3        Y02245        UB               010001
+O5ARTF4 2200         UGCE B  E            GCE ART & DES (PHOTO) UNIT 4        Y02250        UB               010001
+O5BENG1 2635         UGCE B  E            GCE BENGALI UNIT 1                  Y04985        UB               010001
+O5BENG2 2635         UGCE B  E            GCE BENGALI UNIT 2                  Y04985        UB               010001
+O5BIOL1 2410         UGCE B  E            GCE BIOLOGY UNIT 1                  Y01495        UB               010001
+O5BIOL2 2410         UGCE B  E            GCE BIOLOGY UNIT 2                  Y01500        UB               014001
+O5BIOL4 2410         UGCE B  E            GCE BIOLOGY UNIT 4                  Y01495        UB               010001
+O5BIOL5 2410         UGCE B  E            GCE BIOLOGY UNIT 5                  Y01500        UB               014001
+O5BS01  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 1         Y02040        UB               010001
+O5BS02  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 2         Y02040        UB               010001
+O5BS03  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 3         Y02040        UB               010001
+O5BS04  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 4         Y02040        UB               010001
+O5BS05  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 5         Y02040        UB               010001
+O5BS06  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 6         Y02040        UB               010001
+O5BS07  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 7         Y02040        UB               010001
+O5BS08  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 8         Y02040        UB               010001
+O5BS09  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 9         Y02040        UB               010001
+O5BS10  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 10        Y02040        UB               010001
+O5BS11  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 11        Y02040        UB               010001
+O5BS12  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 12        Y02040        UB               010001
+O5BS13  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 13        Y02040        UB               010001
+O5BS14  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 14        Y02040        UB               010001
+O5BS15  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 15        Y02040        UB               010001
+O5BS16  8610         UGCE B  E            GCE APPLIED BUSINESS UNIT 16        Y02040        UB               010001
+O5BUSS1 2130         UGCE B  E            GCE BUSINESS STUDIES UNIT 1         Y02245        UB               008001
+O5BUSS2 2130         UGCE B  E            GCE BUSINESS STUDIES UNIT 2         Y02250        UB               012001
+O5BUSS3 2130         UGCE B  E            GCE BUSINESS STUDIES UNIT 3         Y02245        UB               010001
+O5BUSS4 2130         UGCE B  E            GCE BUSINESS STUDIES UNIT 4         Y02250        UB               010001
+O5CHEM1 2420         UGCE B  E            GCE CHEMISTRY UNIT 1                Y01495        UB               010001
+O5CHEM2 2420         UGCE B  E            GCE CHEMISTRY UNIT 2                Y01500        UB               014001
+O5CHEM4 2420         UGCE B  E            GCE CHEMISTRY UNIT 4                Y01495        UB               012001
+O5CHEM5 2420         UGCE B  E            GCE CHEMISTRY UNIT 5                Y01500        UB               012001
+O5CHM3X 2420         UGCE B  E            GCE CHEMISTRY UNIT 3X               Y01500        UB               006001
+O5CHM6X 2420         UGCE B  E            GCE CHEMISTRY UNIT 6X               Y01500        UB               006001
+O5CIST1 2100         UGCE B  E            GCE CITIZENSHIP STUDIES UNIT 1      Y02335        UB               008001
+O5CIST2 2100         UGCE B  E            GCE CITIZENSHIP STUDIES UNIT 2      Y02340        UB               012001
+O5CIST3 2100         UGCE B  E            GCE CITIZENSHIP STUDIES UNIT 3      Y02335        UB               010001
+O5CIST4 2100         UGCE B  E            GCE CITIZENSHIP STUDIES UNIT 4      Y02340        UB               010001
+O5CIV1A 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1A         Y02245        UB               010001
+O5CIV1B 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1B         Y02245        UB               010001
+O5CIV1C 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1C         Y02245        UB               010001
+O5CIV1D 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1D         Y02245        UB               010001
+O5CIV1E 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1E         Y02245        UB               010001
+O5CIV1F 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 1F         Y02245        UB               010001
+O5CIV2A 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2A         Y02250        UB               010001
+O5CIV2B 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2B         Y02250        UB               010001
+O5CIV2C 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2C         Y02250        UB               010001
+O5CIV2D 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2D         Y02250        UB               010001
+O5CIV2E 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2E         Y02250        UB               010001
+O5CIV2F 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 2F         Y02250        UB               010001
+O5CIV3A 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 3A         Y02245        UB               010001
+O5CIV3B 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 3B         Y02245        UB               010001
+O5CIV3C 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 3C         Y02245        UB               010001
+O5CIV3D 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 3D         Y02245        UB               010001
+O5CIV4A 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 4A         Y02250        UB               010001
+O5CIV4B 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 4B         Y02250        UB               010001
+O5CIV4C 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 4C         Y02250        UB               010001
+O5CIV4D 2020         UGCE B  E            GCE CLASSICAL CIVIL UNIT 4D         Y02250        UB               010001
+O5COMM1 2625         UGCE B  E            GCE COMM AND CULTURE UNIT 1         Y02335        UB               010001
+O5COMM2 2625         UGCE B  E            GCE COMM AND CULTURE UNIT 2         Y02340        UB               010001
+O5COMM3 2625         UGCE B  E            GCE COMM AND CULTURE UNIT 3         Y02335        UB               010001
+O5COMM4 2625         UGCE B  E            GCE COMM AND CULTURE UNIT 4         Y02340        UB               010001
+O5COMP1 2510         UGCE B  E            GCE COMPUTING UNIT 1                Y02245        UB               012001
+O5COMP2 2510         UGCE B  E            GCE COMPUTING UNIT 2                Y02250        UB               008001
+O5COMP3 2510         UGCE B  E            GCE COMPUTING UNIT 3                Y02245        UB               012001
+O5COMP4 2510         UGCE B  E            GCE COMPUTING UNIT 4                Y02250        UB               008001
+O5CREW1 2750         UGCE B  E            GCE CREATIVE WRITING UNIT 1         Y02245        UB               008001
+O5CREW2 2750         UGCE B  E            GCE CREATIVE WRITING UNIT 2         Y02250        UB               012001
+O5CREW3 2750         UGCE B  E            GCE CREATIVE WRITING UNIT 3         Y02245        UB               008001
+O5CREW4 2750         UGCE B  E            GCE CREATIVE WRITING UNIT 4         Y02250        UB               012001
+O5DANC1 2230         UGCE B  E            GCE DANCE UNIT 1                    Y02850        UB               008001
+O5DANC2 2230         UGCE B  E            GCE DANCE UNIT 2                    Y02850        UB               012001
+O5DANC3 2230         UGCE B  E            GCE DANCE UNIT 3                    Y02850        UB               010001
+O5DANC4 2230         UGCE B  E            GCE DANCE UNIT 4                    Y02850        UB               010001
+O5DRAM1 2240         UGCE B  E            GCE DRAMA & THEATRE ST UNIT 1       Y02850        UB               012002
+O5DRAM2 2240         UGCE B  E            GCE DRAMA & THEATRE ST UNIT 2       Y02850        UB               008001
+O5DRAM3 2240         UGCE B  E            GCE DRAMA & THEATRE ST UNIT 3       Y02850        UB               012001
+O5DRAM4 2240         UGCE B  E            GCE DRAMA & THEATRE ST UNIT 4       Y02850        UB               008001
+O5ECON1 2140         UGCE B  E            GCE ECONOMICS UNIT 1                Y02245        UB               010001
+O5ECON2 2140         UGCE B  E            GCE ECONOMICS UNIT 2                Y02250        UB               010001
+O5ECON3 2140         UGCE B  E            GCE ECONOMICS UNIT 3                Y02245        UB               010001
+O5ECON4 2140         UGCE B  E            GCE ECONOMICS UNIT 4                Y02250        UB               010001
+O5EEPF1 2805         UL3  B  E            ENTERPRISE, EMPLOY & PF UNIT 1      Y02245        UB               012001
+O5EEPF2 2805         UL3  B  E            ENTERPRISE, EMPLOY & PF UNIT 2      Y02245        UB               008001
+O5ELEC1 2430         UGCE B  E            GCE ELECTRONICS UNIT 1              Y01660        UB               010501
+O5ELEC2 2430         UGCE B  E            GCE ELECTRONICS UNIT 2              Y01660        UB               010501
+O5ELEC3 2430         UGCE B  E            GCE ELECTRONICS UNIT 3              Y01665        UB               009001
+O5ELEC4 2430         UGCE B  E            GCE ELECTRONICS UNIT 4              Y01660        UB               010501
+O5ELEC5 2430         UGCE B  E            GCE ELECTRONICS UNIT 5              Y01660        UB               010501
+O5ELEC6 2430         UGCE B  E            GCE ELECTRONICS UNIT 6              Y01665        UB               009001
+O5ELLA1 2720         UGCE B  E            GCE ENG LANG & LIT A UNIT 1         Y02245        UB               010001
+O5ELLA2 2720         UGCE B  E            GCE ENG LANG & LIT A UNIT 2         Y02250        UB               010001
+O5ELLA3 2720         UGCE B  E            GCE ENG LANG & LIT A UNIT 3         Y02245        UB               012001
+O5ELLA4 2720         UGCE B  E            GCE ENG LANG & LIT A UNIT 4         Y02250        UB               008001
+O5ELLB1F2725         UGCE B  E            GCE ENG LANG & LIT B UNIT 1F        Y02245        UB               012001
+O5ELLB2 2725         UGCE B  E            GCE ENG LANG & LIT B UNIT 2         Y02250        UB               008001
+O5ELLB3 2725         UGCE B  E            GCE ENG LANG & LIT B UNIT 3         Y02245        UB               012001
+O5ELLB4 2725         UGCE B  E            GCE ENG LANG & LIT B UNIT 4         Y02250        UB               008001
+O5ENGA1 2700         UGCE B  E            GCE ENGLISH LANGUAGE A UNIT 1       Y02245        UB               012001
+O5ENGA2 2700         UGCE B  E            GCE ENGLISH LANGUAGE A UNIT 2       Y02250        UB               008001
+O5ENGA3 2700         UGCE B  E            GCE ENGLISH LANGUAGE A UNIT 3       Y02245        UB               012001
+O5ENGA4 2700         UGCE B  E            GCE ENGLISH LANGUAGE A UNIT 4       Y02250        UB               008001
+O5ENGB1 2705         UGCE B  E            GCE ENGLISH LANGUAGE B UNIT 1       Y02245        UB               012001
+O5ENGB2 2705         UGCE B  E            GCE ENGLISH LANGUAGE B UNIT 2       Y02250        UB               008001
+O5ENGB3 2705         UGCE B  E            GCE ENGLISH LANGUAGE B UNIT 3       Y02245        UB               012001
+O5ENGB4 2705         UGCE B  E            GCE ENGLISH LANGUAGE B UNIT 4       Y02250        UB               008001
+O5ENVS1 2440         UGCE B  E            GCE ENVIRONMENTAL STDS UNIT 1       Y02940        UB               008001
+O5ENVS2 2440         UGCE B  E            GCE ENVIRONMENTAL STDS UNIT 2       Y02940        UB               012001
+O5ENVS3 2440         UGCE B  E            GCE ENVIRONMENTAL STDS UNIT 3       Y02940        UB               010001
+O5ENVS4 2440         UGCE B  E            GCE ENVIRONMENTAL STDS UNIT 4       Y02940        UB               010001
+O5FOOD1 2540         UGCE B  E            GCE D&T:FOOD TECHNOLOGY UNIT 1      Y04900        UB               010001
+O5FOOD2 2540         UGCE B  E            GCE D&T:FOOD TECHNOLOGY UNIT 2      Y04900        UB               010001
+O5FOOD3 2540         UGCE B  E            GCE D&T:FOOD TECHNOLOGY UNIT 3      Y03860        UB               010001
+O5FOOD4 2540         UGCE B  E            GCE D&T:FOOD TECHNOLOGY UNIT 4      Y03865        UB               010001
+O5FRE2T 2650         UGCE B  E            GCE FRENCH UNIT 2 CENTRE ORAL       Y02250        UB               006001
+O5FRE2V 2650         UGCE B  E            GCE FRENCH UNIT 2 EXR ORAL          Y06745        UB               006001
+O5FRE4T 2650         UGCE B  E            GCE FRENCH UNIT 4 CENTRE ORAL       Y02250        UB               006001
+O5FRE4V 2650         UGCE B  E            GCE FRENCH UNIT 4 EXR ORAL          Y06745        UB               006001
+O5FREN1 2650         UGCE B  E            GCE FRENCH UNIT 1                   Y02245        UB               014001
+O5FREN3 2650         UGCE B  E            GCE FRENCH UNIT 3                   Y02245        UB               014001
+O5GENA1 2760         UGCE B  E            GCE GENERAL STUDIES A UNIT 1        Y02245        UB               010001
+O5GENA2 2760         UGCE B  E            GCE GENERAL STUDIES A UNIT 2        Y02250        UB               010001
+O5GENA3 2760         UGCE B  E            GCE GENERAL STUDIES A UNIT 3        Y02245        UB               010001
+O5GENA4 2760         UGCE B  E            GCE GENERAL STUDIES A UNIT 4        Y02250        UB               010001
+O5GENB1 2765         UGCE B  E            GCE GENERAL STUDIES B UNIT 1        Y02245        UB               010001
+O5GENB2 2765         UGCE B  E            GCE GENERAL STUDIES B UNIT 2        Y02250        UB               010001
+O5GENB3 2765         UGCE B  E            GCE GENERAL STUDIES B UNIT 3        Y02245        UB               010001
+O5GENB4 2765         UGCE B  E            GCE GENERAL STUDIES B UNIT 4        Y02250        UB               010001
+O5GEO4A 2030         UGCE B  E            GCE GEOGRAPHY UNIT 4A               Y02250        UB               008001
+O5GEO4B 2030         UGCE B  E            GCE GEOGRAPHY UNIT 4B               Y02250        UB               008001
+O5GEOG1 2030         UGCE B  E            GCE GEOGRAPHY UNIT 1                Y02245        UB               014001
+O5GEOG2 2030         UGCE B  E            GCE GEOGRAPHY UNIT 2                Y02250        UB               006001
+O5GEOG3 2030         UGCE B  E            GCE GEOGRAPHY UNIT 3                Y02245        UB               012001
+O5GER2T 2660         UGCE B  E            GCE GERMAN UNIT 2 CENTRE ORAL       Y02250        UB               006001
+O5GER2V 2660         UGCE B  E            GCE GERMAN UNIT 2 EXR ORAL          Y06745        UB               006001
+O5GER4T 2660         UGCE B  E            GCE GERMAN UNIT 4 CENTRE ORAL       Y02250        UB               006001
+O5GER4V 2660         UGCE B  E            GCE GERMAN UNIT 4 EXR ORAL          Y06745        UB               006001
+O5GERM1 2660         UGCE B  E            GCE GERMAN UNIT 1                   Y02245        UB               014001
+O5GERM3 2660         UGCE B  E            GCE GERMAN UNIT 3                   Y02245        UB               014001
+O5GOV3A 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 3A        Y02245        UB               010001
+O5GOV3B 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 3B        Y02245        UB               010001
+O5GOV4A 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 4A        Y02250        UB               010001
+O5GOV4B 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 4B        Y02250        UB               010001
+O5GOVP1 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 1         Y02245        UB               010001
+O5GOVP2 2150         UGCE B  E            GCE GOV AND POLITICS UNIT 2         Y02250        UB               010001
+O5HART1 2250         UGCE B  E            GCE HISTORY OF ART UNIT 1           Y04900        UB               008001
+O5HART2 2250         UGCE B  E            GCE HISTORY OF ART UNIT 2           Y04900        UB               012001
+O5HART3 2250         UGCE B  E            GCE HISTORY OF ART UNIT 3           Y03535        UB               010001
+O5HART4 2250         UGCE B  E            GCE HISTORY OF ART UNIT 4           Y03540        UB               010001
+O5HBIO1 2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 1            Y01660        UB               012001
+O5HBIO2 2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 2            Y01660        UB               012001
+O5HBIO4 2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 4            Y01660        UB               012001
+O5HBIO5 2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 5            Y01660        UB               012001
+O5HIS1A 2040         UGCE B  E            GCE HISTORY UNIT 1A                 Y02245        UB               010001
+O5HIS1B 2040         UGCE B  E            GCE HISTORY UNIT 1B                 Y02245        UB               010001
+O5HIS1C 2040         UGCE B  E            GCE HISTORY UNIT 1C                 Y02245        UB               010001
+O5HIS1D 2040         UGCE B  E            GCE HISTORY UNIT 1D                 Y02245        UB               010001
+O5HIS1E 2040         UGCE B  E            GCE HISTORY UNIT 1E                 Y02245        UB               010001
+O5HIS1F 2040         UGCE B  E            GCE HISTORY UNIT 1F                 Y02245        UB               010001
+O5HIS1G 2040         UGCE B  E            GCE HISTORY UNIT 1G                 Y02245        UB               010001
+O5HIS1H 2040         UGCE B  E            GCE HISTORY UNIT 1H                 Y02245        UB               010001
+O5HIS1J 2040         UGCE B  E            GCE HISTORY UNIT 1J                 Y02245        UB               010001
+O5HIS1K 2040         UGCE B  E            GCE HISTORY UNIT 1K                 Y02245        UB               010001
+O5HIS1L 2040         UGCE B  E            GCE HISTORY UNIT 1L                 Y02245        UB               010001
+O5HIS1M 2040         UGCE B  E            GCE HISTORY UNIT 1M                 Y02245        UB               010001
+O5HIS1N 2040         UGCE B  E            GCE HISTORY UNIT 1N                 Y02245        UB               010001
+O5HIS2A 2040         UGCE B  E            GCE HISTORY UNIT 2A                 Y02250        UB               010001
+O5HIS2B 2040         UGCE B  E            GCE HISTORY UNIT 2B                 Y02250        UB               010001
+O5HIS2C 2040         UGCE B  E            GCE HISTORY UNIT 2C                 Y02250        UB               010001
+O5HIS2D 2040         UGCE B  E            GCE HISTORY UNIT 2D                 Y02250        UB               010001
+O5HIS2E 2040         UGCE B  E            GCE HISTORY UNIT 2E                 Y02250        UB               010001
+O5HIS2F 2040         UGCE B  E            GCE HISTORY UNIT 2F                 Y02250        UB               010001
+O5HIS2G 2040         UGCE B  E            GCE HISTORY UNIT 2G                 Y02250        UB               010001
+O5HIS2H 2040         UGCE B  E            GCE HISTORY UNIT 2H                 Y02250        UB               010001
+O5HIS2J 2040         UGCE B  E            GCE HISTORY UNIT 2J                 Y02250        UB               010001
+O5HIS2K 2040         UGCE B  E            GCE HISTORY UNIT 2K                 Y02250        UB               010001
+O5HIS2L 2040         UGCE B  E            GCE HISTORY UNIT 2L                 Y02250        UB               010001
+O5HIS2M 2040         UGCE B  E            GCE HISTORY UNIT 2M                 Y02250        UB               010001
+O5HIS2N 2040         UGCE B  E            GCE HISTORY UNIT 2N                 Y02250        UB               010001
+O5HIS2O 2040         UGCE B  E            GCE HISTORY UNIT 2O                 Y02250        UB               010001
+O5HIS2P 2040         UGCE B  E            GCE HISTORY UNIT 2P                 Y02250        UB               010001
+O5HIS2Q 2040         UGCE B  E            GCE HISTORY UNIT 2Q                 Y02250        UB               010001
+O5HIS2R 2040         UGCE B  E            GCE HISTORY UNIT 2R                 Y02250        UB               010001
+O5HIS2S 2040         UGCE B  E            GCE HISTORY UNIT 2S                 Y02250        UB               010001
+O5HIS3A 2040         UGCE B  E            GCE HISTORY UNIT 3A                 Y02245        UB               012001
+O5HIS3B 2040         UGCE B  E            GCE HISTORY UNIT 3B                 Y02245        UB               012001
+O5HIS3C 2040         UGCE B  E            GCE HISTORY UNIT 3C                 Y02245        UB               012001
+O5HIS3D 2040         UGCE B  E            GCE HISTORY UNIT 3D                 Y02245        UB               012001
+O5HIS3E 2040         UGCE B  E            GCE HISTORY UNIT 3E                 Y02245        UB               012001
+O5HIS3F 2040         UGCE B  E            GCE HISTORY UNIT 3F                 Y02245        UB               012001
+O5HIS3G 2040         UGCE B  E            GCE HISTORY UNIT 3G                 Y02245        UB               012001
+O5HIS3H 2040         UGCE B  E            GCE HISTORY UNIT 3H                 Y02245        UB               012001
+O5HIS3J 2040         UGCE B  E            GCE HISTORY UNIT 3J                 Y02245        UB               012001
+O5HIS3K 2040         UGCE B  E            GCE HISTORY UNIT 3K                 Y02245        UB               012001
+O5HIS3L 2040         UGCE B  E            GCE HISTORY UNIT 3L                 Y02245        UB               012001
+O5HIS3M 2040         UGCE B  E            GCE HISTORY UNIT 3M                 Y02245        UB               012001
+O5HIS3N 2040         UGCE B  E            GCE HISTORY UNIT 3N                 Y02245        UB               012001
+O5HIS4X 2040         UGCE B  E            GCE HISTORY UNIT 4X                 Y02250        UB               008001
+O5HSC01 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 1        Y02940        UB               010001
+O5HSC02 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 2        Y02940        UB               010001
+O5HSC03 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 3        Y02940        UB               010001
+O5HSC04 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 4        Y02940        UB               010001
+O5HSC05 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 5        Y02940        UB               010001
+O5HSC06 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 6        Y02940        UB               010001
+O5HSC07 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 7        Y02940        UB               010001
+O5HSC08 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 8        Y02940        UB               010001
+O5HSC09 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 9        Y02940        UB               010001
+O5HSC10 2820         UGCE B  E            GCE HEALTH & SOC CARE UNIT 10       Y02940        UB               010001
+O5INFO1 2520         UGCE B  E            GCE INFO AND COMM TECH UNIT 1       Y02340        UB               010001
+O5INFO2 2520         UGCE B  E            GCE INFO AND COMM TECH UNIT 2       Y02345        UB               010001
+O5INFO3 2520         UGCE B  E            GCE INFO AND COMM TECH UNIT 3       Y02340        UB               012001
+O5INFO4 2520         UGCE B  E            GCE INFO AND COMM TECH UNIT 4       Y02345        UB               008001
+O5LAW01 2160         UGCE B  E            GCE LAW UNIT 1                      Y02245        UB               010001
+O5LAW02 2160         UGCE B  E            GCE LAW UNIT 2                      Y02250        UB               010001
+O5LAW03 2160         UGCE B  E            GCE LAW UNIT 3                      Y02245        UB               010001
+O5LAW04 2160         UGCE B  E            GCE LAW UNIT 4                      Y02250        UB               010001
+O5LITA2 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 2            Y02250        UB               008001
+O5LITA3 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 3            Y02245        UB               012001
+O5LITA4 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 4            Y02250        UB               008001
+O5LITB1 2745         UGCE B  E            GCE ENGLISH LIT B UNIT 1            Y02245        UB               012001
+O5LITB2 2745         UGCE B  E            GCE ENGLISH LIT B UNIT 2            Y02250        UB               008001
+O5LITB3 2745         UGCE B  E            GCE ENGLISH LIT B UNIT 3            Y02245        UB               012001
+O5LITB4 2745         UGCE B  E            GCE ENGLISH LIT B UNIT 4            Y02250        UB               008001
+O5LTA1A 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 1A           Y02245        UB               012001
+O5LTA1B 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 1B           Y02245        UB               012001
+O5LTA1C 2740         UGCE B  E            GCE ENGLISH LIT A UNIT 1C           Y02245        UB               012001
+O5MD01  6360         UGCE B  E            GCE MATHEMATICS UNIT D01            Y01730        UB               010001
+O5MD02  6360         UGCE B  E            GCE MATHEMATICS UNIT D02            Y01730        UB               010001
+O5MEST1 2570         UGCE B  E            GCE MEDIA STUDIES UNIT 1            Y02245        UB               010001
+O5MEST2 2570         UGCE B  E            GCE MEDIA STUDIES UNIT 2            Y02250        UB               010001
+O5MEST3 2570         UGCE B  E            GCE MEDIA STUDIES UNIT 3            Y02245        UB               010001
+O5MEST4 2570         UGCE B  E            GCE MEDIA STUDIES UNIT 4            Y02250        UB               010001
+O5MFP1  6360         UGCE B  E            GCE MATHEMATICS UNIT FP1            Y01730        UB               010001
+O5MFP2  6360         UGCE B  E            GCE MATHEMATICS UNIT FP2            Y01730        UB               010001
+O5MFP3  6360         UGCE B  E            GCE MATHEMATICS UNIT FP3            Y01730        UB               010001
+O5MFP4  6360         UGCE B  E            GCE MATHEMATICS UNIT FP4            Y01730        UB               010001
+O5MHEB1 2675         UGCE B  E            GCE MODERN HEBREW UNIT 1            Y04985        UB               010001
+O5MHEB2 2675         UGCE B  E            GCE MODERN HEBREW UNIT 2            Y04985        UB               010001
+O5MM03  6360         UGCE B  E            GCE MATHEMATICS UNIT M03            Y01730        UB               010001
+O5MM04  6360         UGCE B  E            GCE MATHEMATICS UNIT M04            Y01730        UB               010001
+O5MM05  6360         UGCE B  E            GCE MATHEMATICS UNIT M05            Y01730        UB               010001
+O5MM1B  6360         UGCE B  E            GCE MATHEMATICS UNIT M1B            Y01730        UB               010001
+O5MM2B  6360         UGCE B  E            GCE MATHEMATICS UNIT M2B            Y01730        UB               010001
+O5MPC1  6360         UGCE B  E            GCE MATHEMATICS UNIT PC1            Y01730        UB               010001
+O5MPC2  6360         UGCE B  E            GCE MATHEMATICS UNIT PC2            Y01730        UB               010001
+O5MPC3  6360         UGCE B  E            GCE MATHEMATICS UNIT PC3            Y01730        UB               010001
+O5MPC4  6360         UGCE B  E            GCE MATHEMATICS UNIT PC4            Y01730        UB               010001
+O5MS03  6360         UGCE B  E            GCE MATHEMATICS UNIT S03            Y01730        UB               010001
+O5MS04  6360         UGCE B  E            GCE MATHEMATICS UNIT S04            Y01730        UB               010001
+O5MS1A  6360         UGCE B  E            GCE MATHEMATICS UNIT S1A            Y01730        UB               010002
+O5MS1B  6360         UGCE B  E            GCE MATHEMATICS UNIT S1B            Y01730        UB               010001
+O5MS2B  6360         UGCE B  E            GCE MATHEMATICS UNIT S2B            Y01730        UB               010001
+O5MUS2A 2270         UGCE B  E            GCE MUSIC UNIT 2A                   Y01500        UB               009001
+O5MUS2B 2270         UGCE B  E            GCE MUSIC UNIT 2B                   Y01500        UB               009001
+O5MUS2C 2270         UGCE B  E            GCE MUSIC UNIT 2C                   Y01500        UB               009001
+O5MUS5A 2270         UGCE B  E            GCE MUSIC UNIT 5A                   Y01500        UB               009001
+O5MUS5B 2270         UGCE B  E            GCE MUSIC UNIT 5B                   Y01500        UB               009001
+O5MUS5C 2270         UGCE B  E            GCE MUSIC UNIT 5C                   Y01500        UB               009001
+O5MUSC1 2270         UGCE B  E            GCE MUSIC UNIT 1                    Y01495        UB               009001
+O5MUSC3 2270         UGCE B  E            GCE MUSIC UNIT 3                    Y01500        UB               012001
+O5MUSC4 2270         UGCE B  E            GCE MUSIC UNIT 4                    Y01495        UB               012001
+O5MUSC6 2270         UGCE B  E            GCE MUSIC UNIT 6                    Y01500        UB               009001
+O5NBIO3X2410         UGCE B  E            GCE BIOLOGY UNIT 3X                 Y01500        UB               006001
+O5NBIO6X2410         UGCE B  E            GCE BIOLOGY UNIT 6X                 Y01500        UB               006001
+O5NHBI3X2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 3X           Y01665        UB               006001
+O5NHBI6X2405         UGCE B  E            GCE HUMAN BIOLOGY UNIT 6X           Y01665        UB               006001
+O5PANJ1 2680         UGCE B  E            GCE PANJABI UNIT 1                  Y04985        UB               010001
+O5PANJ2 2680         UGCE B  E            GCE PANJABI UNIT 2                  Y04985        UB               010001
+O5PHA3X 2450         UGCE B  E            GCE PHYSICS A UNIT 3X               Y01500        UB               006001
+O5PHA5A 2450         UGCE B  E            GCE PHYSICS A UNIT 5A               Y01500        UB               012001
+O5PHA5B 2450         UGCE B  E            GCE PHYSICS A UNIT 5B               Y01500        UB               012001
+O5PHA5C 2450         UGCE B  E            GCE PHYSICS A UNIT 5C               Y01500        UB               012001
+O5PHA5D 2450         UGCE B  E            GCE PHYSICS A UNIT 5D               Y01500        UB               012001
+O5PHA6X 2450         UGCE B  E            GCE PHYSICS A UNIT 6X               Y01500        UB               006001
+O5PHB3X 2455         UGCE B  E            GCE PHYSICS B UNIT 3X               Y01500        UB               006001
+O5PHB6X 2455         UGCE B  E            GCE PHYSICS B UNIT 6X               Y01500        UB               006001
+O5PHED1 2580         UGCE B  E            GCE PHYSICAL EDUCATION UNIT 1       Y02245        UB               012001
+O5PHED2 2580         UGCE B  E            GCE PHYSICAL EDUCATION UNIT 2       Y02250        UB               008001
+O5PHED3 2580         UGCE B  E            GCE PHYSICAL EDUCATION UNIT 3       Y02245        UB               012001
+O5PHED4 2580         UGCE B  E            GCE PHYSICAL EDUCATION UNIT 4       Y02250        UB               008001
+O5PHLS1 2175         UGCE B  E            GCE PHILOSOPHY UNIT 1               Y04495        UB               010001
+O5PHLS2 2175         UGCE B  E            GCE PHILOSOPHY UNIT 2               Y04495        UB               010001
+O5PHYA1 2450         UGCE B  E            GCE PHYSICS A UNIT 1                Y01495        UB               012001
+O5PHYA2 2450         UGCE B  E            GCE PHYSICS A UNIT 2                Y01500        UB               012001
+O5PHYA4 2450         UGCE B  E            GCE PHYSICS A UNIT 4                Y01495        UB               012001
+O5PHYB1 2455         UGCE B  E            GCE PHYSICS B UNIT 1                Y01495        UB               012001
+O5PHYB2 2455         UGCE B  E            GCE PHYSICS B UNIT 2                Y01500        UB               012001
+O5PHYB4 2455         UGCE B  E            GCE PHYSICS B UNIT 4                Y01495        UB               012001
+O5PHYB5 2455         UGCE B  E            GCE PHYSICS B UNIT 5                Y01500        UB               012001
+O5PLSH1 2685         UGCE B  E            GCE POLISH UNIT 1                   Y04985        UB               010001
+O5PLSH2 2685         UGCE B  E            GCE POLISH UNIT 2                   Y04985        UB               010001
+O5PROD1 2550         UGCE B  E            GCE D&T: PROD DES (3-D) UNIT 1      Y04900        UB               010001
+O5PROD2 2550         UGCE B  E            GCE D&T: PROD DES (3-D) UNIT 2      Y04900        UB               010001
+O5PROD3 2550         UGCE B  E            GCE D&T: PROD DES (3-D) UNIT 3      Y03860        UB               010001
+O5PROD4 2550         UGCE B  E            GCE D&T: PROD DES (3-D) UNIT 4      Y03865        UB               010001
+O5PSYA1 2180         UGCE B  E            GCE PSYCHOLOGY A UNIT 1             Y02245        UB               010001
+O5PSYA2 2180         UGCE B  E            GCE PSYCHOLOGY A UNIT 2             Y02250        UB               010001
+O5PSYA3 2180         UGCE B  E            GCE PSYCHOLOGY A UNIT 3             Y02245        UB               010001
+O5PSYA4 2180         UGCE B  E            GCE PSYCHOLOGY A UNIT 4             Y02250        UB               010001
+O5PSYB1 2185         UGCE B  E            GCE PSYCHOLOGY B UNIT 1             Y02245        UB               010001
+O5PSYB2 2185         UGCE B  E            GCE PSYCHOLOGY B UNIT 2             Y02250        UB               010001
+O5PSYB3 2185         UGCE B  E            GCE PSYCHOLOGY B UNIT 3             Y02245        UB               010001
+O5PSYB4 2185         UGCE B  E            GCE PSYCHOLOGY B UNIT 4             Y02250        UB               010001
+O5RSS01 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 1        Y02245        UB               010001
+O5RSS02 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 2        Y02245        UB               010001
+O5RSS03 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3        Y02245        UB               010001
+O5RSS04 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 4        Y02245        UB               010001
+O5RSS05 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 5        Y02245        UB               010001
+O5RSS06 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 6        Y02245        UB               010001
+O5RSS07 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 7        Y02245        UB               010001
+O5RSS08 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 8        Y02245        UB               010001
+O5RSS09 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 9        Y02245        UB               010001
+O5RSS10 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 10       Y02245        UB               010001
+O5RSS11 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 11       Y02245        UB               010001
+O5RST3A 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3A       Y02245        UB               010001
+O5RST3B 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3B       Y02245        UB               010001
+O5RST3C 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3C       Y02245        UB               010001
+O5RST3D 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3D       Y02245        UB               010001
+O5RST3E 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3E       Y02245        UB               010001
+O5RST3F 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3F       Y02245        UB               010001
+O5RST3G 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3G       Y02245        UB               010001
+O5RST3H 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 3H       Y02245        UB               010001
+O5RST4A 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 4A       Y02245        UB               010001
+O5RST4B 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 4B       Y02245        UB               010001
+O5RST4C 2060         UGCE B  E            GCE RELIGIOUS STUDIES UNIT 4C       Y02245        UB               010001
+O5SC01  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 1          Y02040        UB               010001
+O5SC02  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 2          Y02040        UB               010001
+O5SC03  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 3          Y02040        UB               010001
+O5SC04  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 4          Y02040        UB               010001
+O5SC05  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 5          Y02040        UB               010001
+O5SC06  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 6          Y02040        UB               010001
+O5SC07  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 7          Y02040        UB               010001
+O5SC08  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 8          Y02040        UB               010001
+O5SC09  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 9          Y02040        UB               010001
+O5SC10  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 10         Y02040        UB               010001
+O5SC11  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 11         Y02040        UB               010001
+O5SC12  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 12         Y02040        UB               010001
+O5SC13  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 13         Y02040        UB               010001
+O5SC14  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 14         Y02040        UB               010001
+O5SC15  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 15         Y02040        UB               010001
+O5SC16  8770         UGCE B  E            GCE APPLIED SCIENCE UNIT 16         Y02040        UB               010001
+O5SCIS1 2400         UGCE B  E            GCE SCIENCE IN SOCIETY UNIT 1       Y02490        UB               012001
+O5SCIS2 2400         UGCE B  E            GCE SCIENCE IN SOCIETY UNIT 2       Y02495        UB               008001
+O5SCIS3 2400         UGCE B  E            GCE SCIENCE IN SOCIETY UNIT 3       Y02490        UB               012001
+O5SCIS4 2400         UGCE B  E            GCE SCIENCE IN SOCIETY UNIT 4       Y02495        UB               008001
+O5SCLY1 2190         UGCE B  E            GCE SOCIOLOGY UNIT 1                Y02245        UB               008001
+O5SCLY2 2190         UGCE B  E            GCE SOCIOLOGY UNIT 2                Y02250        UB               012001
+O5SCLY3 2190         UGCE B  E            GCE SOCIOLOGY UNIT 3                Y02245        UB               008001
+O5SCLY4 2190         UGCE B  E            GCE SOCIOLOGY UNIT 4                Y02250        UB               012001
+O5SPA2T 2695         UGCE B  E            GCE SPANISH UNIT 2 CENTRE ORAL      Y02250        UB               006001
+O5SPA2V 2695         UGCE B  E            GCE SPANISH UNIT 2 EXR ORAL         Y06745        UB               006001
+O5SPA4T 2695         UGCE B  E            GCE SPANISH UNIT 4 CENTRE ORAL      Y02250        UB               006001
+O5SPA4V 2695         UGCE B  E            GCE SPANISH UNIT 4 EXR ORAL         Y06745        UB               006001
+O5SPAN1 2695         UGCE B  E            GCE SPANISH UNIT 1                  Y02245        UB               014001
+O5SPAN3 2695         UGCE B  E            GCE SPANISH UNIT 3                  Y02245        UB               014001
+O5SS02  6380         UGCE B  E            GCE STATISTICS UNIT 2               Y01960        UB               010001
+O5SS03  6380         UGCE B  E            GCE STATISTICS UNIT 3               Y01960        UB               010001
+O5SS04  6380         UGCE B  E            GCE STATISTICS UNIT 4               Y01960        UB               010001
+O5SS05  6380         UGCE B  E            GCE STATISTICS UNIT 5               Y01960        UB               010001
+O5SS06  6380         UGCE B  E            GCE STATISTICS UNIT 6               Y01960        UB               010001
+O5SS1A  6380         UGCE B  E            GCE STATISTICS UNIT 1A              Y01960        UB               010002
+O5SS1B  6380         UGCE B  E            GCE STATISTICS UNIT 1B              Y01960        UB               010001
+O5SYST1 2555         UGCE B  E            GCE D&T: SYS & CON TECH UNIT 1      Y02960        UB               010001
+O5SYST2 2555         UGCE B  E            GCE D&T: SYS & CON TECH UNIT 2      Y02965        UB               010001
+O5SYST3 2555         UGCE B  E            GCE D&T: SYS & CON TECH UNIT 3      Y02960        UB               010001
+O5SYST4 2555         UGCE B  E            GCE D&T: SYS & CON TECH UNIT 4      Y02965        UB               010001
+O5TEXT1 2560         UGCE B  E            GCE D&T: PROD DES (TEX) UNIT 1      Y04900        UB               010001
+O5TEXT2 2560         UGCE B  E            GCE D&T: PROD DES (TEX) UNIT 2      Y04900        UB               010001
+O5TEXT3 2560         UGCE B  E            GCE D&T: PROD DES (TEX) UNIT 3      Y03860        UB               010001
+O5TEXT4 2560         UGCE B  E            GCE D&T: PROD DES (TEX) UNIT 4      Y03865        UB               010001
+O5USE1  9360         UGCE B  E            GCE USE OF MATHEMATICS UNIT 1       Y01455        UB               010001
+O5USE2  9360         UGCE B  E            GCE USE OF MATHEMATICS UNIT 2       Y01445        UB               010001
+O5USE3  9360         UGCE B  E            GCE USE OF MATHEMATICS UNIT 3       Y01450        UB               010001
+O76A17_0000867241116                                                                                               
+O96A17_00008690000000                                                                                              

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCGS-Staff-Intranet2", "DCGS-StaffIntranet2\DCGS-Staff-Intranet2.csproj", "{68EF3C7D-10E3-4479-8D0C-BB269F5B0C84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF} = {2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cerval_Library", "Cerval_Library\Cerval_Library.csproj", "{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68EF3C7D-10E3-4479-8D0C-BB269F5B0C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EF3C7D-10E3-4479-8D0C-BB269F5B0C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EF3C7D-10E3-4479-8D0C-BB269F5B0C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EF3C7D-10E3-4479-8D0C-BB269F5B0C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

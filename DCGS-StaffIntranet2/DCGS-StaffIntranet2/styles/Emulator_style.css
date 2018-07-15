@@ -1,0 +1,20 @@
+﻿body{font-family:Arial; background-color:#949494;}
+#branding h2{background-color:Aqua;height:70px;color:White;
+	background:#949494 url(../images/top_grey.gif) center right no-repeat;}
+#branding span{ padding-left:20px;}
+#wrapper {width: 1024px;position: relative;left: 1%;
+	margin-left: 0px; margin-top:-15px; background-color:#e8e8e8;
+    top: -4px;
+}
+#wrapper h3{ text-decoration:underline;}	
+#content{width:880px;float:right; margin-left:10px;}
+#ports{width:350px;float:right; border-left:solid 2px black; padding-left:20px;}
+#ports .port1{border-bottom:solid 2px #000;}
+#code{width:470px;float:left;border-left:solid 2px black; padding-left:10px;}
+#code .codetext{height:350px;width:450px;}
+#TextBox_Info{width:450px;}
+#Text_Help{ margin-left:20px; width:900px;height:200px; margin-bottom:40px;}
+#content h1, #content h2, #content h3, #content p {padding-right:20px;}
+#processor{width:110px;float:left; padding-left:20px;}
+.test{ margin-left:20px; width:50px;}
+#footer{clear:both;background-color:#949494; padding-left:30px;}

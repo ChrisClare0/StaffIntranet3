@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="StudentInformation.master.cs" Inherits="StudentInformation.styles.StudentInformation" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../styles/Style3.css" rel="stylesheet" title="compact" type="text/css" />
+	<link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+        <div id="branding"><h2>Student Information</h2></div>
+            
+        <div id="mainNav">
+            <ul>
+                <li class="select"><a href="../StudentInformation/StartForm.aspx">Home </a></li>
+                <li><a href="../StudentInformation/PupilTimetable.aspx">My Timetable </a></li>
+                <li><a href="../StudentInformation/ExamResults.aspx">My Exam Results</a></li>
+                <li><a href="../StudentInformation/ExamTimetables.aspx">My Exam Timetable</a></li>
+                <li><a href="../StudentInformation/ExamEntries.aspx">My Exam Entries</a></li>
+                <li><a href="../StudentInformation/ExamModuleRetakes.aspx">My Exam Retakes</a></li>
+                <!--<li><a href="../content/UpdateEmail.aspx">Update My Email</a></li>-->
+                <li><a href="../StudentInformation/Careers.htm">Year 11 Enrichment</a></li>
+<div runat="server" id="SchoolCaptain">
+         <li><a href="../StudentInformation/SchoolCaptain_TT.aspx">Student TT</a></li>
+         <li><a href="../StudentInformation/SchoolCaptain_AddMsg.aspx">Add Message</a></li>
+         <li><a href="../StudentInformation/SchoolCaptain_DisplayMsg.aspx">Check Messages</a></li>     
+    <li><a href="../StudentInformation/SchoolCaptain.aspx">Complex Lists</a></li>
+         
+</div>
+                <li><a href="../StudentInformation/Logout.aspx">Logout</a></li>
+            </ul>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">       
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <span id="logondetail"  ><asp:Label ID="Label2" runat="server"  Text=""></asp:Label><a href="../StudentInformation/Logout.aspx" style="padding-left: 5px">Logout</a></span>
+            <span>3/1/2017. Code by CC: - If you encounter any problems please email <a href="mailto:tickets@challoners.com">IT Support.</a></span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PhysicsBooking.master.cs" Inherits="DCGS_Staff_Intranet2.styles.PhysicsBooking" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder> 
+     <title>DCGS staff intranet Physics Booking master</title>
+    <link href="../styles/default1.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+<!--
+        function uberMenu(intElementId) {
+            document.getElementById('child_' + intElementId).style.display = document.getElementById('child_' + intElementId).style.display == 'none' ? '' : 'none';
+            document.getElementById('parent_' + intElementId).firstChild.className = document.getElementById('parent_' + intElementId).firstChild.className == 'parentclicked' ? '' : 'parentclicked';
+        }
+        //-->
+
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div id="container">
+        <div id="bannerPhysics"></div>
+        <div class ="dcgsNavbar">Physics Equipment Booking</div>
+
+    <div id="columns">
+    <div id="navigation">
+<ul id="ubermenu">
+<li><a href="../../content/StartForm.aspx?id=11">Home</a></li>
+    <li id="parent_0" class="parent" ><a href="#" onclick="uberMenu(0)">Bookings</a>
+    <ul id="child_0" >
+        <li><a href="PhysicsBookingForm.aspx">Make Bookings</a></li>
+        <li><a href="BookingSummary.aspx">Display Booking</a></li>
+        <li><a href="PhysicsEquipmentEdit.aspx">Edit Equipment</a></li>
+        <li><a href="PhysicsExperimentEdit.aspx">Edit Experiments</a></li>
+    </ul>
+    </li>
+    </ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</div>    
+    
+    <div id="content">
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+
+<div id="footer">
+by cc
+</div>
+</div>
+    
+    
+    
+    </div>
+    </form>
+</body>
+</html>
