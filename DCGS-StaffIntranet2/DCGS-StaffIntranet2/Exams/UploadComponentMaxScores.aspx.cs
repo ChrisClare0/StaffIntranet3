@@ -70,6 +70,7 @@ namespace DCGS_Staff_Intranet2.Exams
                     DropDownList_Options.Items.Add(l1);
                 }
             }
+            DropDownList_Options_SelectedIndexChanged(sender, e);
         }
 
         protected void DropDownList_Options_SelectedIndexChanged(object sender, EventArgs e)

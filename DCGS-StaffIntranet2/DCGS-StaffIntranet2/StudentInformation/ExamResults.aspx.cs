@@ -17,11 +17,22 @@ namespace StudentInformation
                 PersonID = u1.GetPersonIdfromRequest(Request);
                 if(PersonID==new Guid("20744211-d0f0-4e69-af84-020c1023dfda"))//cc
                 {
-                    PersonID = u1.GetPersonIDX(@"CHALLONERS\William.Scott");//development 
+                    PersonID = u1.GetPersonIDX(@"CHALLONERS\mayank.sharma");//development 
+                    PersonID = u1.GetPersonIDX(@"CHALLONERS\mayank.sharma");//development
+                    PersonID = u1.GetPersonIDX(@"CHALLONERS\alex.robinson");//development
                 }
 #if DEBUG
                 u1.Is_student = true;
-                PersonID = u1.GetPersonIDX(@"CHALLONERS\Henry.Anning");//development             
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\mayank.sharma");//development    
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\alex.robinson");//development    
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\michael.taylor2");//development   
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\jack.bowe");//development   
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\alexander.lynch");//development 
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\adam.bosher");//development 
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\sam.coyne");//development 
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\kieran.Davis");//development
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\William.Kitchener");//development  
+                PersonID = u1.GetPersonIDX(@"CHALLONERS\Oscar.Jones");//development
 #endif
                 Resultgrid1.StudentId = u1.GetStudentId(PersonID).ToString();
                 Resultgrid1.DisplayType = ResultGrid.GridDisplayType.External;
@@ -45,8 +56,8 @@ namespace StudentInformation
                 }
 
                 //need to check embargo time
-                DateTime d0 = new DateTime(2012, 08, 13, 0, 0, 10);//embargo time
-                DateTime d1 = new DateTime(2012, 08, 16, 09, 00, 30);//release time
+                DateTime d0 = new DateTime(2018, 08, 13, 0, 0, 10);//embargo time
+                DateTime d1 = new DateTime(2018, 08, 16, 08, 00, 00);//release time
                 Server_Heading.InnerHtml = "";
                 try
                 {
@@ -54,6 +65,11 @@ namespace StudentInformation
                     d0 = System.Convert.ToDateTime(c0.Value);
                     Cerval_Configuration c1 = new Cerval_Configuration("StudentInformation_ResultsEmbargoRelease");
                     d1 = System.Convert.ToDateTime(c1.Value);
+#if DEBUG
+                    d1 = new DateTime(2012, 3, 08, 6, 00, 05);//release time             
+#endif
+
+
                     if ((DateTime.Now > d0) && (DateTime.Now < d1))
                     {
                         Resultgrid1.Visible = false;
@@ -68,7 +84,7 @@ namespace StudentInformation
                 catch (Exception  e3)
 
                 {
-                    Response.Redirect("../content/StartForm1.aspx");
+                    Response.Redirect("../content/StartForm.aspx");
                 }
 
 

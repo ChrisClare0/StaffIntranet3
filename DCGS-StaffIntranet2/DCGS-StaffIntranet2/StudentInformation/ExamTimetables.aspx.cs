@@ -144,7 +144,7 @@ namespace StudentInformation
                 {
                     try
                     {
-                        result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_LOADSTUDENTLISTEMAIL&Id=" + p.m_GoogleAppsLogin + "&parameters=" + "10");
+                        result = client.DownloadString("http://10.1.84.230/admin/messagelist.sync?type=ISAMS_LOADSTUDENTLISTEMAIL&Id=" + p.m_GoogleAppsLogin + "&parameters=" + "10");
                     }
                     catch (Exception ex)
                     {
@@ -174,7 +174,7 @@ namespace StudentInformation
                 {
                     try
                     {
-                        result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETEXAMENTRIES&Id=" + p.m_IsamsPupilId + "&parameters=" + "0");
+                        result = client.DownloadString("http://10.1.84.230/admin/messagelist.sync?type=ISAMS_GETEXAMENTRIES&Id=" + p.m_IsamsPupilId + "&parameters=" + "0");
                     }
                     catch (Exception ex)
                     {

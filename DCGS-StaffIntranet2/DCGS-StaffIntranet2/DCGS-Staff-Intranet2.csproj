@@ -50,56 +50,77 @@
       <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis, Version=1.13.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.1.13.0\lib\net45\Google.Apis.dll</HintPath>
+    <Reference Include="Cerval_Library, Version=1.0.7594.21257, Culture=neutral, PublicKeyToken=97a8182f8bd99e93, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Cerval_Library\bin\Debug\Cerval_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis.Auth, Version=1.13.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.Auth.1.13.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.13.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.Auth.1.13.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis.Core, Version=1.13.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.Core.1.13.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis.Drive.v2, Version=1.13.0.483, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.Drive.v2.1.13.0.483\lib\portable-net45+netcore45+wpa81+wp8\Google.Apis.Drive.v2.dll</HintPath>
+    <Reference Include="Google.Apis.Drive.v2, Version=1.49.0.2117, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v2.1.49.0.2117\lib\net45\Google.Apis.Drive.v2.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Google.Apis.PlatformServices, Version=1.13.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Apis.1.13.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.49.0.2111, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Sheets.v4.1.49.0.2111\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net45\Microsoft.IdentityModel.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.1.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
@@ -112,13 +133,15 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
@@ -135,9 +158,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="APITest.aspx" />
     <Content Include="App_Data\CervalConnectionDB.txt" />
     <Content Include="App_Data\CervalDB.txt" />
     <Content Include="App_Data\CervalDebugDB.txt" />
+    <Content Include="App_Data\EzBasic.txt" />
+    <Content Include="App_Data\Ez_Hunt.txt" />
+    <Content Include="App_Data\Ez_Hunt_temp.txt" />
     <Content Include="App_Data\GladstoneDB.txt" />
     <Content Include="App_Data\iSAMSDB.txt" />
     <Content Include="content\Booking\BookingFailure.aspx" />
@@ -149,6 +176,8 @@
     <Content Include="content\Booking\PhysicsBookingForm.aspx" />
     <Content Include="content\Booking\PhysicsEquipmentEdit.aspx" />
     <Content Include="content\Booking\PhysicsExperimentEdit.aspx" />
+    <Content Include="content\Chart.css" />
+    <Content Include="content\Chart.min.css" />
     <Content Include="content\DataEntry1.aspx" />
     <Content Include="content\iSAMS_Sync.aspx" />
     <Content Include="content\ListAPI.aspx" />
@@ -183,12 +212,49 @@
     <Content Include="Exams\UploadEntriesByCourse.aspx" />
     <Content Include="Exams\UploadStudentResits.aspx" />
     <Content Include="Exams\UploadTextFile.aspx" />
+    <Content Include="Exams\ViewStudentResults.aspx" />
+    <Content Include="Ezra\EasterHunt\Bathroom.aspx" />
+    <Content Include="Ezra\EasterHunt\DiningRoom.aspx" />
+    <Content Include="Ezra\EasterHunt\EliStartRoom.aspx" />
+    <Content Include="Ezra\EasterHunt\Finish.aspx" />
+    <Content Include="Ezra\EasterHunt\GPBedroom.aspx" />
+    <Content Include="Ezra\EasterHunt\Hall.aspx" />
+    <Content Include="Ezra\EasterHunt\Images\Bathroom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\DiningRoom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\EasterEgg.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\Hall.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\img_Eli.JPG" />
+    <Content Include="Ezra\EasterHunt\Images\img_Ez2.JPG" />
+    <Content Include="Ezra\EasterHunt\Images\Kitchen.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\KJBedroom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\Lounge.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\PopsBedroom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\SmallBedroom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\SpareRoom.jpg" />
+    <Content Include="Ezra\EasterHunt\Images\Upstairs.jpg" />
+    <Content Include="Ezra\EasterHunt\Kitchen.aspx" />
+    <Content Include="Ezra\EasterHunt\KJBedroom.aspx" />
+    <Content Include="Ezra\EasterHunt\Lounge.aspx" />
+    <Content Include="Ezra\EasterHunt\NOTYET.aspx" />
+    <Content Include="Ezra\EasterHunt\Outside.aspx" />
+    <Content Include="Ezra\EasterHunt\SmallBedroom.aspx" />
+    <Content Include="Ezra\EasterHunt\SpareBedroom.aspx" />
+    <Content Include="Ezra\EasterHunt\Stairs.aspx" />
+    <Content Include="Ezra\EasterHunt\StartRoom.aspx" />
+    <Content Include="Ezra\EasterHunt\Study.aspx" />
+    <Content Include="Ezra\Puzzle1\StartForm.aspx" />
+    <Content Include="Ezra\Puzzle1\StartForm1.aspx" />
+    <Content Include="Ezra\StyleSheet1.css" />
+    <Content Include="images\dcgsBanner.png" />
+    <Content Include="images\dcgsBanner1.png" />
+    <Content Include="images\img_Ez1.JPG" />
+    <Content Include="images\img_Ez2.JPG" />
+    <Content Include="Ezra\WebForm1.aspx" />
     <Content Include="home_test.aspx" />
     <Content Include="home_test2.aspx" />
     <Content Include="home_x.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlTestPage.html" />
-    <Content Include="images\dcgsBanner.png" />
     <Content Include="images\dcgsBanner1.gif" />
     <Content Include="images\img_Banner.jpg" />
     <Content Include="images\img_banner_new.jpg" />
@@ -200,10 +266,13 @@
     <Content Include="images\img_Physics.jpg" />
     <Content Include="images\loading.gif" />
     <Content Include="images\progress.gif" />
+    <Content Include="images\Puzzle1\house1.jpg" />
     <Content Include="images\Report.jpg" />
     <Content Include="images\top_grey.gif" />
     <Content Include="LICENSE.txt" />
     <Content Include="Options\Options1.aspx" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="StudentInformation\Careers.htm" />
     <Content Include="StudentInformation\ComponentResults.aspx" />
     <Content Include="StudentInformation\Emulator.aspx" />
@@ -213,6 +282,7 @@
     <Content Include="StudentInformation\ExamResults.aspx" />
     <Content Include="StudentInformation\ExamTimetables.aspx" />
     <Content Include="StudentInformation\ExamWarnings.aspx" />
+    <Content Include="StudentInformation\GoogleData.aspx" />
     <Content Include="StudentInformation\Logout.aspx" />
     <Content Include="StudentInformation\PersonImagePage.aspx" />
     <Content Include="StudentInformation\PhotoList.aspx" />
@@ -232,8 +302,21 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Xmatrix\chartForm1.aspx" />
+    <Content Include="Xmatrix\GraphicTest11.aspx" />
+    <Content Include="Xmatrix\html_View0.html" />
+    <Content Include="Xmatrix\CreateNewModel.aspx" />
+    <Content Include="Xmatrix\UploadDFEKS2.aspx" />
+    <Content Include="Xmatrix\XmatrixStartPage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APITest.aspx.cs">
+      <DependentUpon>APITest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APITest.aspx.designer.cs">
+      <DependentUpon>APITest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="content\Admin_Timetables.aspx.cs">
       <DependentUpon>Admin_Timetables.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -766,6 +849,161 @@
     <Compile Include="Exams\UploadTextFile.aspx.designer.cs">
       <DependentUpon>UploadTextFile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exams\ViewStudentResults.aspx.cs">
+      <DependentUpon>ViewStudentResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exams\ViewStudentResults.aspx.designer.cs">
+      <DependentUpon>ViewStudentResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Bathroom.aspx.cs">
+      <DependentUpon>Bathroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Bathroom.aspx.designer.cs">
+      <DependentUpon>Bathroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Class1.cs" />
+    <Compile Include="Ezra\EasterHunt\DiningRoom.aspx.cs">
+      <DependentUpon>DiningRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\DiningRoom.aspx.designer.cs">
+      <DependentUpon>DiningRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\EasterHunt.Master.cs">
+      <DependentUpon>EasterHunt.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\EasterHunt.Master.designer.cs">
+      <DependentUpon>EasterHunt.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\EliStartRoom.aspx.cs">
+      <DependentUpon>EliStartRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\EliStartRoom.aspx.designer.cs">
+      <DependentUpon>EliStartRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Finish.aspx.cs">
+      <DependentUpon>Finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Finish.aspx.designer.cs">
+      <DependentUpon>Finish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\GPBedroom.aspx.cs">
+      <DependentUpon>GPBedroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\GPBedroom.aspx.designer.cs">
+      <DependentUpon>GPBedroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Hall.aspx.cs">
+      <DependentUpon>Hall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Hall.aspx.designer.cs">
+      <DependentUpon>Hall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Kitchen.aspx.cs">
+      <DependentUpon>Kitchen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Kitchen.aspx.designer.cs">
+      <DependentUpon>Kitchen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\KJBedroom.aspx.cs">
+      <DependentUpon>KJBedroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\KJBedroom.aspx.designer.cs">
+      <DependentUpon>KJBedroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Lounge.aspx.cs">
+      <DependentUpon>Lounge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Lounge.aspx.designer.cs">
+      <DependentUpon>Lounge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\NOTYET.aspx.cs">
+      <DependentUpon>NOTYET.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\NOTYET.aspx.designer.cs">
+      <DependentUpon>NOTYET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Outside.aspx.cs">
+      <DependentUpon>Outside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Outside.aspx.designer.cs">
+      <DependentUpon>Outside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\SmallBedroom.aspx.cs">
+      <DependentUpon>SmallBedroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\SmallBedroom.aspx.designer.cs">
+      <DependentUpon>SmallBedroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\SpareBedroom.aspx.cs">
+      <DependentUpon>SpareBedroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\SpareBedroom.aspx.designer.cs">
+      <DependentUpon>SpareBedroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Stairs.aspx.cs">
+      <DependentUpon>Stairs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Stairs.aspx.designer.cs">
+      <DependentUpon>Stairs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\StartRoom.aspx.cs">
+      <DependentUpon>StartRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\StartRoom.aspx.designer.cs">
+      <DependentUpon>StartRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Study.aspx.cs">
+      <DependentUpon>Study.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\EasterHunt\Study.aspx.designer.cs">
+      <DependentUpon>Study.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\Ez1.Master.cs">
+      <DependentUpon>Ez1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\Ez1.Master.designer.cs">
+      <DependentUpon>Ez1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\Puzzle1\StartForm.aspx.cs">
+      <DependentUpon>StartForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\Puzzle1\StartForm.aspx.designer.cs">
+      <DependentUpon>StartForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\Puzzle1\StartForm1.aspx.cs">
+      <DependentUpon>StartForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\Puzzle1\StartForm1.aspx.designer.cs">
+      <DependentUpon>StartForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ezra\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ezra\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -857,6 +1095,13 @@
     </Compile>
     <Compile Include="StudentInformation\ExamWarnings.aspx.designer.cs">
       <DependentUpon>ExamWarnings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInformation\GoogleData.aspx.cs">
+      <DependentUpon>GoogleData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentInformation\GoogleData.aspx.designer.cs">
+      <DependentUpon>GoogleData.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentInformation\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -972,6 +1217,48 @@
     <Compile Include="styles\StudentInformation.Master.designer.cs">
       <DependentUpon>StudentInformation.Master</DependentUpon>
     </Compile>
+    <Compile Include="styles\Xmatrix.Master.cs">
+      <DependentUpon>Xmatrix.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="styles\Xmatrix.Master.designer.cs">
+      <DependentUpon>Xmatrix.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Xmatrix\chartForm1.aspx.cs">
+      <DependentUpon>chartForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmatrix\chartForm1.aspx.designer.cs">
+      <DependentUpon>chartForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmatrix\GraphicTest11.aspx.cs">
+      <DependentUpon>GraphicTest11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmatrix\GraphicTest11.aspx.designer.cs">
+      <DependentUpon>GraphicTest11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmatrix\CreateNewModel.aspx.cs">
+      <DependentUpon>CreateNewModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmatrix\CreateNewModel.aspx.designer.cs">
+      <DependentUpon>CreateNewModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmatrix\UploadDFEKS2.aspx.cs">
+      <DependentUpon>UploadDFEKS2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmatrix\UploadDFEKS2.aspx.designer.cs">
+      <DependentUpon>UploadDFEKS2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmatrix\XmatrixStartPage.aspx.cs">
+      <DependentUpon>XmatrixStartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmatrix\XmatrixStartPage.aspx.designer.cs">
+      <DependentUpon>XmatrixStartPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\SimpleLists.aspx" />
@@ -1039,12 +1326,6 @@
     <Folder Include="Exams\ExamFiles\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cerval_Library\Cerval_Library.csproj">
-      <Project>{2D4D9975-8B02-4D8C-93DF-FCB915C0A5FF}</Project>
-      <Name>Cerval_Library</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="key_1.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -1063,7 +1344,10 @@
     <Content Include="styles\Options.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ezra\Ez1.Master" />
+    <Content Include="Ezra\EasterHunt\EasterHunt.Master" />
     <None Include="Properties\PublishProfiles\Test1.pubxml" />
+    <Content Include="styles\Xmatrix.Master" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

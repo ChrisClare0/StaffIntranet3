@@ -100,9 +100,13 @@ namespace DCGS_Staff_Intranet2.content
                     d0 = System.Convert.ToDateTime(c.Value);
                     Cerval_Configuration c1 = new Cerval_Configuration("StaffIntranet_EmbargoRelease");
                     d1 = System.Convert.ToDateTime(c1.Value);
+
+#if DEBUG
+                    d1 = new DateTime(2012, 3, 08, 6, 00, 05);//release time             
+#endif
                     if ((DateTime.Now > d0) && (DateTime.Now < d1))
                     {
-                        //Response.Redirect("../Home.aspx");
+                        Response.Redirect("../Home.aspx");
                     }
                 }
                 catch
@@ -128,11 +132,93 @@ namespace DCGS_Staff_Intranet2.content
             }
         }
 
+        public void MarkAsLeft(DateTime leavingDate, Guid StudentId)
+        {
+            string date_s = "CONVERT(DATETIME, '" + leavingDate.ToString("yyyy-MM-dd HH:mm:ss") + "', 102)";
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "UPDATE dbo.tbl_Core_Students SET  StudentIsOnRole ='false' , ";
+            s += " StudentLeavingDate = " + date_s ;
+            s += " WHERE (StudentId = '" + StudentId.ToString() + "')";
+            en.ExecuteSQL(s);
+
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+            Response.Redirect("../xmatrix/selectmodel.aspx");
             //ReportScale r = new ReportScale(new Guid("5e5d8ab4-aa9a-46cf-a1c2-83352bb2ef57"));
             //string s = r.AssessmentLevelDetail.LevelName;
             //s = s;
+
+            //toclean up left students...
+            return;
+
+
+            SimpleStudentList stl1 = new SimpleStudentList(SimpleStudentList.LIST_TYPE.NOFORM_ONROLE);
+            Group g1 = new Group();
+            StudentGroupMembershipList sg1 = new StudentGroupMembershipList();
+            g1.Load("13year", new DateTime(2019, 4, 1));
+            sg1.LoadList_Group(g1._GroupID,new DateTime(2019, 4, 1));
+
+            //mark all as left in 2019
+
+            foreach (StudentGroupMembership s1 in sg1.m_list)
+            {
+                MarkAsLeft(new DateTime(2019, 7, 31), s1.m_Studentid);
+            }
+
+            g1.Load("13year", new DateTime(2018, 4, 1));
+            sg1.LoadList_Group(g1._GroupID, new DateTime(2018, 4, 1));
+
+            foreach (StudentGroupMembership s1 in sg1.m_list)
+            {
+                MarkAsLeft(new DateTime(2018, 7, 31), s1.m_Studentid);
+            }
+
+            return;
+
+            foreach (SimplePupil p in stl1._studentlist)
+            {
+                //so going to find last known rg group??
+                sg1.LoadList(p.m_StudentId, new DateTime(2019, 4, 1));
+                foreach (StudentGroupMembership s1 in sg1.m_list)
+                {
+                    g1.Load(s1.m_Groupid);
+                    if (g1._GroupPrimaryAdministrative)
+                    {
+                        MarkAsLeft(new DateTime(2018, 7, 31), s1.m_Studentid);
+                    }
+                }
+
+                sg1 = new StudentGroupMembershipList();
+                sg1.LoadList(p.m_StudentId, new DateTime(2018, 4, 1));
+                foreach (StudentGroupMembership s1 in sg1.m_list)
+                {
+                    g1.Load(s1.m_Groupid);
+                    if (g1._GroupPrimaryAdministrative)
+                    {
+                        //so was here in 2018, but not in 2019
+                        //so leaving date is 31/7/2018
+                        MarkAsLeft(new DateTime(2018, 7, 31), s1.m_Studentid);
+
+                    }
+                }
+
+                sg1 = new StudentGroupMembershipList();
+                sg1.LoadList(p.m_StudentId, new DateTime(2017, 4, 1));
+                foreach (StudentGroupMembership s1 in sg1.m_list)
+                {
+                    g1.Load(s1.m_Groupid);
+                    if (g1._GroupPrimaryAdministrative)
+                    {
+                        //so was here in 2017 but not in 2018
+                    }
+                }
+
+            }
+
             Response.Redirect("../content/TestForm.aspx");
             //Response.Redirect("../Exams/UploadComponentResults.aspx");
         }

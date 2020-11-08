@@ -35,9 +35,9 @@ namespace StudentInformation
                         s5 = s;
                     }
                 }
-                StreamWriter sw2 = new StreamWriter(@"c:/_TEMP_/StudentLogs_StartForm.txt", true);
-                sw2.WriteLine(email + "  :  " + s5+DateTime.Now.ToString()+" :  "+DateTime.Now.ToString());
-                sw2.Close();
+                //StreamWriter sw2 = new StreamWriter(@"c:/_TEMP_/StudentLogs_StartForm.txt", true);
+                //sw2.WriteLine(email + "  :  " + s5+DateTime.Now.ToString()+" :  "+DateTime.Now.ToString());
+                //sw2.Close();
 
 
 

@@ -750,11 +750,20 @@ namespace Cerval_Library
     {
         public string GetSeasonString(int season)
         {
-            if (season == 6) return "June";
+
             if (season == 1) return "January";
-            if (season == 11) return "November";
-            if (season == 5) return "May";
+            if (season == 2) return "February";
             if (season == 3) return "March";
+            if (season == 4) return "April";
+            if (season == 5) return "May";
+            if (season == 6) return "June";
+            if (season == 7) return "July";
+            if (season == 8) return "August";
+            if (season == 9) return "September";
+            if (season == 10) return "October";
+            if (season == 11) return "November";
+            if (season == 12) return "December";
+
             return "unknown";
         }
         public string GetSeasonCode(int season)

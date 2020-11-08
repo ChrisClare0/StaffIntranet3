@@ -34,7 +34,9 @@ namespace DCGS_Staff_Intranet2.StudentInformation
                     s += "This table gives your component marks for this subject. Please note these are <b>not</b> UMS marks. ";
                     s += "<br/> The sum of the component marks gives your TQM (Total Qualification Mark), which leads to your final grade.";
                     s += "The table below tells you how the TQM is related to the final grade, i.e. the grade boundaries, if we know them! If not, please speak to a member of staff in school.";
-                    
+
+                    s += "<br/><br /> Note that for Drama and Music the non-integer Scaling factors may mean that the component marks do not exactly add up to the TQM. In this case the TQM is CORRECT!<br/>";
+
                     s += "<br/><br /><TABLE BORDER   class=\"ResultsTbl\" style = \"font-size:small\"   align=\"center\">";
                     s += "<TR><th>Syllabus Code</th><th>Option Code</th><th>Component Code</th><th>Component Name</th>";
                     s+="<th>Mark</th> <th>Max Mark</th></tr>";

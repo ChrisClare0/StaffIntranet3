@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using Microsoft.Owin.Security;
 using System.IO;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace DCGS_Staff_Intranet2
 {
@@ -20,31 +21,39 @@ namespace DCGS_Staff_Intranet2
             if (!IsPostBack)
             {
                 string s = Response.Status.ToString();
-                //StreamWriter sw2 = new StreamWriter(@"c:/_TEMP_/temp.txt", true);
-                //sw2.WriteLine("NEW:" + s);
-                s = Request.QueryString["state"];
                 string s1 = Request.QueryString["code"];
+                /*
+                
+                StreamWriter sw2 = new StreamWriter(@"c:/_TEMP_/temp.txt", true);
+                sw2.WriteLine("NEW:" + s);
+                s = Request.QueryString.ToString();
                 s = Request.QueryString["state"];
-                //sw2.WriteLine(s);
+                
+                s = Request.QueryString["state"];
+                sw2.WriteLine(s);
                 //FileStream f1 = new FileStream(@"c:/_TEMP_/temp.txt", FileMode.OpenOrCreate);
+                */
 
 
-
-                string result="";
+                string result = "";
 
                 using (WebClient client = new WebClient())
                 {
-                    client.Headers.Add("user-agent", "Mozilla / 5.0(Windows NT 10.0; WOW64; Trident / 7.0; rv: 11.0) like Gecko");
+                    //client.Headers.Add("user-agent", "Mozilla / 5.0(Windows NT 10.0; WOW64; Trident / 7.0; rv: 11.0) like Gecko");
                     client.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+                    client.Headers.Add("Host", "oauth2.googleapis.com");
 
-                    try {
+                    try
+                    {
                         byte[] response =
-                        client.UploadValues("https://www.googleapis.com/oauth2/v4/token", new System.Collections.Specialized.NameValueCollection()
+                        client.UploadValues("https://oauth2.googleapis.com/token", "POST",new System.Collections.Specialized.NameValueCollection()
                         {
            { "code", s1 },
-           {"client_id", "1071688065998-77amat8g8k6gsbuhp9gpfuseuc00fvve.apps.googleusercontent.com"},
-                    {"client_secret", "GVmcAzy1Cq92-FIRCPi_s-CI" },
+           {"client_id", "1071688065998-c6mkpr28h0lu4ts5n1f2givml865t0jv.apps.googleusercontent.com"},
+                    {"client_secret", "QfwjffaCAu_64r_u4Du-BZqf" },
                     { "grant_type", "authorization_code"},
+                            {"nonce","fred1234" }, {"state",s },
+                            
 #if DEBUG
                     {"redirect_uri", "http://localhost:50418/home_test2.aspx" }
 #else
@@ -58,12 +67,15 @@ namespace DCGS_Staff_Intranet2
 
                         });
                         result = System.Text.Encoding.UTF8.GetString(response);
-                    }
-                    catch(Exception ex)
-                    {
-                       // sw2.WriteLine("EXCEPTION:" + ex.ToString());
-                    }
 
+                    }
+                    catch (Exception ex)
+                    {
+                        /*
+                        s = s;
+                        sw2.WriteLine("EXCEPTION:" + ex.ToString());
+                        */
+                    }
 
 
 
@@ -97,7 +109,7 @@ namespace DCGS_Staff_Intranet2
                     u.ValidateGoogeLogin(email, out fred2);
                     if (u.Is_staff || u.Is_student)
                     {
-                        //sw2.WriteLine("after Google Validate");
+                       // sw2.WriteLine("after Google Validate");
                         foreach (Claim c4 in fred2)
                         {
                             fred1.Add(c4);
@@ -107,26 +119,28 @@ namespace DCGS_Staff_Intranet2
                                 personid = c4.Value;
                             }
                         }
+                        var id = new ClaimsIdentity();
                         try
                         {
-                            HttpContext.Current.Session["RunSession"] = "1";
+                            HttpContext.Current.Session["RunSession"] = "2";
                             //workround for wierdness in logonsessions....
                             // See http://stackoverflow.com/questions/20737578/asp-net-sessionid-owin-cookies-do-not-send-to-browser/
-                            var id = new ClaimsIdentity(fred1, DefaultAuthenticationTypes.ApplicationCookie);
+                            id = new ClaimsIdentity(fred1, DefaultAuthenticationTypes.ApplicationCookie);
                         Request.GetOwinContext().Authentication.SignIn(new AuthenticationProperties() { IsPersistent = true }, id);
                         }
                         catch(Exception ex)
                         {
-
+                            string aa = "";
+                            aa = "44";
                             //StreamWriter sw3 = new StreamWriter(@"c:/_TEMP_/catchinhometest2.txt", true);
                             //sw3.WriteLine(ex.ToString());
                             
                             //sw3.Close();
                         }
-
+                        string fred3 = Request.GetOwinContext().Authentication.User.ToString();
 
 #if DEBUG
-                        Response.Redirect("/content/StartForm.aspx");
+                        Response.Redirect("/content/startform.aspx");
 #else
 
 #if Admin_test

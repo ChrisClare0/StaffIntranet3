@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style> 
+         table, th, td {border: 1px solid black;}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.center {
+  position: absolute;
+  left: 400px;
+}
+.ResultsTbl  {border-collapse:collapse;font-size:small;}
+.ResultsTbl th{border: none ;background-color:#000000;color:#ffffff;}
+.ResultsTbl tr:nth-of-type(even){background-color:#f3f3f3;}/* stripes */
+.ResultsTbl tr:nth-of-type(odd){background-color:#d0d0d0;}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+        var currentId = 5; var s = ""; var s1 = "not yet"; var s2;
+        var SheetId = "1gs7Mv_e07BKjMzaeQt7txWaQnrB_KjiVJ8Kb2pWa3J4";//amersham
+        window.onload = Setup;
+        function Setup() {
+            var x = document.getElementById('detailsDiv'); x.hidden = "hidden";
+            x = document.getElementById('Loader1'); x.hidden = "";
+            x = document.getElementById('Table1'); x.hidden = ""; x.innerHTML = "";
+            try
+            {
+                callGoogleScript(SetupURL(0, 0, 1,0, "callback1"));
+            }
+            catch (e)
+            {
+                document.getElementById("TextInput1").value = e.message;
+            }
+            
+        }
+        function processBtn(i)
+        {
+            var x = document.getElementById('Table1'); x.hidden = "hidden";
+            x = document.getElementById('Loader1'); x.hidden = "";
+            currentId = i;
+            callGoogleScript(SetupURL(0, 0, 1, 0, "callback2"));
+          
+            
+        }
+
+        function callback2(e) {
+            if (e.Status == "1") {
+                for (var j = 1; j < 40; j++)
+                {
+                    var x = document.getElementById("TextInput" + j);
+                    var s = e.Data[currentId][j];
+                    if (x.type == "date") {x.value = s.slice(0, 4) + '-' + s.slice(5, 7) + '-' + s.slice(8, 10);}
+                    else { if (j == 21) { x.innerHTML = s; } else { x.value = s; } }
+                    
+                }
+            }
+            else { alert("api call failed"); }
+            x = document.getElementById('Loader1'); x.hidden = "hidden";
+            x = document.getElementById('detailsDiv'); x.hidden = "";
+        }
+        function callback1(e)
+        {
+            if (e.Status == "0") { }
+            else {
+
+                var i = 0;
+                while (e.Data[i][1]!="")
+                    {
+                    var table = document.getElementById('Table1');
+                    var row = table.insertRow();
+
+                    var Cell = row.insertCell();
+                    var Text  = document.createTextNode(e.Data[i][1]);
+                    Cell.appendChild(Text);
+
+                    Cell = row.insertCell();
+                    Text  = document.createTextNode(e.Data[i][2]);
+                    Cell.appendChild(Text);
+
+                    Cell = row.insertCell();
+                    Text  = document.createTextNode(e.Data[i][3]);
+                    Cell.appendChild(Text);
+
+                    Cell = row.insertCell();
+                    Text = document.createTextNode(e.Data[i][5] + " " + e.Data[i][6] + " " + e.Data[i][7]);
+                    Cell.appendChild(Text);
+
+                    Cell = row.insertCell();
+                    Cell.innerHTML = '<button class="btn btn-primary btn-xs my-xs-btn" type="button" onClick="processBtn(' + i + ')" >' + '<span class="glyphicon glyphicon-pencil"></span> View Application</button>';
+
+                    i++;
+                }
+            }
+            var x = document.getElementById('Loader1'); x.hidden = "hidden";
+            }
+
+
+  // Make an AJAX call to Google Script
+    function callGoogleScript(url) {
+    var request = $.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+    });
+        }
+
+        function SetupURL(f, l, opt,data, callback) {
+            var url = "https://script.google.com/macros/s/AKfycbzL9QFv7XKf-SKTo4-ACHYT_21StQbxr0m62SkrGw1k_YgupIc/exec?";
+            url += "callback=" + callback;
+            url += "&SheetId="+SheetId;//
+            url += "&Row=" + f;
+            url += "&Column=" + l;
+            url += "&Option=" + opt;
+            url += "&Data=" + data;
+            //alert(url);
+            return url;
+        }
+
+        function Back() {var x = document.getElementById('detailsDiv'); x.hidden = "hidden";
+            var x = document.getElementById('Table1'); x.hidden = "";
+        }
+
+        function Change(e) {
+            var x = e.target;
+            var s = x.id;
+            var s2 = s.slice(9, 12);
+            s2++;
+            alert(currentId+",..."+s2 + "   ..." + x.value);
+            callGoogleScript(SetupURL(currentId+3,s2,2,x.value,"callback3"));
+        }
+
+        function callback3(e)
+        {
+            if (e.Status == "1") { alert("success");}
+            else { alert("api call failed"   +e.message); }
+            //var x = document.getElementById('Loader1'); x.hidden = "hidden";
+        }
+
+        function Select()
+        {         
+            SheetId = document.getElementById("HubSelect").value;
+            Setup();
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+    <form id="form1" >
+        <input id="Button1" type="button" value="Back to List" onclick="Back()" />
+
+        <label for='HubSelect'>Select Hub</label>
+        <select id="HubSelect" onchange="Select()">
+            <option value="1gs7Mv_e07BKjMzaeQt7txWaQnrB_KjiVJ8Kb2pWa3J4">Amersham</option>
+            <option value="1WY8vqnya3LPmmhvVOLq3Lh2Ex9dAG14xNKld0Rk-Pos">Marlow</option>
+            <option value="1GiKW20qgd_5jFeaGwKT8jpEi-bK2xDdH31nEz9iPox4">Aylesbury</option>
+        </select>
+
+        <table id="Table1" class="ResultsTbl"></table>
+
+        <div class="center">
+            <div class="loader" id="Loader1" style="float:right"></div>
+
+        </div>
+
+        <div id="detailsDiv" hidden="hidden" >
+             
+            <label for='TextInput1' style='position:absolute; top: 35px; left: 10px; width: 130px; height: 40px;'>ApplicationNo</label><input id='TextInput1' type='text' style='position:absolute; top: 35px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput2' style='position:absolute; top: 70px; left: 10px; width: 130px; height: 40px;'>Surname</label><input id='TextInput2' type='text' style='position:absolute; top: 70px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput3' style='position:absolute; top: 105px; left: 10px; width: 130px; height: 40px;'>FirstName</label><input id='TextInput3' type='text' style='position:absolute; top: 105px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput4' style='position:absolute; top: 140px; left: 10px; width: 130px; height: 40px;'>Email</label><input id='TextInput4' type='text' style='position:absolute; top: 140px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput5' style='position:absolute; top: 175px; left: 10px; width: 130px; height: 40px;'>Coursecode</label><input id='TextInput5' type='text' style='position:absolute; top: 175px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput6' style='position:absolute; top: 210px; left: 10px; width: 130px; height: 40px;'>Subject</label><input id='TextInput6' type='text' style='position:absolute; top: 210px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput7' style='position:absolute; top: 245px; left: 10px; width: 130px; height: 40px;'>Phase</label><input id='TextInput7' type='text' style='position:absolute; top: 245px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput8' style='position:absolute; top: 280px; left: 10px; width: 130px; height: 40px;'>Hub</label><input id='TextInput8' type='text' style='position:absolute; top: 280px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput9' style='position:absolute; top: 315px; left: 10px; width: 130px; height: 40px;'>Preferred School</label><input id='TextInput9' type='text' style='position:absolute; top: 315px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput10' style='position:absolute; top: 350px; left: 10px; width: 130px; height: 40px;'>Second Hub</label><input id='TextInput10' type='text' style='position:absolute; top: 350px; left: 150px; width: 150px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput11' style='position:absolute; top: 385px; left: 10px; width: 130px; height: 40px;'>Received</label><input id='TextInput11' type='date' style='position:absolute; top: 385px; left: 150px; width: 130px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput12' style='position:absolute; top: 420px; left: 10px; width: 130px; height: 40px;'>Acknowledged</label><input id='TextInput12' type='date' style='position:absolute; top: 420px; left: 150px; width: 130px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput13' style='position:absolute; top: 455px; left: 10px; width: 130px; height: 40px;'>Reply by</label><input id='TextInput13' type='date' style='position:absolute; top: 455px; left: 150px; width: 130px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput14' style='position:absolute; top: 35px; left: 320px; width: 130px; height: 40px;'>1 Year experience?</label><input id='TextInput14' type='text' style='position:absolute; top: 35px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput15' style='position:absolute; top: 70px; left: 320px; width: 130px; height: 40px;'>A Level ranking</label><input id='TextInput15' type='number' style='position:absolute; top: 70px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput16' style='position:absolute; top: 105px; left: 320px; width: 130px; height: 40px;'>Degree ranking</label><input id='TextInput16' type='number' style='position:absolute; top: 105px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput17' style='position:absolute; top: 140px; left: 320px; width: 130px; height: 40px;'>Understanding of Teaching</label><input id='TextInput17' type='number' style='position:absolute; top: 140px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput18' style='position:absolute; top: 175px; left: 320px; width: 130px; height: 40px;'>Work experience</label><input id='TextInput18' type='number' style='position:absolute; top: 175px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput19' style='position:absolute; top: 210px; left: 320px; width: 130px; height: 40px;'>Added value</label><input id='TextInput19' type='number' style='position:absolute; top: 210px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput20' style='position:absolute; top: 245px; left: 320px; width: 130px; height: 40px;'>Average</label><input id='TextInput20' type='number' style='position:absolute; top: 245px; left: 460px; width: 50px; height: 25px ;background-color:lightgrey' readonly value='' />
+            <label for='TextInput21' style='position:absolute; top: 500px; left: 10px; width: 130px; height: 40px;'>Directors NOTES</label><textarea id='TextInput21' style='position:absolute; top: 500px; left: 150px; width: 800px; height: 100px ' onchange='Change(event)'></textarea>
+            <label for='TextInput22' style='position:absolute; top: 280px; left: 320px; width: 130px; height: 40px;'>Invite for interview</label><input id='TextInput22' type='text' style='position:absolute; top: 280px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput23' style='position:absolute; top: 350px; left: 650px; width: 130px; height: 40px;'>Reasons for rejection</label><input id='TextInput23' type='text' style='position:absolute; top: 350px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput24' style='position:absolute; top: 315px; left: 650px; width: 130px; height: 40px;'>UCAS Notified</label><input id='TextInput24' type='text' style='position:absolute; top: 315px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput25' style='position:absolute; top: 800px; left: 800px; width: 130px; height: 40px;'>Interview details sent</label><input id='TextInput25' type='text' style='position:absolute; top: 800px; left: 940px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput26' style='position:absolute; top: 350px; left: 320px; width: 130px; height: 40px;'>Interview</label><input id='TextInput26' type='date' style='position:absolute; top: 350px; left: 460px; width: 130px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput27' style='position:absolute; top: 385px; left: 320px; width: 130px; height: 40px;'>Interview Details sent</label><input id='TextInput27' type='date' style='position:absolute; top: 385px; left: 460px; width: 130px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput28' style='position:absolute; top: 800px; left: 800px; width: 130px; height: 40px;'>Date of interview</label><input id='TextInput28' type='date' style='position:absolute; top: 800px; left: 940px; width: 130px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput29' style='position:absolute; top: 315px; left: 320px; width: 130px; height: 40px;'>Accepted invitation to interview</label><input id='TextInput29' type='text' style='position:absolute; top: 315px; left: 460px; width: 50px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput30' style='position:absolute; top: 420px; left: 320px; width: 130px; height: 40px;'>Venue</label><input id='TextInput30' type='text' style='position:absolute; top: 420px; left: 460px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput31' style='position:absolute; top: 455px; left: 320px; width: 130px; height: 40px;'>Panel Leader</label><input id='TextInput31' type='text' style='position:absolute; top: 455px; left: 460px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput32' style='position:absolute; top: 35px; left: 650px; width: 130px; height: 40px;'>Outcome of interview </label><input id='TextInput32' type='text' style='position:absolute; top: 35px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput33' style='position:absolute; top: 105px; left: 650px; width: 130px; height: 40px;'>Stage 2 interview Location</label><input id='TextInput33' type='text' style='position:absolute; top: 105px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput34' style='position:absolute; top: 140px; left: 650px; width: 130px; height: 40px;'>Lesson details sent</label><input id='TextInput34' type='text' style='position:absolute; top: 140px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput35' style='position:absolute; top: 175px; left: 650px; width: 130px; height: 40px;'>Accepted invitation to interview</label><input id='TextInput35' type='text' style='position:absolute; top: 175px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput36' style='position:absolute; top: 70px; left: 650px; width: 130px; height: 40px;'>Stage 2 interview</label><input id='TextInput36' type='date' style='position:absolute; top: 70px; left: 790px; width: 130px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput37' style='position:absolute; top: 210px; left: 650px; width: 130px; height: 40px;'>Final outcome</label><input id='TextInput37' type='text' style='position:absolute; top: 210px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput38' style='position:absolute; top: 245px; left: 650px; width: 130px; height: 40px;'>Main placement</label><input id='TextInput38' type='text' style='position:absolute; top: 245px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput39' style='position:absolute; top: 280px; left: 650px; width: 130px; height: 40px;'>Second placement</label><input id='TextInput39' type='text' style='position:absolute; top: 280px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+            <label for='TextInput40' style='position:absolute; top: 385px; left: 650px; width: 130px; height: 40px;'>Where those we lost ended up</label><input id='TextInput40' type='text' style='position:absolute; top: 385px; left: 790px; width: 170px; height: 25px ' onchange='Change(event)' value='' />
+
+           </div>
+
+    </form>
+</body>
+</html>

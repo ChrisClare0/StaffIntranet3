@@ -7,6 +7,9 @@
     <asp:Label ID="Label_head" runat="server" Text=""></asp:Label><br />
 
     <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="false" Width="589px" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Board:
+    <asp:DropDownList ID="DropDownList1" runat="server">
+    </asp:DropDownList>
     <br />
 
     <asp:Button ID="Button_Display" runat="server" Text="Display File"  Height="28px" Width="126px" OnClick="Button_Display_Click" />
@@ -14,8 +17,8 @@
     <br /><br /> 
 
     <asp:Label ID="Label_Text" runat="server" Text=""></asp:Label>
-    <asp:TextBox ID="TextBox_Warning" visible="false" runat="server"  TextMode="MultiLine" Width="725px" Wrap="False" Height="53px"></asp:TextBox><BR />
+    <asp:TextBox ID="TextBox_Warning" visible="false" runat="server"  TextMode="MultiLine" Width="760px" Wrap="False" Height="53px"></asp:TextBox><BR />
 
-    <asp:TextBox ID="TextBox1" runat="server" Height="292px" TextMode="MultiLine" Width="725px" Wrap="False"></asp:TextBox><BR />
+    <asp:TextBox ID="TextBox1" runat="server" Height="292px" TextMode="MultiLine" Width="765px" Wrap="False"></asp:TextBox><BR />
 
 </asp:Content>

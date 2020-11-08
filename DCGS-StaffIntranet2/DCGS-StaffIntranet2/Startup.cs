@@ -18,7 +18,7 @@ namespace DCGS_Staff_Intranet2
                 LoginPath = new PathString("/home_test.aspx"),
                 
                 CookieSecure = CookieSecureOption.SameAsRequest,
-                ExpireTimeSpan = new TimeSpan(7,1,0,0)  //for production - 1 week...
+                ExpireTimeSpan = new TimeSpan(30,1,0,0)  //for production - 1 month...
             });
 
         }

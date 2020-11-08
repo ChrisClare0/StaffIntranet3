@@ -1,0 +1,119 @@
+﻿body {
+}
+
+#bannerEz {
+    background-image: url(EasterHunt/Images/img_Ez2.JPG);
+    background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 200px;
+    width: 1400px;
+}
+
+#bannerEli {
+    background-image: url(EasterHunt/Images/img_Eli.JPG);
+    background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 200px;
+    width: 1400px;
+}
+.test1{
+    font-size:x-large;
+    font-family:'Comic Sans MS';
+}
+
+.normal {
+    font-family:'Comic Sans MS';
+    font-size:medium;
+}
+
+.DiningRoom_Background
+{
+    background-image: url(EasterHunt/images/DiningRoom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+
+.Kitchen_Background{
+    background-image: url(EasterHunt/images/Kitchen.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.Lounge_Background{
+    background-image: url(EasterHunt/images/Lounge.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.Hall_Background{
+    background-image: url(EasterHunt/images/Hall.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.Upstairs_Background{
+    background-image: url(EasterHunt/images/Upstairs.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+
+
+.KJBedroom_Background{
+    background-image: url(EasterHunt/images/KJBedroom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.Bathroom_Background{
+    background-image: url(EasterHunt/images/Bathroom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.SmallBedroom_Background{
+    background-image: url(EasterHunt/images/SmallBedroom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.SpareRoom_Background{
+    background-image: url(EasterHunt/images/SpareRoom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+.PopsBedroom_Background{
+    background-image: url(EasterHunt/images/PopsBedroom.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height: 1200px;
+    width: 1400px;
+}
+
+#EasterEgg{
+    background-image: url(EasterHunt/Images/EasterEgg.jpg);
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height:1200px;
+    width: 1400px;
+}

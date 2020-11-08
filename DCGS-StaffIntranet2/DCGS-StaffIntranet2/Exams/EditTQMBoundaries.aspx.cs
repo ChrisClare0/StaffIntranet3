@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Cerval_Library;
+using System.IO;
 
 namespace DCGS_Staff_Intranet2.Exams
 {
@@ -162,6 +163,116 @@ namespace DCGS_Staff_Intranet2.Exams
             foreach (ExamTQMBoundary eb in exTQMlist1.m_list) eb.Delete();
             exTQMlist1.LoadList(ex1.m_OptionID, YearCode.ToString(), SeasonCode.ToString());
             Current_Data.InnerHtml = UpdateCurrentData(exTQMlist1);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            //file has  Board short name/optioncode/grade/mark
+
+
+            if (!FileUpload1.HasFile) return;
+            Cerval_Library.TextReader TxtRd1 = new Cerval_Library.TextReader();
+            TextRecord t = new TextRecord(); int l = 0; int n = 0;
+            string s1 = ""; char ct = (char)0x09;
+
+            int n_Board = 0; int n_OptionCode = 0; int n_Grade = 0; int n_Mark = 0;
+            bool f_Board = false; bool f_OptionCode = false; bool f_Grade = false; bool f_Mark = false;
+
+
+            while (TxtRd1.ReadTextLine(FileUpload1.FileContent, ref t) == Cerval_Library.TextReader.READ_LINE_STATUS.VALID)
+            {
+                l = s1.Length;
+                for (int i = 0; i <= t.number_fields; i++)
+                {
+                    s1 += t.field[i] + ct;
+                }
+                if (s1.Length > l) s1 += Environment.NewLine;
+                if (n == 0)
+                {
+                    //going to look for our columns:
+                    for (int i = 0; i <= t.number_fields; i++)
+                    {
+                        switch (t.field[i])
+                        {
+                            case "Board": n_Board = i; f_Board = true; break;
+                            case "Option": n_OptionCode = i; f_OptionCode = true; break;
+                            case "Mark": n_Mark = i; f_Mark = true; break;
+                            case "Grade": n_Grade = i; f_Grade = true; break;
+                            default: break;
+                        }
+                    }
+
+                    // so do we have all the required columns??
+                    if (!(f_Board && f_OptionCode && f_Grade && f_Mark))
+                    {
+
+                        Label_Text.Text = "Can't recognise the format of this file. ";
+                        if (!f_Board) { Label_Text.Text += "No Board Column"; }
+                        if (!f_OptionCode) { Label_Text.Text += "No Option Column"; }
+                        if (!f_Mark) { Label_Text.Text += "No  Mark Column"; }
+                        if (!f_Grade) { Label_Text.Text += "No Grade Column"; }
+                        return;
+                    }
+                    else
+                    {
+                        Label_Text.Text = "File Format Fine:   ";
+                    }
+
+                }
+            }
+
+            //so process the file...
+            string s2 = "";
+            char[] ct1 = new char[1]; ct1[0] = (char)0x09;
+            string[] fields = new string[20];
+
+            using (StringReader sr = new StringReader(s1))
+            {
+                string firstline = sr.ReadLine();
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    fields = line.Split(ct1);
+                    bool found = false;
+                    Exam_Board eb1 = new Exam_Board();
+                    eb1.Load(fields[n_Board]);
+                    ExamOption eo1 = new ExamOption();
+                    if (eo1.Load(fields[n_OptionCode], SeasonCode.ToString(), YearCode.ToString(), eb1.m_ExamBoardId))
+                    {
+                        //valid option cod
+                        ExamTQMBoundaryList l1 = new ExamTQMBoundaryList();
+                        l1.LoadList(eo1.m_OptionID, YearCode.ToString(), SeasonCode.ToString());
+                        foreach (ExamTQMBoundary b in l1.m_list)
+                        {
+                            if (b.Grade == fields[n_Grade])
+                            {
+                                b.Mark = Convert.ToInt32(fields[n_Mark]);
+                                b.Save();
+                                found = true;
+                                s2 += eb1.m_OrganisationFriendlyName + ct + eo1.m_OptionCode + ct + eo1.m_OptionTitle + ct + b.Grade + ct + b.Mark +ct+"Updated"+ System.Environment.NewLine;
+                            }
+                        }
+                        if (!found)
+                        {
+                            ExamTQMBoundary etqm1 = new ExamTQMBoundary();
+                            etqm1.OptionId = eo1.m_OptionID;
+                            etqm1.Mark = Convert.ToInt32(fields[n_Mark]);
+                            etqm1.Grade = fields[n_Grade];
+                            etqm1.OptionCode = eo1.m_OptionCode;
+                            etqm1.OptionTitle = eo1.m_OptionTitle;
+                            etqm1.Season = SeasonCode.ToString();
+                            etqm1.Year = YearCode.ToString();
+                            etqm1.Version = 22;
+                            etqm1.Save();
+                            s2 += eb1.m_OrganisationFriendlyName+ct+ eo1.m_OptionCode + ct + eo1.m_OptionTitle + ct + etqm1.Grade + ct + etqm1.Mark +ct+"New Entry" +System.Environment.NewLine;
+                        }
+                    }
+                }
+                Label_Text.Text = " Completed... saved as below:";
+                TextBox1.Text = s2;
+            }
+
         }
     }
 }

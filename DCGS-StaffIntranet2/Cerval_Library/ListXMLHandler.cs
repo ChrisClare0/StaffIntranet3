@@ -5,6 +5,8 @@ using System.Web;
 using System.Xml;
 using System.IO;
 using System.Runtime.Serialization.Json;
+using Microsoft.Owin;
+using System.Security.Claims;
 //see  https://blog.udemy.com/json-serializer-c-sharp/
 
 namespace Cerval_Library
@@ -108,18 +110,64 @@ namespace Cerval_Library
             string s_type = context.Request.QueryString["Type"].ToUpper();
             string s_id = context.Request.QueryString["Id"];
             string s3 = context.Request.QueryString["Parameters"];
+
+
+
+            System.Security.Principal.IIdentity fred = HttpContext.Current.User.Identity;
+            string s7 = HttpContext.Current.User.Identity.Name;
+            IOwinContext ctx = context.Request.GetOwinContext();
+            ClaimsPrincipal user = ctx.Authentication.User;
+            IEnumerable<Claim> claims = user.Claims;
+
+
+
+
+
+            System.Collections.Specialized.NameValueCollection fred4 = context.Request.QueryString;
+
+
             /*
-            string s4 = context.Request.QueryString["Key"];
-            if (s4 != "1sva64HxxX_cz8IcXZrwhVRlDzhwRSex4G0XxuUn9RTQ")
+            string filename = context.Server.MapPath(@"~/App_Data/headers.txt");
+            FileStream fs = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            StreamWriter sw1 = new StreamWriter(fs);
+            string[] s4 = new string[20];
+
+            sw1.BaseStream.Seek(sw1.BaseStream.Length, 0);
+            s="";
+            s = DateTime.Now.ToString() + ",";
+            foreach (string key in fred4.AllKeys)
             {
-                s = "{\"Error\" : \"Id not same as logged on user \" User is " + context.User.Identity.Name.ToString() + "}";
+                s4 = fred4.GetValues(key);
+                s+=key + " : " + s4[0]+",";
+            }
+            s += "UserHostAddress : " + context.Request.UserHostAddress + ",";
+            s += "UserHostName : " + context.Request.UserHostName + ",";
+            foreach (Claim c2 in claims)
+            {
+                s += c2.Type + " : " + c2.Value + ",";
+            }
+            sw1.WriteLine(s);
+            sw1.Close();
+*/
+
+            //not on X server....
+            
+            
+
+            string s5 = context.Request.QueryString["Key"];
+            if (s5 != "1sva64HxxX_cz8IcXZrwhVRlDzhwRSex4G0XxuUn9RTQ")
+            {
+                s = "{\"Error\" : \"Key not recognised  \"}";
                 context.Response.Clear();
                 context.Response.ContentType = "application/json";
                 context.Response.Write(s);
                 context.Response.End();
                 return;
             }
-            */
+            
+
+            
+            
             //try to get user info???
             Utility u1 = new Utility();
             //Guid PersonID = u1.GetPersonID(context.User.Identity.Name.ToString());
@@ -139,53 +187,215 @@ namespace Cerval_Library
 
             switch (s_type)
             {
-                //ACTIVE_MESSAGES and ALL_MESSAGES have student ID in s_id
-                case "ACTIVE_MESSAGES": s = GenerateJSON_Messages(new Guid(s_id), true); break;
-                case "ALL_MESSAGES": s = GenerateJSON_Messages(new Guid(s_id), false); break;
-
-                case "EXAM_ENTRIES": s = GenerateJSONExamEntries(new Guid(s_id)); break;
-
+                #region Calls for Old Cerval Intranet
+                case "ACTIVE_MESSAGES": s = GenerateJSON_Messages(new Guid(s_id), true); break;//student ID in s_id
+                case "ALL_MESSAGES": s = GenerateJSON_Messages(new Guid(s_id), false); break;//student ID in s_id
+                case "EXAM_ENTRIES": s = GenerateJSONExamEntries(new Guid(s_id)); break;//student ID in s_id
                 case "GET_DATATYPES": s = GetDataTypes(); break;
                 case "GET_GROUPDATA": s = GetGroupData(new Guid(s_id), s3); break;
                 case "GET_STAFFID_FROMAPPSLOGIN": s = GetStaffId(s_id, s3); break;
                 case "GET_STAFF_TEACHINGSETS": s = GetStaffSets(s_id); break;
-
                 case "STAFF_TIMETABLE": s = GenerateJSONtimetable(s_id, false, TT_writer.TimetableType.Staff); break;//todays tt returned
                 case "STAFF_TIMETABLE_FULL": s = GenerateJSONtimetable(s_id, true, TT_writer.TimetableType.Staff); break;//full week tt returned
-
                 case "STUDENT_TIMETABLE": s = GenerateJSONtimetable(s_id, false, TT_writer.TimetableType.Student); break;//todays tt returned
                 case "STUDENT_TIMETABLE_FULL": s = GenerateJSONtimetable(s_id, true, TT_writer.TimetableType.Student); break;//full week tt returned
                 case "STUDENT_RESULTS": s = GenerateJSONResults(new Guid(s_id)); break;
                 case "STUDENT_RETAKES": s = GenerateJSONRetakes(new Guid(s_id)); break;
-
-                //MESSAGE_DELIVERED has MessageStudent_id in s_id
-                case "MESSAGE_DELIVERED": s = DeliverMessage(new Guid(s_id)); break;
+                case "MESSAGE_DELIVERED": s = DeliverMessage(new Guid(s_id)); break; //MESSAGE_DELIVERED has MessageStudent_id in s_id
                 case "MASTER_SHEET": s = GenerateMasterSheet(s_id); break;
+                case "GETSETSFORSUBJECTS": s = GetSetsForSubject(s_id, s3); break;
+                #endregion
+                //following for Google Reports Project - please do not alter!!
+                #region Calls for Google Reporting
                 case "ISAMS_MASTER_SHEET": s = ISAMSGenerateMasterSheet(s_id); break;
-                case "ISAMS_MASTER_SHEETX": s = ISAMSGenerateMasterSheetX(s_id,context); break;
-                case "GETSETSFORSUBJECTS": s = GetSetsForSubject(s_id,s3); break;
+                case "ISAMS_MASTER_SHEETX": s = GenericX("ISAMS_MASTER_SHEET",s_id, s3); break;
+ 
                 case "ISAMS_GETSETSFORSUBJECTS": s = ISAMSGetSetsForSubject(s_id, s3); break;
-                case "ISAMS_GETSETSFORSUBJECTSX": s = ISAMSGetSetsForSubjectX(s_id, s3,context); break;
-                case "ISAMS_GETSETMEMBERSHIPSX": s = ISAMSGetSetMembershipsX(s_id,  context); break;//id = year 
+                case "ISAMS_GETSETSFORSUBJECTSX": s = GenericX("ISAMS_GETSETSFORSUBJECTS",s_id, s3); break;
+
+                case "ISAMS_GETSETMEMBERSHIPSX": s = GenericX("ISAMS_GETSETMEMBERSHIPS",s_id,s3); break;//id = year 
                 case "ISAMS_GETSETMEMBERSHIPS": s = ISAMSGetSetMemberships(s_id); break;
+                #endregion
+                //
+                #region Calls for iSAMS outputs to spreadsheets
 
-                case "ISAMS_GETEXAMENTRIESX": s = ISAMSGetExamEntriesX(s_id,s3, context); break;
+                case "ISAMS_GETTEACHINGSTAFFX": s = GenericX("ISAMS_GETTEACHINGSTAFF", s_id, s3); break;
+                case "ISAMS_GETTEACHINGSTAFF": s = Generic("ISAMS_GETTEACHINGSTAFF", s_id, s3); break;
+
+                case "ISAMS_GETSTUDENT_SETSX": s = GenericX("ISAMS_GETSTUDENT_SETS", s_id, s3); break;
+                case "ISAMS_GETSTUDENT_SETS": s = Generic("ISAMS_GETSTUDENT_SETS", s_id, s3); break;
+
+                case "ISAMS_GETEXAMENTRIESX": s = GenericX("ISAMS_GETEXAMENTRIES",s_id,s3); break;
                 case "ISAMS_GETEXAMENTRIES": s = ISAMSGetExamEntries(s_id,s3); break;
-                case "ISAMS_LOADSTUDENTLISTEMAIL": s = ISAMSLoadStudentListEmail(s_id); break;// s_id is the email address 
 
-                case "ISAMS_GETADDRESSLISTX":  s = ISAMSGetAddressListX(s_id, s3, context); break;//s_id= NCYear
+                case "ISAMS_LOADSTUDENTLISTEMAIL": s = ISAMSLoadStudentListEmail(s_id); break;// s_id is the email address 
+                case "ISAMS_LOADSTUDENTLISTEMAILX": s=GenericX("ISAMS_LOADSTUDENTLISTEMAIL", s_id, s3); break;
+
+                case "ISAMS_GETADDRESSLISTX":  s = GenericX("ISAMS_GETADDRESSLIST",s_id, s3); break;//s_id= NCYear
                 case "ISAMS_GETADDRESSLIST":   s = ISAMSGetAddressList(s_id, s3); break;
 
-                case "ISAMS_GETSTUDENTLISTX": s = ISAMSGetStudentListX(s_id, s3, context); break;
+                case "ISAMS_GETPTOLISTX":      s = GenericX("ISAMS_GETPTOLIST", s_id, s3); break;//s_id= NCYear
+                case "ISAMS_GETPTOLIST":       s = Generic("ISAMS_GETPTOLIST", s_id, s3); break;//s_id= NCYear
+
+                case "ISAMS_GETSTUDENTLISTX": s = GenericX("ISAMS_GETSTUDENTLIST", s_id, s3); break;
                 case "ISAMS_GETSTUDENTLIST": s = ISAMSGetStudentList(s_id, s3); break;
 
+                case "GET_TQM_BOUNDARIESX": s = GenericX("GET_TQM_BOUNDARIES", s_id, s3); break;
+                case "GET_TQM_BOUNDARIES": s = GetTQMBoundaries(s_id, s3); break;
 
-                default: s = "{\"Error\" : \"Type not recognised\" }"; break;
+                case "GETCOMPONENTRESULTSX": s = GenericX("GETCOMPONENTS", s_id, s3); break;
+                case "GETCOMPONENTRESULTS": s = GetComponentResults(s_id, s3); break;
+
+                case "GETCOMPONENTRESULTSSTUDENTX": s = GenericX("GETCOMPONENTSSTUDENT", s_id, s3); break;
+                case "GETCOMPONENTRESULTSSTUDENT": s = GetComponentResultsStudent(s_id, s3); break;
+
+                case "GETEXTERNALRESULTSTUDENT": s = GetExternalResults(s_id, s3); break;
+
+                case "ISAMS_GETSEATINGPLANX": s = GenericX("ISAMS_GETSEATINGPLAN", s_id, s3); break;//id = exam cycle 
+                case "ISAMS_GETSEATINGPLAN": s = Generic("ISAMS_GETSEATINGPLAN", s_id, s3); break;//id = exam cycle
+
+                case "ISAMS_GETEXAMSTUDENTACCESSLISTX": s = GenericX("ISAMS_GETEXAMSTUDENTACCESSLIST", s_id, s3); break;//id = exam cycle 
+                case "ISAMS_GETEXAMSTUDENTACCESSLIST": s = Generic("ISAMS_GETEXAMSTUDENTACCESSLIST", s_id, s3); break;//id = exam cycle
+
+                case "ISAMS_GETEXAMCYCLESX": s = GenericX("ISAMS_GETEXAMCYCLES", s_id, s3); break;//id = exam cycle 
+                case "ISAMS_GETEXAMCYCLES": s = Generic("ISAMS_GETEXAMCYCLES", s_id, s3); break;//id = exam cycle
+
+                #endregion
+
+                default: s = "{\"Error\" : \"Type "+s_type+" not recognised\" }"; break;
             }
             context.Response.Clear();
             context.Response.ContentType = "application/json";
             context.Response.Write(s);
             context.Response.End();
+        }
+
+
+        private string Generic(string type, string s_id, string s3)
+        {
+            string s = "";
+            MemoryStream ms = new MemoryStream();
+            switch (type)
+            {
+                case "ISAMS_GETTEACHINGSTAFF":
+                    ISAMS_StaffTeachingList tsl1 = new ISAMS_StaffTeachingList();
+                    DataContractJsonSerializer js0 = new DataContractJsonSerializer(typeof(List<ISAMS_Staff>));
+                    js0.WriteObject(ms, tsl1.m_list);
+                    break;
+                case "ISAMS_GETSTUDENT_SETS":
+                    ISAMS_Student_Set_List l1 = new ISAMS_Student_Set_List();
+                    l1.Load(s_id, true);
+                    DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<ISAMS_Student_Set>));
+                    js.WriteObject(ms, l1.m_list);
+                    break;
+                case "ISAMS_GETSEATINGPLAN":
+                    ISAMS_ExamSeatingPlan_List l2 = new ISAMS_ExamSeatingPlan_List();
+                    l2.Load(System.Convert.ToInt32(s_id));
+                    DataContractJsonSerializer js1 = new DataContractJsonSerializer(typeof(List<ISAMS_ExamSeatingPlan>));
+                    js1.WriteObject(ms, l2.m_list);
+                    break;
+
+                case "ISAMS_GETPTOLIST":
+                    ISAMS_Set_PTOList Leena = new ISAMS_Set_PTOList();
+                    int NC = System.Convert.ToInt32(s_id);
+                    Leena.load(NC);
+                    DataContractJsonSerializer js2 = new DataContractJsonSerializer(typeof(List<ISAMS_Set_PTO>));
+                    js2.WriteObject(ms, Leena.m_list);
+                    break;
+
+                case "ISAMS_GETEXAMSTUDENTACCESSLIST":
+                    ISAMS_ExamStudentAccessList AccessList1 = new ISAMS_ExamStudentAccessList();
+                    int NC1 = System.Convert.ToInt32(s_id);
+                    AccessList1.load(NC1);
+                    DataContractJsonSerializer js3 = new DataContractJsonSerializer(typeof(List<ISAMS_ExamStudentAccess>));
+                    js3.WriteObject(ms, AccessList1.m_list);
+                    break;
+
+                case "ISAMS_GETEXAMCYCLES":
+                    ISAMS_ExamCycleList CycleList1 = new ISAMS_ExamCycleList();
+                    CycleList1.load();
+                    DataContractJsonSerializer js4 = new DataContractJsonSerializer(typeof(List<ISAMS_ExamCycle>));
+                    js4.WriteObject(ms, CycleList1.m_list);
+
+                    break;
+
+
+
+                default: s = "{\"Error\" : \"Type "+type+" not recognised at Generic call\" }"; return s;
+            }
+            string result = System.Text.Encoding.Default.GetString(ms.ToArray());
+            ms.Close();
+            return result;
+
+        }
+
+        private string GenericX(string type, string s_id, string s3)
+        {
+            string result = "";
+            using (System.Net.WebClient client = new System.Net.WebClient())
+            {
+                //try { result = client.DownloadString("http://10.1.3.199/Admin/messagelist.sync?Type=" + type + "&Id=" + s_id + "&parameters=" + s3); }
+                try   { result = client.DownloadString("http://10.1.84.230/admin/messagelist.sync?type="+type+"&Id=" + s_id + "&parameters=" + s3 + "&Key=1sva64HxxX_cz8IcXZrwhVRlDzhwRSex4G0XxuUn9RTQ");}
+                catch (Exception ex) { result = ex.ToString(); }
+            }
+            return result;
+        }
+
+        private string GetExternalResults(string s_id, string s3)
+        {
+            //id has student adno , s3 the exam year.... assuming summer season
+            ExamExternalResultsAsGrid l1 = new ExamExternalResultsAsGrid();
+            int adno = System.Convert.ToInt32(s_id);
+            Utility u = new Utility();
+            Guid Id = new Guid();
+            Id=u.Get_StudentID("StudentAdmissionNumber", s_id);
+            l1.Load(s3, "6", Id);
+            DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<List<string>>));
+            MemoryStream ms = new MemoryStream();
+            js.WriteObject(ms, l1.m_list);
+
+            string result = System.Text.Encoding.Default.GetString(ms.ToArray());
+            ms.Close();
+            return result;
+        }
+
+
+        private string GetComponentResults(string s_id, string s3)
+        {
+            ExamComponentResultFullList l1 = new ExamComponentResultFullList();
+            l1.LoadList(s_id, s3);
+            DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<ExamComponentResultFull>));
+            MemoryStream ms = new MemoryStream();
+            js.WriteObject(ms, l1.m_list);
+            string result = System.Text.Encoding.Default.GetString(ms.ToArray());
+            ms.Close();
+            return result;
+        }
+
+        private string GetComponentResultsStudent(string s_id, string s3)
+        {
+            ExamComponentResultFullList l1 = new ExamComponentResultFullList();
+            int adno = System.Convert.ToInt32(s_id);
+            l1.LoadListStudent(adno);//id is adno
+            DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<ExamComponentResultFull>));
+            MemoryStream ms = new MemoryStream();
+            js.WriteObject(ms, l1.m_list);
+            string result = System.Text.Encoding.Default.GetString(ms.ToArray());
+            ms.Close();
+            return result;
+        }
+
+        private string GetTQMBoundaries(string s_id, string s3)
+        {
+            ExamTQMBoundaryList_AsGrid l1 = new ExamTQMBoundaryList_AsGrid();
+            l1.Load(s_id, s3);
+            DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<List<string>>));
+            MemoryStream ms = new MemoryStream();
+            js.WriteObject(ms, l1.m_list);
+
+            string result = System.Text.Encoding.Default.GetString(ms.ToArray());
+            ms.Close();
+            return result;
         }
 
         private string ISAMSLoadStudentListEmail(string email)
@@ -218,42 +428,6 @@ namespace Cerval_Library
             return result;
         }
 
-
-        private string ISAMSGetExamEntriesX(string s_id, string s3, HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-                try
-                {
-                   result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETEXAMENTRIES&Id=" + s_id + "&parameters=" + s3);
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                }
-            }
-            return result;
-        }
-
-
-        private string ISAMSGetAddressListX(string s_id, string s3, HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-                try
-                {
-                    result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETADDRESSLIST&Id=" + s_id + "&parameters=" + s3);
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                }
-            }
-            return result;
-        }
-
         private string ISAMSGetAddressList(string s_id, string s3)
         {
 
@@ -270,44 +444,19 @@ namespace Cerval_Library
             return result;
         }
 
-
-
-
-
-        private string ISAMSGetStudentListX(string s_id, string s3, HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-                try
-                {
-                    result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETSTUDENTLIST&Id=" + s_id + "&parameters=" + s3);
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                }
-            }
-            return result;
-        }
-
         private string ISAMSGetStudentList(string s_id, string s3)
         {
 
             ISAMS_Student_List sl1 = new ISAMS_Student_List(true);
-
             //if (s_id == "0") { el1.Load(s3); } else { el1.Load(s_id, s3); }
            
             DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(List<ISAMS_Student>));
             MemoryStream ms = new MemoryStream();
             js.WriteObject(ms, sl1.m_list);
-
             string result = System.Text.Encoding.Default.GetString(ms.ToArray());
             ms.Close();
             return result;
         }
-
-
 
         private string GetSetsForSubject(string subject, string year)
         {
@@ -382,74 +531,6 @@ namespace Cerval_Library
 
             s += ns + "}" + ns + "}";
             return s;
-        }
-
-        private string ISAMSGetSetsForSubjectX(string subject, string year,HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-
-
-                try
-                {
-                    //byte[] response = client.DownloadData("10.1.84.130/admin/messagelist.sync?type=ISAMS_GETSETSFORSUBJECTS&Id=MA&parameters=13");
-                    //byte[] response = client.UploadValues("http://10.1.84.130/admin/messagelist.sync?type=ISAMS_GETSETSFORSUBJECTS&Id="+subject+"&parameters="+year, new System.Collections.Specialized.NameValueCollection()
-                    //{ { "Id",subject }, {"type","ISAMS_GETSETSFORSUBJECTS" }, { "parameters", "13"} });
-                    result = client.DownloadString("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETSETSFORSUBJECTS&Id=" + subject + "&parameters=" + year);
-                    //result = System.Text.Encoding.UTF8.GetString(response);
-                    
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                    s1 = s1;
-                }
-            }
-            return result;
-        }
-        private string ISAMSGenerateMasterSheetX(string GroupCode,HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-                ///client.Headers.Add("user-agent", "Mozilla / 5.0(Windows NT 10.0; WOW64; Trident / 7.0; rv: 11.0) like Gecko");
-                //client.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
-
-                try
-                {
-                    //byte[] response = client.DownloadData("10.1.84.130/admin/messagelist.sync?type=ISAMS_GETSETSFORSUBJECTS&Id=MA&parameters=13");
-                    byte[] response = client.UploadValues("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_MASTER_SHEET&Id=" + GroupCode + "&parameters=13", new System.Collections.Specialized.NameValueCollection()
-                    { { "Id", GroupCode }, {"type","ISAMS_MASTER_SHEET" }, { "parameters", "13"} });
-                    result = System.Text.Encoding.UTF8.GetString(response);
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                    s1 = s1;
-                }
-            }
-            return result;
-        }
-
-        private string ISAMSGetSetMembershipsX(string Year, HttpContext context)
-        {
-            string result = "";
-            using (System.Net.WebClient client = new System.Net.WebClient())
-            {
-                try
-                {
-                    byte[] response = client.UploadValues("http://10.1.3.165/admin/messagelist.sync?type=ISAMS_GETSETMEMBERSHIPS&Id=" + Year+ "&parameters=13", new System.Collections.Specialized.NameValueCollection()
-                    { { "Id", Year }, {"type","ISAMS_GETSETMEMBERSHIPS" }, { "parameters", "13"} });
-                    result = System.Text.Encoding.UTF8.GetString(response);
-                }
-                catch (Exception ex)
-                {
-                    string s1 = ex.ToString();
-                    s1 = s1;
-                }
-            }
-            return result;
         }
 
         private string ISAMSGetSetMemberships(string Year)

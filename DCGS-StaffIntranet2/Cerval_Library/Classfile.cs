@@ -23,6 +23,12 @@ using System.Runtime.InteropServices;
 using System.Security.Principal;
 using System.Runtime.Serialization.Json;
 using System.Web.Hosting;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Sheets.v4;
+using System.Threading;
+using Google.Apis.Util.Store;
+using Google.Apis.Services;
+using System.Data.SqlTypes;
 
 namespace Cerval_Library
 {
@@ -156,7 +162,7 @@ namespace Cerval_Library
         public static Guid newdawnLinearCse = new Guid("057d1186-875d-48e8-8d32-d46794330df6");
         public static Guid RegistrationCse = new Guid("e51cea19-5056-4841-a048-05c0df7e684e");
         public static Guid IndividualStaffGroup = new Guid("0d1cdbaf-d8c1-4425-9a08-8b1b41e98a6e");
-        public static System.Collections.Generic.List<Guid> NewStructureCourses = new System.Collections.Generic.List<Guid>();
+        public static List<Guid> NewStructureCourses = new List<Guid>();
 
 
 
@@ -320,20 +326,16 @@ namespace Cerval_Library
                 s += ", CourseCode = '" + CourseCode + "' ";
                 s += ", CourseName = '" + CourseName + "' ";
                 s += ", CourseType = '" + CourseType + "' ";
-
                 s += " WHERE (CourseID = '" + _CourseID.ToString() + "' ) ";
-
             }
             Encode en = new Encode();
             en.ExecuteSQL(s);
-
         }
 
         public bool GetResultType(ref int ResultType, DateTime CourseStartDate)
         {
             ResultType = 0;
             if (_CourseID == Guid.Empty) return false;
-
             Encode en = new Encode();
             string db_connection = en.GetDbConnection();
             //get a list of all courses.... 
@@ -620,21 +622,62 @@ namespace Cerval_Library
     {
         private byte[] Key = { 0x5f, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
         private byte[] IV = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-
+        public string GetFilePath(string filename)
+        {
+            string s = "";
+            s = HostingEnvironment.MapPath(@"/App_Data/" + filename);//OK for web apps
+            if (s == null)
+            {
+                s = @"../App_Data/" + filename;
+            }
+            return s;
+        }
 
         public string GetDbConnection()
         {
 #if DEBUG
-            //string s = "";
+            string s = "";
+            //s = ReadEncrypted(GetFilePath("CervalDb.txt"));
+            return " Initial Catalog = Civet; Data Source = 192.168.1.98; user ID =sa; password = djgt290652";
+            return " Initial Catalog = Cerval; Data Source = 192.168.1.98; user ID =sa; password = djgt290652";
             //s=HostingEnvironment.MapPath(@"/App_Data/CervalDb.txt");
-            //AppSettingsReader ar = new AppSettingsReader();
+            //AppSettingsReader ar = new AppSettingsReader();sdf:!602
             //s = ar.GetValue("CervalDb", typeof(string)).ToString();
             //s = ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/CervalDb.txt"));
-            return ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/CervalDb.txt"));
+           // return "Initial Catalog = Cerval; Data Source = 10.1.84.230,1433; user ID =sa; password = 4h4h7..>sapa";
+            s = ReadEncrypted(GetFilePath("CervalDb.txt"));
+            s = "Initial Catalog=Cerval;Data Source=postyshev.challoners.net;user ID=cc-development;password=sdf:!602";
+            return ReadEncrypted(GetFilePath("CervalDb.txt"));
+            return "Initial Catalog = iSAMS_Challoners; Data Source = tcp: 95.138.141.94,29347; user ID = wwwiSAMS_DCGSAccess; password = Flw5P % sdp1mq6f76";
 #else
+            return "Initial Catalog = Cerval; Data Source = 10.1.84.230,1433; user ID =sa; password = 4h4h7..>sapa";
+            return ReadEncrypted(GetFilePath("CervalDb.txt"));
             return ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/CervalDb.txt"));
 
 #endif
+        }
+        public string GetISAMSDBConnection()
+        {
+            string s = ReadEncrypted(GetFilePath("iSAMSDB.txt"));
+
+            return ReadEncrypted(GetFilePath("iSAMSDB.txt"));
+        }
+
+        public string GetCaracalDBConnection()
+        {
+            string s = "Initial Catalog = Caracal; Data Source = 10.1.84.230,1433; user ID =sa; password = 4h4h7..>sapa";
+
+            return s;
+        }
+
+
+        public string GetGladstoneDBConnection()
+        {
+            return ReadEncrypted(GetFilePath("GladstoneDB.txt"));
+        }
+        public string GetCervalConnectionString()
+        {
+            return ReadEncrypted(GetFilePath("CervalConnectionDB.txt"));
         }
         public string ReadEncrypted(string file_name)
         {
@@ -675,22 +718,8 @@ namespace Cerval_Library
             using (FileStream fs = File.Open(filename, FileMode.OpenOrCreate))
             {
                 fs.Write(encrypted, 0, encrypted.Length);
-            } 
+            }
 
-        }
-
-        public string GetISAMSDBConnection()
-        {
-            return ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/iSAMSDB.txt"));
-        }
-        public string GetGladstoneDBConnection()
-        {
-            return ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/GladstoneDB.txt"));
-        }
-
-        public string GetCervalConnectionString()
-        {
-            return ReadEncrypted(HostingEnvironment.MapPath(@"/App_Data/CervalConnectionDB.txt"));
         }
 
         public void ExecuteSQL(string s)
@@ -1641,7 +1670,7 @@ namespace Cerval_Library
                 s += "'" + _GroupPrimaryAdministrative.ToString() + "' , ";
                 if (_GroupRegistrationYear != 0) s += " '" + _GroupRegistrationYear.ToString() + "' , ";
                 if (_GroupManagedBy != Guid.Empty) s += " '" + _GroupManagedBy.ToString() + "' , ";
-                s += " '8' "; //version for New Dawn
+                s += " '9' "; //version for New Dawn
                 s += ")";
                 en.ExecuteSQL(s);
                 //now need to get the id....
@@ -4727,6 +4756,8 @@ namespace Cerval_Library
             if (m_PersonId == Guid.Empty)
             {
                 m_PersonId = Guid.NewGuid();
+
+
                 string s = "INSERT INTO dbo.tbl_Core_People ";
                 s += " (PersonId, PersonTitle, PersonGender, PersonGivenName, PersonSurname, PersonDateOfBirth, Version  )";
                 s += " VALUES ( '" + m_PersonId.ToString() + "' , '" + m_Title.ToString() + "'";
@@ -5674,11 +5705,11 @@ namespace Cerval_Library
             if (!dr.IsDBNull(13)) m_upn = dr.GetString(13);
             if (!dr.IsDBNull(14)) m_examNo = dr.GetInt32(14);
             //ad date ethnic-code ethnic-name
-            m_doa = dr.GetDateTime(15);
-            m_ethnicity = dr.GetString(17);
-            m_religion = dr.GetString(19);
-            m_language = dr.GetString(21);
-            m_IsOnRole = dr.GetBoolean(23);
+            if (!dr.IsDBNull(15)) m_doa = dr.GetDateTime(15);
+            if (!dr.IsDBNull(17)) m_ethnicity = dr.GetString(17);
+            if (!dr.IsDBNull(19)) m_religion = dr.GetString(19);
+            if (!dr.IsDBNull(21)) m_language = dr.GetString(21);
+            if (!dr.IsDBNull(23)) m_IsOnRole = dr.GetBoolean(23);
             //fsm flag ,  in care flag , 
             //dbo.tbl_Core_Students.StudentDoctor AS Expr17, 
             //dbo.tbl_Core_Students.StudentLeavingDate AS Expr18
@@ -8419,7 +8450,7 @@ namespace Cerval_Library
                 s = "INSERT INTO tbl_Core_ScheduledPeriodValidity ";
                 s += " (ScheduledPeriodValidityId, ScheduledPeriodId, ValidityStart, ValidityEnd ,Version)";
                 s += " VALUES ( '" + Id.ToString() + "', '" + ScheduledPeriodId.ToString() + "', CONVERT(DATETIME, '" + Start.ToString("yyyy-MM-dd HH:mm:ss") + "', 102), ";
-                s += " CONVERT(DATETIME, '" + End.ToString("yyyy-MM-dd HH:mm:ss") + "', 102), '0' )";
+                s += " CONVERT(DATETIME, '" + End.ToString("yyyy-MM-dd HH:mm:ss") + "', 102), '5' )";
                 en.ExecuteSQL(s);
             }
             return Id;
@@ -8630,6 +8661,23 @@ namespace Cerval_Library
             en.ExecuteSQL(s);
         }
 
+        public void UpdateAdno(string adno)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "UPDATE dbo.tbl_Core_Students SET StudentAdmissionNumber='" + adno + "' WHERE (StudentId = '" + m_StudentId.ToString() + "')";
+            en.ExecuteSQL(s);
+        }
+
+
+        public void UpdateUPN(string upn)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "UPDATE dbo.tbl_Core_Students SET StudentUPN='" + upn + "' WHERE (StudentId = '" + m_StudentId.ToString() + "')";
+            en.ExecuteSQL(s);
+        }
+
         public void UpdateULN(string uln)
         {
             Encode en = new Encode();
@@ -8655,8 +8703,34 @@ namespace Cerval_Library
         }
 
 
+        public void MarkAsOnRole(DateTime AdmissionDate)
+        {
+            string date_s = "CONVERT(DATETIME, '" + AdmissionDate.ToString("yyyy-MM-dd HH:mm:ss") + "', 102)";
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "UPDATE dbo.tbl_Core_Students SET  StudentIsOnRole ='true' ,";
+            s += " StudentLeavingDate = NULL , StudentAdmissionDate = "+date_s;
+            s += " WHERE (StudentId = '" + m_StudentId.ToString() + "')";
+            en.ExecuteSQL(s);
+
+        }
+
+
+        public void MarkAsLeft(DateTime leavingDate)
+        {
+            string date_s = "CONVERT(DATETIME, '" + leavingDate.ToString("yyyy-MM-dd HH:mm:ss") + "', 102)";
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "UPDATE dbo.tbl_Core_Students SET  StudentIsOnRole ='false' ,";
+            s += " StudentLeavingDate = " + date_s;
+            s += "   WHERE (StudentId = '" + m_StudentId.ToString() + "')";
+            en.ExecuteSQL(s);
+
+        }
+
         public bool Check_UCI_Checksum(string uci)
         {
+            if (uci == null) return false;
             string s = uci.Substring(0, 12);
             //ok checksum.....
             int sum = 0; int digit = 0;
@@ -8918,6 +8992,18 @@ namespace Cerval_Library
             Load1("SELECT * FROM tbl_Core_Rooms WHERE RoomCode='" + RoomCode + "' ");
         }
 
+        public Guid Create(string RoomCode)
+        {
+            Guid Id = new Guid(); Id = Guid.NewGuid();
+            Encode en = new Encode(); string s = "";
+            s = "INSERT INTO dbo.tbl_Core_Rooms ";
+            s += " (RoomId, RoomCode, Version  )";
+            s += " VALUES ( '" + Id.ToString() + "' , '" + RoomCode + "', '20' )";
+            en.ExecuteSQL(s);
+            return Id;
+
+        }
+
         public override string ToString()
         {
             return (m_roomcode);
@@ -8977,7 +9063,7 @@ namespace Cerval_Library
         public int m_Post;
         [DataMember]
         public Guid m_PersonId;
-        public bool m_valid;
+        public bool m_valid = false;
 
         public SimpleStaff()
         {
@@ -9059,6 +9145,52 @@ namespace Cerval_Library
 
             return free;
         }
+
+        public Guid CreateNew(int Title, string Gender, string Surname, string GivenName, DateTime Dob, string staffCode, string GoogleLogin)
+        {
+            Person p = new Person();
+            p.m_Gender = Gender;
+            p.m_GivenName = GivenName;
+            p.m_Surname = Surname;
+            p.m_Title = Title;
+            p.m_dob = Dob;
+            m_PersonId = p.Save();
+            string s = "";
+
+            //now check that teh staff record doesn'e exist
+
+
+            Encode en = new Encode();
+            SimpleStaff s1 = new SimpleStaff(staffCode);
+            if (s1.m_valid)
+            {
+                s = "UPDATE dbo.tbl_Core_Staff SET  StaffPersonId='" + m_PersonId.ToString() + "' WHERE (StaffId = '" + s1.m_StaffId.ToString() + "')";
+                en.ExecuteSQL(s);
+            }
+            else
+            {
+
+                if (m_PersonId != Guid.Empty)
+                {
+                    s = "INSERT INTO dbo.tbl_Core_Staff ";
+                    s += " (StaffPersonId, StaffCode, Version  )";
+                    s += " VALUES ( '" + m_PersonId.ToString() + "' , '" + staffCode + "', '20' )";
+                    en.ExecuteSQL(s);
+
+                    SimpleStaff s2 = new SimpleStaff(staffCode);
+
+                    s = "UPDATE dbo.tbl_Core_Staff SET  GoogleAppsLogin ='" + GoogleLogin + "' WHERE (StaffId = '" + s2.m_StaffId.ToString() + "')";
+                    en.ExecuteSQL(s);
+                }
+                else
+                {
+
+                }
+            }
+            return m_PersonId;
+        }
+
+
     }
     [Serializable]
     public class SimpleStudentFullList : IEnumerable
@@ -10411,6 +10543,75 @@ namespace Cerval_Library
             }
         }
     }
+
+
+    public class StaffContract
+    {
+        //TODO
+        public StaffContract() { }
+        public Guid Id;
+        public int ContractType;
+        public Guid m_StaffId;
+        public DateTime start;
+        public DateTime end;
+        public int Post;
+        public int PrimaryRole;
+
+        public void Load(Guid StaffId)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = "SELECT  * FROM tbl_Core_TEMP_StaffContracts WHERE (StaffId = '" + StaffId + "' ) ";
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            Id = dr.GetGuid(0);
+                            ContractType = dr.GetInt32(2);
+                            m_StaffId = StaffId;
+                            start = dr.GetDateTime(3);
+                            if (!dr.IsDBNull(4)) { end = dr.GetDateTime(4); }
+                            Post = dr.GetInt32(5);
+                            PrimaryRole = dr.GetInt32(6);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
+        public void Save()
+        {
+            if (start > end) throw new Exception("Dates don't match");
+            Encode en = new Encode(); string s = "";
+            if ((Id == null) || (Id == Guid.Empty))
+            {
+                //make a new one.....
+                Guid Id = new Guid(); Id = Guid.NewGuid();
+                s = "INSERT INTO tbl_Core_TEMP_StaffContracts Id, StaffId, ContractType,start, end, Post,PrimaryRole)";
+
+                s += "VALUES ('" + Id.ToString() + "' , '" + m_StaffId.ToString() + "' ,  '" + ContractType + "',";
+                s += " CONVERT(DATETIME, '" + start.ToString("yyyy-MM-dd HH:mm:ss") + "', 102) , ";
+                s += " CONVERT(DATETIME, '" + end.ToString("yyyy-MM-dd HH:mm:ss") + "', 102) , ";
+                s += " '" + Post + "' , ";
+                s += "'" + PrimaryRole + "' )";
+                en.ExecuteSQL(s);
+            }
+            else
+            {
+                throw new Exception("Update not yet implemented");
+            }
+        }
+    }
+
+
+
     public class StudentSENStrategy
     {
         public Guid Id;
@@ -13036,6 +13237,29 @@ namespace Cerval_Library
         {
 
         }
+
+        public async void Test1()
+        {
+            UserCredential credential;
+            using (var stream = new FileStream(@"d:\\client_secret_318674442685-a4ajr3vqnd8tkj4090p3jh83epn21ra5.apps.googleusercontent.com", FileMode.Open, FileAccess.Read))
+            {
+                credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    new[] { SheetsService.Scope.Spreadsheets },
+                    "user", CancellationToken.None, new FileDataStore(@"d:\\test.txt"));
+            }
+
+            // Create the service.
+            var service = new SheetsService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = "Apps Script",
+            });
+            var fred = service.Spreadsheets.Get("10usxblP6yGQTB2VkYeA5xuLUMepf1TuIcyhig4H1ygk").SpreadsheetId;
+            fred = fred;
+
+        }
+
         public DateTime ThisExamSeasonStart()
         {
             DateTime t1 = new DateTime(DateTime.Now.Year, 5, 1);
@@ -14142,6 +14366,7 @@ namespace Cerval_Library
         public int m_ValueAddedBaseResultType;
         public int m_ValueAddedOutputResultType;
         public int m_ValueAddedCourseType;
+        public bool m_Current;
         public bool m_valid;
 
         public ValueAddedMethod() { m_valid = false; }
@@ -14149,6 +14374,19 @@ namespace Cerval_Library
         {
             m_valid = false;
             Load1("WHERE (ValueAddedMethodID='" + ValueAddedMethodId.ToString() + "' )");
+        }
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            m_ValueAddedMethodID = dr.GetGuid(0);
+            m_ValeAddedDescription = dr.GetString(1);
+            m_ValueAddedShortName = dr.GetString(2);
+            m_ValueAddedBaseResultType = dr.GetInt32(3);
+            m_ValueAddedOutputResultType = dr.GetInt32(4);
+            m_ValueAddedCourseType = dr.GetInt32(5);
+            m_Current = dr.GetBoolean(7);
+            m_valid = true;
+
         }
         public void Load1(string query)
         {
@@ -14163,16 +14401,7 @@ namespace Cerval_Library
                 {
                     using (SqlDataReader dr = cm.ExecuteReader())
                     {
-                        while (dr.Read())
-                        {
-                            m_ValueAddedMethodID = dr.GetGuid(0);
-                            m_ValeAddedDescription = dr.GetString(1);
-                            m_ValueAddedShortName = dr.GetString(2);
-                            m_ValueAddedBaseResultType = dr.GetInt32(3);
-                            m_ValueAddedOutputResultType = dr.GetInt32(4);
-                            m_ValueAddedCourseType = dr.GetInt32(5);
-                            m_valid = true;
-                        }
+                        while (dr.Read()){Hydrate(dr);}
                     }
                 }
             }
@@ -14320,14 +14549,13 @@ namespace Cerval_Library
     }
     public class ValueAddedMethodList
     {
-        public ArrayList _ValueAddedMethodList = new ArrayList();
+        public List<ValueAddedMethod> _ValueAddedMethodList = new List<ValueAddedMethod>();
         public ValueAddedMethodList()
         {
             _ValueAddedMethodList.Clear();
             Encode en = new Encode();
             string db_connection = en.GetDbConnection();
-            string s = "SELECT     ValueAddedMethodID, ValueAddedDescription, ValueAddedShortName, ValueAddedBaseResultType, ";
-            s += "ValueAddedOutputResultType, ValueAddedOutputCourseType FROM   tbl_Core_ValueAddedMethods ";
+            string s = "SELECT * FROM   tbl_Core_ValueAddedMethods ";
             using (SqlConnection cn = new SqlConnection(db_connection))
             {
                 cn.Open();
@@ -14338,13 +14566,7 @@ namespace Cerval_Library
                         while (dr.Read())
                         {
                             ValueAddedMethod v = new ValueAddedMethod();
-                            _ValueAddedMethodList.Add(v);
-                            v.m_ValueAddedMethodID = dr.GetGuid(0);
-                            v.m_ValeAddedDescription = dr.GetString(1);
-                            v.m_ValueAddedShortName = dr.GetString(2);
-                            v.m_ValueAddedBaseResultType = dr.GetInt32(3);
-                            v.m_ValueAddedOutputResultType = dr.GetInt32(4);
-                            v.m_ValueAddedCourseType = dr.GetInt32(5);
+                            v.Hydrate(dr);_ValueAddedMethodList.Add(v);
                         }
                         dr.Close();
                     }
@@ -14927,6 +15149,38 @@ namespace Cerval_Library
             }
         }
 
+
+
+        public void Load(string ExamBdFriendlyName)
+        {
+            //overloaded to allow for the upload code to work....
+            string s = "SELECT     dbo.tbl_Core_ExamBoards.ExamBoardId, dbo.tbl_Core_ExamBoards.ExamBoardOrganisationId, ";
+            s += "dbo.tbl_Core_ExamBoards.LegacyExamBdId, dbo.tbl_Core_Organisations.OrganisationName, ";
+            s += "dbo.tbl_Core_Organisations.OrganisationFriendlyName ";
+            s += "FROM         dbo.tbl_Core_ExamBoards ";
+            s += "INNER JOIN dbo.tbl_Core_Organisations ";
+            s += "ON dbo.tbl_Core_ExamBoards.ExamBoardOrganisationId = dbo.tbl_Core_Organisations.OrganisationId ";
+            s += " WHERE     (dbo.tbl_Core_Organisations.OrganisationFriendlyName = '" + ExamBdFriendlyName + "')";
+
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
         public void Hydrate(SqlDataReader dr)
         {
             m_valid = true;
@@ -15503,18 +15757,18 @@ namespace Cerval_Library
 
 
     }
-
+    [DataContract]
     public class ExamComponentResult
     {
-        public Guid ComponentResultId;
-        public Guid StudentId;
-        public Guid ComponentId;
-        public Guid OptionId;
-        public int ComponentScaledMark = 0;
-        public int ComponentUMS = 0;
-        public string ComponentStatus = "";
-        public int version;
-        public bool valid;
+        [DataMember]public Guid ComponentResultId;
+        [DataMember]public Guid StudentId;
+        [DataMember] public Guid ComponentId;
+        [DataMember] public Guid OptionId;
+        [DataMember] public int ComponentScaledMark = 0;
+        [DataMember] public int ComponentUMS = 0;
+        [DataMember] public string ComponentStatus = "";
+        [DataMember] public int version;
+        [DataMember] public bool valid;
 
         public ExamComponentResult() { valid = false; ComponentResultId = Guid.Empty; }
 
@@ -15683,6 +15937,122 @@ namespace Cerval_Library
         }
     }
 
+    [DataContract]
+    public class ExamComponentResultFull
+    {
+        [DataMember]
+        public int AdmissionNumber;
+        [DataMember]
+        public string GivenName;
+        [DataMember]
+        public string Surname;
+        [DataMember]
+        public string OptionCode;
+        [DataMember]
+        public string OptionTitle;
+        [DataMember]
+        public string ComponentCode;
+        [DataMember]
+        public string ComponentTitle;
+        [DataMember]
+        public int ScaledMark = 0;
+        [DataMember]
+        public int MaxMark = 0;
+        [DataMember]
+        public bool valid = false;
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            AdmissionNumber = dr.GetInt32(0); valid = true;
+            GivenName = dr.GetString(1);
+            Surname = dr.GetString(2);
+            OptionCode = dr.GetString(3);
+            OptionTitle = dr.GetString(4);
+            ComponentCode = dr.GetString(5);
+            ComponentTitle = dr.GetString(6);
+            if (!dr.IsDBNull(7)) ScaledMark = dr.GetInt32(7);
+            if (!dr.IsDBNull(8)) MaxMark = dr.GetInt32(8);
+
+        }
+    }
+    [DataContract]
+    public class ExamComponentResultFullList
+    {
+        [DataMember]
+        public List<ExamComponentResultFull> m_list = new List<ExamComponentResultFull>();
+
+        public string GetQuery(string where)
+        {
+            string s = " SELECT DISTINCT  dbo.tbl_Core_Students.StudentAdmissionNumber, dbo.tbl_Core_People.PersonGivenName, dbo.tbl_Core_People.PersonSurname, dbo.tbl_Exams_Options.OptionCode, dbo.tbl_Exams_Options.OptionTitle, ";
+            s += "     dbo.tbl_Exams_Components.ComponentCode, dbo.tbl_Exams_Components.ComponentTitle, dbo.tbl_Exams_ComponentResults.ComponentScaledMark, dbo.tbl_Exams_Components.MaximumMark ";
+            s += " FROM   dbo.tbl_Exams_ComponentResults ";
+            s += "   INNER JOIN dbo.tbl_Exams_Components ON dbo.tbl_Exams_ComponentResults.ComponentId = dbo.tbl_Exams_Components.ComponentID ";
+            s += " INNER JOIN  dbo.tbl_Core_Students ON dbo.tbl_Exams_ComponentResults.StudentId = dbo.tbl_Core_Students.StudentId ";
+            s += "  INNER JOIN dbo.tbl_Core_People ON dbo.tbl_Core_Students.StudentPersonId = dbo.tbl_Core_People.PersonId ";
+            s += " INNER JOIN  dbo.tbl_Exams_Options ON dbo.tbl_Exams_ComponentResults.OptionID = dbo.tbl_Exams_Options.OptionID  ";
+            s += where;
+            return s;
+        }
+
+
+        public void LoadListStudent(int Adno)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            m_list.Clear();
+            string s = GetQuery(" WHERE(dbo.tbl_Core_Students.StudentAdmissionNumber = '" + Adno.ToString() + "')");
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ExamComponentResultFull r = new ExamComponentResultFull();
+                            m_list.Add(r);
+                            r.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
+
+        public void LoadList(string year, string season)
+        {
+            //get all syllabusses....???
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            m_list.Clear();
+            string s = GetQuery(" WHERE(dbo.tbl_Exams_Options.YearCode = '" + year + "') AND(dbo.tbl_Exams_Options.SeasonCode = '" + season + "')");
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ExamComponentResultFull r = new ExamComponentResultFull();
+                            m_list.Add(r);
+                            r.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
+    }
+
+
+
     public class Exam_Entry
     {
         public Guid m_ExamEntryID;
@@ -15827,7 +16197,7 @@ namespace Cerval_Library
                 // make a new record..
                 s = "INSERT INTO dbo.tbl_Exams_Entries (ExamEntryID,StudentID, OptionID, DateCreated, ExamYear, ExamSeason, EntryStatus, Version )";
                 s += "VALUES ( '" + m_ExamEntryID.ToString() + "' ,";
-                s += "'" + m_StudentID.ToString() + "' , '" + m_OptionID.ToString() + "' , CONVERT(DATETIME, '" + m_Date_Created.ToShortDateString() + "', 103) ,'" + m_year + "' , '" + m_season + "' , '" + m_EntryStatus + "' , '4' )";
+                s += "'" + m_StudentID.ToString() + "' , '" + m_OptionID.ToString() + "' , CONVERT(DATETIME, '" + m_Date_Created.ToShortDateString() + "', 103) ,'" + m_year + "' , '" + m_season + "' , '" + m_EntryStatus + "' , '5' )";
             }
             else
             {
@@ -16399,15 +16769,18 @@ namespace Cerval_Library
 
     }
 
+    [DataContract]
     public class ExamTQMBoundary
     {
-        public Guid TQMBoundaryId;
-        public Guid OptionId;
-        public int Mark;
-        public string Grade;
-        public string Year; //exam bde year ie 2 digit
-        public string Season;
-        public int Version;
+        [DataMember] public Guid TQMBoundaryId;
+        [DataMember] public Guid OptionId;
+        [DataMember] public int Mark;
+        [DataMember] public string Grade;
+        [DataMember] public string Year; //exam bde year ie 2 digit
+        [DataMember] public string Season;
+        [DataMember] public int Version;
+        [DataMember] public string OptionCode;
+        [DataMember] public string OptionTitle;
 
         public ExamTQMBoundary() { }
 
@@ -16420,6 +16793,8 @@ namespace Cerval_Library
             Year = dr.GetString(4);
             Season = dr.GetString(5);
             Version = dr.GetInt32(6);
+            OptionCode = dr.GetString(7);
+            OptionTitle = dr.GetString(8);
         }
         public void Save()
         {
@@ -16460,9 +16835,10 @@ namespace Cerval_Library
         }
     }
 
+    [DataContract]
     public class ExamTQMBoundaryList
     {
-        public List<ExamTQMBoundary> m_list = new List<ExamTQMBoundary>();
+        [DataMember] public List<ExamTQMBoundary> m_list = new List<ExamTQMBoundary>();
 
         public ExamTQMBoundaryList() { }
 
@@ -16473,10 +16849,11 @@ namespace Cerval_Library
             string db_connection = en.GetDbConnection();
             m_list.Clear();
 
-            string s = " SELECT  TQMBoundariesId, OptionId, Mark, Grade, Year, Season, Version";
-            s += " FROM tbl_Exams_TQM_Boundaries";
-            s += " WHERE ( Year='" + year + "' ) AND ( Season='" + season + "'  ) AND (OptionId = '" + optionId.ToString() + "' ) ";
-            s += "ORDER BY Mark DESC ";
+            string s = " SELECT  dbo.tbl_Exams_TQM_Boundaries.TQMBoundariesId, dbo.tbl_Exams_TQM_Boundaries.OptionId, dbo.tbl_Exams_TQM_Boundaries.Mark, dbo.tbl_Exams_TQM_Boundaries.Grade, dbo.tbl_Exams_TQM_Boundaries.Year, dbo.tbl_Exams_TQM_Boundaries.Season, dbo.tbl_Exams_TQM_Boundaries.Version";
+            s += ", dbo.tbl_Exams_Options.OptionCode, dbo.tbl_Exams_Options.OptionTitle ";
+            s += " FROM tbl_Exams_TQM_Boundaries INNER JOIN  dbo.tbl_Exams_Options ON dbo.tbl_Exams_TQM_Boundaries.OptionId = dbo.tbl_Exams_Options.OptionID ";
+            s += " WHERE (  dbo.tbl_Exams_TQM_Boundaries.Year='" + year + "' ) AND (  dbo.tbl_Exams_TQM_Boundaries.Season='" + season + "'  ) AND ( dbo.tbl_Exams_TQM_Boundaries.OptionId = '" + optionId.ToString() + "' ) ";
+            s += " ORDER BY dbo.tbl_Exams_TQM_Boundaries.OptionId, dbo.tbl_Exams_TQM_Boundaries.Mark DESC ";
 
             using (SqlConnection cn = new SqlConnection(db_connection))
             {
@@ -16499,7 +16876,145 @@ namespace Cerval_Library
 
         }
 
+        public void LoadList(string year, string season)
+        {
+            //get all syllabusses....???
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            m_list.Clear();
+
+            string s = " SELECT   dbo.tbl_Exams_TQM_Boundaries.TQMBoundariesId,  dbo.tbl_Exams_TQM_Boundaries.OptionId,  dbo.tbl_Exams_TQM_Boundaries.Mark,  dbo.tbl_Exams_TQM_Boundaries.Grade,  dbo.tbl_Exams_TQM_Boundaries.Year,  dbo.tbl_Exams_TQM_Boundaries.Season,  dbo.tbl_Exams_TQM_Boundaries.Version";
+            s += ", dbo.tbl_Exams_Options.OptionCode, dbo.tbl_Exams_Options.OptionTitle ";
+            s += " FROM tbl_Exams_TQM_Boundaries INNER JOIN  dbo.tbl_Exams_Options ON dbo.tbl_Exams_TQM_Boundaries.OptionId = dbo.tbl_Exams_Options.OptionID ";
+            s += " WHERE ( dbo.tbl_Exams_TQM_Boundaries.Year='" + year + "' ) AND ( dbo.tbl_Exams_TQM_Boundaries.Season='" + season + "'  )  ";
+            s += " ORDER BY dbo.tbl_Exams_TQM_Boundaries.OptionId, dbo.tbl_Exams_TQM_Boundaries.Mark DESC ";
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ExamTQMBoundary e1 = new ExamTQMBoundary();
+                            m_list.Add(e1);
+                            e1.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
     }
+
+    [DataContract]
+    public class ExamTQMBoundaryList_AsGrid
+    {
+        [DataMember] public List<List<string>> m_list = new List<List<string>>();
+        public List<List<string>> Load(string year, string season)
+        {
+            ExamTQMBoundaryList TQM1 = new ExamTQMBoundaryList();
+            TQM1.LoadList(year, season);
+
+            string currentOPt = ""; int max_opts = 0;
+            List<string> Grades = new List<string>();
+            foreach (ExamTQMBoundary e1 in TQM1.m_list)
+            {
+                if (currentOPt != e1.OptionCode) { max_opts++; currentOPt = e1.OptionCode; }
+                if (!Grades.Contains(e1.Grade)) Grades.Add(e1.Grade);
+            }
+            int max_grades = Grades.Count;
+            string[][] a1 = new string[max_opts + 2][];
+            for (int i = 0; i < max_opts + 2; i++) { string[] a2 = new string[max_grades + 3]; a1[i] = a2; }
+
+            a1[0][0] = "Option Code"; a1[0][1] = "OptionTitle"; //a1[0][2] = "OptionId";
+            for (int i = 0; i < Grades.Count; i++) a1[0][i + 3] = Grades[i];
+            currentOPt = ""; int i1 = 1;
+            foreach (ExamTQMBoundary e1 in TQM1.m_list)
+            {
+                if (currentOPt != e1.OptionCode)
+                {
+                    i1++;
+                    a1[i1][0] = e1.OptionCode; a1[i1][1] = e1.OptionTitle; //a1[i1][2] = e1.OptionId.ToString();
+                    currentOPt = e1.OptionCode;
+                }
+                for (int j = 0; j < max_grades; j++)
+                {
+                    if (a1[0][j] == e1.Grade) { a1[i1][j] = e1.Mark.ToString(); break; }
+                }
+            }
+
+            //so have array??
+            i1 = 0;
+            for (int i = 0; i < max_opts; i++)
+            {
+                List<string> s1 = new List<string>();
+                for (int j = 0; j < max_grades; j++)
+                {
+                    s1.Add(a1[i][j]);
+                }
+                m_list.Add(s1);
+            }
+            return m_list;
+        }
+    }
+
+    [DataContract]
+    public class ExamExternalResultsAsGrid
+    {
+        [DataMember]
+        public List<List<string>> m_list = new List<List<string>>();
+        public List<List<string>> Load(string year, string season, Guid StudentId)
+        {
+            List<string> s1 = new List<string>();
+            m_list.Clear();
+            s1.Add("id");
+            s1.Add("Date");
+            s1.Add("Description");
+            s1.Add("Syllabus");
+            s1.Add("Syllabus Title");
+            s1.Add("Result");
+            s1.Add("Add Info");
+            m_list.Add(s1);
+
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            string s = " SELECT  dbo.tbl_Core_Results.ResultDate, dbo.tbl_List_ResultType.ShortName, dbo.tbl_Exams_Syllabus.SyllabusCode, dbo.tbl_Exams_Syllabus.SyllabusTitle, ";
+            s += " dbo.tbl_Core_Results.ResultValue, dbo.tbl_Core_Results.ResultText  FROM  dbo.tbl_List_ResultType ";
+            s += "  INNER JOIN dbo.tbl_Core_Results ON dbo.tbl_List_ResultType.Id = dbo.tbl_Core_Results.ResultType ";
+            s += " INNER JOIN dbo.tbl_Exams_Syllabus INNER JOIN dbo.tbl_Exams_Options ON dbo.tbl_Exams_Syllabus.SyllabusID = dbo.tbl_Exams_Options.SyllabusID ON dbo.tbl_Core_Results.ExamsOptionId = dbo.tbl_Exams_Options.OptionID ";
+            s += " WHERE(dbo.tbl_Exams_Options.YearCode = '" + year + "') AND  ( dbo.tbl_Exams_Options.SeasonCode = '" + season + "') ";
+            s += " AND ( dbo.tbl_Core_Results.StudentId = '" + StudentId + "' )";
+            s += " ORDER BY dbo.tbl_Core_Results.ResultType ASC ";
+            int n = 0;
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            s1 = new List<string>();
+                            s1.Add(n.ToString()); n++;
+                            s1.Add(dr.GetDateTime(0).ToShortDateString());
+                            for (int i = 1; i < 6; i++) s1.Add(dr.GetString(i));
+                            m_list.Add(s1);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+            return m_list;
+        }
+    }
+
 
 
     public class ExamDesk : IComparable
@@ -18129,6 +18644,8 @@ namespace Cerval_Library
         public string Title;
         public string FirstName;
         public string Surname;
+        public DateTime DoB;
+        public string email;
 
         public void Hydrate(SqlDataReader dr)
         {
@@ -18140,6 +18657,8 @@ namespace Cerval_Library
             if (!dr.IsDBNull(7)) Title = dr.GetString(7);
             if (!dr.IsDBNull(8)) FirstName = dr.GetString(8);
             if (!dr.IsDBNull(10)) Surname = dr.GetString(10);
+            if (!dr.IsDBNull(17)) DoB = dr.GetDateTime(17);
+            if (!dr.IsDBNull(44)) email = dr.GetString(44);
 
         }
 
@@ -18167,7 +18686,93 @@ namespace Cerval_Library
             return Id;
 
         }
+
+        public int LoadStaffInitials(string StaffInitials)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s = "SELECT *  FROM TblStaff  WHERE (Initials = '" + StaffInitials + "')";
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+            return Id;
+
+        }
     }
+
+    public class ISAMS_StaffList
+    {
+        public List<ISAMS_Staff> m_list = new List<ISAMS_Staff>();
+        public ISAMS_StaffList()
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s = "SELECT *  FROM TblStaff ";
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_Staff d = new ISAMS_Staff();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
+    }
+
+    public class ISAMS_StaffTeachingList
+    {
+        public List<ISAMS_Staff> m_list = new List<ISAMS_Staff>();
+        public ISAMS_StaffTeachingList()
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s = "SELECT * FROM TblStaff WHERE(TeachingStaff = 1) AND(LeavingDate IS NULL)";
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_Staff d = new ISAMS_Staff();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+
 
     public class ISAMS_Room
     {
@@ -18213,6 +18818,122 @@ namespace Cerval_Library
         }
     }
 
+
+    //TODO  LNA is doing this
+    [DataContract]
+    public class ISAMS_ExamSeatingPlan
+    {
+        [DataMember(Order = 1)]  public string SchoolID;
+        [DataMember(Order = 2)]  public string candidateName;
+        [DataMember(Order = 3)]  public string candidateSurname;
+        [DataMember(Order = 4)]  public string candidateNumber;
+        [DataMember(Order = 5)]  public string UCI;
+        [DataMember(Order = 6)]  public int NCYear;
+        [DataMember(Order = 7)]  public string txtForm;
+        [DataMember(Order = 8)]  public int CycleID;
+        [DataMember(Order = 9)]  public string Programme;
+        [DataMember(Order = 10)] public string Subject;
+        [DataMember(Order = 11)] public string ComponentCode;
+        [DataMember(Order = 12)] public string ComponentTitle;
+        [DataMember(Order = 13)] public string OptionCode;
+        [DataMember(Order = 14)] public string Qualification;
+        [DataMember(Order = 15)] public string StartTimeAsString = "";
+        [DataMember(Order = 16)] public string EndTimeAsString = "";
+        [DataMember(Order = 17)] public int TimeAllowed;
+        [DataMember(Order = 18)] public string TimetabledDateAsString = "";
+        [DataMember(Order = 19)] public string GivenSeat;
+        [DataMember(Order = 20)] public string RoomCode;
+        [DataMember(Order = 21)] public string RoomName;
+        [DataMember(Order = 22)] public bool IsTimetabledDateValid = false;
+        [DataMember(Order = 23)] public bool IsStartTimeValid = false;
+        [DataMember(Order = 24)] public bool IsEndTimeValid = false;
+        [DataMember(Order = 25)] public DateTime StartTime;
+        [DataMember(Order = 26)] public DateTime EndTime;
+        [DataMember(Order = 27)] public DateTime TimetabledDate;
+
+        public string formatString = "d/M/yy";
+
+
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            SchoolID = dr.GetString(0);
+            if (!dr.IsDBNull(1)) candidateName = dr.GetString(1); else candidateName = "";
+            if (!dr.IsDBNull(2)) candidateSurname = dr.GetString(2); else candidateSurname = "";
+            if (!dr.IsDBNull(3)) candidateNumber = dr.GetString(3); else candidateNumber = "";
+            if (!dr.IsDBNull(4)) UCI = dr.GetString(4);
+            if (!dr.IsDBNull(5)) NCYear = dr.GetInt32(5);
+            if (!dr.IsDBNull(6)) txtForm = dr.GetString(6); else txtForm = "";
+            if (!dr.IsDBNull(7)) CycleID = dr.GetInt32(7);
+            if (!dr.IsDBNull(8)) Programme = dr.GetString(8); else Programme = "";
+            if (!dr.IsDBNull(9)) Subject = dr.GetString(9); else Subject = "";
+            if (!dr.IsDBNull(10)) ComponentCode = dr.GetString(10); else ComponentCode = "";
+            if (!dr.IsDBNull(11)) ComponentTitle = dr.GetString(11); else ComponentTitle = "";
+            if (!dr.IsDBNull(12)) OptionCode = dr.GetString(12); else OptionCode = "";
+            if (!dr.IsDBNull(13)) Qualification = dr.GetString(13); else Qualification = "";
+            if (!dr.IsDBNull(14)) { StartTime = dr.GetDateTime(14); IsStartTimeValid = true; StartTimeAsString = StartTime.ToShortTimeString(); }
+            if (!dr.IsDBNull(15)) { EndTime = dr.GetDateTime(15); IsEndTimeValid = true; EndTimeAsString = EndTime.ToShortTimeString(); }
+            if (!dr.IsDBNull(16)) TimeAllowed = dr.GetInt32(16);
+            if (!dr.IsDBNull(17)) { TimetabledDate = dr.GetDateTime(17); IsTimetabledDateValid = true; TimetabledDateAsString = StartTime.ToString(formatString); }
+            if (!dr.IsDBNull(18)) GivenSeat = dr.GetString(18); else GivenSeat = "";
+            if (!dr.IsDBNull(19)) RoomCode = dr.GetString(19); else RoomCode = "";
+            if (!dr.IsDBNull(20)) RoomName = dr.GetString(20); else RoomName = "";
+        }
+    }
+    [DataContract]
+    public class ISAMS_ExamSeatingPlan_List
+    {
+        public ISAMS_ExamSeatingPlan_List()
+        {
+        }
+
+        [DataMember]  public List<ISAMS_ExamSeatingPlan> m_list = new List<ISAMS_ExamSeatingPlan>();
+        public void Load(int ExamCycle)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s = "SELECT VwExamManagerStudentExams.SchoolID, VwExamManagerStudentExams.CandidateForenames, VwExamManagerStudentExams.CandidateSurname, ";
+            s += " VwExamManagerStudentExams.CandidateNumber,  VwExamManagerStudentExams.UCI, VwExamManagerStudentExams.NCYear, ";
+            s += " VwExamManagerStudentExams.Form, VwExamManagerStudentExams.CycleID, VwExamManagerStudentExams.Programme, ";
+            s += " VwExamManagerStudentExams.Subject, VwExamManagerStudentExams.ComponentCode, VwExamManagerStudentExams.ComponentTitle , ";
+            s += " VwExamManagerStudentExams.OptionCode, VwExamManagerStudentExams.Qualification, ";
+            s += " VwExamManagerStudentExams.ExamStart,  ";
+            s += " VwExamManagerStudentExams.ExamEnd,  ";
+            s += " VwExamManagerStudentExams.TimeAllowed, ";
+            s += "  VwExamManagerStudentExamSeats.dTimetabledDate, VwExamManagerStudentExamSeats.txtGivenSeat, ";
+            s += " TblExamManagerRoomConfigurations.txtRoomCode, UPPER(TblExamManagerRoomConfigurations.txtRoomName) ";
+            s += " FROM VwExamManagerStudentExams ";
+            s += " INNER JOIN  VwExamManagerStudentExamSeats ON VwExamManagerStudentExams.CycleID = VwExamManagerStudentExamSeats.intCycle ";
+            s += " AND VwExamManagerStudentExams.SchoolID = VwExamManagerStudentExamSeats.txtSchoolId ";
+            s += " AND VwExamManagerStudentExams.ComponentCode = VwExamManagerStudentExamSeats.txtComponentCode ";
+            s += " INNER JOIN TblExamManagerRoomConfigurations ON VwExamManagerStudentExamSeats.intRoomConfigId = TblExamManagerRoomConfigurations.TblExamManagerRoomConfigurationsID ";
+            s += " WHERE(VwExamManagerStudentExams.CycleID = '" + ExamCycle.ToString() + "') ";
+            s += " ORDER BY VwExamManagerStudentExams.CandidateNumber,VwExamManagerStudentExamSeats.dTimetabledDate, VwExamManagerStudentExams.ExamStart ";
+
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_ExamSeatingPlan d = new ISAMS_ExamSeatingPlan();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
+
+
+    }
 
     [Serializable]
     public class ISAMS_ExamComponent
@@ -18607,6 +19328,76 @@ namespace Cerval_Library
         }
     }
 
+
+    [DataContract]
+    public class ISAMS_ExamCycle
+    {
+        [DataMember]
+        public int TblExamManagerCyclesID;
+        [DataMember]
+        public string txtCentreId;
+        [DataMember]
+        public int intFormatMonth;
+        [DataMember]
+        public string intYear;
+        [DataMember]
+        public int intFormatYear;
+
+
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            TblExamManagerCyclesID = dr.GetInt32(0);
+            txtCentreId = dr.GetString(1);
+            intFormatMonth = dr.GetInt32(2);
+            intYear = dr.GetString(3);
+            intFormatYear = dr.GetInt32(4);
+
+        }
+    }
+
+    [DataContract]
+    public class ISAMS_ExamCycleList
+    {
+        [DataMember]
+        public List<ISAMS_ExamCycle> m_list = new List<ISAMS_ExamCycle>();
+
+        protected string GetQuery()
+        {
+            string s = " SELECT TblExamManagerCyclesID, txtCentreId, intFormatMonth, intYear, intFormatYear FROM TblExamManagerCycles ";
+            return s;
+        }
+
+        public void load()
+        {
+            string s = GetQuery();
+
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_ExamCycle d = new ISAMS_ExamCycle();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
+    }
+
+
     [Serializable]
     [DataContract]
     public class ISAMS_ExamEntry
@@ -18769,16 +19560,153 @@ namespace Cerval_Library
 
 
 
+    [DataContract]
+    public class ISAMS_ExamStudentAccess
+    {
+        [DataMember(Order = 1)]
+        public string iSAMS_SchoolId; //note is really studentId
+        [DataMember(Order = 2)]
+        public string candidateNo; //candidate number
+        [DataMember(Order = 3)]
+        public string candidateName; //candidate forename
+        [DataMember(Order = 4)]
+        public string candidateSurname; //candidate surename
+        [DataMember(Order = 5)]
+        public int NCYear;
+        [DataMember(Order = 6)]
+        public string txtForm;
+        [DataMember(Order = 7)]
+        public int intCycleId;
+        [DataMember(Order = 8)]
+        public int intSystemStatus;
+        [DataMember(Order = 9)]
+        public string ExtraTime = "";
+        [DataMember(Order = 10)]
+        public string Processor = "";
+        [DataMember(Order = 11)]
+        public string Rest = "";
+        [DataMember(Order = 12)]
+        public string Transcript = "";
+        [DataMember(Order = 13)]
+        public string Dictionary = "";
+        [DataMember(Order = 14)]
+        public string Prompter = "";
+        [DataMember(Order = 15)]
+        public string Reader = "";
+        [DataMember(Order = 16)]
+        public string SeparateInvigilation = "";
+        [DataMember(Order = 17)]
+        public string Scribe = "";
+        [DataMember(Order = 18)]
+        public string ColourNaming = "";
+        [DataMember(Order = 19)]
+        public string examCode;
+        [DataMember(Order = 20)]
+        public string txtArrangementNotes = "";
+        [DataMember(Order = 21)]
+        public DateTime startDate;
+        [DataMember(Order = 22)]
+        public bool IsStartDateValid = false;
+        [DataMember(Order = 23)]
+        public string StartDateAsString = "";
+        [DataMember(Order = 24)]
+        public DateTime endDate;
+        [DataMember(Order = 25)]
+        public bool IsEndDateValid = false;
+        [DataMember(Order = 26)]
+        public string EndDateAsString = "";
+
+
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            iSAMS_SchoolId = dr.GetString(0);
+            candidateNo = dr.GetString(1);
+            if (!dr.IsDBNull(2)) candidateName = dr.GetString(2); else candidateName = "";
+            if (!dr.IsDBNull(3)) candidateSurname = dr.GetString(3); else candidateSurname = "";
+            if (!dr.IsDBNull(4)) NCYear = dr.GetInt32(4);
+            if (!dr.IsDBNull(5)) txtForm = dr.GetString(5); else txtForm = "";
+            if (!dr.IsDBNull(6)) intCycleId = dr.GetInt32(6);
+            if (!dr.IsDBNull(7)) intSystemStatus = dr.GetInt32(7);
+
+            if (!dr.IsDBNull(8)) { if (dr.GetInt32(8) > 0) ExtraTime = dr.GetInt32(8).ToString() + "% Extra Time"; }
+            if (!dr.IsDBNull(9)) { if (dr.GetInt32(9) == 1) Processor = "Can Type"; }
+            if (!dr.IsDBNull(10)) { if (dr.GetInt32(10) == 1) Rest = "Rest Break"; }
+            if (!dr.IsDBNull(11)) { if (dr.GetInt32(11) == 1) Transcript = " Transcript  "; }
+            if (!dr.IsDBNull(12)) { if (dr.GetInt32(12) == 1) Dictionary = "Dictionary"; }
+            if (!dr.IsDBNull(13)) { if (dr.GetInt32(13) == 1) Prompter = " Prompter  "; }
+            if (!dr.IsDBNull(14)) { if (dr.GetInt32(14) == 1) Reader = " Reader"; }
+            if (!dr.IsDBNull(15)) { if (dr.GetInt32(15) == 1) SeparateInvigilation = " Separate Invigilation  "; }
+            if (!dr.IsDBNull(16)) { if (dr.GetInt32(16) == 1) Scribe = "Scribe"; }
+            if (!dr.IsDBNull(17)) { if (dr.GetInt32(17) == 1) ColourNaming = "Colour Naming"; }
+            if (!dr.IsDBNull(18)) txtArrangementNotes = dr.GetString(18); else txtArrangementNotes = "";
+
+            if (!dr.IsDBNull(19)) { startDate = dr.GetDateTime(19); IsStartDateValid = true; StartDateAsString = startDate.ToLongDateString(); }
+            if (!dr.IsDBNull(20)) { endDate = dr.GetDateTime(20); IsEndDateValid = true; EndDateAsString = endDate.ToLongDateString(); }
+            if (!dr.IsDBNull(21)) examCode = dr.GetString(21); else examCode = "";
+
+        }
+    }
+    [DataContract]
+    public class ISAMS_ExamStudentAccessList
+    {
+        [DataMember]
+        public List<ISAMS_ExamStudentAccess> m_list = new List<ISAMS_ExamStudentAccess>();
+        protected string GetQuery(string where)
+        {
+            string s = " SELECT DISTINCT VwExamManagerStudentExams.SchoolID, VwExamManagerStudentExams.CandidateNumber, VwExamManagerStudentExams.CandidateForenames, ";
+            s += " VwExamManagerStudentExams.CandidateSurname, TblPupilManagementPupils.intNCYear, TblPupilManagementPupils.txtForm,VwExamManagerStudentExams.CycleID, ";
+            s += " TblPupilManagementPupils.intSystemStatus, TblExamManagerCandidateOptions.intExtraTime,TblExamManagerCandidateOptions.intProcessor, TblExamManagerCandidateOptions.intRest, ";
+            s += " TblExamManagerCandidateOptions.intTranscript, TblExamManagerCandidateOptions.intDictionary, TblExamManagerCandidateOptions.intPrompter, TblExamManagerCandidateOptions.intReader, ";
+            s += " TblExamManagerCandidateOptions.intSeparateInvigilation, TblExamManagerCandidateOptions.intScribe, TblExamManagerCandidateOptions.intColourNaming, ";
+            s += " TblExamManagerCandidateOptions.txtArrangementNotes, ";
+            s += "TblExamManagerCandidateOptions.dteStartDate, TblExamManagerCandidateOptions.dteEndDate, TblExamManagerCandidateOptions.txtExamCode ";
+            s += " FROM VwExamManagerStudentExams ";
+            s += " INNER JOIN TblPupilManagementPupils ON VwExamManagerStudentExams.SchoolID = TblPupilManagementPupils.txtSchoolID  ";
+            s += " LEFT OUTER JOIN TblExamManagerCandidateOptions ON VwExamManagerStudentExams.SchoolID = TblExamManagerCandidateOptions.txtSchoolID ";
+            s += where;
+            return s;
+        }
+        public void load(int CycleId)
+        {
+            string where = " WHERE (VwExamManagerStudentExams.CycleID = '" + CycleId.ToString() + "')";
+            string s = GetQuery(where);
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_ExamStudentAccess d = new ISAMS_ExamStudentAccess();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+
+
     [Serializable]
     public class ISAMS_Period
     {
         public int Id;
-        public int day; //mon = 1  I think could be 2 week tt???
+        public int day; //mon = 2  I think could be 2 week tt???
         public int order;//starts at 1 ugh
         public string Name;
         public string ShortName;
         public string StartTime;
         public string EndTime;
+        public int Week;  // this is the week no (1 or 2 at present)
 
         public void Hydrate(SqlDataReader dr)
         {
@@ -18789,6 +19717,7 @@ namespace Cerval_Library
             ShortName = dr.GetString(4);
             StartTime = dr.GetString(5);
             EndTime = dr.GetString(6);
+            Week = dr.GetInt32(7);
         }
     }
     public class ISAMS_Period_List
@@ -18798,7 +19727,13 @@ namespace Cerval_Library
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = "SELECT *  FROM TblTimetableManagerPeriods  ORDER BY intOrder";
+            string s = "SELECT dbo.TblTimetableManagerPeriods.TblTimetableManagerPeriodsID, dbo.TblTimetableManagerPeriods.intDay, ";
+            s += " dbo.TblTimetableManagerPeriods.intOrder, dbo.TblTimetableManagerPeriods.txtName, ";
+            s += " dbo.TblTimetableManagerPeriods.txtShortName, dbo.TblTimetableManagerPeriods.txtStartTime, dbo.TblTimetableManagerPeriods.txtEndTime, ";
+            s += " dbo.TblTimetableManagerDays.intWeek  ";
+            s += " FROM            dbo.TblTimetableManagerDays INNER JOIN  ";
+            s += " dbo.TblTimetableManagerPeriods ON dbo.TblTimetableManagerDays.TblTimetableManagerDaysID = dbo.TblTimetableManagerPeriods.intDay";
+            s += "  ORDER BY dbo.TblTimetableManagerPeriods.intOrder";
             using (SqlConnection cn = new SqlConnection(db_connection))
             {
                 cn.Open();
@@ -18933,6 +19868,7 @@ namespace Cerval_Library
         public string RoomCode;
         public string StaffCode;
         public string PreviousMISId;
+        public int Week;
 
         public void Hydrate(SqlDataReader dr)
         {
@@ -18942,6 +19878,7 @@ namespace Cerval_Library
             RoomCode = dr.GetString(3);
             StaffCode = dr.GetString(4);
             if (!dr.IsDBNull(5)) PreviousMISId = dr.GetString(5); else PreviousMISId = "";
+            Week = dr.GetInt32(6);
         }
     }
 
@@ -18952,15 +19889,21 @@ namespace Cerval_Library
         public void LoadListCurrentTT()
         {
             ISAMS_Timetable tt = new ISAMS_Timetable();
-            int TTId = tt.LoadPublishedTimetable();
+            int TTId = tt.LoadPublishedTimetable();//gets id of current TT
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = "SELECT dbo.TblTimetableManagerPeriods.intDay, dbo.TblTimetableManagerPeriods.txtShortName, dbo.TblTimetableManagerSchedule.txtCode, dbo.TblSchoolManagementClassrooms.txtCode AS Room, dbo.TblStaff.Initials, dbo.TblStaff.txtPreviousMISStaffID   ";
+            string s = "SELECT dbo.TblTimetableManagerPeriods.intDay, dbo.TblTimetableManagerPeriods.txtShortName, ";
+            s += "dbo.TblTimetableManagerSchedule.txtCode, dbo.TblSchoolManagementClassrooms.txtCode AS Room, dbo.TblStaff.Initials, ";
+            s += " dbo.TblStaff.txtPreviousMISStaffID, ";
+            s += "dbo.TblTimetableManagerDays.intWeek  ";
             s += " FROM dbo.TblTimetableManagerSchedule INNER JOIN ";
             s += " dbo.TblSchoolManagementClassrooms ON dbo.TblTimetableManagerSchedule.intRoom = dbo.TblSchoolManagementClassrooms.TblSchoolManagementClassroomsID INNER JOIN  ";
             s += " dbo.TblTimetableManagerPeriods ON dbo.TblTimetableManagerSchedule.intPeriod = dbo.TblTimetableManagerPeriods.TblTimetableManagerPeriodsID INNER JOIN  ";
             s += " dbo.TblStaff ON dbo.TblTimetableManagerSchedule.txtTeacher = dbo.TblStaff.User_Code  ";
+            s += " INNER JOIN ";
+            s += " dbo.TblTimetableManagerDays ON dbo.TblTimetableManagerDays.TblTimetableManagerDaysID = dbo.TblTimetableManagerPeriods.intDay";
             s += " WHERE ( intTimetableID='" + TTId.ToString() + "' )";
+            s += "AND  (dbo.TblTimetableManagerDays.intWeek='1') ";
 
             using (SqlConnection cn = new SqlConnection(db_connection))
             {
@@ -18983,6 +19926,77 @@ namespace Cerval_Library
         }
     }
 
+
+    public class ISAMS_Calender
+    {
+        public DateTime Calender_Date;
+        public int Calender_Year;
+        public int Calender_Week;
+        public int Calender_WeekDayNumber;
+        public int Timetable_Week;
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            Calender_Date = dr.GetDateTime(0);
+            Calender_Year = dr.GetInt32(1);
+            Calender_Week = dr.GetInt32(2);
+            Calender_WeekDayNumber = dr.GetInt32(3);
+            Timetable_Week = dr.GetInt32(4);
+
+        }
+    }
+
+    public class ISAMS_CalenderList
+    {
+        public List<ISAMS_Calender> m_list = new List<ISAMS_Calender>();
+
+        public void LoadList(DateTime YearStartDate)
+        {
+            YearStartDate.AddDays(-10); // so we get all of week 0  
+            DateTime YearEnd = new DateTime(YearStartDate.Year + 1, 7, 31);
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s = "SELECT dbo.TblTimetableManagerCalendar.CalendarDate, dbo.TblTimetableManagerCalendar.CalendarYear, ";
+            s += " dbo.TblTimetableManagerCalendar.CalendarWeek, dbo.TblTimetableManagerCalendar.WeekDayNumber, ";
+            s += "dbo.TblTimetableManagerWeeksAllocations.intWeek ";
+            s += " FROM TblTimetableManagerCalendar  ";
+            s += "INNER JOIN  dbo.TblTimetableManagerWeeksAllocations ";
+            s += " ON dbo.TblTimetableManagerCalendar.CalendarYear = dbo.TblTimetableManagerWeeksAllocations.intYear AND ";
+            s += "  dbo.TblTimetableManagerCalendar.CalendarWeek = dbo.TblTimetableManagerWeeksAllocations.intYearWeek ";
+            s += " WHERE(CalendarDate > CONVERT(DATETIME, '" + YearStartDate.ToString("yyyy-MM-dd HH:mm:ss") + "', 102)) ";
+            s += " AND(CalendarDate < CONVERT(DATETIME, '" + YearEnd.ToString("yyyy-MM-dd HH:mm:ss") + "', 102)) ";
+            s += " ORDER BY CalendarDate  ";
+
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_Calender d = new ISAMS_Calender();
+                            d.Hydrate(dr);
+                            //now only want to add if we haven't got this week....
+                            bool found = false;
+                            foreach (ISAMS_Calender c in m_list)
+                            {
+                                if (d.Calender_Week == c.Calender_Week) found = true;
+                            }
+                            if (!found) m_list.Add(d);
+
+
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
+    }
 
     public class ISAMS_Set_AssociatedTeacher
     {
@@ -19032,24 +20046,39 @@ namespace Cerval_Library
 
     }
 
-
+    [DataContract]
     public class ISAMS_Set
     {
-        public int Id;
+        [DataMember] public int Id;
+        [DataMember]
         public int Subject;
+        [DataMember]
         public int Year;
+        [DataMember]
         public string SetNumber;
+        [DataMember]
         public string SetCode;
+        [DataMember]
         public string Name;
+        [DataMember]
         public string Teacher;
+        [DataMember]
         public int StaffId;
+        [DataMember]
         public string StaffCode;//ISAMS calls initials
+        [DataMember]
         public string StaffFirstName;
+        [DataMember]
         public string StaffSurname;
+        [DataMember]
         public string StaffEmail;
+        [DataMember]
         public int SubjectId;
+        [DataMember]
         public string SubjectCode;
+        [DataMember]
         public string SubjectName;
+        [DataMember]
         public string StaffTitle;
 
 
@@ -19073,10 +20102,10 @@ namespace Cerval_Library
             StaffTitle = dr.GetString(14);
         }
 
-        public void Hydrate(SqlDataReader dr,int offset)
+        public void Hydrate(SqlDataReader dr, int offset)
         {
             Id = dr.GetInt32(offset);
-            SetCode = dr.GetString(offset+1);
+            SetCode = dr.GetString(offset + 1);
             Name = dr.GetString(offset + 2);
             Year = dr.GetInt32(offset + 3);
             SetNumber = dr.GetString(offset + 4);
@@ -19092,9 +20121,11 @@ namespace Cerval_Library
             StaffTitle = dr.GetString(offset + 14);
         }
     }
+
+    [DataContract]
     public class ISAMS_Set_List
     {
-        public List<ISAMS_Set> m_list = new List<ISAMS_Set>();
+        [DataMember] public List<ISAMS_Set> m_list = new List<ISAMS_Set>();
         public ISAMS_Set_List()
         {
             Encode en = new Encode();
@@ -19129,7 +20160,7 @@ namespace Cerval_Library
                 cn.Close();
             }
         }
-        public ISAMS_Set_List(string SubjectCode,int Year)
+        public ISAMS_Set_List(string SubjectCode, int Year)
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
@@ -19144,7 +20175,7 @@ namespace Cerval_Library
             s += " dbo.TblStaff ON dbo.TblTeachingManagerSets.txtTeacher = dbo.TblStaff.User_Code INNER JOIN ";
             s += " dbo.TblTeachingManagerSubjects ON dbo.TblTeachingManagerSets.intSubject = dbo.TblTeachingManagerSubjects.TblTeachingManagerSubjectsID  ";
             s += "WHERE (dbo.TblTeachingManagerSubjects.txtSubjectCode ='" + SubjectCode + "') ";
-            if(Year>6) s+= "  AND (dbo.TblTeachingManagerSets.intYear = '" + Year.ToString() + "') ";
+            if (Year > 6) s += "  AND (dbo.TblTeachingManagerSets.intYear = '" + Year.ToString() + "') ";
             s += "ORDER BY txtSetCode";
             using (SqlConnection cn = new SqlConnection(db_connection))
             {
@@ -19166,11 +20197,11 @@ namespace Cerval_Library
             }
         }
     }
-
+    [DataContract]
     public class ISAMS_Student_Set
     {
-        public ISAMS_Student student;
-        public ISAMS_Set set;
+        [DataMember]public ISAMS_Student student;
+        [DataMember]public ISAMS_Set set;
         public ISAMS_Student_Set()
         {
             student = new ISAMS_Student();
@@ -19179,13 +20210,14 @@ namespace Cerval_Library
         public void Hydrate(SqlDataReader dr)
         {
             student.Hydrate(dr);
-            set.Hydrate(dr,14);
+            set.Hydrate(dr, 13);
         }
     }
 
+    [DataContract]
     public class ISAMS_Student_Set_List
     {
-        public List<ISAMS_Student_Set> m_list = new List<ISAMS_Student_Set>();
+        [DataMember] public List<ISAMS_Student_Set> m_list = new List<ISAMS_Student_Set>();
 
         public void Load(string year, bool OnRole)
         {
@@ -19197,9 +20229,8 @@ namespace Cerval_Library
             s += " dbo.TblPupilManagementPupils.txtSurname, dbo.TblPupilManagementPupils.txtEmailAddress, dbo.TblPupilManagementPupils.txtForm ";
             s += " ,dbo.TblPupilManagementPupils.txtPreName ";
             s += " , dbo.TblPupilManagementPupils.intAutoSchoolCodeNumericPart,  dbo.TblPupilManagementPupils.intSystemStatus, ";
-            s += " dbo.TblPupilManagementPupils.txtGender,  ";
-            s+= " dbo.TblPupilManagementPupils.txtGender  , dbo.TblPupilManagementPupils.txtDOB, ";
-            s += " dbo.TblPupilManagementPupils.intNCYear";
+            s += " dbo.TblPupilManagementPupils.txtGender  , dbo.TblPupilManagementPupils.txtDOB, ";
+            s += " dbo.TblPupilManagementPupils.intNCYear, ";
             //next bit is set...
             s += " dbo.TblTeachingManagerSets.TblTeachingManagerSetsID, dbo.TblTeachingManagerSets.txtSetCode, ";
             s += " dbo.TblTeachingManagerSets.txtName, dbo.TblTeachingManagerSets.intYear, dbo.TblTeachingManagerSets.txtSetNumber, ";
@@ -19221,7 +20252,7 @@ namespace Cerval_Library
             //s += "WHERE (dbo.TblTeachingManagerSubjects.txtSubjectCode ='" + SubjectCode + "') ";
             s += "  WHERE (dbo.TblTeachingManagerSets.intYear = '" + year + "')  ";
             if (OnRole) { s += " AND (intSystemStatus = 1)  "; } else { }
-            s += "ORDER BY dbo.TblPupilManagementPupils.txtSurname , dbo.TblPupilManagementPupils.txtForename, dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblTeachingManagerSets.txtSetCode ";
+            s += "ORDER BY dbo .TblPupilManagementPupils.txtSurname , dbo.TblPupilManagementPupils.txtForename, dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblTeachingManagerSets.txtSetCode ";
 
 
             using (SqlConnection cn = new SqlConnection(db_connection))
@@ -19247,7 +20278,7 @@ namespace Cerval_Library
 
     public class ISAMS_Sen
     {
-        public enum SenFlagType { None, SchoolSupport, SenSupport, Statement,  Monitor };
+        public enum SenFlagType { None, SchoolSupport, SenSupport, Statement, Monitor };
         public int SENRegisterId;
         public string ISAMSPupilId;
         public int SENFlag;// I think this is like serious level  ISAM star colour 4 -monitor  1- grey school support 2 sen support  3 statement/plan
@@ -19308,37 +20339,68 @@ namespace Cerval_Library
         [DataMember] public string Gender;
         [DataMember] public DateTime Dob;
         [DataMember] public int NCYear;
+        [DataMember] public string GoogleLogin;
+        [DataMember] public byte[] SurnameAsBytes;
+        [DataMember] public byte[] FirstNameAsBytes;
+        [DataMember] public string UCI;
+        [DataMember]  public int PreviousMISId;
+        [DataMember] public string UPN;
+        [DataMember]public DateTime LeavingDate;
+        [DataMember]public DateTime JoiningDate;
+
+
+
 
         public void Hydrate(SqlDataReader dr)
         {
             ISAMS_SchoolId = dr.GetString(0);
-            try { Adno = System.Convert.ToInt32(dr.GetString(1)); } catch { Adno = 0; }
-            if(!dr.IsDBNull(2))Title = dr.GetString(2);
+            if (!dr.IsDBNull(1)) { Adno = System.Convert.ToInt32(dr.GetString(1)); } else { Adno = 0; };
+            if (!dr.IsDBNull(2)) Title = dr.GetString(2);
             if (!dr.IsDBNull(3)) FirstName = dr.GetString(3);
             if (!dr.IsDBNull(4)) Surname = dr.GetString(4);
             if (!dr.IsDBNull(5)) Email = dr.GetString(5);
             if (!dr.IsDBNull(6)) Form = dr.GetString(6);
             if (!dr.IsDBNull(7)) PreferedName = dr.GetString(7);
-            if (!dr.IsDBNull(8) && (Adno == 0)) Adno = dr.GetInt32(8);//other place we store adno???
+            //if (!dr.IsDBNull(8) && (Adno == 0)) Adno = dr.GetInt32(8);//other place we store adno???
             if (!dr.IsDBNull(9)) SystemStatus = dr.GetInt32(9);
             if (!dr.IsDBNull(10)) Gender = dr.GetString(10);
             if (!dr.IsDBNull(11)) Dob = dr.GetDateTime(11);
             if (!dr.IsDBNull(12)) NCYear = dr.GetInt32(12);
+            if (!dr.IsDBNull(13)) GoogleLogin = dr.GetString(13);
+            if (!dr.IsDBNull(14)) UCI = dr.GetString(14);
+            if (!dr.IsDBNull(15)) PreviousMISId = System.Convert.ToInt32(dr.GetString(15));
+            if (!dr.IsDBNull(16)) UPN = dr.GetString(16);
+            if (!dr.IsDBNull(17)) LeavingDate = dr.GetDateTime(17);
+            if (!dr.IsDBNull(18)) JoiningDate = dr.GetDateTime(18);
+
+            if (Surname != null) SurnameAsBytes = Encoding.Default.GetBytes(Surname);
+            if (FirstName != null) FirstNameAsBytes = Encoding.Default.GetBytes(FirstName);
+
+            //tstEnro;mentDate smalldatetime  txtLeavingDate
         }
     }
-[DataContract]
+    [DataContract]
     public class ISAMS_Student_List
     {
         [DataMember] public List<ISAMS_Student> m_list = new List<ISAMS_Student>();
-        public ISAMS_Student_List(bool OnRole)
+
+        protected string GetSelectString()
+        {
+            string s = " SELECT txtSchoolID,txtSchoolCode , txtTitle, txtForename, txtSurname, ";
+            s += " txtEmailAddress, txtForm, txtPreName, intAutoSchoolCodeNumericPart,intSystemStatus ";
+            s += ", txtGender ,txtDOB, intNCYear , txtEmailAddress , txtCandidateCode,txtPreviousMISID, txtUPN,  ";
+            s += "txtLeavingDate, txtEnrolmentDate ";
+            return s;
+
+        }
+
+        public ISAMS_Student_List(string Adno, bool OnRole)
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = " SELECT txtSchoolID, txtPreviousMISID, txtTitle, txtForename, txtSurname, ";
-            s += " txtEmailAddress, txtForm, txtPreName, intAutoSchoolCodeNumericPart,intSystemStatus ";
-            s += ", txtGender ,txtDOB, intNCYear ";
+            string s = GetSelectString();
             s += " FROM  dbo.TblPupilManagementPupils ";
-            if (OnRole) { s += " WHERE (intSystemStatus = 1)  "; }else { }
+            s += " WHERE (txtPreviousMISID = " + Adno + ")  ";
 
 
             using (SqlConnection cn = new SqlConnection(db_connection))
@@ -19361,21 +20423,60 @@ namespace Cerval_Library
             }
         }
 
-        public ISAMS_Student_List(int SetId)
+        public ISAMS_Student_List(bool OnRole)
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = " SELECT dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblPupilManagementPupils.txtPreviousMISID, ";
+            string s = GetSelectString();
+            s += " FROM  dbo.TblPupilManagementPupils ";
+            if (OnRole) { s += " WHERE (intSystemStatus = 1)  "; } else { }
+
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_Student d = new ISAMS_Student();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
+        protected string GetSelectString2()
+        {
+            string s = " SELECT dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblPupilManagementPupils.txtSchoolCode, ";
             s += " dbo.TblPupilManagementPupils.txtTitle, dbo.TblPupilManagementPupils.txtForename, ";
             s += " dbo.TblPupilManagementPupils.txtSurname, dbo.TblPupilManagementPupils.txtEmailAddress, dbo.TblPupilManagementPupils.txtForm ";
             s += " ,dbo.TblPupilManagementPupils.txtPreName ";
             s += " , dbo.TblPupilManagementPupils.intAutoSchoolCodeNumericPart,  dbo.TblPupilManagementPupils.intSystemStatus ";
             s += ", dbo.TblPupilManagementPupils.txtGender  , dbo.TblPupilManagementPupils.txtDOB, ";
-            s += " dbo.TblPupilManagementPupils.intNCYear";
+            s += " dbo.TblPupilManagementPupils.intNCYear , dbo.TblPupilManagementPupils.txtEmailAddress ";
+            s += ", dbo.TblPupilManagementPupils.txtCandidateCode ,dbo.TblPupilManagementPupils.txtPreviousMISID,  dbo.TblPupilManagementPupils.txtUPN,  ";
+            s += "dbo.TblPupilManagementPupils.txtLeavingDate, dbo.TblPupilManagementPupils.txtEnrolmentDate ";
             s += " FROM  dbo.TblPupilManagementPupils INNER JOIN  dbo.TblTeachingManagerSetLists ";
+
             s += " ON dbo.TblPupilManagementPupils.txtSchoolID = dbo.TblTeachingManagerSetLists.txtSchoolID ";
             s += " INNER JOIN  dbo.TblTeachingManagerSets ";
             s += " ON dbo.TblTeachingManagerSets.TblTeachingManagerSetsID = dbo.TblTeachingManagerSetLists.intSetID ";
+            return s;
+
+        }
+
+        public ISAMS_Student_List(int SetId)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+            string s= GetSelectString2();
             s += " WHERE(dbo.TblTeachingManagerSetLists.intSetID = '" + SetId.ToString() + "')  ";
             s += "ORDER BY dbo.TblPupilManagementPupils.txtSurname , dbo.TblPupilManagementPupils.txtForename ";
 
@@ -19403,16 +20504,7 @@ namespace Cerval_Library
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = " SELECT dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblPupilManagementPupils.txtPreviousMISID, ";
-            s += " dbo.TblPupilManagementPupils.txtTitle, dbo.TblPupilManagementPupils.txtForename, ";
-            s += " dbo.TblPupilManagementPupils.txtSurname, dbo.TblPupilManagementPupils.txtEmailAddress, dbo.TblPupilManagementPupils.txtForm ";
-            s += " ,dbo.TblPupilManagementPupils.txtPreName ";
-            s += " , dbo.TblPupilManagementPupils.intAutoSchoolCodeNumericPart, dbo.TblPupilManagementPupils.intSystemStatus";
-            s += ", dbo.TblPupilManagementPupils.txtGender  , dbo.TblPupilManagementPupils.txtDOB,  dbo.TblPupilManagementPupils.intNCYear ";
-            s += " FROM  dbo.TblPupilManagementPupils INNER JOIN  dbo.TblTeachingManagerSetLists ";
-            s += " ON dbo.TblPupilManagementPupils.txtSchoolID = dbo.TblTeachingManagerSetLists.txtSchoolID ";
-            s+= " INNER JOIN  dbo.TblTeachingManagerSets ";
-            s += " ON dbo.TblTeachingManagerSets.TblTeachingManagerSetsID = dbo.TblTeachingManagerSetLists.intSetID "; 
+            string s = GetSelectString2();
             s += " WHERE(dbo.TblTeachingManagerSets.txtSetCode = '" + SetCode + "')  ";
             s += "ORDER BY dbo.TblPupilManagementPupils.txtSurname , dbo.TblPupilManagementPupils.txtForename ";
 
@@ -19442,9 +20534,7 @@ namespace Cerval_Library
         {
             Encode en = new Encode();
             string db_connection = en.GetISAMSDBConnection();
-            string s = " SELECT txtSchoolID, txtPreviousMISID, txtTitle, txtForename, txtSurname, ";
-            s += " txtEmailAddress, txtForm, txtPreName, intAutoSchoolCodeNumericPart,intSystemStatus ";
-            s += ", txtGender  , txtDOB, intNCYear ";
+            string s = GetSelectString();
             s += " FROM  dbo.TblPupilManagementPupils ";
             s += " WHERE (txtEmailAddress = '" + email + "')  ";
             using (SqlConnection cn = new SqlConnection(db_connection))
@@ -19476,12 +20566,12 @@ namespace Cerval_Library
         [DataMember] public string iSAMS_SchoolId; //note is really studentId
         [DataMember] public string SchoolCode;
         [DataMember] public string txtTitle;
-        [DataMember] public string txtForename ;
+        [DataMember] public string txtForename;
         [DataMember] public string txtSurname;
         [DataMember] public string txtFullName;
         [DataMember] public int intPersonId;
         [DataMember] public string txtContactsTitle;
-        [DataMember] public string txtContactsForename ;
+        [DataMember] public string txtContactsForename;
         [DataMember] public string txtContactsSurname;
         [DataMember] public string txtEmail1;
         [DataMember] public int intSecondaryPersonId;
@@ -19495,6 +20585,7 @@ namespace Cerval_Library
         [DataMember] int intJustContact;
         [DataMember] string txtSOS;
 
+
         public void Hydrate(SqlDataReader dr)
         {
             iSAMS_SchoolId = dr.GetString(0);
@@ -19504,6 +20595,7 @@ namespace Cerval_Library
             if (!dr.IsDBNull(4)) txtSurname = dr.GetString(4); else txtSurname = "";
             if (!dr.IsDBNull(5)) txtFullName = dr.GetString(5); else txtFullName = "";
             if (!dr.IsDBNull(6)) intPersonId = dr.GetInt32(6);
+
             if (!dr.IsDBNull(7)) txtContactsTitle = dr.GetString(7); else txtContactsTitle = "";
             if (!dr.IsDBNull(8)) txtContactsForename = dr.GetString(8); else txtContactsForename = "";
             if (!dr.IsDBNull(9)) txtContactsSurname = dr.GetString(9); else txtContactsSurname = "";
@@ -19562,7 +20654,7 @@ namespace Cerval_Library
             s += " FROM   dbo.TblPupilManagementPupils INNER JOIN ";
             s += " dbo.TblPupilManagementAddressLink ON dbo.TblPupilManagementPupils.txtSchoolID = dbo.TblPupilManagementAddressLink.txtSchoolID INNER JOIN ";
             s += " dbo.TblPupilManagementAddresses ON dbo.TblPupilManagementAddressLink.intAddressID = dbo.TblPupilManagementAddresses.TblPupilManagementAddressesID ";
-            s +=  where;
+            s += where;
             s += " ORDER BY dbo.TblPupilManagementAddresses.txtRelationType DESC ";
             return s;
         }
@@ -19599,4 +20691,559 @@ namespace Cerval_Library
     #endregion
 
     #endregion
+
+    //lna code.....
+    [DataContract]
+    public class ISAMS_Set_PTO
+    {
+        [DataMember(Order = 1)]
+        public string SCD; //note is really studentId
+        [DataMember(Order = 2)]
+        public string SFN;
+        [DataMember(Order = 3)]
+        public string SSN;
+        [DataMember(Order = 4)]
+        public string CCD;
+        [DataMember(Order = 5)]
+        public int CGN;
+        [DataMember(Order = 6)]
+        public string CLS;
+        [DataMember(Order = 7)]
+        public string TCD;
+        [DataMember(Order = 8)]
+        public string TTI;
+        [DataMember(Order = 9)]
+        public string TFN;
+        [DataMember(Order = 10)]
+        public string TSN;
+        [DataMember(Order = 11)]
+        public string TEM;
+        [DataMember(Order = 12)]
+        public string txtForm;
+        [DataMember(Order = 13)]
+        public int NCYear;
+        [DataMember(Order = 14)]
+        public string SchoolCode;
+
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            SCD = dr.GetString(0);
+            SchoolCode = dr.GetString(1);
+            if (!dr.IsDBNull(2)) SFN = dr.GetString(2); else SFN = "";
+            if (!dr.IsDBNull(3)) SSN = dr.GetString(3); else SSN = "";
+            if (!dr.IsDBNull(4)) CCD = dr.GetString(4); else CCD = "";
+            if (!dr.IsDBNull(5)) CGN = dr.GetInt32(5);
+            if (!dr.IsDBNull(6)) CLS = dr.GetString(6); else CLS = "";
+            if (!dr.IsDBNull(7)) TCD = dr.GetString(7); else TCD = "";
+            if (!dr.IsDBNull(8)) TTI = dr.GetString(8); else TTI = "";
+            if (!dr.IsDBNull(9)) TFN = dr.GetString(9); else TFN = "";
+            if (!dr.IsDBNull(10)) TSN = dr.GetString(10); else TSN = "";
+            if (!dr.IsDBNull(11)) TEM = dr.GetString(11); else TEM = "";
+            if (!dr.IsDBNull(12)) txtForm = dr.GetString(12); else txtForm = "";
+            if (!dr.IsDBNull(13)) NCYear = dr.GetInt32(13);
+        }
+    }
+
+    [DataContract]
+    public class ISAMS_Set_PTOList
+    {
+        [DataMember]
+        public List<ISAMS_Set_PTO> m_list = new List<ISAMS_Set_PTO>();
+
+        protected string GetQuery(string where)
+        {
+            string s = " SELECT  dbo.TblPupilManagementPupils.txtSchoolID as SCD, dbo.TblPupilManagementPupils.txtSchoolCode , dbo.TblPupilManagementPupils.txtForename as SFN, dbo.TblPupilManagementPupils.txtSurname as SSN, ";
+            s += " dbo.TblTeachingManagerSets.txtSetCode AS CCD , dbo.TblTeachingManagerSets.intYear AS CGN ,  dbo.TblTeachingManagerSubjects.txtSubjectName AS CLS ,";
+            s += " dbo.TblStaff.Initials AS TCD, dbo.TblStaff.Title AS TTI, dbo.TblStaff.Firstname AS TFN, dbo.TblStaff.Surname AS TSN, dbo.TblStaff.SchoolEmailAddress AS TEM,";
+            s += " dbo.TblPupilManagementPupils.txtForm,  dbo.TblPupilManagementPupils.intNCYear ";
+            s += " FROM   dbo.TblPupilManagementPupils INNER JOIN ";
+            s += " dbo.TblTeachingManagerSetLists ON dbo.TblPupilManagementPupils.txtSchoolID = dbo.TblTeachingManagerSetLists.txtSchoolID INNER JOIN ";
+            s += " dbo.TblTeachingManagerSets ON dbo.TblTeachingManagerSetLists.intSetID = dbo.TblTeachingManagerSets.TblTeachingManagerSetsID INNER JOIN ";
+            s += " dbo.TblTeachingManagerSubjects ON TblTeachingManagerSets.intSubject = TblTeachingManagerSubjects.TblTeachingManagerSubjectsID INNER JOIN  ";
+            s += " dbo.TblStaff ON dbo.TblTeachingManagerSets.txtTeacher = dbo.TblStaff.User_Code ";
+            s += where;
+            s += " GROUP BY dbo.TblPupilManagementPupils.txtSchoolID, dbo.TblPupilManagementPupils.txtSchoolCode, dbo.TblPupilManagementPupils.txtForename, dbo.TblPupilManagementPupils.txtSurname , ";
+            s += " dbo.TblTeachingManagerSets.txtSetCode, dbo.TblTeachingManagerSets.intYear, dbo.TblTeachingManagerSubjects.txtSubjectName, ";
+            s += " dbo.TblStaff.Initials, dbo.TblStaff.Title, dbo.TblStaff.Firstname, dbo.TblStaff.Surname, dbo.TblStaff.SchoolEmailAddress, ";
+            s += " TblPupilManagementPupils.txtForm,  TblPupilManagementPupils.intNCYear ";
+            s += " Union ";
+            s += " SELECT TblPupilManagementPupils.txtSchoolID AS SCD, TblPupilManagementPupils.txtSchoolCode,TblPupilManagementPupils.txtForename AS SFN, TblPupilManagementPupils.txtSurname AS SSN, ";
+            s += " dbo.TblTeachingManagerSets.txtSetCode AS CCD, TblTeachingManagerSets.intYear AS CGN, TblTeachingManagerSubjects.txtSubjectName AS CLS, ";
+            s += " dbo.TblStaff.Initials AS TCD, TblStaff.Title AS TTI, TblStaff.Firstname AS TFN, TblStaff.Surname AS TSN,TblStaff.SchoolEmailAddress AS TEM, ";
+            s += " TblPupilManagementPupils.txtForm,  TblPupilManagementPupils.intNCYear ";
+            s += " FROM TblTeachingManagerSetAssociatedTeachers INNER JOIN ";
+            s += " dbo.TblStaff ON TblTeachingManagerSetAssociatedTeachers.txtTeacher = TblStaff.User_Code INNER JOIN ";
+            s += " dbo.TblPupilManagementPupils  INNER JOIN ";
+            s += " dbo.TblTeachingManagerSetLists ON TblPupilManagementPupils.txtSchoolID = TblTeachingManagerSetLists.txtSchoolID INNER JOIN ";
+            s += " dbo.TblTeachingManagerSets ON TblTeachingManagerSetLists.intSetID = TblTeachingManagerSets.TblTeachingManagerSetsID INNER JOIN ";
+            s += " dbo.TblTeachingManagerSubjects ON TblTeachingManagerSets.intSubject = TblTeachingManagerSubjects.TblTeachingManagerSubjectsID  ON  ";
+            s += " dbo.TblTeachingManagerSetAssociatedTeachers.intSetID = TblTeachingManagerSets.TblTeachingManagerSetsID ";
+            s += where;
+            s += " group by TblPupilManagementPupils.txtSchoolID,TblPupilManagementPupils.txtSchoolCode,TblPupilManagementPupils.txtForename,TblPupilManagementPupils.txtSurname,TblTeachingManagerSets.txtSetCode, ";
+            s += " TblTeachingManagerSets.intYear,TblTeachingManagerSubjects.txtSubjectName,TblStaff.Initials,TblStaff.Title , TblStaff.Firstname , TblStaff.Surname, ";
+            s += " TblStaff.SchoolEmailAddress , TblPupilManagementPupils.txtForm,  TblPupilManagementPupils.intNCYear ";
+            return s;
+        }
+
+        public void load(int NCYear)
+        {
+            string where = " WHERE (dbo.TblPupilManagementPupils.intSystemStatus = 1) AND (dbo.TblPupilManagementPupils.intNCYear ='" + NCYear.ToString() + "') AND (NOT(dbo.TblTeachingManagerSubjects.txtSubjectCode IN(N'HS', N'GA')))";
+            string s = GetQuery(where);
+
+            Encode en = new Encode();
+            string db_connection = en.GetISAMSDBConnection();
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ISAMS_Set_PTO d = new ISAMS_Set_PTO();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+
+        }
+    }
+
+
+
+
+    /// <remarks/>
+  
+    public class ValueAddedResult
+    {
+        public Guid Id;
+        public Guid VAMethodId;
+        public Guid StudentId;
+        public Guid GroupId;
+        public Guid CourseId;
+        public decimal BaseResultValue;
+        public decimal OutputResultValue;
+        public decimal VAResultValue;
+        public System.DateTime DateOutpuResult;
+        public DateTime Date;
+        public int Version;
+
+        public ValueAddedResult()
+        {
+            Id = Guid.Empty;
+            StudentId = Guid.Empty;
+            GroupId = Guid.Empty;
+            CourseId = Guid.Empty;
+
+        }
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            int i = 0;
+            Id = dr.GetGuid(i); i++;
+            VAMethodId = dr.GetGuid(i); i++;
+            if (!dr.IsDBNull(i)) { StudentId = dr.GetGuid(i);} i++;
+            if (!dr.IsDBNull(i)) { GroupId   = dr.GetGuid(i);} i++;
+            if (!dr.IsDBNull(i)) { CourseId  = dr.GetGuid(i);} i++;
+            BaseResultValue = dr.GetDecimal(i);i++;
+            OutputResultValue = dr.GetDecimal(i); i++;
+            VAResultValue = dr.GetDecimal(i);i++;
+            DateOutpuResult = dr.GetDateTime(i);i++;
+            Date = dr.GetDateTime(i);i++;
+            Version = dr.GetInt32(i);
+        }
+
+        public void Update()
+        {
+            //if id exists then update - else create...
+            string s = "";
+            if (Id == Guid.Empty)
+            {
+                Id = Guid.NewGuid();
+                s = "INSERT INTO tbl_Core_ValueAddedResults (Id,VAMethodId,";
+                if (StudentId != Guid.Empty) { s += " StudentId,"; }
+                if (GroupId != Guid.Empty) { s += " GroupId,"; }
+                if (CourseId != Guid.Empty) { s += "CourseId,"; }
+                s += " BaseResultValue,OutputResultValue,VAResultValue,DateOutpuResult,DateofEvaluation,Version )";
+                s += "VALUES ('" + Id.ToString() + "', '" + VAMethodId.ToString() + "' , '";
+                if (StudentId != Guid.Empty) { s += StudentId.ToString() + "' , '"; }
+                if (GroupId != Guid.Empty) { s += GroupId.ToString() + "' , '"; }
+                if (CourseId != Guid.Empty) { s += CourseId.ToString() + "' , '"; }
+                s += BaseResultValue.ToString() + "' , '" + OutputResultValue.ToString() + "' , '" + VAResultValue.ToString() + "' , CONVERT(DATETIME, '" + DateOutpuResult.ToString("yyyy-MM-dd HH:mm:ss") + "', 102) , CONVERT(DATETIME, '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 102), '" + Version + "'  )";
+            }
+            else
+            {
+                s = "UPDATE tbl_Core_ValueAddedResults SET VAMethodId='" + VAMethodId.ToString() + "' , ";
+                if (StudentId != Guid.Empty) { s += "StudentId='" + StudentId.ToString() + "' ,"; }
+                if (GroupId != Guid.Empty) { s += "GroupId='" + GroupId.ToString() + "' , "; }
+                if (CourseId != Guid.Empty) { s += "CourseId= '" + CourseId.ToString() + "', ";}
+                s += "BaseResultValue= '" + BaseResultValue.ToString() + "' , ";
+                s += "OutputResultValue= '" + OutputResultValue.ToString() + "' , ";
+                s += "VAResultValue='" + VAResultValue.ToString() + "' , ";
+                s += "DateOutpuResult=CONVERT(DATETIME, '" + DateOutpuResult.ToString("yyyy-MM-dd HH:mm:ss") + "', 102) , ";
+                s += "DateofEvaluation=CONVERT(DATETIME, '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 102) , ";
+                s+=" Version='" + Version + "' ";
+                s += " WHERE (ID ='" + Id.ToString() + "' ) ";
+            }
+            Encode en = new Encode(); en.ExecuteSQL(s);
+        }
+    }
+
+
+    public class VAResultsList
+    {
+        public List<ValueAddedResult> m_list = new List<ValueAddedResult>();
+
+        public void Load()
+        {   Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM tbl_Core_ValueAddedResults";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ValueAddedResult d = new ValueAddedResult();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+        public void LoadCourse(Guid VAMethod)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM tbl_Core_ValueAddedResults INNER JOIN tbl_Core_Courses ON tbl_Core_ValueAddedResults.CourseId  = tbl_Core_Courses.CourseId ";
+                s += "    WHERE (VAMethodId ='" + VAMethod.ToString() + "') AND (StudentId IS NULL) AND (GroupId IS NULL)";
+                s += " ORDER BY tbl_Core_Courses.CourseName ";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ValueAddedResult d = new ValueAddedResult();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
+        public void LoadGroup(Guid VAMethod, Guid CourseId)
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM tbl_Core_ValueAddedResults INNER JOIN tbl_Core_Groups ON tbl_Core_ValueAddedResults.GroupId  = tbl_Core_Groups.GroupId ";
+                s += "    WHERE (VAMethodId ='" + VAMethod.ToString() + "') AND (StudentId IS NULL) AND (tbl_Core_ValueAddedResults.CourseId ='" + CourseId.ToString()+"')";
+                s += " ORDER BY tbl_Core_Groups.GroupName ";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            ValueAddedResult d = new ValueAddedResult();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+    public class VAModel
+    {
+        public Guid Id;
+        public string Name;
+        public Guid VAMethodId;
+        public int BaseDataAggregationId;
+        public int ResultsYear;
+        public string Notes;
+        public bool Valid;
+        public bool Display;
+
+        public VAModel() { Id = Guid.Empty; }
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            int i = 0;
+            Id = dr.GetGuid(i);i++;
+            Name = dr.GetString(i); i++;
+            if (!dr.IsDBNull(i)) { VAMethodId = dr.GetGuid(i); }else {VAMethodId = Guid.Empty; } i++;
+            if (!dr.IsDBNull(i)) { BaseDataAggregationId = dr.GetInt32(i); } else { BaseDataAggregationId = 0; }; i++;
+            if (!dr.IsDBNull(i)) { ResultsYear = dr.GetInt32(i); } i++;
+            if (!dr.IsDBNull(i)) { Notes = dr.GetString(i); i++; } else { Notes = ""; i++; }
+            Valid = dr.GetBoolean(i); i++;
+            Display = dr.GetBoolean(i);       
+        }
+
+        public void Update()
+        {
+            //if id exists then update - else create...
+            string s = "";
+            if (Id == Guid.Empty)
+            {
+                Id = Guid.NewGuid();
+                s = "INSERT INTO tbl_Core_ValueAddedModels (Id,ImplementationName,VAMethodId,BaseDataAggregationId,ResultsYear,Description,Valid,Display )";
+                s += "VALUES ('" + Id.ToString() + "', '" + Name + "' , '" + VAMethodId.ToString() + "' , '" + BaseDataAggregationId.ToString()+"' , '"+ ResultsYear.ToString() + "' , '" + Notes + "' ,'"+Valid+"' , '"+Display+"'  )";
+            }
+            else
+            {
+                s = "UPDATE dtbl_Core_ValueAddedModels SET ImplementationName='" + Name + "' , VAMethodId='"+ VAMethodId.ToString() + "' , BaseDataAggregationId='"+BaseDataAggregationId.ToString()+"' ,  ResultsYear='" + ResultsYear.ToString()+"',  Description='"+Notes+"' , valid='"+Valid+"' , Display='"+Display+"'";
+                s += " WHERE (Id ='" + Id.ToString() + "' )";
+            }
+            Encode en = new Encode(); en.ExecuteSQL(s);
+        }
+    }
+    public class VAModelList
+    {
+        public List<VAModel> m_list = new List<VAModel>();
+        public void Load()
+        {
+
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM tbl_Core_ValueAddedModels";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            VAModel d = new VAModel();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+    public class VABaseDataAggregation
+    {
+        public int Id;
+        public string Name;
+        public string Description;
+        public string Equation;
+        public VABaseDataAggregation() { Id = 0; }
+        public void Hydrate(SqlDataReader dr)
+        {
+            int i = 0;
+            Id = dr.GetInt32(i); i++;
+            Name = dr.GetString(i); i++;
+            if (!dr.IsDBNull(i)) { Description = dr.GetString(i); }else {Description = "";} i++;
+            if (!dr.IsDBNull(i)) { Equation = dr.GetString(i); } else { Equation = ""; }
+        }
+        public void Update()
+        {
+            //if id exists then update - else create...
+            string s = "";
+            if (Id == 0)
+            {
+                s = "INSERT INTO tbl_List_VABaseDataAggrehation (Name,Description,Equation)";
+                s += "VALUES ('" + Name + "' , '" + Description + "' , '" + Equation +  "'  )";
+            }
+            else
+            {
+                s = "UPDATE dtbl_Core_ValueAddedModels SET Name='" + Name + "' ,Description='" + Description + "' , Equation='" + Equation + "'";
+                s += " WHERE (Id ='" + Id.ToString() + "' )";
+            }
+            Encode en = new Encode(); en.ExecuteSQL(s);
+        }
+    }
+    public class VABaseDataAggregationList
+    {
+        public VABaseDataAggregationList()
+        {
+            Load();
+        }
+        public List<VABaseDataAggregation> m_list = new List<VABaseDataAggregation>();
+        public void Load()
+        {
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM tbl_List_VABaseDataAggregation";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            VABaseDataAggregation d = new VABaseDataAggregation();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+    [DataContract]
+    public class dFEProgressItem
+    {
+
+        public Guid Id;
+        public Guid studentID;
+        public bool disadvantaged;
+        public bool english_first_language;
+        public string sEN;
+        public bool nonMobile;
+        public int ethnicOrigin;
+        public int attainment8;
+        public double averageAttainment8ScoreForSimilarPupils;
+        public float progress8AdjustedScore;
+        public float progress8UnadjustedScore;
+        public bool grade5InEnglishmaths;
+        public bool eBacc;
+        public int eN_DoubleweightedA8score;
+        public float averageAttainment8ScoreEnglishForSimilarPupils;
+        public float en_Progressscore;
+        public int mA_DoubleweightedA8score;
+        public float averageAttainment8ScoreMathsForSimilarPupils;
+        public float mAProgressscore;
+        public int eBaccSlot1Score;
+        public int eBaccSlot2Score;
+        public int eBaccSlot3Score;
+        public int eBaccA8Score;
+        public float averageAttainment8ScoreEBACCForSimilarPupils;
+        public float eBacc_ProgressScore;
+        public int openSlot1Score;
+        public int openSlot2Score;
+        public int openSlot3Score;
+        public int gCSEonlyScore;
+        public int nonGCSEOnlyScore;
+        public int openA8Score;
+        public float averageAttainment8ScoreOpenSlotsForSimilarPupils;
+        public float openA8_ProgressScore;
+        public bool englishEntry;
+        public bool eN_PillarArachieved;
+        public bool mathsEntry;
+        public bool mA_PillarAchieved;
+        public bool scienceEntry;
+        public bool sc_PillarAchieved;
+        public bool humanitiesEntry;
+        public bool hu_PillarAchieved;
+        public bool languageEntry;
+        public bool lang_PillarAchieved;
+
+        
+
+        public void Hydrate(SqlDataReader dr)
+        {
+            int i = 0;
+            Id = dr.GetGuid(i); i++;
+            studentID = dr.GetGuid(i); i++;
+            disadvantaged = dr.GetBoolean(i); i++;
+            english_first_language = dr.GetBoolean(i); i++;
+            sEN = dr.GetString(i); i++;
+            nonMobile = dr.GetBoolean(i); i++;
+            ethnicOrigin = dr.GetInt32(i); i++;
+            attainment8 = dr.GetInt32(i); i++;
+            try {
+                averageAttainment8ScoreForSimilarPupils = dr.GetInt32(i); i++;
+            }catch (Exception e)
+            {
+                i = 9;
+            }
+            try
+            {
+                progress8AdjustedScore = (float)dr.GetDecimal(i); i++;
+            }
+            catch (Exception e)
+            {
+                i = 9;
+            }
+            try
+            {
+                progress8UnadjustedScore = (float)dr.GetDecimal(i); i++;
+            }
+            catch (Exception e)
+            {
+                i = 9;
+            }
+
+        }
+    }
+
+    [DataContract]
+    public class dFEProgressList
+    {
+
+        [DataMember]
+        public List<dFEProgressItem> m_list = new List<dFEProgressItem>();
+
+        public void Load()
+        {
+
+            Encode en = new Encode();
+            string db_connection = en.GetDbConnection();
+
+            using (SqlConnection cn = new SqlConnection(db_connection))
+            {
+                cn.Open();
+                string s = "SELECT * FROM dFE_ProgressData";
+                using (SqlCommand cm = new SqlCommand(s, cn))
+                {
+                    using (SqlDataReader dr = cm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            dFEProgressItem d = new dFEProgressItem();
+                            m_list.Add(d);
+                            d.Hydrate(dr);
+                        }
+                        dr.Close();
+                    }
+                }
+                cn.Close();
+            }
+        }
+    }
+
+
+
+        
+
+
 }

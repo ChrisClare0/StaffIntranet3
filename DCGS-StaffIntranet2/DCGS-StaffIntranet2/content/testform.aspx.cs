@@ -9,15 +9,41 @@ using System.IO;
 using System.Security.AccessControl;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
+using Google.Apis.Auth.OAuth2;
+using System.Threading;
+using Google.Apis.Util.Store;
+using Google.Apis.Sheets.v4;
+using Google.Apis.Services;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Google.Apis.Sheets.v4.Data;
+using System.Text;
+using System.Net;
 
 namespace DCGS_Staff_Intranet2.content
 {
+   
     public partial class testform : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                //RegisterAsyncTask(new PageAsyncTask(Test1));
+
+
+                ISAMS_Student_List is1 = new ISAMS_Student_List("8104",true);
+
+                foreach (ISAMS_Student s1 in is1.m_list)
+                {
+                    string s2 = s1.Surname;
+                    byte[] bytes = Encoding.Default.GetBytes(s2);
+                    string test1= Encoding.UTF8.GetString(bytes);
+                    string s4 = s2;
+                    s4 = Encoding.Default.ToString();
+                    s4 = s4;
+
+                }
 
 
                 return;
@@ -261,13 +287,94 @@ namespace DCGS_Staff_Intranet2.content
         }
 
 
+        protected async Task Test1()
+        {
+            string credPath = @"d:\\project-id-9301225348112901974-d05770b23edc.json";
+            DateTime t1 = new DateTime(); t1 = DateTime.Now;
+            string json = File.ReadAllText(credPath);
+            Newtonsoft.Json.Linq.JObject cr = (Newtonsoft.Json.Linq.JObject)JsonConvert.DeserializeObject(json);
+            string private_key = (string)cr.GetValue("private_key");
+            string email = (string)cr.GetValue("Client_email");
+
+            ServiceAccountCredential credential = new ServiceAccountCredential(new ServiceAccountCredential.Initializer("104602038154026657417")
+            {
+                Scopes = new[] { SheetsService.Scope.Spreadsheets}
+            }.FromPrivateKey(private_key));
+
+
+            // Create the service.
+            var service = new SheetsService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = "CC_Sheets_Service",
+            });
+            var fred = service.Spreadsheets.Get("10usxblP6yGQTB2VkYeA5xuLUMepf1TuIcyhig4H1ygk");
+            fred.IncludeGridData = true;
+
+
+            String spreadsheetId = "10usxblP6yGQTB2VkYeA5xuLUMepf1TuIcyhig4H1ygk";
+            String range = "Sheet1!A1:AB210";
+  
+            SpreadsheetsResource.ValuesResource.GetRequest request =
+                    service.Spreadsheets.Values.Get(spreadsheetId, range);
+
+
+
+            ValueRange response = request.Execute();
+            IList<IList<Object>> values = response.Values;
+            TimeSpan ts1 = new TimeSpan(); ts1 = DateTime.Now - t1;
+            fred = fred;
+
+            for( var i= 1;i<210;i++)
+            {
+                string s = (string)values[i][0];
+                string s1 = "";
+                if (s == "6752")
+                {
+                    s1 = (string)values[i][1];
+                    s1 = s1;
+                }
+            }
+        }
 
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            using (WebClient client = new WebClient())
+            {
+                client.Headers.Add("user-agent", "Mozilla / 5.0(Windows NT 10.0; WOW64; Trident / 7.0; rv: 11.0) like Gecko");
+                //client.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+                client.Headers.Add("Authorization", "SNAeoB88JTmAXfNTAfpR");
 
-            //this is the test button
+                try
+                {
+                    string response = client.DownloadString("https://sandbox.apply-for-teacher-training.service.gov.uk/api/v1");
+                }
+                catch (Exception e2)
+                {
+                    string s5455 = e2.ToString();
+                    s5455 = e2.InnerException.ToString();
+                }
+
+            }
+
             return;
+
+
+            ISAMS_ExamStudentAccessList list44 = new ISAMS_ExamStudentAccessList();
+            list44.load(18);
+
+
+            ISAMS_ExamSeatingPlan_List list33 = new ISAMS_ExamSeatingPlan_List();
+            list33.Load(18);
+
+           // ISAMS_Set_PTOList Leena = new ISAMS_Set_PTOList();
+           // Leena.load(12);
+
+
+
+            return;
+
 
 
             ExamComponentResultList ecrl1 = new ExamComponentResultList();

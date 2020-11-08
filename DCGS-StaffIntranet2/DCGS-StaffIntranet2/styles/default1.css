@@ -10,6 +10,15 @@
     text-indent:10px
 }
 
+#test1{
+    background-image: url(../images/Puzzle1/house1.jpg);
+           background-position: 0 0;
+    background-repeat:repeat-x;
+    height: 900px;
+    width: 992px;
+
+}
+
 /* -------- Container Styling -------- */
 #container
 {
@@ -61,6 +70,8 @@
     width: 992px;
 }
 
+
+
 #bannerExams {
     	background-image: url(../images/img_Exams.jpg);
         background-position: 0 0;
@@ -72,12 +83,21 @@
 
 #banneroptions
 {
-    	background-image: url(../images/img_options.gif);
-        background-position: 0 0;
+    background-image: url(../images/img_options.gif);
+    background-position: 0 0;
     background-repeat:repeat-x;
-    height: 100px;
+    height: 130px;
     width: 992px;
 }
+#bannerxMatrix
+{
+	background-image: url(../images/dcgsBanner.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 1000px;
+}
+
 
 
 #banner h1
@@ -347,5 +367,10 @@ body p
 .NormalText {
     font-family: Arial;
     font-size: small;
+}
+
+.center{
+    position:absolute;
+    left:300px;
 }
 

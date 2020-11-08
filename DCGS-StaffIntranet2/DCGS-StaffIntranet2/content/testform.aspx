@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/styles/StaffIntranet.Master" AutoEventWireup="true" CodeBehind="testform.aspx.cs" Inherits="DCGS_Staff_Intranet2.content.testform" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/styles/StaffIntranet.Master" AutoEventWireup="true" CodeBehind="testform.aspx.cs" Inherits="DCGS_Staff_Intranet2.content.testform"   %>
 
 <%@ Register Assembly="Cerval_Library" Namespace="Cerval_Library" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

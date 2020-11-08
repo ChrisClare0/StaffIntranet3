@@ -9,7 +9,7 @@
 
     <asp:DropDownList ID="DropDownList_Options" runat="server" AutoPostBack="true" Height="20px"  Width="427px" OnSelectedIndexChanged="DropDownList_Options_SelectedIndexChanged"></asp:DropDownList>
     </div>
-    <div>
+    <div style="height: 309px; width: 837px">
         <br /><br />
         <div id ="Current_Data"  runat="server"></div>
         <br />
@@ -21,6 +21,18 @@
             <asp:Button ID="Button_Delete" runat="server" Text="Delete TQM for this Option" OnClick="Button_Delete_Click"  />
             </div>
 
+        
+
     </div>
+    <br /><br/>
+    <asp:Button ID="Button1" runat="server" Text="Upload from file" OnClick="Button1_Click" Width="137px" />
+
+    <asp:FileUpload ID="FileUpload1" runat="server" Width="511px" />
+    <br />
+    <br />
+    <asp:Label ID="Label_Text" runat="server" Text="File is tab separted text file and has: Board/Option/Grade/Mark"></asp:Label>
+    <br />
+    <asp:TextBox ID="TextBox1" runat="server" Height="101px" TextMode="MultiLine" Width="737px"></asp:TextBox>
+    <br />
 
 </asp:Content>

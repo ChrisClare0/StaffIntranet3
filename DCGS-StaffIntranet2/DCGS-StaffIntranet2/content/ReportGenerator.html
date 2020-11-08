@@ -61,7 +61,21 @@
             callGoogleScript(SetupURL(FirstRow, LastRow,1,"ctrlq"));
         }
 
+        function GetTest() {
+            callGoogleScript("https://script.google.com/a/challoners.org/macros/s/AKfycbwfQmTC4X9dQ82TKTx_RPRDnuOU2YjKYX_UTwwUAaLoxKwcbSs/exec?SheetId=10usxblP6yGQTB2VkYeA5xuLUMepf1TuIcyhig4H1ygk&Option=4&FirstRow=46&Adno=6836&callback=callback2");
+        }
 
+        function callback2(e)
+        {
+            document.getElementById("Image1").style.display = "none";
+            if (e.Status == "0") {
+                ClearStatus();
+                document.getElementById("Status1").value = "Call Failed:" + e.Error;
+            }
+            else {
+                document.getElementById("Status1").value = e.Result;
+            }
+        }
 
   // Make an AJAX call to Google Script
     function callGoogleScript(url) {
@@ -165,6 +179,12 @@
         <div id="BannerText" class="Navbar">Google Sheets Report Generator</div>
              
     <p >
+fred
+
+        <div><input id="Button1" type="button" onclick="GetTest()" value="button" /></div>
+
+
+
         <div id="status" class="block">
             Status:
             <img id="Image1" src="../images/loading.gif" style="display:none" alt="" width="50" height="50" />
@@ -176,7 +196,7 @@
         <div id="main" class="block">
             <br />
 
-            <input onclick="Create()" id="Button_Create" type="button" value="Generate Grade Profiles pdfs for this report cycle" />
+            <input onclick="Create()" id="Button_Create" type="button" value="Generate Grade Profiles pdfs for this report cycle,,," />
             Generator Sheet ID:<input id="Text1" type="text" size="60" value="12xdRhUygfQz7P42k5aGVDK7wcDiqUC6F6Png43Yg2y8" />
             First Row:<input id="Text2" type="text" value="2" size="5" />
             Last Row:<input id="Text3" type="text" value="6" size="5" />
@@ -194,6 +214,8 @@
         <hr />
     <div class="block">
         <input onclick="PublishSudents()" id="Button_PublishStudents" type="button" value="Publish to Students Folder" />
+
+
     </div>
 
 

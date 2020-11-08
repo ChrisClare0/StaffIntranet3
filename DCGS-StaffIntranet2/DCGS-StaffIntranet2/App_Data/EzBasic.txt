@@ -1,0 +1,4 @@
+﻿HuntId,ClueId,RoomId,Position-x,Position-y,Clue,Open,SuccessCode,Current
+1,0,0,0,0,Inside Pop's present",0,200,1
+1,1,0,300,500,The next clue is behind a Kettle,1,201,0
+1,1,1,448,720,The next clue is behind a jug ,0,73,0

@@ -3977,10 +3977,8 @@ namespace Cerval_Library
             st1.m_ExamsCanType = CheckBox_CanType.Checked;
             st1.m_StudentId = StudentId;
             st1.Save();
-            this.Visible = false;
-            
+            this.Visible = false;        
         }
-
     }
 
     [ToolboxData("<{0}:SENListControl runat=server></{0}:SENListControl>")]

@@ -4,6 +4,9 @@
 .ResultsTbl tr:nth-of-type(even){background-color:#f3f3f3;}/* stripes */
 .ResultsTbl tr:nth-of-type(odd){background-color:#d0d0d0;}
 
+.SimpleTbl  {border-collapse:collapse;font-size:x-large;}
+.SimpleTbl th{border: none ;background-color:#000000;color:#ffffff;}
+
 /* style for Exams tables */
 .ExamsTbl  {border-collapse:collapse;font-size:small;}
 .ExamsTbl th{border: none ;}
@@ -51,3 +54,7 @@
 .DataTableInvalid {background-color: Lime;}
 
 .button1style {background-color:#f3f3f3;color:#000; outline-color:#888; outline-style:ridge; }
+
+
+
+

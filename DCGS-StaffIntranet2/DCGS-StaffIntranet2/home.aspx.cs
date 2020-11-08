@@ -16,6 +16,7 @@ namespace DCGS_Staff_Intranet2
         {
             if (!IsPostBack)
             {
+
 #if DEBUG
 
 #else
@@ -61,6 +62,10 @@ namespace DCGS_Staff_Intranet2
                     d0 = System.Convert.ToDateTime(c.Value);
                     Cerval_Configuration c1 = new Cerval_Configuration("StaffIntranet_EmbargoRelease");
                     d1 = System.Convert.ToDateTime(c1.Value);
+
+#if DEBUG
+                    d1 = new DateTime(2012, 3, 08, 6, 00, 05);//release time             
+#endif
                     if ((DateTime.Now > d0) && (DateTime.Now < d1))
                     {
                         s = "<h4>Staff Intranet service is currently unavailable. ";
@@ -77,8 +82,8 @@ namespace DCGS_Staff_Intranet2
                 //Response.Redirect("/content/ReportGenerator.aspx");
                 //Response.Redirect("/content/SENEdit.aspx");
                 //Response.Redirect("/content/ExamResultsforStaff.aspx");
-                //Response.Redirect("/content/testform.aspx");
-                Response.Redirect("/content/StartForm.aspx");
+                Response.Redirect("/content/testform.aspx");
+                //Response.Redirect("/content/StartForm.aspx");
                 //Server.Transfer("/content/StudentsComplexLists.aspx");
                 //Response.Redirect("/content/music_stuff/UploadSets.aspx");
                 Response.Redirect("/content/PupilAcademicProfile.aspx");
@@ -90,6 +95,25 @@ namespace DCGS_Staff_Intranet2
 #if Admin_test
                 Response.Redirect("../admin-test/content/StartForm.aspx");   //for deploy version  TESTING site
 #else
+
+                
+                switch (RadioButtonList1.SelectedIndex)
+                {
+                    case 0:
+                        Response.Redirect("../admin/content/StartForm.aspx");   //for deploy version
+                        break;
+                    case 1:
+                        Response.Redirect("../4matrix/");
+                        break;
+                    case 2:
+                        Response.Redirect("../admin/content/Booking/Menu.aspx");
+                        break;
+
+                    default:
+                        Response.Redirect("../admin/content/StartForm.aspx");   //for deploy version
+                        break;
+                }
+
                 Response.Redirect("../admin/content/StartForm.aspx");   //for deploy version
 #endif
 

@@ -138,19 +138,25 @@ namespace Cerval_Library
         public void Load_ISAMS(DateTime time)
         {
             RoomList rl1 = new RoomList();
+            ISAMS_Period_List iperiods = new ISAMS_Period_List();
             rl1.LoadList();
             PeriodList pl1 = new PeriodList();
             StaffList sl1 = new StaffList(); sl1.LoadFullList();
-            DateTime starttime = new DateTime(2017, 9, 4, 01, 0, 0);
+            DateTime starttime = new DateTime(2019, 9, 4, 03, 0, 0);
             groups1 = new GroupList(starttime, GroupList.GroupListOrder.GroupName);
             ISAMS_TimetableScheduledPeriodList TT1 = new ISAMS_TimetableScheduledPeriodList();
             TT1.LoadListCurrentTT();
-            bool SetPrimaryRegistration = true;string PrimaryRegistrationKey = "RG";
+            //would quite like to thin this where week1==week2....
+
+
+            bool SetPrimaryRegistration = true;
+            string PrimaryRegistrationKey = "RG";
 
             foreach (ISAMS_TimetableScheduledPeriod ip in TT1.m_list)
             {
+                
                 TT_period p = new TT_period(); periodlist1.m_list.Add(p);
-                Group g1 = Find_Group(ip.SetName, starttime, new DateTime(2018, 7, 31, 01, 0, 0), true);
+                Group g1 = Find_Group(ip.SetName, starttime, new DateTime(2020, 7, 31, 01, 0, 0), true);
                 if (SetPrimaryRegistration)
                 {
                     if (g1._GroupName.ToUpper().Contains(PrimaryRegistrationKey.ToUpper()))
@@ -176,8 +182,15 @@ namespace Cerval_Library
                 {
                     if (r.m_roomcode.ToUpper().Trim() == ip.RoomCode.ToUpper().Trim()) { p.RoomId = r.m_RoomID;break; }
                     if ("T"+r.m_roomcode.ToUpper().Trim() == ip.RoomCode.ToUpper().Trim()) { p.RoomId = r.m_RoomID; break; }
+
                 }
-                p.StaffCode = ip.StaffCode;
+                if (p.RoomId == Guid.Empty)
+                {
+                    string s6 = p.RoomCode;
+                    SimpleRoom room_1 = new SimpleRoom();
+                    p.RoomId = room_1.Create(ip.RoomCode.ToUpper().Trim());
+                }
+                p.StaffCode = ip.StaffCode;p.StaffId = Guid.Empty;
                 try
                 {
                     p.StaffId = new Guid(ip.PreviousMISId);
@@ -189,6 +202,20 @@ namespace Cerval_Library
                         if (s1.m_StaffCode.ToUpper().Trim() == ip.StaffCode){ p.StaffId = s1.m_StaffId; break; }
                     }
                 }
+
+                if (p.StaffId == Guid.Empty)
+                {
+                    //we need to make new..
+                    ISAMS_Staff ist1 = new ISAMS_Staff();
+                    ist1.LoadStaffInitials(ip.StaffCode);
+                    SimpleStaff s2 = new SimpleStaff();
+                    p.StaffId = s2.CreateNew(1, "M", ist1.Surname, ist1.FirstName, ist1.DoB, ip.StaffCode, ist1.email);
+
+                    //ought to update tbl_Core_TEMP_StaffContracts....  with contract1 post 4 primary role =10
+                }
+
+
+
                 bool found = false;
                 p.DayNo = ip.Day - 1;
                 foreach(Period p1 in pl1.m_PeriodList)
@@ -640,7 +667,11 @@ namespace Cerval_Library
                     course = group_name.Substring(l - 2, 2);
                 }
             }
-            if ((y < 9)&&(y>6)) course = group_name.Substring(3, 2);
+            if ((y < 9) && (y > 6))
+            {   //exception !!
+                if(group_name.StartsWith("8VI")) { course = "SU"; course_type = "1"; }
+                else { course = group_name.Substring(3, 2); }
+            }
             if (y == 9)
             {
                 if (!group_name.Contains("-")) course = group_name.Substring(1, 2);
@@ -655,8 +686,7 @@ namespace Cerval_Library
             if (course.ToUpper() == "HB") { course_type = "3"; course = "BI"; }
             if (course.ToUpper() == "YE") { course = "YA"; course_type = "0"; }
             if (course.ToUpper() == "CV") { course = "EX"; course_type = "0"; }
-
-
+            if (course.ToUpper() == "PC") { course = "SU"; course_type = "1"; }
             Guid cse_Id = Find_Course(course, course_type, ounit, true);
             if (cse_Id == Guid.Empty)
             {

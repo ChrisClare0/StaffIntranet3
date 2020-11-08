@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ez1.master.cs" Inherits="DCGS_Staff_Intranet2.Ezra.Ez1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ezra Puzzles and Games</title>
+    <link href="../styles/default1.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../styles/TableStyles.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="StyleSheet1.css" media="screen" rel="stylesheet" type="text/css" />
+    <script lang="javascript" type="text/javascript">
+<!--
+    function uberMenu(intElementId) {
+        document.getElementById('child_' + intElementId).style.display = document.getElementById('child_' + intElementId).style.display == 'none' ? '' : 'none';
+        document.getElementById('parent_' + intElementId).firstChild.className = document.getElementById('parent_' + intElementId).firstChild.className == 'parentclicked' ? '' : 'parentclicked';
+    }
+    //-->
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+   <div id="container">
+        <div id="bannerEz"></div>
+        <div class ="dcgsNavbar">Ezra's Puzzle Page</div>
+
+    <div id="columns">
+    <div id="navigation">
+<ul id="ubermenu">
+<li><a href="WebForm1.aspx?id=11">Home</a></li>
+    <li id="parent_0" class="parent" ><a href="#" onclick="uberMenu(0)">Puzzles</a>
+    <ul id="child_0" >
+        <li><a href="../EzraPuzzle1/StartForm.aspx">Puzzle 1</a></li></br>
+        <li><a href="../EzraPuzzle2/StartForm.aspx">Puzzle 2</a></li></br>
+        <li><a href="../EzraPuzzle3/StartForm.aspx">Puzzle 2</a></li></br>
+        <li><a href="../EzraPuzzle4/StartForm.apsx">Puzzle 2</a></li></br>
+    </ul>
+    </li>
+    </ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</div> 
+    <div id="content">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+
+<div id="footer">
+by cc
+</div>
+</div>
+    
+   
+    </form>
+</body>
+</html>

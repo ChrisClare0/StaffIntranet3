@@ -12,7 +12,7 @@ namespace DCGS_Staff_Intranet2
 	{
 		protected void Page_Load(object sender, System.EventArgs e)
 		{
-			// Put user code to initialize the page here
+
 			Response.ContentType = "image/jpeg";
 			int width = 110;
 			int height = 140;

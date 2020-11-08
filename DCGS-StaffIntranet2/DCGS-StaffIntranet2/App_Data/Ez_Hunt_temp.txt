@@ -1,0 +1,17 @@
+HuntId,ClueId,RoomId,Position-x,Position-y,Clue,SuccessCode
+1,0,0,0,0,,0
+1,0,0,0,0,Inside Pop's present,200
+1,1,0,709,500,The next clue is behind a Kettle,901
+1,2,1,720,400,The next clue is on a monkey hanging by his arms ,652
+1,3,7,320,150,The next clue is qp itcppau ktqp   (hint c=a b=d..),377
+1,4,2,500,500,The waste basket in a very untidy room,42
+1,5,8,1050,350,On a picture of Ez and Eli in school uniform,677
+1,6,1,70,500,A boat on a bed!!,0
+1,7,5,480,530,,0
+X,X,X,X,X,X,X
+iji
+
+
+
+
+

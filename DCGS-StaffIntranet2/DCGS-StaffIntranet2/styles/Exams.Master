@@ -22,7 +22,8 @@
     <form id="form1" runat="server">
         <div id="container">
         <div id="bannerExams"></div>
-        <div  id="BannerText" class ="dcgsNavbar"><asp:Label ID="Label_Banner"  runat="server" Text="DCGS Exams"></asp:Label></div>
+            <div id="BannerText" class="dcgsNavbar">
+                <asp:Label ID="Label_Banner" runat="server" Text="DCGS Exams"></asp:Label></div>
         <div id="navigation">
 <ul id="ubermenu">
 <li><a href="https://internal.challoners.com/x/admin/content/StartForm.aspx">Intranet Home</a></li>
@@ -88,7 +89,7 @@
 
     </ul>
     </li>
-
+   
     <li><a href="../content/Logout.aspx">Logout</a></li>
 
     </ul>

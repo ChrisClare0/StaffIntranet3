@@ -198,7 +198,6 @@ namespace DCGS_Staff_Intranet2.Exams
                     Ex1.m_withdrawn = false;
                     Ex1.m_year = Year.ToString();
                     Ex1.m_EntryStatus = 7;
-
                     Ex1.Save();
                 }
                 else
@@ -211,6 +210,25 @@ namespace DCGS_Staff_Intranet2.Exams
 
 
 
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            // going to delete option/component values
+
+            ExamOption_List eol1 = new ExamOption_List();
+            eol1.Load(YearCode.ToString(), SeasonCode.ToString());
+            ExamCompononent_List ecl1 = new ExamCompononent_List();
+            ecl1.LoadAllComponentsSeason(YearCode.ToString(), SeasonCode.ToString());
+
+            foreach(ExamOption eo in eol1.m_list)
+            {
+                eo.Delete();
+            }
+            foreach (ExamComponent ec in ecl1.m_list)
+            {
+                ec.Delete();
             }
         }
     }
